@@ -1,7 +1,9 @@
 /* eslint-disable import/no-anonymous-default-export */
 export default {
-  docs: {
-    title: 'Components',
-    type: 'page',
+  button: {
+    title: 'Button',
+  },
+  badge: {
+    title: 'Badge',
   },
 };

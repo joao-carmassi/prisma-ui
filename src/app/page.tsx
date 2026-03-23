@@ -26,7 +26,7 @@ export default function Home(): React.ReactNode {
         </p>
 
         <div className='flex gap-4'>
-          <Link href='/teste'>
+          <Link href='/docs/button'>
             <Button size='lg' effect='ringHover'>
               Documentação
               <ArrowRight />

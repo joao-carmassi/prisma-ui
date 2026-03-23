@@ -1,0 +1,404 @@
+import { Button } from '@/components/ui/button';
+import {
+  ArrowRight,
+  ChevronRight,
+  Heart,
+  Mail,
+  Trash2,
+  Download,
+  Plus,
+  Search,
+  Star,
+  Settings,
+} from 'lucide-react';
+
+# Button
+
+A versatile button component built on top of Radix UI and styled with Tailwind CSS. Supports multiple variants, sizes, visual effects, icons, and loading states.
+
+## Import
+
+```tsx
+import { Button } from '@/components/ui/button';
+```
+
+---
+
+## Variants
+
+The `variant` prop controls the visual style of the button.
+
+<div className='flex flex-wrap items-center gap-4 rounded-lg border p-6 my-4'>
+  <Button variant='default'>Default</Button>
+  <Button variant='destructive'>Destructive</Button>
+  <Button variant='outline'>Outline</Button>
+  <Button variant='secondary'>Secondary</Button>
+  <Button variant='ghost'>Ghost</Button>
+  <Button variant='link'>Link</Button>
+</div>
+
+```tsx
+<Button variant="default">Default</Button>
+<Button variant="destructive">Destructive</Button>
+<Button variant="outline">Outline</Button>
+<Button variant="secondary">Secondary</Button>
+<Button variant="ghost">Ghost</Button>
+<Button variant="link">Link</Button>
+```
+
+| Variant       | Description                           |
+| ------------- | ------------------------------------- |
+| `default`     | Primary button with solid background  |
+| `destructive` | For dangerous or destructive actions  |
+| `outline`     | Bordered button with transparent fill |
+| `secondary`   | Subtle, less prominent button         |
+| `ghost`       | No background until hovered           |
+| `link`        | Styled as a text link with underline  |
+
+---
+
+## Sizes
+
+The `size` prop controls the dimensions of the button.
+
+<div className='flex flex-wrap items-center gap-4 rounded-lg border p-6 my-4'>
+  <Button size='xs'>Extra Small</Button>
+  <Button size='sm'>Small</Button>
+  <Button size='default'>Default</Button>
+  <Button size='lg'>Large</Button>
+</div>
+
+```tsx
+<Button size="xs">Extra Small</Button>
+<Button size="sm">Small</Button>
+<Button size="default">Default</Button>
+<Button size="lg">Large</Button>
+```
+
+### Icon Sizes
+
+For icon-only buttons, use the icon size variants.
+
+<div className='flex flex-wrap items-center gap-4 rounded-lg border p-6 my-4'>
+  <Button size='icon-xs'>
+    <Plus />
+  </Button>
+  <Button size='icon-sm'>
+    <Plus />
+  </Button>
+  <Button size='icon'>
+    <Plus />
+  </Button>
+  <Button size='icon-lg'>
+    <Plus />
+  </Button>
+</div>
+
+```tsx
+<Button size="icon-xs"><Plus /></Button>
+<Button size="icon-sm"><Plus /></Button>
+<Button size="icon"><Plus /></Button>
+<Button size="icon-lg"><Plus /></Button>
+```
+
+| Size      | Description             |
+| --------- | ----------------------- |
+| `default` | Standard height (36px)  |
+| `xs`      | Extra small             |
+| `sm`      | Small                   |
+| `lg`      | Large                   |
+| `icon`    | Square button for icons |
+| `icon-xs` | Extra small icon button |
+| `icon-sm` | Small icon button       |
+| `icon-lg` | Large icon button       |
+
+---
+
+## Effects
+
+The `effect` prop adds visual animations and transitions to the button.
+
+### Shine
+
+A continuous animated shine sweeping across the button.
+
+<div className='flex flex-wrap items-center gap-4 rounded-lg border p-6 my-4'>
+  <Button effect='shine'>Shine</Button>
+  <Button variant='destructive' effect='shine'>
+    Shine Destructive
+  </Button>
+  <Button variant='secondary' effect='shine'>
+    Shine Secondary
+  </Button>
+</div>
+
+```tsx
+<Button effect="shine">Shine</Button>
+<Button variant="destructive" effect="shine">Shine Destructive</Button>
+<Button variant="secondary" effect="shine">Shine Secondary</Button>
+```
+
+### Shine Hover
+
+Shine effect that triggers only on hover.
+
+<div className='flex flex-wrap items-center gap-4 rounded-lg border p-6 my-4'>
+  <Button effect='shineHover'>Shine Hover</Button>
+  <Button variant='destructive' effect='shineHover'>
+    Shine Hover
+  </Button>
+  <Button variant='secondary' effect='shineHover'>
+    Shine Hover
+  </Button>
+</div>
+
+```tsx
+<Button effect='shineHover'>Shine Hover</Button>
+```
+
+### Ring Hover
+
+Displays a colored ring around the button on hover.
+
+<div className='flex flex-wrap items-center gap-4 rounded-lg border p-6 my-4'>
+  <Button effect='ringHover'>Ring Hover</Button>
+  <Button variant='destructive' effect='ringHover'>
+    Ring Hover
+  </Button>
+  <Button variant='outline' effect='ringHover'>
+    Ring Hover
+  </Button>
+</div>
+
+```tsx
+<Button effect='ringHover'>Ring Hover</Button>
+```
+
+### Gooey Right / Gooey Left
+
+A fluid gooey animation sweeping from right or left on hover.
+
+<div className='flex flex-wrap items-center gap-4 rounded-lg border p-6 my-4'>
+  <Button effect='gooeyRight'>Gooey Right</Button>
+  <Button effect='gooeyLeft'>Gooey Left</Button>
+  <Button variant='destructive' effect='gooeyRight'>
+    Gooey Right
+  </Button>
+  <Button variant='destructive' effect='gooeyLeft'>
+    Gooey Left
+  </Button>
+</div>
+
+```tsx
+<Button effect="gooeyRight">Gooey Right</Button>
+<Button effect="gooeyLeft">Gooey Left</Button>
+```
+
+### Expand Icon
+
+An icon that expands from hidden on hover. Requires `icon` and `iconPlacement` props.
+
+<div className='flex flex-wrap items-center gap-4 rounded-lg border p-6 my-4'>
+  <Button effect='expandIcon' icon={ArrowRight} iconPlacement='right'>
+    Continue
+  </Button>
+  <Button
+    effect='expandIcon'
+    icon={ChevronRight}
+    iconPlacement='right'
+    variant='outline'
+  >
+    Next Step
+  </Button>
+  <Button effect='expandIcon' icon={Mail} iconPlacement='left'>
+    Send Email
+  </Button>
+</div>
+
+```tsx
+import { ArrowRight, Mail } from 'lucide-react';
+
+<Button effect="expandIcon" icon={ArrowRight} iconPlacement="right">
+  Continue
+</Button>
+<Button effect="expandIcon" icon={Mail} iconPlacement="left">
+  Send Email
+</Button>
+```
+
+### Underline / Hover Underline
+
+Underline animations for link-style buttons.
+
+<div className='flex flex-wrap items-center gap-4 rounded-lg border p-6 my-4'>
+  <Button variant='link' effect='underline'>
+    Underline
+  </Button>
+  <Button variant='link' effect='hoverUnderline'>
+    Hover Underline
+  </Button>
+</div>
+
+```tsx
+<Button variant="link" effect="underline">Underline</Button>
+<Button variant="link" effect="hoverUnderline">Hover Underline</Button>
+```
+
+### Pulsating
+
+A continuous pulsating glow effect.
+
+<div className='flex flex-wrap items-center gap-4 rounded-lg border p-6 my-4'>
+  <Button effect='pulsating'>Pulsating</Button>
+  <Button variant='destructive' effect='pulsating'>
+    Pulsating
+  </Button>
+</div>
+
+```tsx
+<Button effect='pulsating'>Pulsating</Button>
+```
+
+### Rainbow
+
+An animated rainbow gradient border effect.
+
+<div className='flex flex-wrap items-center gap-4 rounded-lg border p-6 my-4'>
+  <Button effect='rainbow'>Rainbow</Button>
+  <Button size='lg' effect='rainbow'>
+    Rainbow Large
+  </Button>
+</div>
+
+```tsx
+<Button effect='rainbow'>Rainbow</Button>
+```
+
+| Effect           | Description                        |
+| ---------------- | ---------------------------------- |
+| `shine`          | Continuous animated shine          |
+| `shineHover`     | Shine triggered on hover           |
+| `ringHover`      | Colored ring on hover              |
+| `gooeyRight`     | Fluid gooey animation from right   |
+| `gooeyLeft`      | Fluid gooey animation from left    |
+| `expandIcon`     | Icon expands on hover              |
+| `underline`      | Underline that disappears on hover |
+| `hoverUnderline` | Underline that appears on hover    |
+| `pulsating`      | Continuous pulsating glow          |
+| `rainbow`        | Animated rainbow gradient border   |
+
+---
+
+## With Icons
+
+Buttons can include icons using the `icon` and `iconPlacement` props, or by placing SVG elements directly as children.
+
+<div className='flex flex-wrap items-center gap-4 rounded-lg border p-6 my-4'>
+  <Button icon={Mail} iconPlacement='left'>
+    Send Email
+  </Button>
+  <Button icon={ArrowRight} iconPlacement='right'>
+    Next
+  </Button>
+  <Button variant='outline'>
+    <Download /> Download
+  </Button>
+  <Button variant='destructive'>
+    <Trash2 /> Delete
+  </Button>
+  <Button variant='secondary'>
+    <Heart /> Favorite
+  </Button>
+</div>
+
+```tsx
+import { Mail, ArrowRight, Download, Trash2, Heart } from 'lucide-react';
+
+<Button icon={Mail} iconPlacement="left">Send Email</Button>
+<Button icon={ArrowRight} iconPlacement="right">Next</Button>
+<Button variant="outline"><Download /> Download</Button>
+<Button variant="destructive"><Trash2 /> Delete</Button>
+```
+
+---
+
+## Loading State
+
+Set `loading` to show a spinner and disable the button.
+
+<div className='flex flex-wrap items-center gap-4 rounded-lg border p-6 my-4'>
+  <Button loading>Saving...</Button>
+  <Button loading variant='destructive'>
+    Deleting...
+  </Button>
+  <Button loading variant='outline'>
+    Loading...
+  </Button>
+  <Button loading size='icon' />
+  <Button loading size='icon-sm' />
+</div>
+
+```tsx
+<Button loading>Saving...</Button>
+<Button loading variant="destructive">Deleting...</Button>
+<Button loading variant="outline">Loading...</Button>
+<Button loading size="icon" />
+```
+
+---
+
+## Disabled State
+
+<div className='flex flex-wrap items-center gap-4 rounded-lg border p-6 my-4'>
+  <Button disabled>Disabled</Button>
+  <Button disabled variant='destructive'>
+    Disabled
+  </Button>
+  <Button disabled variant='outline'>
+    Disabled
+  </Button>
+  <Button disabled variant='secondary'>
+    Disabled
+  </Button>
+</div>
+
+```tsx
+<Button disabled>Disabled</Button>
+<Button disabled variant="destructive">Disabled</Button>
+```
+
+---
+
+## As Child
+
+Use `asChild` to render the button styles on a different element, such as an anchor or Next.js `Link`.
+
+```tsx
+import Link from 'next/link';
+
+<Button asChild variant="link">
+  <Link href="/docs">Go to Docs</Link>
+</Button>
+
+<Button asChild>
+  <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+    GitHub
+  </a>
+</Button>
+```
+
+---
+
+## API Reference
+
+| Prop            | Type                                                                                                                                                   | Default     | Description                             |
+| --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------- | --------------------------------------- |
+| `variant`       | `"default" \| "destructive" \| "outline" \| "secondary" \| "ghost" \| "link"`                                                                          | `"default"` | Visual style of the button              |
+| `size`          | `"default" \| "xs" \| "sm" \| "lg" \| "icon" \| "icon-xs" \| "icon-sm" \| "icon-lg"`                                                                   | `"default"` | Size of the button                      |
+| `effect`        | `"shine" \| "shineHover" \| "ringHover" \| "gooeyRight" \| "gooeyLeft" \| "expandIcon" \| "underline" \| "hoverUnderline" \| "pulsating" \| "rainbow"` | `undefined` | Visual effect applied to the button     |
+| `icon`          | `React.ElementType`                                                                                                                                    | `undefined` | Icon component to render                |
+| `iconPlacement` | `"left" \| "right"`                                                                                                                                    | `undefined` | Position of the icon                    |
+| `loading`       | `boolean`                                                                                                                                              | `false`     | Shows a spinner and disables the button |
+| `asChild`       | `boolean`                                                                                                                                              | `false`     | Renders as child element via Radix Slot |
+| `disabled`      | `boolean`                                                                                                                                              | `false`     | Disables the button                     |
+| `className`     | `string`                                                                                                                                               | `undefined` | Additional CSS classes                  |
