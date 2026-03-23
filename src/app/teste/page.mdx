@@ -1,0 +1,168 @@
+# Teste — Documentação de componentes
+
+Bem-vindo à página de testes da **Prisma UI**. Aqui você encontra exemplos de uso dos componentes disponíveis.
+
+---
+
+## Button
+
+O componente `Button` suporta múltiplas variantes, tamanhos, efeitos visuais, ícones e estado de carregamento.
+
+### Importação
+
+```tsx
+import { Button } from '@/components/ui/button';
+```
+
+### Variantes
+
+| Variante      | Descrição                         |
+| ------------- | --------------------------------- |
+| `default`     | Botão primário com fundo sólido   |
+| `destructive` | Ação destrutiva (vermelho)        |
+| `outline`     | Borda visível, fundo transparente |
+| `secondary`   | Fundo secundário, menos destaque  |
+| `ghost`       | Sem fundo, aparece no hover       |
+| `link`        | Estilo de link com underline      |
+
+### Tamanhos
+
+| Tamanho   | Descrição           |
+| --------- | ------------------- |
+| `default` | Altura 36px         |
+| `xs`      | Extra pequeno       |
+| `sm`      | Pequeno             |
+| `lg`      | Grande              |
+| `icon`    | Quadrado para ícone |
+| `icon-xs` | Ícone extra pequeno |
+| `icon-sm` | Ícone pequeno       |
+| `icon-lg` | Ícone grande        |
+
+### Efeitos
+
+| Efeito           | Descrição                          |
+| ---------------- | ---------------------------------- |
+| `shine`          | Brilho animado contínuo            |
+| `shineHover`     | Brilho que aparece no hover        |
+| `ringHover`      | Anel colorido ao passar o mouse    |
+| `gooeyRight`     | Efeito gooey pela direita          |
+| `gooeyLeft`      | Efeito gooey pela esquerda         |
+| `expandIcon`     | Ícone que expande no hover         |
+| `underline`      | Sublinhado que desaparece no hover |
+| `hoverUnderline` | Sublinhado que aparece no hover    |
+| `pulsating`      | Pulso animado contínuo             |
+| `rainbow`        | Gradiente arco-íris animado        |
+
+### Exemplos de uso
+
+```tsx
+// Botão básico
+<Button>Clique aqui</Button>
+
+// Botão com variante e efeito
+<Button variant="destructive" effect="shine">
+  Deletar
+</Button>
+
+// Botão com tamanho personalizado
+<Button size="lg" effect="ringHover">
+  Ação principal
+</Button>
+
+// Botão com ícone
+import { ArrowRight } from 'lucide-react';
+
+<Button icon={ArrowRight} iconPlacement="right" effect="expandIcon">
+  Próximo
+</Button>
+
+// Botão com estado de carregamento
+<Button loading>Salvando...</Button>
+
+// Botão como link (usando asChild)
+import Link from 'next/link';
+
+<Button asChild variant="link">
+  <Link href="/outra-pagina">Ir para outra página</Link>
+</Button>
+```
+
+---
+
+## Badge
+
+O componente `Badge` suporta variantes, tamanhos e efeitos visuais.
+
+### Importação
+
+```tsx
+import { Badge } from '@/components/ui/badge';
+```
+
+### Variantes
+
+| Variante      | Descrição                       |
+| ------------- | ------------------------------- |
+| `default`     | Badge primário com fundo sólido |
+| `secondary`   | Fundo secundário                |
+| `destructive` | Vermelho para alertas           |
+| `outline`     | Apenas borda                    |
+| `ghost`       | Sem fundo, aparece no hover     |
+| `link`        | Estilo de link                  |
+
+### Tamanhos
+
+| Tamanho   | Descrição           |
+| --------- | ------------------- |
+| `default` | Padrão (texto xs)   |
+| `lg`      | Grande (texto sm)   |
+| `icon`    | Quadrado para ícone |
+| `icon-lg` | Ícone grande        |
+
+### Efeitos
+
+| Efeito      | Descrição                   |
+| ----------- | --------------------------- |
+| `shine`     | Brilho animado contínuo     |
+| `pulsating` | Pulso animado               |
+| `rainbow`   | Gradiente arco-íris animado |
+
+### Exemplos de uso
+
+```tsx
+// Badge básico
+<Badge>Novo</Badge>
+
+// Badge com variante
+<Badge variant="destructive">Erro</Badge>
+
+// Badge com efeito
+<Badge effect="shine">Destaque</Badge>
+
+// Badge grande
+<Badge size="lg" variant="secondary">
+  Versão 1.0
+</Badge>
+```
+
+---
+
+## Spinner
+
+Componente de loading simples usando o ícone `Loader2` do Lucide.
+
+### Importação
+
+```tsx
+import { Spinner } from '@/components/ui/spinner';
+```
+
+### Exemplo de uso
+
+```tsx
+// Spinner básico
+<Spinner />
+
+// Spinner com tamanho personalizado
+<Spinner className="size-8" />
+```
