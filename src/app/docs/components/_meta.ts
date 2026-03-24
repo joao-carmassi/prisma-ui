@@ -10,6 +10,9 @@ export default {
   badge: {
     title: 'Badge',
   },
+  'confetti-wrapper': {
+    title: 'Confetti Button',
+  },
   '-- cards': {
     type: 'separator',
     title: 'Cards',

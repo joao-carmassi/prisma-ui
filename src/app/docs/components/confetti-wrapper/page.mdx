@@ -1,0 +1,153 @@
+import { ConfettiWrapper } from '@/components/ui/confetti-wrapper';
+import { Button } from '@/components/ui/button';
+import { ConfettiOnClickDemo } from './_demo-onclick';
+
+# Confetti Button Wrapper
+
+A lightweight wrapper that fires a burst of confetti from the wrapped button on click, without replacing or overriding the button's own `onClick` handler. Built on Radix UI's `Slot` primitive for seamless composition.
+
+## Import
+
+```tsx
+import { ConfettiWrapper } from '@/components/ui/confetti-wrapper';
+```
+
+---
+
+## Basic Usage
+
+Wrap any `Button` with `ConfettiWrapper`. The original `onClick` handler is preserved and fires alongside the confetti effect.
+
+<ComponentPreview>
+  <ConfettiWrapper>
+    <Button>Click me!</Button>
+  </ConfettiWrapper>
+</ComponentPreview>
+
+```tsx
+<ConfettiWrapper>
+  <Button>Click me!</Button>
+</ConfettiWrapper>
+```
+
+---
+
+## With onClick
+
+The wrapped button's `onClick` fires normally — `ConfettiWrapper` composes both handlers.
+
+<ComponentPreview>
+  <ConfettiOnClickDemo />
+</ComponentPreview>
+
+```tsx
+<ConfettiWrapper>
+  <Button onClick={() => alert('Clicked!')}>With onClick</Button>
+</ConfettiWrapper>
+```
+
+---
+
+## Angle
+
+The `angle` prop controls the direction (in degrees) at which confetti launches from the button. `90` shoots straight up, `270` shoots down, `0` shoots right, and `180` shoots left.
+
+<ComponentPreview>
+  <ConfettiWrapper angle={60}>
+    <Button variant='outline'>60°</Button>
+  </ConfettiWrapper>
+  <ConfettiWrapper angle={90}>
+    <Button variant='outline'>90° (default)</Button>
+  </ConfettiWrapper>
+  <ConfettiWrapper angle={120}>
+    <Button variant='outline'>120°</Button>
+  </ConfettiWrapper>
+</ComponentPreview>
+
+```tsx
+<ConfettiWrapper angle={60}>
+  <Button>60°</Button>
+</ConfettiWrapper>
+
+<ConfettiWrapper angle={90}>
+  <Button>90° (default)</Button>
+</ConfettiWrapper>
+
+<ConfettiWrapper angle={120}>
+  <Button>120°</Button>
+</ConfettiWrapper>
+```
+
+---
+
+## Count
+
+The `count` prop controls how many confetti particles are fired.
+
+<ComponentPreview>
+  <ConfettiWrapper count={20}>
+    <Button variant='secondary'>Light (20)</Button>
+  </ConfettiWrapper>
+  <ConfettiWrapper count={80}>
+    <Button variant='secondary'>Default (80)</Button>
+  </ConfettiWrapper>
+  <ConfettiWrapper count={200}>
+    <Button variant='secondary'>Explosion (200)</Button>
+  </ConfettiWrapper>
+</ComponentPreview>
+
+```tsx
+<ConfettiWrapper count={20}>
+  <Button>Light (20)</Button>
+</ConfettiWrapper>
+
+<ConfettiWrapper count={80}>
+  <Button>Default (80)</Button>
+</ConfettiWrapper>
+
+<ConfettiWrapper count={200}>
+  <Button>Explosion (200)</Button>
+</ConfettiWrapper>
+```
+
+---
+
+## With Variants
+
+Works with any button variant.
+
+<ComponentPreview>
+  <ConfettiWrapper>
+    <Button variant='default'>Default</Button>
+  </ConfettiWrapper>
+  <ConfettiWrapper>
+    <Button variant='destructive'>Destructive</Button>
+  </ConfettiWrapper>
+  <ConfettiWrapper>
+    <Button variant='outline'>Outline</Button>
+  </ConfettiWrapper>
+  <ConfettiWrapper>
+    <Button variant='secondary'>Secondary</Button>
+  </ConfettiWrapper>
+  <ConfettiWrapper>
+    <Button variant='ghost'>Ghost</Button>
+  </ConfettiWrapper>
+</ComponentPreview>
+
+```tsx
+<ConfettiWrapper><Button variant="default">Default</Button></ConfettiWrapper>
+<ConfettiWrapper><Button variant="destructive">Destructive</Button></ConfettiWrapper>
+<ConfettiWrapper><Button variant="outline">Outline</Button></ConfettiWrapper>
+<ConfettiWrapper><Button variant="secondary">Secondary</Button></ConfettiWrapper>
+<ConfettiWrapper><Button variant="ghost">Ghost</Button></ConfettiWrapper>
+```
+
+---
+
+## API Reference
+
+| Prop       | Type        | Default | Description                                        |
+| ---------- | ----------- | ------- | -------------------------------------------------- |
+| `angle`    | `number`    | `90`    | Launch angle in degrees. 90 = straight up.         |
+| `count`    | `number`    | `80`    | Number of confetti particles fired per click.      |
+| `children` | `ReactNode` | —       | The button element to wrap. Must accept `onClick`. |
