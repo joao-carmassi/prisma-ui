@@ -5,6 +5,15 @@ import type { ReactNode } from 'react';
 import { Slot } from 'radix-ui';
 import confetti from 'canvas-confetti';
 
+/*
+ * @author: @joao-carmassi
+ * @description: A wrapper component that adds confetti animation to its children when clicked. The confetti launches from the center of the clicked element.
+ * @version: 1.0.0
+ * @date: 2026-24-03
+ * @license: MIT
+ * @reference: https://magicui.design/docs/components/confetti
+ */
+
 interface ConfettiWrapperProps {
   /** Angle (in degrees) at which confetti launches. 90 = straight up. */
   angle?: number;
