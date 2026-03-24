@@ -9,6 +9,32 @@ import {
 } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
+import { JsonLd } from '@/components/seo/json-ld';
+
+export const metadata = {
+  title: 'Flip Card',
+  description:
+    'A card component with a 3D flip animation revealing a back face. Supports hover and programmatic trigger modes.',
+  alternates: { canonical: '/docs/components/flip-card' },
+};
+
+<JsonLd
+  data={{
+    '@context': 'https://schema.org',
+    '@type': 'TechArticle',
+    headline: 'Flip Card — Prisma UI',
+    description:
+      'A card with 3D flip animation, configurable trigger modes, and full TypeScript support.',
+    breadcrumb: {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://prisma-ui-xi.vercel.app' },
+        { '@type': 'ListItem', position: 2, name: 'Docs', item: 'https://prisma-ui-xi.vercel.app/docs' },
+        { '@type': 'ListItem', position: 3, name: 'Flip Card', item: 'https://prisma-ui-xi.vercel.app/docs/components/flip-card' },
+      ],
+    },
+  }}
+/>
 
 # Flip Card
 

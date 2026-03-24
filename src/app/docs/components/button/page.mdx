@@ -11,6 +11,32 @@ import {
   Star,
   Settings,
 } from 'lucide-react';
+import { JsonLd } from '@/components/seo/json-ld';
+
+export const metadata = {
+  title: 'Button',
+  description:
+    'A versatile button component with multiple variants, sizes, visual effects, icons, and loading states. Built on Radix UI and Tailwind CSS.',
+  alternates: { canonical: '/docs/components/button' },
+};
+
+<JsonLd
+  data={{
+    '@context': 'https://schema.org',
+    '@type': 'TechArticle',
+    headline: 'Button — Prisma UI',
+    description:
+      'A versatile button component with multiple variants, sizes, visual effects, icons, and loading states.',
+    breadcrumb: {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://prisma-ui-xi.vercel.app' },
+        { '@type': 'ListItem', position: 2, name: 'Docs', item: 'https://prisma-ui-xi.vercel.app/docs' },
+        { '@type': 'ListItem', position: 3, name: 'Button', item: 'https://prisma-ui-xi.vercel.app/docs/components/button' },
+      ],
+    },
+  }}
+/>
 
 # Button
 

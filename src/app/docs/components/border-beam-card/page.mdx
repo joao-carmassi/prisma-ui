@@ -8,6 +8,32 @@ import {
   CardFooter,
 } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
+import { JsonLd } from '@/components/seo/json-ld';
+
+export const metadata = {
+  title: 'Border Beam Card',
+  description:
+    'A card component with an animated beam of light that travels along its border. Uses offset-path CSS animations.',
+  alternates: { canonical: '/docs/components/border-beam-card' },
+};
+
+<JsonLd
+  data={{
+    '@context': 'https://schema.org',
+    '@type': 'TechArticle',
+    headline: 'Border Beam Card — Prisma UI',
+    description:
+      'A card component with an animated border-beam light effect using CSS offset-path.',
+    breadcrumb: {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://prisma-ui-xi.vercel.app' },
+        { '@type': 'ListItem', position: 2, name: 'Docs', item: 'https://prisma-ui-xi.vercel.app/docs' },
+        { '@type': 'ListItem', position: 3, name: 'Border Beam Card', item: 'https://prisma-ui-xi.vercel.app/docs/components/border-beam-card' },
+      ],
+    },
+  }}
+/>
 
 # Border Beam
 

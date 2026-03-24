@@ -1,43 +1,347 @@
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
+import { ShaderHero } from '@/components/ui/shader-hero';
+import { JsonLd } from '@/components/seo/json-ld';
 import Link from 'next/link';
-import { ArrowRight } from 'lucide-react';
-import { getGithubUrl } from '@/lib/env';
+import {
+  ArrowRight,
+  Accessibility,
+  Sparkles,
+  Code2,
+  Github,
+  Package,
+  Layers,
+  Palette,
+  Zap,
+} from 'lucide-react';
+import { getGithubUrl, getSiteUrl } from '@/lib/env';
+import type { SoftwareApplication, WithContext } from 'schema-dts';
+
+const softwareAppSchema: WithContext<SoftwareApplication> = {
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  name: 'Prisma UI',
+  applicationCategory: 'DeveloperApplication',
+  operatingSystem: 'Web',
+  description:
+    'An advanced React component library built on Radix UI and Tailwind CSS. Accessible variants, animated effects, and typed APIs — production-ready.',
+  url: getSiteUrl(),
+  offers: {
+    '@type': 'Offer',
+    price: '0',
+    priceCurrency: 'USD',
+  },
+};
+
+const features = [
+  {
+    icon: Accessibility,
+    title: 'Accessible by default',
+    description:
+      'Built on Radix UI primitives — keyboard navigation, ARIA attributes, and focus management handled for you.',
+  },
+  {
+    icon: Sparkles,
+    title: 'Rich visual effects',
+    description:
+      'Shimmer, rainbow, pulsating, border-beam and more — expressive animations with zero configuration.',
+  },
+  {
+    icon: Code2,
+    title: 'Fully typed API',
+    description:
+      'Every prop, variant, and effect is typed with TypeScript. Better autocomplete, fewer bugs, faster builds.',
+  },
+];
+
+const components = [
+  {
+    label: 'Button',
+    tag: 'General',
+    preview: (
+      <div className='flex flex-wrap gap-2'>
+        <Button size='sm' effect='ringHover'>
+          Default
+        </Button>
+        <Button size='sm' variant='outline' effect='shineHover'>
+          Outline
+        </Button>
+        <Button size='sm' variant='secondary'>
+          Secondary
+        </Button>
+        <Button size='sm' effect='rainbow' variant='outline'>
+          Rainbow
+        </Button>
+      </div>
+    ),
+  },
+  {
+    label: 'Badge',
+    tag: 'General',
+    preview: (
+      <div className='flex flex-wrap gap-2'>
+        <Badge>Default</Badge>
+        <Badge variant='secondary'>Secondary</Badge>
+        <Badge variant='outline'>Outline</Badge>
+        <Badge variant='destructive'>Destructive</Badge>
+        <Badge effect='rainbow' variant='outline'>
+          Rainbow
+        </Badge>
+      </div>
+    ),
+  },
+  {
+    label: 'Spinner',
+    tag: 'Feedback',
+    preview: (
+      <div className='flex items-center gap-4'>
+        <Button size='sm' loading>
+          Loading
+        </Button>
+        <Button size='sm' variant='outline' loading>
+          Save
+        </Button>
+      </div>
+    ),
+  },
+  {
+    label: 'Effects',
+    tag: 'Animation',
+    preview: (
+      <div className='flex flex-wrap gap-2'>
+        <Button size='sm' effect='pulsating'>
+          Pulsating
+        </Button>
+        <Button size='sm' effect='gooeyRight' variant='outline'>
+          Gooey
+        </Button>
+        <Button size='sm' effect='hoverUnderline' variant='ghost'>
+          Underline
+        </Button>
+      </div>
+    ),
+  },
+];
+
+const techStack = [
+  { icon: Package, name: 'Radix UI', color: 'text-violet-400' },
+  { icon: Layers, name: 'shadcn/ui', color: 'text-slate-300' },
+  { icon: Palette, name: 'Tailwind CSS', color: 'text-cyan-400' },
+  { icon: Zap, name: 'Next.js', color: 'text-white' },
+  { icon: Code2, name: 'TypeScript', color: 'text-blue-400' },
+];
 
 export default function Home(): React.ReactNode {
   return (
-    <main className='flex flex-col items-center justify-center min-h-[calc(100svh-4rem)]'>
-      {/* Hero */}
-      <section className='flex flex-col items-center gap-6 px-4 py-24 text-center'>
-        <Badge variant='outline' size='lg'>
-          v1.0.0 — Available now
-        </Badge>
+    <main className='flex flex-col'>
+      <JsonLd data={softwareAppSchema} />
 
-        <h1 className='max-w-3xl text-5xl font-bold tracking-tight sm:text-6xl'>
-          React components with{' '}
-          <span className='bg-linear-to-r from-purple-500 to-pink-500 bg-clip-text text-transparent'>
-            style and purpose
-          </span>
-        </h1>
+      {/* ── Hero ──────────────────────────────────────────── */}
+      <section className='relative flex min-h-[calc(100svh-3.5rem)] flex-col items-center justify-center overflow-hidden bg-[#0a0a12]'>
+        <ShaderHero />
 
-        <p className='max-w-2xl text-lg text-muted-foreground'>
-          Prisma UI is an advanced component library built on top of Radix UI
-          and Tailwind CSS. Variants, visual effects, icons, and loading states
-          — all ready to use.
-        </p>
+        {/* Dark radial gradient overlay so text reads clearly */}
+        <div
+          aria-hidden='true'
+          className='absolute inset-0 bg-radial-[ellipse_70%_60%_at_50%_50%] from-transparent via-transparent to-[#0a0a12]/80 pointer-events-none'
+        />
 
-        <div className='flex gap-4'>
-          <Link href='/docs'>
-            <Button size='lg' effect='ringHover'>
-              Documentation
-              <ArrowRight />
-            </Button>
-          </Link>
-          <a href={getGithubUrl()} target='_blank' rel='noopener noreferrer'>
-            <Button effect={'shineHover'} variant='outline' size='lg'>
-              GitHub
-            </Button>
-          </a>
+        {/* Content */}
+        <div className='relative z-10 flex flex-col items-center gap-6 px-4 text-center'>
+          <Badge
+            variant='outline'
+            size='lg'
+            className='border-violet-500/40 bg-violet-950/40 text-violet-300 backdrop-blur-sm'
+          >
+            v1.0.0 — Available now
+          </Badge>
+
+          <h1 className='font-display max-w-3xl text-5xl font-bold tracking-tight text-white sm:text-6xl lg:text-7xl'>
+            React components with{' '}
+            <span className='bg-linear-to-r from-violet-400 via-fuchsia-400 to-cyan-400 bg-clip-text text-transparent'>
+              style and purpose
+            </span>
+          </h1>
+
+          <p className='max-w-2xl text-base text-slate-400 sm:text-lg'>
+            Prisma UI is an advanced component library built on top of Radix UI
+            and Tailwind CSS. Variants, visual effects, icons, and loading
+            states&nbsp;— all ready to use.
+          </p>
+
+          <div className='flex flex-wrap justify-center gap-4 pt-2'>
+            <Link href='/docs'>
+              <Button
+                size='lg'
+                effect='ringHover'
+                className='bg-violet-600 hover:bg-violet-500 text-white border-0'
+              >
+                Get Started
+                <ArrowRight />
+              </Button>
+            </Link>
+            <a
+              href={getGithubUrl()}
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              <Button
+                effect='shineHover'
+                variant='outline'
+                size='lg'
+                className='border-white/20 bg-white/5 text-white backdrop-blur-sm hover:bg-white/10'
+              >
+                <Github />
+                GitHub
+              </Button>
+            </a>
+          </div>
+        </div>
+
+        {/* Bottom fade into the next section */}
+        <div
+          aria-hidden='true'
+          className='absolute bottom-0 left-0 right-0 h-32 bg-linear-to-b from-transparent to-background pointer-events-none'
+        />
+      </section>
+
+      {/* ── Features ──────────────────────────────────────── */}
+      <section className='px-4 py-28'>
+        <div className='mx-auto max-w-6xl'>
+          <div className='mb-14 text-center'>
+            <Badge variant='outline' className='mb-4'>
+              Why Prisma UI
+            </Badge>
+            <h2 className='font-display text-3xl font-bold tracking-tight sm:text-4xl'>
+              Everything you need, nothing you don&apos;t
+            </h2>
+            <p className='mx-auto mt-4 max-w-xl text-muted-foreground'>
+              Opinionated defaults that disappear when you need them to. Ship
+              polished interfaces without wrestling with primitives.
+            </p>
+          </div>
+
+          <div className='grid gap-6 sm:grid-cols-3'>
+            {features.map(({ icon: Icon, title, description }) => (
+              <div
+                key={title}
+                className='group rounded-2xl border border-border/60 bg-card p-7 transition-all hover:border-violet-500/40 hover:shadow-[0_0_30px_-5px] hover:shadow-violet-500/10'
+              >
+                <div className='mb-4 inline-flex rounded-xl border border-violet-500/20 bg-violet-500/10 p-3'>
+                  <Icon className='size-5 text-violet-400' strokeWidth={1.5} />
+                </div>
+                <h3 className='font-display mb-2 text-lg font-semibold'>
+                  {title}
+                </h3>
+                <p className='text-sm leading-relaxed text-muted-foreground'>
+                  {description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Component Showcase ────────────────────────────── */}
+      <section className='bg-muted/30 px-4 py-28'>
+        <div className='mx-auto max-w-6xl'>
+          <div className='mb-14 text-center'>
+            <Badge variant='outline' className='mb-4'>
+              Component Library
+            </Badge>
+            <h2 className='font-display text-3xl font-bold tracking-tight sm:text-4xl'>
+              Built to be used
+            </h2>
+            <p className='mx-auto mt-4 max-w-xl text-muted-foreground'>
+              Every component ships with thoughtful variants, sizes, and
+              effects. Copy paste, customize, and ship.
+            </p>
+          </div>
+
+          <div className='grid gap-4 sm:grid-cols-2'>
+            {components.map(({ label, tag, preview }) => (
+              <div
+                key={label}
+                className='rounded-2xl border border-border/60 bg-card p-6'
+              >
+                <div className='mb-4 flex items-center justify-between'>
+                  <span className='font-display font-semibold'>{label}</span>
+                  <Badge variant='secondary'>
+                    {tag}
+                  </Badge>
+                </div>
+                <div className='flex min-h-12 items-center'>{preview}</div>
+              </div>
+            ))}
+          </div>
+
+          <div className='mt-8 text-center'>
+            <Link href='/docs/components'>
+              <Button variant='outline' effect='hoverUnderline'>
+                View all components
+                <ArrowRight />
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Tech Stack ────────────────────────────────────── */}
+      <section className='border-y border-border/40 px-4 py-16'>
+        <div className='mx-auto max-w-6xl'>
+          <p className='mb-8 text-center text-sm font-medium uppercase tracking-widest text-muted-foreground'>
+            Built with best-in-class tools
+          </p>
+          <div className='flex flex-wrap items-center justify-center gap-8 sm:gap-14'>
+            {techStack.map(({ icon: Icon, name, color }) => (
+              <div
+                key={name}
+                className='flex items-center gap-2 opacity-60 transition-opacity hover:opacity-100'
+              >
+                <Icon className={`size-5 ${color}`} strokeWidth={1.5} />
+                <span className='font-display text-sm font-medium'>{name}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── CTA ───────────────────────────────────────────── */}
+      <section className='relative overflow-hidden px-4 py-28'>
+        {/* Subtle glowing accent */}
+        <div
+          aria-hidden='true'
+          className='absolute left-1/2 top-1/2 -z-10 h-80 w-80 -translate-x-1/2 -translate-y-1/2 rounded-full bg-violet-600/10 blur-3xl'
+        />
+        <div className='mx-auto max-w-2xl text-center'>
+          <h2 className='font-display text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl'>
+            Start building{' '}
+            <span className='bg-linear-to-r from-violet-400 to-cyan-400 bg-clip-text text-transparent'>
+              today
+            </span>
+          </h2>
+          <p className='mt-5 text-lg text-muted-foreground'>
+            Open-source, MIT-licensed, and ready to drop into your Next.js
+            project. No configuration required.
+          </p>
+          <div className='mt-8 flex flex-wrap justify-center gap-4'>
+            <Link href='/docs'>
+              <Button size='lg' effect='ringHover'>
+                Read the docs
+                <ArrowRight />
+              </Button>
+            </Link>
+            <a
+              href={getGithubUrl()}
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              <Button variant='outline' size='lg' effect='shineHover'>
+                <Github />
+                Star on GitHub
+              </Button>
+            </a>
+          </div>
         </div>
       </section>
     </main>

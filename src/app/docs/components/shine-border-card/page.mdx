@@ -8,6 +8,32 @@ import {
   CardFooter,
 } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
+import { JsonLd } from '@/components/seo/json-ld';
+
+export const metadata = {
+  title: 'Shine Border Card',
+  description:
+    'A card component wrapped with an animated shine border effect. Creates a sweeping light highlight on the border.',
+  alternates: { canonical: '/docs/components/shine-border-card' },
+};
+
+<JsonLd
+  data={{
+    '@context': 'https://schema.org',
+    '@type': 'TechArticle',
+    headline: 'Shine Border Card — Prisma UI',
+    description:
+      'A card component with an animated sweeping shine border effect.',
+    breadcrumb: {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://prisma-ui-xi.vercel.app' },
+        { '@type': 'ListItem', position: 2, name: 'Docs', item: 'https://prisma-ui-xi.vercel.app/docs' },
+        { '@type': 'ListItem', position: 3, name: 'Shine Border Card', item: 'https://prisma-ui-xi.vercel.app/docs/components/shine-border-card' },
+      ],
+    },
+  }}
+/>
 
 # Shine Border
 

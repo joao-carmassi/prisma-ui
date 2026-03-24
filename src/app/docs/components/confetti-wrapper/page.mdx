@@ -1,6 +1,32 @@
 import { ConfettiWrapper } from '@/components/ui/confetti-wrapper';
 import { Button } from '@/components/ui/button';
 import { ConfettiOnClickDemo } from './_demo-onclick';
+import { JsonLd } from '@/components/seo/json-ld';
+
+export const metadata = {
+  title: 'Confetti Button Wrapper',
+  description:
+    'A wrapper component that triggers a canvas-confetti celebration animation on any child button click.',
+  alternates: { canonical: '/docs/components/confetti-wrapper' },
+};
+
+<JsonLd
+  data={{
+    '@context': 'https://schema.org',
+    '@type': 'TechArticle',
+    headline: 'Confetti Button Wrapper — Prisma UI',
+    description:
+      'A wrapper component triggering canvas-confetti animations on button click.',
+    breadcrumb: {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://prisma-ui-xi.vercel.app' },
+        { '@type': 'ListItem', position: 2, name: 'Docs', item: 'https://prisma-ui-xi.vercel.app/docs' },
+        { '@type': 'ListItem', position: 3, name: 'Confetti Wrapper', item: 'https://prisma-ui-xi.vercel.app/docs/components/confetti-wrapper' },
+      ],
+    },
+  }}
+/>
 
 # Confetti Button Wrapper
 

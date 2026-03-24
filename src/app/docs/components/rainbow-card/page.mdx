@@ -12,6 +12,32 @@ import {
 } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
+import { JsonLd } from '@/components/seo/json-ld';
+
+export const metadata = {
+  title: 'Rainbow Card',
+  description:
+    'A card component wrapped with an animated rainbow gradient border effect. Fully composable and accessible.',
+  alternates: { canonical: '/docs/components/rainbow-card' },
+};
+
+<JsonLd
+  data={{
+    '@context': 'https://schema.org',
+    '@type': 'TechArticle',
+    headline: 'Rainbow Card — Prisma UI',
+    description:
+      'A composable card component with an animated rainbow gradient border.',
+    breadcrumb: {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://prisma-ui-xi.vercel.app' },
+        { '@type': 'ListItem', position: 2, name: 'Docs', item: 'https://prisma-ui-xi.vercel.app/docs' },
+        { '@type': 'ListItem', position: 3, name: 'Rainbow Card', item: 'https://prisma-ui-xi.vercel.app/docs/components/rainbow-card' },
+      ],
+    },
+  }}
+/>
 
 # Rainbow Border
 

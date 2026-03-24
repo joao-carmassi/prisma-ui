@@ -1,19 +1,25 @@
 import type { Metadata } from 'next';
-import { Geist, Geist_Mono, Inter } from 'next/font/google';
+import { Geist, Geist_Mono, Syne } from 'next/font/google';
 import './globals.css';
 import { cn } from '@/lib/utils';
-import { getDocsRepositoryBase, getGithubUrl } from '@/lib/env';
+import { getDocsRepositoryBase, getGithubUrl, getSiteUrl } from '@/lib/env';
 import { Banner, Head } from 'nextra/components';
 import { Footer, Layout, Navbar } from 'nextra-theme-docs';
 import { TooltipProvider } from '@/components/ui/tooltip';
 import { getPageMap } from 'nextra/page-map';
 import 'nextra-theme-docs/style.css';
+import { JsonLd } from '@/components/seo/json-ld';
+import type { Organization, WebSite, WithContext } from 'schema-dts';
 
 interface RootLayoutProps {
   children: React.ReactNode;
 }
 
-const inter = Inter({ subsets: ['latin'], variable: '--font-sans' });
+const syne = Syne({
+  variable: '--font-display',
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700', '800'],
+});
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -25,10 +31,85 @@ const geistMono = Geist_Mono({
   subsets: ['latin'],
 });
 
+const siteUrl = getSiteUrl() || 'https://prisma-ui-xi.vercel.app';
+
 export const metadata: Metadata = {
-  title: 'Prisma UI',
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: 'Prisma UI — React Component Library',
+    template: '%s | Prisma UI',
+  },
   description:
-    'A React component library with advanced variants, visual effects, and accessibility.',
+    'An advanced React component library built on Radix UI and Tailwind CSS. Accessible variants, animated effects, and fully typed APIs — ready for production.',
+  keywords: [
+    'React',
+    'component library',
+    'UI components',
+    'Radix UI',
+    'Tailwind CSS',
+    'Next.js',
+    'TypeScript',
+    'accessible',
+    'animated',
+    'shadcn',
+  ],
+  authors: [{ name: 'Prisma UI' }],
+  creator: 'Prisma UI',
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: siteUrl,
+    siteName: 'Prisma UI',
+    title: 'Prisma UI — React Component Library',
+    description:
+      'An advanced React component library built on Radix UI and Tailwind CSS. Accessible variants, animated effects, and fully typed APIs.',
+    images: [
+      {
+        url: '/og.png',
+        width: 1200,
+        height: 630,
+        alt: 'Prisma UI — React Component Library',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Prisma UI — React Component Library',
+    description:
+      'Accessible, animated, and fully typed React components. Built on Radix UI and Tailwind CSS.',
+    images: ['/og.png'],
+  },
+  alternates: {
+    canonical: siteUrl,
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+};
+
+const websiteSchema: WithContext<WebSite> = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: 'Prisma UI',
+  url: siteUrl,
+  description:
+    'An advanced React component library built on Radix UI and Tailwind CSS.',
+};
+
+const orgSchema: WithContext<Organization> = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'Prisma UI',
+  url: siteUrl,
+  sameAs: [getGithubUrl()],
 };
 
 const banner = (
@@ -43,22 +124,16 @@ const footer = <Footer>MIT {new Date().getFullYear()} © Prisma UI.</Footer>;
 export default async function RootLayout({ children }: RootLayoutProps) {
   return (
     <html
-      // Not required, but good for SEO
       lang='en'
-      // Required to be set
       dir='ltr'
-      // Suggested by `next-themes` package https://github.com/pacocoursey/next-themes#with-app
       suppressHydrationWarning
-      className={cn('font-sans', inter.variable)}
+      className={cn(syne.variable, geistSans.variable, geistMono.variable)}
     >
-      <Head
-      // ... Your additional head options
-      >
-        {/* Your additional tags should be passed as `children` of `<Head>` element */}
+      <Head>
+        <JsonLd data={websiteSchema} />
+        <JsonLd data={orgSchema} />
       </Head>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className='antialiased'>
         <TooltipProvider delayDuration={300}>
           <Layout
             banner={banner}
@@ -66,7 +141,6 @@ export default async function RootLayout({ children }: RootLayoutProps) {
             pageMap={await getPageMap()}
             docsRepositoryBase={getDocsRepositoryBase()}
             footer={footer}
-            // ... Your additional layout options
           >
             {children}
           </Layout>

@@ -1,3 +1,29 @@
+import { JsonLd } from '@/components/seo/json-ld';
+
+export const metadata = {
+  title: 'Welcome to Prisma UI',
+  description:
+    'An advanced React component library built on Radix UI and Tailwind CSS. Accessible variants, animated effects, and fully typed APIs.',
+  alternates: { canonical: '/docs' },
+};
+
+<JsonLd
+  data={{
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    name: 'Prisma UI Documentation',
+    description:
+      'An advanced React component library built on Radix UI and Tailwind CSS.',
+    breadcrumb: {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://prisma-ui-xi.vercel.app' },
+        { '@type': 'ListItem', position: 2, name: 'Docs', item: 'https://prisma-ui-xi.vercel.app/docs' },
+      ],
+    },
+  }}
+/>
+
 # Welcome to Prisma UI
 
 A React component library with advanced variants, visual effects, and accessibility.

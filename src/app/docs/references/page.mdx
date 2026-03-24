@@ -1,3 +1,30 @@
+import { JsonLd } from '@/components/seo/json-ld';
+
+export const metadata = {
+  title: 'References',
+  description:
+    'Libraries, tools, and projects that inspired and supported the creation of Prisma UI — including shadcn/ui, Magic UI, Nextra, and enhanced-button.',
+  alternates: { canonical: '/docs/references' },
+};
+
+<JsonLd
+  data={{
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    name: 'References — Prisma UI',
+    description:
+      'Libraries, tools, and projects that inspired the creation of Prisma UI.',
+    breadcrumb: {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://prisma-ui-xi.vercel.app' },
+        { '@type': 'ListItem', position: 2, name: 'Docs', item: 'https://prisma-ui-xi.vercel.app/docs' },
+        { '@type': 'ListItem', position: 3, name: 'References', item: 'https://prisma-ui-xi.vercel.app/docs/references' },
+      ],
+    },
+  }}
+/>
+
 # References
 
 A collection of libraries, tools, and projects that inspired and supported the creation of Prisma UI.
