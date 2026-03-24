@@ -9,6 +9,7 @@ import { TooltipProvider } from '@/components/ui/tooltip';
 import { getPageMap } from 'nextra/page-map';
 import 'nextra-theme-docs/style.css';
 import { JsonLd } from '@/components/seo/json-ld';
+import Logo from '@/components/logo';
 import type { Organization, WebSite, WithContext } from 'schema-dts';
 
 interface RootLayoutProps {
@@ -118,8 +119,13 @@ const banner = (
   </Banner>
 );
 
-const navbar = <Navbar logo={<b>Prisma UI</b>} projectLink={getGithubUrl()} />;
-const footer = <Footer>MIT {new Date().getFullYear()} © Prisma UI.</Footer>;
+const navbar = <Navbar logo={<Logo />} projectLink={getGithubUrl()} />;
+const footer = (
+  <Footer className='flex items-center gap-2'>
+    <Logo />
+    <span>/</span>MIT {new Date().getFullYear()} © Prisma UI.
+  </Footer>
+);
 
 export default async function RootLayout({ children }: RootLayoutProps) {
   return (
