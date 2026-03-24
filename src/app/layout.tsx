@@ -5,6 +5,7 @@ import { cn } from '@/lib/utils';
 import { getDocsRepositoryBase, getGithubUrl } from '@/lib/env';
 import { Banner, Head } from 'nextra/components';
 import { Footer, Layout, Navbar } from 'nextra-theme-docs';
+import { TooltipProvider } from '@/components/ui/tooltip';
 import { getPageMap } from 'nextra/page-map';
 import 'nextra-theme-docs/style.css';
 
@@ -58,16 +59,18 @@ export default async function RootLayout({ children }: RootLayoutProps) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Layout
-          banner={banner}
-          navbar={navbar}
-          pageMap={await getPageMap()}
-          docsRepositoryBase={getDocsRepositoryBase()}
-          footer={footer}
-          // ... Your additional layout options
-        >
-          {children}
-        </Layout>
+        <TooltipProvider delayDuration={300}>
+          <Layout
+            banner={banner}
+            navbar={navbar}
+            pageMap={await getPageMap()}
+            docsRepositoryBase={getDocsRepositoryBase()}
+            footer={footer}
+            // ... Your additional layout options
+          >
+            {children}
+          </Layout>
+        </TooltipProvider>
       </body>
     </html>
   );
