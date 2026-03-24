@@ -180,11 +180,7 @@ export default function Home(): React.ReactNode {
                 <ArrowRight />
               </Button>
             </Link>
-            <a
-              href={getGithubUrl()}
-              target='_blank'
-              rel='noopener noreferrer'
-            >
+            <a href={getGithubUrl()} target='_blank' rel='noopener noreferrer'>
               <Button
                 effect='shineHover'
                 variant='outline'
@@ -266,9 +262,7 @@ export default function Home(): React.ReactNode {
               >
                 <div className='mb-4 flex items-center justify-between'>
                   <span className='font-display font-semibold'>{label}</span>
-                  <Badge variant='secondary'>
-                    {tag}
-                  </Badge>
+                  <Badge variant='secondary'>{tag}</Badge>
                 </div>
                 <div className='flex min-h-12 items-center'>{preview}</div>
               </div>
@@ -331,11 +325,7 @@ export default function Home(): React.ReactNode {
                 <ArrowRight />
               </Button>
             </Link>
-            <a
-              href={getGithubUrl()}
-              target='_blank'
-              rel='noopener noreferrer'
-            >
+            <a href={getGithubUrl()} target='_blank' rel='noopener noreferrer'>
               <Button variant='outline' size='lg' effect='shineHover'>
                 <Github />
                 Star on GitHub

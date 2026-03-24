@@ -8,7 +8,7 @@ interface JsonLdProps {
 export function JsonLd({ data }: JsonLdProps): React.ReactNode {
   return (
     <script
-      type="application/ld+json"
+      type='application/ld+json'
       dangerouslySetInnerHTML={{ __html: serialize(data, { isJSON: true }) }}
     />
   );

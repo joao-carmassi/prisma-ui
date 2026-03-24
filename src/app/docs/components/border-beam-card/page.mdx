@@ -27,9 +27,24 @@ export const metadata = {
     breadcrumb: {
       '@type': 'BreadcrumbList',
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://prisma-ui-xi.vercel.app' },
-        { '@type': 'ListItem', position: 2, name: 'Docs', item: 'https://prisma-ui-xi.vercel.app/docs' },
-        { '@type': 'ListItem', position: 3, name: 'Border Beam Card', item: 'https://prisma-ui-xi.vercel.app/docs/components/border-beam-card' },
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: 'Home',
+          item: 'https://prisma-ui-xi.vercel.app',
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: 'Docs',
+          item: 'https://prisma-ui-xi.vercel.app/docs',
+        },
+        {
+          '@type': 'ListItem',
+          position: 3,
+          name: 'Border Beam Card',
+          item: 'https://prisma-ui-xi.vercel.app/docs/components/border-beam-card',
+        },
       ],
     },
   }}
@@ -67,7 +82,13 @@ import {
       </CardDescription>
     </CardHeader>
     <CardContent>
-      <p className='text-sm text-muted-foreground'>{'Drop '}<code>{'<BorderBeam />'}</code>{' inside any Card with '}<code>{'relative overflow-hidden'}</code>{'.'}</p>
+      <p className='text-sm text-muted-foreground'>
+        {'Drop '}
+        <code>{'<BorderBeam />'}</code>
+        {' inside any Card with '}
+        <code>{'relative overflow-hidden'}</code>
+        {'.'}
+      </p>
     </CardContent>
     <CardFooter>
       <Button size='sm'>Action</Button>
@@ -107,7 +128,9 @@ import {
       <CardDescription>Blue gradient, faster speed.</CardDescription>
     </CardHeader>
     <CardContent>
-      <p className='text-sm text-muted-foreground'>{'Customize the beam colors and speed with props.'}</p>
+      <p className='text-sm text-muted-foreground'>
+        {'Customize the beam colors and speed with props.'}
+      </p>
     </CardContent>
   </Card>
   <Card className='relative w-[340px] overflow-hidden'>
@@ -117,7 +140,11 @@ import {
       <CardDescription>Gold colors, reversed direction.</CardDescription>
     </CardHeader>
     <CardContent>
-      <p className='text-sm text-muted-foreground'>{'Use the '}<code>{'reverse'}</code>{' prop to flip the beam direction.'}</p>
+      <p className='text-sm text-muted-foreground'>
+        {'Use the '}
+        <code>{'reverse'}</code>
+        {' prop to flip the beam direction.'}
+      </p>
     </CardContent>
   </Card>
 </ComponentPreview>
@@ -149,7 +176,11 @@ Stack two `<BorderBeam />` instances with opposite directions and a delay offset
       <CardDescription>Two beams, opposite directions.</CardDescription>
     </CardHeader>
     <CardContent>
-      <p className='text-sm text-muted-foreground'>{'Stacking two beams with a half-period delay creates a symmetric loop.'}</p>
+      <p className='text-sm text-muted-foreground'>
+        {
+          'Stacking two beams with a half-period delay creates a symmetric loop.'
+        }
+      </p>
     </CardContent>
   </Card>
 </ComponentPreview>
