@@ -1,11 +1,11 @@
 @import 'tailwindcss';
 @import 'tw-animate-css';
 @import 'shadcn/tailwind.css';
-@import 'nextra-theme-docs/style.css';
 
 [data-slot='button'] p,
 [data-slot='badge'] p {
   display: contents;
+  line-height: inherit;
 }
 
 @custom-variant dark (&:is(.dark *));

@@ -5,6 +5,7 @@ import { cn } from '@/lib/utils';
 import { Banner, Head } from 'nextra/components';
 import { Footer, Layout, Navbar } from 'nextra-theme-docs';
 import { getPageMap } from 'nextra/page-map';
+import 'nextra-theme-docs/style.css';
 
 interface RootLayoutProps {
   children: React.ReactNode;

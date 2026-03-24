@@ -1,7 +1,7 @@
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import Link from 'next/link';
-import { ArrowRight, Sparkles, Palette, Zap } from 'lucide-react';
+import { ArrowRight, Sparkles, Palette, Zap, X } from 'lucide-react';
 
 export default function Home(): React.ReactNode {
   return (
@@ -10,6 +10,10 @@ export default function Home(): React.ReactNode {
       <section className='flex flex-col items-center gap-6 px-4 py-24 text-center'>
         <Badge variant='outline' size='lg'>
           v1.0.0 — Disponível agora
+        </Badge>
+
+        <Badge variant='destructive'>
+          <X /> Rejected
         </Badge>
 
         <h1 className='max-w-3xl text-5xl font-bold tracking-tight sm:text-6xl'>
