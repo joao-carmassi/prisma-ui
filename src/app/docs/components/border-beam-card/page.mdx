@@ -1,0 +1,159 @@
+import { BorderBeam } from '@/components/ui/border-beam';
+import {
+  Card,
+  CardHeader,
+  CardTitle,
+  CardDescription,
+  CardContent,
+  CardFooter,
+} from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+
+# Border Beam
+
+An animated beam of light that travels along the border of any Card. Inspired by [Magic UI's Border Beam](https://magicui.design/docs/components/border-beam). Implemented with pure CSS — no external animation library required.
+
+## Import
+
+```tsx
+import { BorderBeam } from '@/components/ui/border-beam';
+import {
+  Card,
+  CardHeader,
+  CardTitle,
+  CardDescription,
+  CardContent,
+  CardFooter,
+} from '@/components/ui/card';
+```
+
+---
+
+## Preview
+
+<div className='flex flex-wrap gap-6 rounded-lg border p-6 my-4'>
+  <Card className='relative w-[340px] overflow-hidden'>
+    <BorderBeam />
+    <CardHeader>
+      <CardTitle>Border Beam</CardTitle>
+      <CardDescription>
+        An animated beam travels along the border.
+      </CardDescription>
+    </CardHeader>
+    <CardContent>
+      <p className='text-sm text-muted-foreground'>
+        Drop <code>&lt;BorderBeam /&gt;</code> inside any Card with{' '}
+        <code>relative overflow-hidden</code>.
+      </p>
+    </CardContent>
+    <CardFooter>
+      <Button size='sm'>Action</Button>
+    </CardFooter>
+  </Card>
+</div>
+
+```tsx
+<Card className='relative w-[340px] overflow-hidden'>
+  <BorderBeam />
+  <CardHeader>
+    <CardTitle>Border Beam</CardTitle>
+    <CardDescription>
+      An animated beam travels along the border.
+    </CardDescription>
+  </CardHeader>
+  <CardContent>
+    <p className='text-sm text-muted-foreground'>
+      Drop &lt;BorderBeam /&gt; inside any Card with relative overflow-hidden.
+    </p>
+  </CardContent>
+  <CardFooter>
+    <Button size='sm'>Action</Button>
+  </CardFooter>
+</Card>
+```
+
+---
+
+## Custom Colors
+
+<div className='flex flex-wrap gap-6 rounded-lg border p-6 my-4'>
+  <Card className='relative w-[340px] overflow-hidden'>
+    <BorderBeam colorFrom='#00c6ff' colorTo='#0072ff' duration={4} />
+    <CardHeader>
+      <CardTitle>Custom Colors</CardTitle>
+      <CardDescription>Blue gradient, faster speed.</CardDescription>
+    </CardHeader>
+    <CardContent>
+      <p className='text-sm text-muted-foreground'>
+        Customize the beam colors and speed with props.
+      </p>
+    </CardContent>
+  </Card>
+  <Card className='relative w-[340px] overflow-hidden'>
+    <BorderBeam colorFrom='#f7971e' colorTo='#ffd200' reverse />
+    <CardHeader>
+      <CardTitle>Reversed Beam</CardTitle>
+      <CardDescription>Gold colors, reversed direction.</CardDescription>
+    </CardHeader>
+    <CardContent>
+      <p className='text-sm text-muted-foreground'>
+        Use the <code>reverse</code> prop to flip the beam direction.
+      </p>
+    </CardContent>
+  </Card>
+</div>
+
+```tsx
+<Card className="relative overflow-hidden">
+  <BorderBeam colorFrom="#00c6ff" colorTo="#0072ff" duration={4} />
+  ...
+</Card>
+
+<Card className="relative overflow-hidden">
+  <BorderBeam colorFrom="#f7971e" colorTo="#ffd200" reverse />
+  ...
+</Card>
+```
+
+---
+
+## Double Beam
+
+Stack two `<BorderBeam />` instances with opposite directions and a delay offset for a more dynamic effect.
+
+<div className='flex flex-wrap gap-6 rounded-lg border p-6 my-4'>
+  <Card className='relative w-[340px] overflow-hidden'>
+    <BorderBeam duration={6} />
+    <BorderBeam duration={6} delay={3} reverse />
+    <CardHeader>
+      <CardTitle>Double Beam</CardTitle>
+      <CardDescription>Two beams, opposite directions.</CardDescription>
+    </CardHeader>
+    <CardContent>
+      <p className='text-sm text-muted-foreground'>
+        Stacking two beams with a half-period delay creates a symmetric loop.
+      </p>
+    </CardContent>
+  </Card>
+</div>
+
+```tsx
+<Card className='relative overflow-hidden'>
+  <BorderBeam duration={6} />
+  <BorderBeam duration={6} delay={3} reverse />
+  ...
+</Card>
+```
+
+---
+
+## Props
+
+| Prop        | Type      | Default   | Description                                |
+| ----------- | --------- | --------- | ------------------------------------------ |
+| `size`      | `number`  | `50`      | Size of the beam in pixels                 |
+| `duration`  | `number`  | `6`       | Duration of one full loop in seconds       |
+| `delay`     | `number`  | `0`       | Delay before the animation starts          |
+| `colorFrom` | `string`  | `#ffaa40` | Start color of the beam gradient           |
+| `colorTo`   | `string`  | `#9c40ff` | End color of the beam gradient             |
+| `reverse`   | `boolean` | `false`   | Whether to reverse the animation direction |

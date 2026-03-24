@@ -1,0 +1,140 @@
+import { ShineBorder } from '@/components/ui/shine-border';
+import {
+  Card,
+  CardHeader,
+  CardTitle,
+  CardDescription,
+  CardContent,
+  CardFooter,
+} from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+
+# Shine Border
+
+An animated shining radial-gradient border effect. Inspired by [Magic UI's Shine Border](https://magicui.design/docs/components/shine-border). Implemented with pure CSS — no external animation library required.
+
+## Import
+
+```tsx
+import { ShineBorder } from '@/components/ui/shine-border';
+import {
+  Card,
+  CardHeader,
+  CardTitle,
+  CardDescription,
+  CardContent,
+  CardFooter,
+} from '@/components/ui/card';
+```
+
+---
+
+## Preview
+
+<div className='flex flex-wrap gap-6 rounded-lg border p-6 my-4'>
+  <Card className='relative w-[340px]'>
+    <ShineBorder shineColor='#9c40ff' />
+    <CardHeader>
+      <CardTitle>Shine Border</CardTitle>
+      <CardDescription>
+        A radial gradient sweeps continuously around the border.
+      </CardDescription>
+    </CardHeader>
+    <CardContent>
+      <p className='text-sm text-muted-foreground'>
+        Drop <code>&lt;ShineBorder /&gt;</code> inside any Card with{' '}
+        <code>relative</code>.
+      </p>
+    </CardContent>
+    <CardFooter>
+      <Button size='sm'>Action</Button>
+    </CardFooter>
+  </Card>
+</div>
+
+```tsx
+<Card className='relative w-[340px]'>
+  <ShineBorder shineColor='#9c40ff' />
+  <CardHeader>
+    <CardTitle>Shine Border</CardTitle>
+    <CardDescription>
+      A radial gradient sweeps continuously around the border.
+    </CardDescription>
+  </CardHeader>
+  <CardContent>
+    <p className='text-sm text-muted-foreground'>
+      Drop &lt;ShineBorder /&gt; inside any Card with relative.
+    </p>
+  </CardContent>
+  <CardFooter>
+    <Button size='sm'>Action</Button>
+  </CardFooter>
+</Card>
+```
+
+---
+
+## Multi-color Shine
+
+Pass an array of colors to `shineColor` to create a rainbow-like shine effect.
+
+<div className='flex flex-wrap gap-6 rounded-lg border p-6 my-4'>
+  <Card className='relative w-[340px]'>
+    <ShineBorder
+      shineColor={['#ffaa40', '#9c40ff', '#00d2ff']}
+      borderWidth={2}
+    />
+    <CardHeader>
+      <CardTitle>Multi-color Shine</CardTitle>
+      <CardDescription>Array of colors with a thicker border.</CardDescription>
+    </CardHeader>
+    <CardContent>
+      <p className='text-sm text-muted-foreground'>
+        Multiple colors blend into the radial gradient sweep.
+      </p>
+    </CardContent>
+  </Card>
+</div>
+
+```tsx
+<Card className='relative'>
+  <ShineBorder shineColor={['#ffaa40', '#9c40ff', '#00d2ff']} borderWidth={2} />
+  ...
+</Card>
+```
+
+---
+
+## Slow Duration
+
+<div className='flex flex-wrap gap-6 rounded-lg border p-6 my-4'>
+  <Card className='relative w-[340px]'>
+    <ShineBorder shineColor='#00d2ff' duration={30} />
+    <CardHeader>
+      <CardTitle>Slow Shine</CardTitle>
+      <CardDescription>Longer duration for a subtle effect.</CardDescription>
+    </CardHeader>
+    <CardContent>
+      <p className='text-sm text-muted-foreground'>
+        Increase <code>duration</code> for a slower, more ambient glow.
+      </p>
+    </CardContent>
+  </Card>
+</div>
+
+```tsx
+<Card className='relative'>
+  <ShineBorder shineColor='#00d2ff' duration={30} />
+  ...
+</Card>
+```
+
+---
+
+## Props
+
+| Prop          | Type                 | Default   | Description                                |
+| ------------- | -------------------- | --------- | ------------------------------------------ |
+| `borderWidth` | `number`             | `1`       | Width of the shining border in pixels      |
+| `duration`    | `number`             | `14`      | Duration of the shine animation in seconds |
+| `shineColor`  | `string \| string[]` | `#000000` | Color(s) for the shine gradient            |

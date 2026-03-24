@@ -1,3 +1,19 @@
+[data-variant='default'] {
+  --button-pulse-color: var(--primary);
+}
+[data-variant='destructive'] {
+  --button-pulse-color: var(--destructive);
+}
+[data-variant='secondary'] {
+  --button-pulse-color: var(--secondary-foreground);
+}
+[data-variant='outline'] {
+  --button-pulse-color: var(--ring);
+}
+[data-variant='ghost'] {
+  --button-pulse-color: var(--ring);
+}
+
 .before\:animate-shine::before {
   animation: shine 3s ease-out infinite;
 }
@@ -8,6 +24,22 @@
 
 .animate-button-pulsating {
   animation: button-pulsating 1.5s ease-out infinite;
+}
+
+.card-shine {
+  animation: card-shine var(--duration) infinite linear;
+}
+
+@keyframes card-shine {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  to {
+    background-position: 0% 0%;
+  }
 }
 
 @keyframes shine {
@@ -53,18 +85,29 @@
   }
 }
 
-[data-variant='default'] {
-  --button-pulse-color: var(--primary);
+@keyframes border-beam {
+  0% {
+    offset-distance: 0%;
+  }
+  100% {
+    offset-distance: 100%;
+  }
 }
-[data-variant='destructive'] {
-  --button-pulse-color: var(--destructive);
-}
-[data-variant='secondary'] {
-  --button-pulse-color: var(--secondary-foreground);
-}
-[data-variant='outline'] {
-  --button-pulse-color: var(--ring);
-}
-[data-variant='ghost'] {
-  --button-pulse-color: var(--ring);
+
+@keyframes shine-pulse {
+  0% {
+    background-position:
+      0% 0%,
+      0 0;
+  }
+  50% {
+    background-position:
+      100% 100%,
+      0 0;
+  }
+  to {
+    background-position:
+      0% 0%,
+      0 0;
+  }
 }

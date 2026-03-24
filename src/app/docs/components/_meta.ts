@@ -6,4 +6,20 @@ export default {
   badge: {
     title: 'Badge',
   },
+  '-- cards': {
+    type: 'separator',
+    title: 'Cards',
+  },
+  'rainbow-card': {
+    title: 'Rainbow Card',
+  },
+  'border-beam-card': {
+    title: 'Border Beam Card',
+  },
+  'shine-border-card': {
+    title: 'Shine Border Card',
+  },
+  'flip-card': {
+    title: 'Flip Card',
+  },
 };
