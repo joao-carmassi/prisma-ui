@@ -27,7 +27,9 @@ function CodeBlockInner({
 
   return (
     <div ref={wrapperRef} className='relative group/codeblock'>
-      <Pre {...props}>{children}</Pre>
+      <Pre className={cn(props.className, 'rounded-xl! mt-4')} {...props}>
+        {children}
+      </Pre>
       <Tooltip>
         <TooltipTrigger asChild>
           <button
