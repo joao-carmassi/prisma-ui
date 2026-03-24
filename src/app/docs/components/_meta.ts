@@ -1,5 +1,9 @@
 /* eslint-disable import/no-anonymous-default-export */
 export default {
+  '-- general': {
+    type: 'separator',
+    title: 'General',
+  },
   button: {
     title: 'Button',
   },

@@ -3,4 +3,7 @@ export default {
   components: {
     title: 'Components',
   },
+  references: {
+    title: 'References',
+  },
 };
