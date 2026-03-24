@@ -8,6 +8,27 @@
   line-height: inherit;
 }
 
+/*
+ * Mobile nav: the MobileNav component uses `directories` (full page map) while
+ * the desktop Sidebar uses `docsDirectories` (inner items only). This causes an
+ * extra "Components" folder wrapper at the top level on mobile. These rules hide
+ * that wrapper button and remove its indent so mobile matches the desktop sidebar.
+ */
+.nextra-mobile-nav > ul > li > button,
+.nextra-mobile-nav > ul > li > a {
+  display: none !important;
+}
+
+.nextra-mobile-nav > ul > li > div > ul {
+  padding-inline-start: 0 !important;
+  margin-inline-start: 0 !important;
+  padding-top: 0 !important;
+}
+
+.nextra-mobile-nav > ul > li > div > ul::before {
+  content: none !important;
+}
+
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
