@@ -26,12 +26,12 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: 'Prisma UI',
   description:
-    'Uma biblioteca de componentes React com variantes avançadas, efeitos visuais e acessibilidade.',
+    'A React component library with advanced variants, visual effects, and accessibility.',
 };
 
 const banner = (
   <Banner storageKey='prisma-ui-banner'>
-    Prisma UI - Biblioteca de componentes React
+    Prisma UI - React component library
   </Banner>
 );
 
