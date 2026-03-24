@@ -97,6 +97,8 @@ For icon-only badges, use the icon size variants.
 </ComponentPreview>
 
 ```tsx
+import { Star, X, Check } from 'lucide-react';
+
 <Badge size="icon"><Star /></Badge>
 <Badge size="icon-lg"><Star /></Badge>
 <Badge variant="destructive" size="icon"><X /></Badge>
@@ -237,12 +239,15 @@ Common real-world uses for badges.
 </ComponentPreview>
 
 ```tsx
+import { AlertTriangle, Zap } from 'lucide-react';
+
 <Badge variant="default">v1.0.0</Badge>
 <Badge variant="secondary">Beta</Badge>
 <Badge variant="destructive">Deprecated</Badge>
 <Badge variant="outline">TypeScript</Badge>
 <Badge variant="default" effect="shine">New</Badge>
 <Badge variant="destructive" effect="pulsating"><AlertTriangle /> Critical</Badge>
+<Badge variant='secondary'><Zap /> Featured</Badge>
 ```
 
 ---

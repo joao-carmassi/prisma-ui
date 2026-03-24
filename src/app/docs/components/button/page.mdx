@@ -95,6 +95,8 @@ For icon-only buttons, use the icon size variants.
 </ComponentPreview>
 
 ```tsx
+import { Plus } from 'lucide-react';
+
 <Button size="icon-xs"><Plus /></Button>
 <Button size="icon-sm"><Plus /></Button>
 <Button size="icon"><Plus /></Button>
@@ -153,7 +155,9 @@ Shine effect that triggers only on hover.
 </ComponentPreview>
 
 ```tsx
-<Button effect='shineHover'>Shine Hover</Button>
+<Button effect="shineHover">Shine Hover</Button>
+<Button variant="destructive" effect="shineHover">Shine Hover</Button>
+<Button variant="secondary" effect="shineHover">Shine Hover</Button>
 ```
 
 ### Ring Hover
@@ -171,7 +175,9 @@ Displays a colored ring around the button on hover.
 </ComponentPreview>
 
 ```tsx
-<Button effect='ringHover'>Ring Hover</Button>
+<Button effect="ringHover">Ring Hover</Button>
+<Button variant="destructive" effect="ringHover">Ring Hover</Button>
+<Button variant="outline" effect="ringHover">Ring Hover</Button>
 ```
 
 ### Gooey Right / Gooey Left
@@ -192,6 +198,8 @@ A fluid gooey animation sweeping from right or left on hover.
 ```tsx
 <Button effect="gooeyRight">Gooey Right</Button>
 <Button effect="gooeyLeft">Gooey Left</Button>
+<Button effect="gooeyRight" variant="destructive">Gooey Right</Button>
+<Button effect="gooeyLeft" variant="destructive">Gooey Left</Button>
 ```
 
 ### Expand Icon
@@ -216,10 +224,13 @@ An icon that expands from hidden on hover. Requires `icon` and `iconPlacement` p
 </ComponentPreview>
 
 ```tsx
-import { ArrowRight, Mail } from 'lucide-react';
+import { ArrowRight, ChevronRight, Mail } from 'lucide-react';
 
 <Button effect="expandIcon" icon={ArrowRight} iconPlacement="right">
   Continue
+</Button>
+<Button effect="expandIcon" icon={ChevronRight} iconPlacement="right" variant="outline">
+  Next Step
 </Button>
 <Button effect="expandIcon" icon={Mail} iconPlacement="left">
   Send Email
@@ -256,7 +267,8 @@ A continuous pulsating glow effect.
 </ComponentPreview>
 
 ```tsx
-<Button effect='pulsating'>Pulsating</Button>
+<Button effect="pulsating">Pulsating</Button>
+<Button variant="destructive" effect="pulsating">Pulsating</Button>
 ```
 
 ### Rainbow
@@ -271,7 +283,8 @@ An animated rainbow gradient border effect.
 </ComponentPreview>
 
 ```tsx
-<Button effect='rainbow'>Rainbow</Button>
+<Button effect="rainbow">Rainbow</Button>
+<Button size="lg" effect="rainbow">Rainbow Large</Button>
 ```
 
 | Effect           | Description                        |
@@ -321,6 +334,7 @@ import { Mail, Download, Trash2, Heart, Search, ArrowRight } from 'lucide-react'
 <Button variant="outline"><Download /> Download</Button>
 <Button variant="destructive"><Trash2 /> Delete</Button>
 <Button variant="secondary"><Heart /> Favorite</Button>
+<Button variant="ghost"><Search /> Search</Button>
 <Button>Next <ArrowRight /></Button>
 ```
 
@@ -347,6 +361,7 @@ Set `loading` to show a spinner and disable the button.
 <Button loading variant="destructive">Deleting...</Button>
 <Button loading variant="outline">Loading...</Button>
 <Button loading size="icon" />
+<Button loading size="icon-sm" />
 ```
 
 ---
@@ -369,6 +384,8 @@ Set `loading` to show a spinner and disable the button.
 ```tsx
 <Button disabled>Disabled</Button>
 <Button disabled variant="destructive">Disabled</Button>
+<Button disabled variant="outline">Disabled</Button>
+<Button disabled variant="secondary">Disabled</Button>
 ```
 
 ---
