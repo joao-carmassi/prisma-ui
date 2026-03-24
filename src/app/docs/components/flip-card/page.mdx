@@ -33,7 +33,7 @@ import {
 
 <ComponentPreview className='gap-6 items-start'>
   <FlipCard
-    className='h-[280px] w-[300px]'
+    className='h-70 w-75'
     front={
       <Card className='h-full'>
         <CardHeader>
@@ -67,7 +67,7 @@ import {
 
 ```tsx
 <FlipCard
-  className='h-[280px] w-[300px]'
+  className='h-70 w-75'
   front={
     <Card className='h-full'>
       <CardHeader>
@@ -159,7 +159,7 @@ import {
 
 ## Usage Notes
 
-- The `FlipCard` container requires an explicit **height** (and optionally width) via `className` — e.g. `className="h-[280px] w-[300px]"`.
+- The `FlipCard` container requires an explicit **height** (and optionally width) via `className` — e.g. `className="h-70 w-75"`.
 - Both `front` and `back` Cards should include `className="h-full"` to fill the container.
 - The flip is triggered on **hover** (`group-hover`). No JavaScript state is needed.
 
