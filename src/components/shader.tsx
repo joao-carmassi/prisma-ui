@@ -1,10 +1,10 @@
-"use client";
+'use client';
 
-import { Canvas, useFrame, useThree } from "@react-three/fiber";
-import { useMemo, useRef } from "react";
-import * as THREE from "three";
+import { Canvas, useFrame, useThree } from '@react-three/fiber';
+import { useMemo, useRef } from 'react';
+import * as THREE from 'three';
 
-import { cn } from "@/lib/utils";
+import { cn } from '@/lib/utils';
 
 interface ShaderPlaneProps {
   vertexShader: string;
@@ -50,7 +50,7 @@ interface ShaderBackgroundProps {
   className?: string;
 }
 
-const Shader4 = ({
+const Shader = ({
   vertexShader = `
     varying vec2 vUv;
     void main() {
@@ -155,7 +155,7 @@ const Shader4 = ({
   );
 
   return (
-    <section className={cn(className, "absolute inset-0 h-screen w-full")}>
+    <section className={cn(className, 'absolute inset-0 h-screen w-full')}>
       <Canvas>
         <ShaderPlane
           vertexShader={vertexShader}
@@ -167,4 +167,4 @@ const Shader4 = ({
   );
 };
 
-export { Shader4 };
+export default Shader;

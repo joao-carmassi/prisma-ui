@@ -1,6 +1,6 @@
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { Shader4 } from '@/components/shader4';
+import Shader from '@/components/shader';
 import { JsonLd } from '@/components/seo/json-ld';
 import Link from 'next/link';
 import {
@@ -56,67 +56,69 @@ const features = [
 
 const components = [
   {
-    label: 'Button',
-    tag: 'General',
+    label: 'Variants',
     preview: (
-      <div className='flex flex-wrap gap-2'>
+      <div className='flex flex-wrap items-center gap-4 justify-center'>
         <Button size='sm' effect='ringHover'>
           Default
         </Button>
-        <Button size='sm' variant='outline' effect='shineHover'>
+        <Button size='sm' variant='outline'>
           Outline
         </Button>
-        <Button size='sm' variant='secondary'>
-          Secondary
+        <Button size='sm' variant='destructive'>
+          Destructive
         </Button>
-        <Button size='sm' effect='rainbow' variant='outline'>
-          Rainbow
+        <Button size='sm' variant='ghost'>
+          Ghost
         </Button>
       </div>
     ),
   },
   {
-    label: 'Badge',
-    tag: 'General',
+    label: 'Sizes',
     preview: (
-      <div className='flex flex-wrap gap-2'>
-        <Badge>Default</Badge>
-        <Badge variant='secondary'>Secondary</Badge>
-        <Badge variant='outline'>Outline</Badge>
-        <Badge variant='destructive'>Destructive</Badge>
-        <Badge effect='rainbow' variant='outline'>
-          Rainbow
-        </Badge>
+      <div className='flex flex-wrap items-center gap-4 justify-center'>
+        <Button size='xs'>Extra Small</Button>
+        <Button size='sm'>Small</Button>
+        <Button>Medium</Button>
+        <Button size='lg'>Large</Button>
       </div>
     ),
   },
   {
-    label: 'Spinner',
-    tag: 'Feedback',
+    label: 'Feedback',
     preview: (
-      <div className='flex items-center gap-4'>
-        <Button size='sm' loading>
-          Loading
+      <div className='flex flex-wrap items-center gap-4 justify-center'>
+        <Button loading size='sm' effect='ringHover'>
+          Default
         </Button>
-        <Button size='sm' variant='outline' loading>
-          Save
+        <Button loading size='sm' variant='outline'>
+          Outline
+        </Button>
+        <Button loading size='sm' variant='destructive'>
+          Destructive
+        </Button>
+        <Button loading size='sm' variant='ghost'>
+          Ghost
         </Button>
       </div>
     ),
   },
   {
     label: 'Effects',
-    tag: 'Animation',
     preview: (
-      <div className='flex flex-wrap gap-2'>
+      <div className='flex flex-wrap items-center gap-4 justify-center'>
         <Button size='sm' effect='pulsating'>
           Pulsating
         </Button>
-        <Button size='sm' effect='gooeyRight' variant='outline'>
-          Gooey
+        <Button size='sm' effect='rainbow' variant='outline'>
+          Rainbow
         </Button>
-        <Button size='sm' effect='hoverUnderline' variant='ghost'>
-          Underline
+        <Button size='sm' effect='shine' variant='ghost'>
+          Shine
+        </Button>
+        <Button size='sm' effect='ringHover'>
+          Ring Hover
         </Button>
       </div>
     ),
@@ -137,8 +139,8 @@ export default function Home(): React.ReactNode {
       <JsonLd data={softwareAppSchema} />
 
       {/* ── Hero ──────────────────────────────────────────── */}
-      <section className='relative flex min-h-[calc(100svh-3.5rem)] flex-col items-center justify-center overflow-hidden bg-[#0a0a12]'>
-        <Shader4 />
+      <section className='relative flex min-h-[calc(100svh-6.5rem)] flex-col items-center justify-center overflow-hidden bg-[#0a0a12]'>
+        <Shader />
 
         {/* Dark radial gradient overlay so text reads clearly */}
         <div
@@ -174,7 +176,7 @@ export default function Home(): React.ReactNode {
               <Button
                 size='lg'
                 effect='ringHover'
-                className='bg-violet-600 hover:bg-violet-500 text-white border-0'
+                className='bg-violet-600 hover:bg-violet-500 ring-violet-500! text-white border-0'
               >
                 Get Started
                 <ArrowRight />
@@ -255,14 +257,13 @@ export default function Home(): React.ReactNode {
           </div>
 
           <div className='grid gap-4 sm:grid-cols-2'>
-            {components.map(({ label, tag, preview }) => (
+            {components.map(({ label, preview }) => (
               <div
                 key={label}
                 className='rounded-2xl border border-border/60 bg-card p-6'
               >
                 <div className='mb-4 flex items-center justify-between'>
                   <span className='font-display font-semibold'>{label}</span>
-                  <Badge variant='secondary'>{tag}</Badge>
                 </div>
                 <div className='flex min-h-12 items-center'>{preview}</div>
               </div>
@@ -290,7 +291,7 @@ export default function Home(): React.ReactNode {
             {techStack.map(({ icon: Icon, name, color }) => (
               <div
                 key={name}
-                className='flex items-center gap-2 opacity-60 transition-opacity hover:opacity-100'
+                className='flex items-center gap-2 transition-opacity hover:opacity-70'
               >
                 <Icon className={`size-5 ${color}`} strokeWidth={1.5} />
                 <span className='font-display text-sm font-medium'>{name}</span>
