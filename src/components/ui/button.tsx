@@ -16,7 +16,7 @@ import { Spinner } from '@/components/ui/spinner';
  */
 
 interface IconProps {
-  icon: React.ElementType;
+  icon: React.ComponentType<Record<string, never>>;
   iconPlacement: 'left' | 'right';
 }
 

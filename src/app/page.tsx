@@ -1,6 +1,6 @@
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { ShaderHero } from '@/components/ui/shader-hero';
+import { Shader4 } from '@/components/shader4';
 import { JsonLd } from '@/components/seo/json-ld';
 import Link from 'next/link';
 import {
@@ -138,7 +138,7 @@ export default function Home(): React.ReactNode {
 
       {/* ── Hero ──────────────────────────────────────────── */}
       <section className='relative flex min-h-[calc(100svh-3.5rem)] flex-col items-center justify-center overflow-hidden bg-[#0a0a12]'>
-        <ShaderHero />
+        <Shader4 />
 
         {/* Dark radial gradient overlay so text reads clearly */}
         <div
