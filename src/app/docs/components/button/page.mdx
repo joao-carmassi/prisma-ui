@@ -165,11 +165,17 @@ Shine effect that triggers only on hover.
 Displays a colored ring around the button on hover.
 
 <ComponentPreview>
-  <Button effect='ringHover'>Ring Hover</Button>
-  <Button variant='destructive' effect='ringHover'>
+  <Button className='ring-offset-muted' effect='ringHover'>
     Ring Hover
   </Button>
-  <Button variant='outline' effect='ringHover'>
+  <Button
+    className='ring-offset-muted'
+    variant='destructive'
+    effect='ringHover'
+  >
+    Ring Hover
+  </Button>
+  <Button className='ring-offset-muted' variant='outline' effect='ringHover'>
     Ring Hover
   </Button>
 </ComponentPreview>
