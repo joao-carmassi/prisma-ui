@@ -3,6 +3,11 @@
 @import 'shadcn/tailwind.css';
 @import 'nextra-theme-docs/style.css';
 
+[data-slot='button'] p,
+[data-slot='badge'] p {
+  display: contents;
+}
+
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {

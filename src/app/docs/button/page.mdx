@@ -291,14 +291,11 @@ An animated rainbow gradient border effect.
 
 ## With Icons
 
-Buttons can include icons using the `icon` and `iconPlacement` props, or by placing SVG elements directly as children.
+Place icon components directly as children of the button.
 
 <div className='flex flex-wrap items-center gap-4 rounded-lg border p-6 my-4'>
-  <Button icon={Mail} iconPlacement='left'>
-    Send Email
-  </Button>
-  <Button icon={ArrowRight} iconPlacement='right'>
-    Next
+  <Button>
+    <Mail /> Send Email
   </Button>
   <Button variant='outline'>
     <Download /> Download
@@ -309,15 +306,22 @@ Buttons can include icons using the `icon` and `iconPlacement` props, or by plac
   <Button variant='secondary'>
     <Heart /> Favorite
   </Button>
+  <Button variant='ghost'>
+    <Search /> Search
+  </Button>
+  <Button>
+    Next <ArrowRight />
+  </Button>
 </div>
 
 ```tsx
-import { Mail, ArrowRight, Download, Trash2, Heart } from 'lucide-react';
+import { Mail, Download, Trash2, Heart, Search, ArrowRight } from 'lucide-react';
 
-<Button icon={Mail} iconPlacement="left">Send Email</Button>
-<Button icon={ArrowRight} iconPlacement="right">Next</Button>
+<Button><Mail /> Send Email</Button>
 <Button variant="outline"><Download /> Download</Button>
 <Button variant="destructive"><Trash2 /> Delete</Button>
+<Button variant="secondary"><Heart /> Favorite</Button>
+<Button>Next <ArrowRight /></Button>
 ```
 
 ---
