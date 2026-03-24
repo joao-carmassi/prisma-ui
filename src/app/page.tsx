@@ -3,7 +3,7 @@ import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
 import {
   RainbowBorder,
-  rainbowCardClassesDark,
+  rainbowCardClasses,
 } from '@/components/ui/rainbow-border';
 import { ShineBorder } from '@/components/ui/shine-border';
 import Shader from '@/components/shader';
@@ -231,7 +231,7 @@ export default function Home(): React.ReactNode {
               i === 1 ? (
                 <Card
                   key={title}
-                  className={cn('relative p-7 gap-0', rainbowCardClassesDark)}
+                  className={cn('relative p-7 gap-0', rainbowCardClasses)}
                 >
                   <RainbowBorder />
                   <CardContent className='p-0'>
