@@ -2,6 +2,7 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
+import { getGithubUrl } from '@/lib/env';
 
 export default function Home(): React.ReactNode {
   return (
@@ -32,11 +33,7 @@ export default function Home(): React.ReactNode {
               <ArrowRight />
             </Button>
           </Link>
-          <a
-            href='https://github.com/joao-carmassi'
-            target='_blank'
-            rel='noopener noreferrer'
-          >
+          <a href={getGithubUrl()} target='_blank' rel='noopener noreferrer'>
             <Button variant='outline' size='lg'>
               GitHub
             </Button>

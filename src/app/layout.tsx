@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Geist, Geist_Mono, Inter } from 'next/font/google';
 import './globals.css';
 import { cn } from '@/lib/utils';
+import { getDocsRepositoryBase, getGithubUrl } from '@/lib/env';
 import { Banner, Head } from 'nextra/components';
 import { Footer, Layout, Navbar } from 'nextra-theme-docs';
 import { getPageMap } from 'nextra/page-map';
@@ -35,12 +36,7 @@ const banner = (
   </Banner>
 );
 
-const navbar = (
-  <Navbar
-    logo={<b>Prisma UI</b>}
-    // ... Your additional navbar options
-  />
-);
+const navbar = <Navbar logo={<b>Prisma UI</b>} projectLink={getGithubUrl()} />;
 const footer = <Footer>MIT {new Date().getFullYear()} © Prisma UI.</Footer>;
 
 export default async function RootLayout({ children }: RootLayoutProps) {
@@ -66,7 +62,7 @@ export default async function RootLayout({ children }: RootLayoutProps) {
           banner={banner}
           navbar={navbar}
           pageMap={await getPageMap()}
-          docsRepositoryBase='https://github.com/shuding/nextra/tree/main/docs'
+          docsRepositoryBase={getDocsRepositoryBase()}
           footer={footer}
           // ... Your additional layout options
         >
