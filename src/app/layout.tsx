@@ -127,7 +127,12 @@ export default async function RootLayout({ children }: RootLayoutProps) {
       lang='en'
       dir='ltr'
       suppressHydrationWarning
-      className={cn(syne.variable, geistSans.variable, geistMono.variable)}
+      className={cn(
+        'dark',
+        syne.variable,
+        geistSans.variable,
+        geistMono.variable,
+      )}
     >
       <Head>
         <JsonLd data={websiteSchema} />

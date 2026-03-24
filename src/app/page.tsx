@@ -146,7 +146,7 @@ export default function Home(): React.ReactNode {
       <JsonLd data={softwareAppSchema} />
 
       {/* ── Hero ──────────────────────────────────────────── */}
-      <section className='relative flex min-h-[calc(100svh-6.5rem)] flex-col items-center justify-center overflow-hidden bg-[#0a0a12]'>
+      <section className='relative flex min-h-[calc(100svh-6.5rem)] flex-col items-center justify-center overflow-hidden bg-[#0a0a12] animate-in fade-in duration-1000 delay-500 fill-mode-both transition-opacity'>
         <Shader />
 
         {/* Dark radial gradient overlay so text reads clearly */}
