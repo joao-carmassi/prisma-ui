@@ -38,7 +38,7 @@ import { cn } from '@/lib/utils';
 
 ## Preview
 
-<div className='flex flex-wrap gap-6 rounded-lg border p-6 my-4'>
+<ComponentPreview className='gap-6 items-start'>
   <Card className={cn('relative w-[320px]', rainbowCardClasses)}>
     <RainbowBorder />
     <CardHeader>
@@ -58,7 +58,7 @@ import { cn } from '@/lib/utils';
       </Button>
     </CardFooter>
   </Card>
-</div>
+</ComponentPreview>
 
 ```tsx
 import {

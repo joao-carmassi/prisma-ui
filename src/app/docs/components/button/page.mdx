@@ -28,14 +28,14 @@ import { Button } from '@/components/ui/button';
 
 The `variant` prop controls the visual style of the button.
 
-<div className='flex flex-wrap items-center gap-4 rounded-lg border p-6 my-4'>
+<ComponentPreview>
   <Button variant='default'>Default</Button>
   <Button variant='destructive'>Destructive</Button>
   <Button variant='outline'>Outline</Button>
   <Button variant='secondary'>Secondary</Button>
   <Button variant='ghost'>Ghost</Button>
   <Button variant='link'>Link</Button>
-</div>
+</ComponentPreview>
 
 ```tsx
 <Button variant="default">Default</Button>
@@ -61,12 +61,12 @@ The `variant` prop controls the visual style of the button.
 
 The `size` prop controls the dimensions of the button.
 
-<div className='flex flex-wrap items-center gap-4 rounded-lg border p-6 my-4'>
+<ComponentPreview>
   <Button size='xs'>Extra Small</Button>
   <Button size='sm'>Small</Button>
   <Button size='default'>Default</Button>
   <Button size='lg'>Large</Button>
-</div>
+</ComponentPreview>
 
 ```tsx
 <Button size="xs">Extra Small</Button>
@@ -79,7 +79,7 @@ The `size` prop controls the dimensions of the button.
 
 For icon-only buttons, use the icon size variants.
 
-<div className='flex flex-wrap items-center gap-4 rounded-lg border p-6 my-4'>
+<ComponentPreview>
   <Button size='icon-xs'>
     <Plus />
   </Button>
@@ -92,7 +92,7 @@ For icon-only buttons, use the icon size variants.
   <Button size='icon-lg'>
     <Plus />
   </Button>
-</div>
+</ComponentPreview>
 
 ```tsx
 <Button size="icon-xs"><Plus /></Button>
@@ -122,7 +122,7 @@ The `effect` prop adds visual animations and transitions to the button.
 
 A continuous animated shine sweeping across the button.
 
-<div className='flex flex-wrap items-center gap-4 rounded-lg border p-6 my-4'>
+<ComponentPreview>
   <Button effect='shine'>Shine</Button>
   <Button variant='destructive' effect='shine'>
     Shine Destructive
@@ -130,7 +130,7 @@ A continuous animated shine sweeping across the button.
   <Button variant='secondary' effect='shine'>
     Shine Secondary
   </Button>
-</div>
+</ComponentPreview>
 
 ```tsx
 <Button effect="shine">Shine</Button>
@@ -142,7 +142,7 @@ A continuous animated shine sweeping across the button.
 
 Shine effect that triggers only on hover.
 
-<div className='flex flex-wrap items-center gap-4 rounded-lg border p-6 my-4'>
+<ComponentPreview>
   <Button effect='shineHover'>Shine Hover</Button>
   <Button variant='destructive' effect='shineHover'>
     Shine Hover
@@ -150,7 +150,7 @@ Shine effect that triggers only on hover.
   <Button variant='secondary' effect='shineHover'>
     Shine Hover
   </Button>
-</div>
+</ComponentPreview>
 
 ```tsx
 <Button effect='shineHover'>Shine Hover</Button>
@@ -160,7 +160,7 @@ Shine effect that triggers only on hover.
 
 Displays a colored ring around the button on hover.
 
-<div className='flex flex-wrap items-center gap-4 rounded-lg border p-6 my-4'>
+<ComponentPreview>
   <Button effect='ringHover'>Ring Hover</Button>
   <Button variant='destructive' effect='ringHover'>
     Ring Hover
@@ -168,7 +168,7 @@ Displays a colored ring around the button on hover.
   <Button variant='outline' effect='ringHover'>
     Ring Hover
   </Button>
-</div>
+</ComponentPreview>
 
 ```tsx
 <Button effect='ringHover'>Ring Hover</Button>
@@ -178,7 +178,7 @@ Displays a colored ring around the button on hover.
 
 A fluid gooey animation sweeping from right or left on hover.
 
-<div className='flex flex-wrap items-center gap-4 rounded-lg border p-6 my-4'>
+<ComponentPreview>
   <Button effect='gooeyRight'>Gooey Right</Button>
   <Button effect='gooeyLeft'>Gooey Left</Button>
   <Button variant='destructive' effect='gooeyRight'>
@@ -187,7 +187,7 @@ A fluid gooey animation sweeping from right or left on hover.
   <Button variant='destructive' effect='gooeyLeft'>
     Gooey Left
   </Button>
-</div>
+</ComponentPreview>
 
 ```tsx
 <Button effect="gooeyRight">Gooey Right</Button>
@@ -198,7 +198,7 @@ A fluid gooey animation sweeping from right or left on hover.
 
 An icon that expands from hidden on hover. Requires `icon` and `iconPlacement` props.
 
-<div className='flex flex-wrap items-center gap-4 rounded-lg border p-6 my-4'>
+<ComponentPreview>
   <Button effect='expandIcon' icon={ArrowRight} iconPlacement='right'>
     Continue
   </Button>
@@ -213,7 +213,7 @@ An icon that expands from hidden on hover. Requires `icon` and `iconPlacement` p
   <Button effect='expandIcon' icon={Mail} iconPlacement='left'>
     Send Email
   </Button>
-</div>
+</ComponentPreview>
 
 ```tsx
 import { ArrowRight, Mail } from 'lucide-react';
@@ -230,14 +230,14 @@ import { ArrowRight, Mail } from 'lucide-react';
 
 Underline animations for link-style buttons.
 
-<div className='flex flex-wrap items-center gap-4 rounded-lg border p-6 my-4'>
+<ComponentPreview>
   <Button variant='link' effect='underline'>
     Underline
   </Button>
   <Button variant='link' effect='hoverUnderline'>
     Hover Underline
   </Button>
-</div>
+</ComponentPreview>
 
 ```tsx
 <Button variant="link" effect="underline">Underline</Button>
@@ -248,12 +248,12 @@ Underline animations for link-style buttons.
 
 A continuous pulsating glow effect.
 
-<div className='flex flex-wrap items-center gap-4 rounded-lg border p-6 my-4'>
+<ComponentPreview>
   <Button effect='pulsating'>Pulsating</Button>
   <Button variant='destructive' effect='pulsating'>
     Pulsating
   </Button>
-</div>
+</ComponentPreview>
 
 ```tsx
 <Button effect='pulsating'>Pulsating</Button>
@@ -263,12 +263,12 @@ A continuous pulsating glow effect.
 
 An animated rainbow gradient border effect.
 
-<div className='flex flex-wrap items-center gap-4 rounded-lg border p-6 my-4'>
+<ComponentPreview>
   <Button effect='rainbow'>Rainbow</Button>
   <Button size='lg' effect='rainbow'>
     Rainbow Large
   </Button>
-</div>
+</ComponentPreview>
 
 ```tsx
 <Button effect='rainbow'>Rainbow</Button>
@@ -293,7 +293,7 @@ An animated rainbow gradient border effect.
 
 Place icon components directly as children of the button.
 
-<div className='flex flex-wrap items-center gap-4 rounded-lg border p-6 my-4'>
+<ComponentPreview>
   <Button>
     <Mail /> Send Email
   </Button>
@@ -312,7 +312,7 @@ Place icon components directly as children of the button.
   <Button>
     Next <ArrowRight />
   </Button>
-</div>
+</ComponentPreview>
 
 ```tsx
 import { Mail, Download, Trash2, Heart, Search, ArrowRight } from 'lucide-react';
@@ -330,7 +330,7 @@ import { Mail, Download, Trash2, Heart, Search, ArrowRight } from 'lucide-react'
 
 Set `loading` to show a spinner and disable the button.
 
-<div className='flex flex-wrap items-center gap-4 rounded-lg border p-6 my-4'>
+<ComponentPreview>
   <Button loading>Saving...</Button>
   <Button loading variant='destructive'>
     Deleting...
@@ -340,7 +340,7 @@ Set `loading` to show a spinner and disable the button.
   </Button>
   <Button loading size='icon' />
   <Button loading size='icon-sm' />
-</div>
+</ComponentPreview>
 
 ```tsx
 <Button loading>Saving...</Button>
@@ -353,7 +353,7 @@ Set `loading` to show a spinner and disable the button.
 
 ## Disabled State
 
-<div className='flex flex-wrap items-center gap-4 rounded-lg border p-6 my-4'>
+<ComponentPreview>
   <Button disabled>Disabled</Button>
   <Button disabled variant='destructive'>
     Disabled
@@ -364,7 +364,7 @@ Set `loading` to show a spinner and disable the button.
   <Button disabled variant='secondary'>
     Disabled
   </Button>
-</div>
+</ComponentPreview>
 
 ```tsx
 <Button disabled>Disabled</Button>

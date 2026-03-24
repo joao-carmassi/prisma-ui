@@ -28,14 +28,14 @@ import { Badge } from '@/components/ui/badge';
 
 The `variant` prop controls the visual style of the badge.
 
-<div className='flex flex-wrap items-center gap-4 rounded-lg border p-6 my-4'>
+<ComponentPreview>
   <Badge variant='default'>Default</Badge>
   <Badge variant='secondary'>Secondary</Badge>
   <Badge variant='destructive'>Destructive</Badge>
   <Badge variant='outline'>Outline</Badge>
   <Badge variant='ghost'>Ghost</Badge>
   <Badge variant='link'>Link</Badge>
-</div>
+</ComponentPreview>
 
 ```tsx
 <Badge variant="default">Default</Badge>
@@ -61,10 +61,10 @@ The `variant` prop controls the visual style of the badge.
 
 The `size` prop controls the dimensions of the badge.
 
-<div className='flex flex-wrap items-center gap-4 rounded-lg border p-6 my-4'>
+<ComponentPreview>
   <Badge size='default'>Default</Badge>
   <Badge size='lg'>Large</Badge>
-</div>
+</ComponentPreview>
 
 ```tsx
 <Badge size="default">Default</Badge>
@@ -75,7 +75,7 @@ The `size` prop controls the dimensions of the badge.
 
 For icon-only badges, use the icon size variants.
 
-<div className='flex flex-wrap items-center gap-4 rounded-lg border p-6 my-4'>
+<ComponentPreview>
   <Badge size='icon'>
     <Star />
   </Badge>
@@ -94,7 +94,7 @@ For icon-only badges, use the icon size variants.
   <Badge variant='secondary' size='icon-lg'>
     <Check />
   </Badge>
-</div>
+</ComponentPreview>
 
 ```tsx
 <Badge size="icon"><Star /></Badge>
@@ -120,7 +120,7 @@ The `effect` prop adds visual animations to the badge.
 
 A continuous animated shine sweeping across the badge.
 
-<div className='flex flex-wrap items-center gap-4 rounded-lg border p-6 my-4'>
+<ComponentPreview>
   <Badge effect='shine'>Shine</Badge>
   <Badge variant='destructive' effect='shine'>
     Error
@@ -128,7 +128,7 @@ A continuous animated shine sweeping across the badge.
   <Badge variant='secondary' effect='shine'>
     Secondary
   </Badge>
-</div>
+</ComponentPreview>
 
 ```tsx
 <Badge effect="shine">Shine</Badge>
@@ -140,7 +140,7 @@ A continuous animated shine sweeping across the badge.
 
 A continuous pulsating glow effect.
 
-<div className='flex flex-wrap items-center gap-4 rounded-lg border p-6 my-4'>
+<ComponentPreview>
   <Badge effect='pulsating'>Live</Badge>
   <Badge variant='destructive' effect='pulsating'>
     Alert
@@ -148,7 +148,7 @@ A continuous pulsating glow effect.
   <Badge variant='secondary' effect='pulsating'>
     Active
   </Badge>
-</div>
+</ComponentPreview>
 
 ```tsx
 <Badge effect="pulsating">Live</Badge>
@@ -159,12 +159,12 @@ A continuous pulsating glow effect.
 
 An animated rainbow gradient border effect.
 
-<div className='flex flex-wrap items-center gap-4 rounded-lg border p-6 my-4'>
+<ComponentPreview>
   <Badge effect='rainbow'>Rainbow</Badge>
   <Badge size='lg' effect='rainbow'>
     Rainbow Large
   </Badge>
-</div>
+</ComponentPreview>
 
 ```tsx
 <Badge effect="rainbow">Rainbow</Badge>
@@ -183,7 +183,7 @@ An animated rainbow gradient border effect.
 
 Badges can include icons as children alongside text.
 
-<div className='flex flex-wrap items-center gap-4 rounded-lg border p-6 my-4'>
+<ComponentPreview>
   <Badge>
     <Check /> Approved
   </Badge>
@@ -202,7 +202,7 @@ Badges can include icons as children alongside text.
   <Badge size='lg' variant='secondary'>
     <Bell /> Notifications
   </Badge>
-</div>
+</ComponentPreview>
 
 ```tsx
 import { Check, X, Clock, Info, Flame, Bell } from 'lucide-react';
@@ -220,7 +220,7 @@ import { Check, X, Clock, Info, Flame, Bell } from 'lucide-react';
 
 Common real-world uses for badges.
 
-<div className='flex flex-wrap items-center gap-4 rounded-lg border p-6 my-4'>
+<ComponentPreview>
   <Badge variant='default'>v1.0.0</Badge>
   <Badge variant='secondary'>Beta</Badge>
   <Badge variant='destructive'>Deprecated</Badge>
@@ -234,7 +234,7 @@ Common real-world uses for badges.
   <Badge variant='secondary'>
     <Zap /> Featured
   </Badge>
-</div>
+</ComponentPreview>
 
 ```tsx
 <Badge variant="default">v1.0.0</Badge>

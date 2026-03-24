@@ -31,7 +31,7 @@ import {
 
 ## Preview
 
-<div className='flex flex-wrap gap-6 rounded-lg border p-6 my-4'>
+<ComponentPreview className='gap-6 items-start'>
   <Card className='relative w-[340px] overflow-hidden'>
     <BorderBeam />
     <CardHeader>
@@ -50,7 +50,7 @@ import {
       <Button size='sm'>Action</Button>
     </CardFooter>
   </Card>
-</div>
+</ComponentPreview>
 
 ```tsx
 <Card className='relative w-[340px] overflow-hidden'>
@@ -76,7 +76,7 @@ import {
 
 ## Custom Colors
 
-<div className='flex flex-wrap gap-6 rounded-lg border p-6 my-4'>
+<ComponentPreview className='gap-6 items-start'>
   <Card className='relative w-[340px] overflow-hidden'>
     <BorderBeam colorFrom='#00c6ff' colorTo='#0072ff' duration={4} />
     <CardHeader>
@@ -101,7 +101,7 @@ import {
       </p>
     </CardContent>
   </Card>
-</div>
+</ComponentPreview>
 
 ```tsx
 <Card className="relative overflow-hidden">
@@ -121,7 +121,7 @@ import {
 
 Stack two `<BorderBeam />` instances with opposite directions and a delay offset for a more dynamic effect.
 
-<div className='flex flex-wrap gap-6 rounded-lg border p-6 my-4'>
+<ComponentPreview className='gap-6 items-start'>
   <Card className='relative w-[340px] overflow-hidden'>
     <BorderBeam duration={6} />
     <BorderBeam duration={6} delay={3} reverse />
@@ -135,7 +135,7 @@ Stack two `<BorderBeam />` instances with opposite directions and a delay offset
       </p>
     </CardContent>
   </Card>
-</div>
+</ComponentPreview>
 
 ```tsx
 <Card className='relative overflow-hidden'>
