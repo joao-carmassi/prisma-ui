@@ -34,7 +34,7 @@ export default function Home(): React.ReactNode {
             </Button>
           </Link>
           <a href={getGithubUrl()} target='_blank' rel='noopener noreferrer'>
-            <Button variant='outline' size='lg'>
+            <Button effect={'shineHover'} variant='outline' size='lg'>
               GitHub
             </Button>
           </a>
