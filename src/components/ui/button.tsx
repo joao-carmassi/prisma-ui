@@ -118,7 +118,7 @@ function Button({
       data-size={size}
       className={cn(
         buttonVariants({ variant, effect, size, className }),
-        loading && effect === 'expandIcon' && 'gap-2',
+        effect === 'expandIcon' && (loading ? 'gap-2' : 'gap-0'),
       )}
       disabled={loading || props.disabled}
       {...props}
@@ -127,7 +127,7 @@ function Button({
         Icon &&
         iconPlacement === 'left' &&
         (effect === 'expandIcon' ? (
-          <div className='w-0 overflow-hidden translate-x-[0%] pr-0 opacity-0 transition-all duration-200 group-hover:w-5 group-hover:translate-x-0 group-hover:pr-2 group-hover:opacity-100'>
+          <div className='w-0 overflow-hidden translate-x-[0%] pr-0 opacity-0 transition-all duration-200 group-hover:w-6 group-hover:translate-x-0 group-hover:pr-2 group-hover:opacity-100'>
             <Icon />
           </div>
         ) : (
@@ -141,7 +141,7 @@ function Button({
         Icon &&
         iconPlacement === 'right' &&
         (effect === 'expandIcon' ? (
-          <div className='w-0 overflow-hidden translate-x-full pl-0 opacity-0 transition-all duration-200 group-hover:w-5 group-hover:translate-x-0 group-hover:pl-2 group-hover:opacity-100'>
+          <div className='w-0 overflow-hidden translate-x-full pl-0 opacity-0 transition-all duration-200 group-hover:w-5 group-hover:translate-x-0 group-hover:pl-1.5 group-hover:opacity-100'>
             <Icon />
           </div>
         ) : (
