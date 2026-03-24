@@ -1,5 +1,11 @@
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
+import { Card, CardContent } from '@/components/ui/card';
+import {
+  RainbowBorder,
+  rainbowCardClassesDark,
+} from '@/components/ui/rainbow-border';
+import { ShineBorder } from '@/components/ui/shine-border';
 import Shader from '@/components/shader';
 import { JsonLd } from '@/components/seo/json-ld';
 import Link from 'next/link';
@@ -14,6 +20,7 @@ import {
   Palette,
   Zap,
 } from 'lucide-react';
+import { cn } from '@/lib/utils';
 import { getGithubUrl, getSiteUrl } from '@/lib/env';
 import type { SoftwareApplication, WithContext } from 'schema-dts';
 
@@ -220,22 +227,48 @@ export default function Home(): React.ReactNode {
           </div>
 
           <div className='grid gap-6 sm:grid-cols-3'>
-            {features.map(({ icon: Icon, title, description }) => (
-              <div
-                key={title}
-                className='group rounded-2xl border border-border/60 bg-card p-7 transition-all hover:border-violet-500/40 hover:shadow-[0_0_30px_-5px] hover:shadow-violet-500/10'
-              >
-                <div className='mb-4 inline-flex rounded-xl border border-violet-500/20 bg-violet-500/10 p-3'>
-                  <Icon className='size-5 text-violet-400' strokeWidth={1.5} />
-                </div>
-                <h3 className='font-display mb-2 text-lg font-semibold'>
-                  {title}
-                </h3>
-                <p className='text-sm leading-relaxed text-muted-foreground'>
-                  {description}
-                </p>
-              </div>
-            ))}
+            {features.map(({ icon: Icon, title, description }, i) =>
+              i === 1 ? (
+                <Card
+                  key={title}
+                  className={cn('relative p-7 gap-0', rainbowCardClassesDark)}
+                >
+                  <RainbowBorder />
+                  <CardContent className='p-0'>
+                    <div className='mb-4 inline-flex rounded-xl border border-violet-500/20 bg-violet-500/10 p-3'>
+                      <Icon
+                        className='size-5 text-violet-400'
+                        strokeWidth={1.5}
+                      />
+                    </div>
+                    <h3 className='font-display text-foreground mb-2 text-lg font-semibold'>
+                      {title}
+                    </h3>
+                    <p className='text-sm leading-relaxed text-muted-foreground'>
+                      {description}
+                    </p>
+                  </CardContent>
+                </Card>
+              ) : (
+                <Card key={title} className='relative p-7 gap-0'>
+                  <ShineBorder shineColor={['#a855f7', '#818cf8', '#22d3ee']} />
+                  <CardContent className='p-0'>
+                    <div className='mb-4 inline-flex rounded-xl border border-violet-500/20 bg-violet-500/10 p-3'>
+                      <Icon
+                        className='size-5 text-violet-400'
+                        strokeWidth={1.5}
+                      />
+                    </div>
+                    <h3 className='font-display mb-2 text-lg font-semibold'>
+                      {title}
+                    </h3>
+                    <p className='text-sm leading-relaxed text-muted-foreground'>
+                      {description}
+                    </p>
+                  </CardContent>
+                </Card>
+              ),
+            )}
           </div>
         </div>
       </section>
