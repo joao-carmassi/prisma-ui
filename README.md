@@ -1,33 +1,106 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+<div align="center">
 
-## Getting Started
+<svg width="64" height="64" viewBox="-27 0 310 310" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid">
+  <path d="M254.312882,235.518775 L148.000961,9.74987264 C145.309805,4.08935083 139.731924,0.359884549 133.472618,0.0359753113 C127.198908,-0.384374336 121.212054,2.71925839 117.939655,8.08838662 L2.63252565,194.847143 C-0.947129465,200.604248 -0.871814894,207.912774 2.8257217,213.594888 L59.2003287,300.896318 C63.5805009,307.626626 71.8662281,310.673635 79.5631922,308.384597 L243.161606,259.992851 C248.145475,258.535702 252.252801,254.989363 254.421072,250.271225 C256.559881,245.57581 256.523135,240.176915 254.32061,235.511047 L254.312882,235.518775 Z M230.511129,245.201761 L91.6881763,286.252058 C87.4533189,287.511696 83.388474,283.840971 84.269448,279.567474 L133.866738,42.0831633 C134.794079,37.6396542 140.929985,36.9364206 142.869673,41.0476325 L234.684164,236.021085 C235.505704,237.779423 235.515611,239.809427 234.711272,241.575701 C233.906934,243.341974 232.369115,244.667163 230.503401,245.201761 L230.511129,245.201761 Z" fill="#7c3aed"/>
+</svg>
 
-First, run the development server:
+# Prisma UI
+
+**An advanced React component library built on Radix UI and Tailwind CSS.**
+
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-prisma--ui--xi.vercel.app-7c3aed?style=flat-square)](https://prisma-ui-xi.vercel.app/)
+[![License](https://img.shields.io/badge/license-MIT-7c3aed?style=flat-square)](LICENSE)
+[![Next.js](https://img.shields.io/badge/Next.js-16-black?style=flat-square&logo=next.js)](https://nextjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?style=flat-square&logo=typescript)](https://www.typescriptlang.org/)
+
+</div>
+
+---
+
+## What is Prisma UI?
+
+Prisma UI is a production-ready component library that ships accessible, animated, and fully typed React components. Every component is individually installable via the **shadcn CLI**, meaning you copy only what you need directly into your project — no runtime dependency, just your code.
+
+- **Accessible by default** — Built on [Radix UI](https://www.radix-ui.com/) primitives with keyboard navigation, ARIA attributes, and focus management included.
+- **Rich visual effects** — Shimmer, rainbow, pulsating, border-beam, confetti, and more — expressive animations with zero extra configuration.
+- **Fully typed API** — Every prop, variant, and effect is typed with TypeScript for better autocomplete and fewer bugs.
+
+---
+
+## Components
+
+| Component | Description |
+|---|---|
+| **Button** | Multiple variants, sizes, loading state, and animated effects (pulsating, rainbow, shine, ringHover). |
+| **Badge** | Compact status labels with size and variant support. |
+| **Card** | Flexible card primitive with header, content, and footer slots. |
+| **Border Beam** | Animated glowing-beam border effect card. |
+| **Shine Border** | Sweeping shine animation around a card border. |
+| **Rainbow Border** | Cycling rainbow gradient border. |
+| **Flip Card** | 3D flip animation with configurable front and back faces. |
+| **Confetti Wrapper** | Triggers a canvas-confetti burst on any action. |
+
+---
+
+## Installation
+
+Components require **shadcn/ui** to be initialized in your project:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npx shadcn@latest init
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Then add any component individually with:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npx shadcn@latest add https://prisma-ui-xi.vercel.app/components/<component-name>.json
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Example — adding the Button:
 
-## Learn More
+```bash
+npx shadcn@latest add https://prisma-ui-xi.vercel.app/components/button.json
+```
 
-To learn more about Next.js, take a look at the following resources:
+The CLI automatically downloads the source file into your `components/ui/` directory and installs any required dependencies.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Tech Stack
+
+| Tool | Role |
+|---|---|
+| [Next.js 16](https://nextjs.org/) | Framework |
+| [React 19](https://react.dev/) | UI library |
+| [Radix UI](https://www.radix-ui.com/) | Accessible primitives |
+| [Tailwind CSS v4](https://tailwindcss.com/) | Utility-first styling |
+| [shadcn/ui](https://ui.shadcn.com/) | Component distribution via CLI |
+| [Motion](https://motion.dev/) | Animations |
+| [TypeScript 5](https://www.typescriptlang.org/) | Type safety |
+| [Nextra](https://nextra.site/) | Documentation |
+
+---
+
+## Development
+
+```bash
+# Install dependencies
+npm install
+
+# Start dev server
+npm run dev
+
+# Build for production
+npm run build
+```
+
+---
+
+## Links
+
+- **Documentation & Demo:** [prisma-ui-xi.vercel.app](https://prisma-ui-xi.vercel.app/)
+- **Docs — Installation:** [prisma-ui-xi.vercel.app/docs](https://prisma-ui-xi.vercel.app/docs)
+- **Components reference:** [prisma-ui-xi.vercel.app/docs/references](https://prisma-ui-xi.vercel.app/docs/references)
 
 ## Deploy on Vercel
 
