@@ -64,7 +64,7 @@ export function ShineBorder({
         } as React.CSSProperties
       }
       className={cn(
-        'card-shine pointer-events-none absolute inset-0 size-full rounded-[inherit] will-change-[background-position]',
+        'card-shine-effect pointer-events-none absolute inset-0 size-full rounded-[inherit] will-change-[background-position]',
         className,
       )}
       {...props}

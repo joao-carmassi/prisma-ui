@@ -1,48 +1,36 @@
 [data-variant='default'] {
-  --button-pulse-color: var(--primary);
+  --pulse-color: var(--primary);
 }
 [data-variant='destructive'] {
-  --button-pulse-color: var(--destructive);
+  --pulse-color: var(--destructive);
 }
 [data-variant='secondary'] {
-  --button-pulse-color: var(--secondary-foreground);
+  --pulse-color: var(--secondary-foreground);
 }
 [data-variant='outline'] {
-  --button-pulse-color: var(--ring);
+  --pulse-color: var(--ring);
 }
 [data-variant='ghost'] {
-  --button-pulse-color: var(--ring);
+  --pulse-color: var(--ring);
 }
 
-.before\:animate-shine::before {
-  animation: shine 3s ease-out infinite;
+.before\:animate-shine-effect::before {
+  animation: shine-effect 3s ease-out infinite;
 }
 
-.animate-rainbow {
-  animation: rainbow 3s linear infinite;
+.animate-rainbow-effect {
+  animation: rainbow-effect 3s linear infinite;
 }
 
-.animate-button-pulsating {
-  animation: button-pulsating 1.5s ease-out infinite;
+.animate-pulsating-effect {
+  animation: pulsating-effect 1.5s ease-out infinite;
 }
 
-.card-shine {
-  animation: card-shine var(--duration) infinite linear;
+.card-shine-effect {
+  animation: card-shine-effect var(--duration) infinite linear;
 }
 
-@keyframes card-shine {
-  0% {
-    background-position: 0% 0%;
-  }
-  50% {
-    background-position: 100% 100%;
-  }
-  to {
-    background-position: 0% 0%;
-  }
-}
-
-@keyframes shine {
+@keyframes shine-effect {
   0% {
     background-position: 200% 0;
   }
@@ -54,7 +42,7 @@
   }
 }
 
-@keyframes rainbow {
+@keyframes rainbow-effect {
   0% {
     background-position: 0%;
   }
@@ -63,9 +51,9 @@
   }
 }
 
-@keyframes button-pulsating {
+@keyframes pulsating-effect {
   0% {
-    box-shadow: 0 0 0 0 var(--button-pulse-color, currentColor);
+    box-shadow: 0 0 0 0 var(--pulse-color, currentColor);
   }
   70% {
     box-shadow: 0 0 0 8px transparent;
@@ -75,39 +63,14 @@
   }
 }
 
-@keyframes pulse {
-  0%,
-  100% {
-    box-shadow: 0 0 0 0 var(--pulse-color);
+@keyframes card-shine-effect {
+  0% {
+    background-position: 0% 0%;
   }
   50% {
-    box-shadow: 0 0 0 8px var(--pulse-color);
-  }
-}
-
-@keyframes border-beam {
-  0% {
-    offset-distance: 0%;
-  }
-  100% {
-    offset-distance: 100%;
-  }
-}
-
-@keyframes shine-pulse {
-  0% {
-    background-position:
-      0% 0%,
-      0 0;
-  }
-  50% {
-    background-position:
-      100% 100%,
-      0 0;
+    background-position: 100% 100%;
   }
   to {
-    background-position:
-      0% 0%,
-      0 0;
+    background-position: 0% 0%;
   }
 }
