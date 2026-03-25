@@ -32,7 +32,7 @@ const geistMono = Geist_Mono({
   subsets: ['latin'],
 });
 
-const siteUrl = getSiteUrl() || 'https://prisma-ui-xi.vercel.app';
+const siteUrl = getSiteUrl() || 'https://prismaui.com';
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),

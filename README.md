@@ -8,7 +8,7 @@
 
 **An advanced React component library built on Radix UI and Tailwind CSS.**
 
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-prisma--ui--xi.vercel.app-7c3aed?style=flat-square)](https://prisma-ui-xi.vercel.app/)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-prisma--ui--xi.vercel.app-7c3aed?style=flat-square)](https://prismaui.com/)
 [![License](https://img.shields.io/badge/license-MIT-7c3aed?style=flat-square)](LICENSE)
 [![Next.js](https://img.shields.io/badge/Next.js-16-black?style=flat-square&logo=next.js)](https://nextjs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?style=flat-square&logo=typescript)](https://www.typescriptlang.org/)
@@ -53,13 +53,13 @@ npx shadcn@latest init
 Then add any component individually with:
 
 ```bash
-npx shadcn@latest add https://prisma-ui-xi.vercel.app/components/<component-name>.json
+npx shadcn@latest add https://prismaui.com/components/<component-name>.json
 ```
 
 Example — adding the Button:
 
 ```bash
-npx shadcn@latest add https://prisma-ui-xi.vercel.app/components/button.json
+npx shadcn@latest add https://prismaui.com/components/button.json
 ```
 
 The CLI automatically downloads the source file into your `components/ui/` directory and installs any required dependencies.
@@ -98,9 +98,9 @@ npm run build
 
 ## Links
 
-- **Documentation & Demo:** [prisma-ui-xi.vercel.app](https://prisma-ui-xi.vercel.app/)
-- **Docs — Installation:** [prisma-ui-xi.vercel.app/docs](https://prisma-ui-xi.vercel.app/docs)
-- **Components reference:** [prisma-ui-xi.vercel.app/docs/references](https://prisma-ui-xi.vercel.app/docs/references)
+- **Documentation & Demo:** [prisma-ui-xi.vercel.app](https://prismaui.com/)
+- **Docs — Installation:** [prisma-ui-xi.vercel.app/docs](https://prismaui.com/docs)
+- **Components reference:** [prisma-ui-xi.vercel.app/docs/references](https://prismaui.com/docs/references)
 
 ## Deploy on Vercel
 
