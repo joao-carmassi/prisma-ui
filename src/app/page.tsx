@@ -66,9 +66,7 @@ const components = [
     label: 'Variants',
     preview: (
       <div className='flex flex-wrap items-center gap-4 justify-center'>
-        <Button size='sm' effect='ringHover'>
-          Default
-        </Button>
+        <Button size='sm'>Default</Button>
         <Button size='sm' variant='outline'>
           Outline
         </Button>
@@ -304,7 +302,7 @@ export default function Home(): React.ReactNode {
           </div>
 
           <div className='mt-8 text-center'>
-            <Link href='/docs/components'>
+            <Link href='/docs'>
               <Button variant='outline' effect='hoverUnderline'>
                 View all components
                 <ArrowRight />

@@ -140,7 +140,16 @@ export default async function RootLayout({ children }: RootLayoutProps) {
         geistMono.variable,
       )}
     >
-      <Head>
+      <Head
+        color={{
+          hue: 262,
+          saturation: 83,
+          lightness: {
+            light: 40,
+            dark: 60,
+          },
+        }}
+      >
         <JsonLd data={websiteSchema} />
         <JsonLd data={orgSchema} />
       </Head>
