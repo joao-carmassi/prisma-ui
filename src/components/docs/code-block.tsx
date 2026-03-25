@@ -27,7 +27,10 @@ function CodeBlockInner({
 
   return (
     <div ref={wrapperRef} className='relative group/codeblock'>
-      <Pre className={cn(props.className, 'rounded-xl! mt-4')} {...props}>
+      <Pre
+        className={cn(props.className, 'rounded-xl! mt-4 shadow')}
+        {...props}
+      >
         {children}
       </Pre>
       <Tooltip>
@@ -36,7 +39,7 @@ function CodeBlockInner({
             onClick={handleCopy}
             aria-label='Copy code'
             className={cn(
-              'absolute top-3 right-3',
+              'absolute top-2 right-13 md:top-3 md:right-3',
               'size-7 rounded-full',
               'flex items-center justify-center',
               'bg-background/80 backdrop-blur-sm',

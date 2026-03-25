@@ -50,7 +50,7 @@ function MdxTd({ children }: TableSectionProps): React.ReactNode {
 
 function MdxTable({ children }: MdxTableProps): React.ReactNode {
   return (
-    <Card className='not-prose my-6 p-0 overflow-hidden'>
+    <Card className='not-prose my-6 p-0 overflow-hidden shadow-md'>
       <CardContent className='p-0'>
         <Table>{children}</Table>
       </CardContent>

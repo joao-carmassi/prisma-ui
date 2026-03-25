@@ -1,9 +1,10 @@
 import { JsonLd } from '@/components/seo/json-ld';
+import { InstallSnippet } from '@/components/docs/install-snippet';
 
 export const metadata = {
-  title: 'Welcome to Prisma UI',
+  title: 'Installation — Prisma UI',
   description:
-    'An advanced React component library built on Radix UI and Tailwind CSS. Accessible variants, animated effects, and fully typed APIs.',
+    'Install Prisma UI components via the shadcn CLI. An advanced React component library built on Radix UI and Tailwind CSS.',
   alternates: { canonical: '/docs' },
 };
 
@@ -11,9 +12,9 @@ export const metadata = {
   data={{
     '@context': 'https://schema.org',
     '@type': 'WebPage',
-    name: 'Prisma UI Documentation',
+    name: 'Prisma UI — Installation',
     description:
-      'An advanced React component library built on Radix UI and Tailwind CSS.',
+      'Install Prisma UI components via the shadcn CLI. Built on Radix UI and Tailwind CSS.',
     breadcrumb: {
       '@type': 'BreadcrumbList',
       itemListElement: [
@@ -34,6 +35,68 @@ export const metadata = {
   }}
 />
 
-# Welcome to Prisma UI
+# Installation
 
-A React component library with advanced variants, visual effects, and accessibility.
+Prisma UI components are installed individually via the [shadcn CLI](https://ui.shadcn.com/docs/cli). Each component is a self-contained registry JSON — the CLI handles downloading, placing files, and installing dependencies automatically.
+
+## Prerequisites
+
+Your project needs **shadcn/ui** initialized. If you have not done so yet:
+
+```bash
+npx shadcn@latest init
+```
+
+## Adding a component
+
+Pick any component and run the install command from its docs page. For example, to add the **Button**:
+
+<InstallSnippet registryUrl='https://prisma-ui-xi.vercel.app/components/button.json' />
+
+The CLI will:
+
+1. Download the component source files into your `components/ui` directory.
+2. Install any npm dependencies (e.g. `class-variance-authority`).
+3. Resolve registry dependencies (e.g. card components required by card effects).
+
+---
+
+## Shared styles
+
+Several components (Button, Badge, Flip Card, Rainbow Border, Shine Border) rely on a shared `style.css` file that ships alongside them. It defines keyframe animations and `[data-variant]` CSS custom properties used by effects like **shine**, **pulsating**, and **rainbow**.
+
+The CLI installs this file automatically at `components/ui/style.css`.
+
+---
+
+## Custom variant colors
+
+Prisma UI uses `data-variant` attributes to drive per-variant animation colors. The default `style.css` maps each variant to a CSS custom property:
+
+```css
+[data-variant='default'] {
+  --pulse-color: var(--primary);
+}
+[data-variant='destructive'] {
+  --pulse-color: var(--destructive);
+}
+[data-variant='secondary'] {
+  --pulse-color: var(--secondary-foreground);
+}
+[data-variant='outline'] {
+  --pulse-color: var(--ring);
+}
+[data-variant='ghost'] {
+  --pulse-color: var(--ring);
+}
+```
+
+You can extend this pattern for your own custom variants by adding a new `[data-variant='...']` selector in the same file:
+
+```css
+[data-variant='success'] {
+  --pulse-color: var(--success);
+}
+```
+
+Then use it with any component that supports the `variant` prop and effects.
