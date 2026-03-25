@@ -78,7 +78,7 @@ import {
 ## Preview
 
 <ComponentPreview className='gap-6 items-start'>
-  <Card className='relative w-[340px] overflow-hidden'>
+  <Card className='relative w-85 overflow-hidden'>
     <BorderBeam />
     <CardHeader>
       <CardTitle>Border Beam</CardTitle>
@@ -102,7 +102,7 @@ import {
 </ComponentPreview>
 
 ```tsx
-<Card className='relative w-[340px] overflow-hidden'>
+<Card className='relative w-85 overflow-hidden'>
   <BorderBeam />
   <CardHeader>
     <CardTitle>Border Beam</CardTitle>
@@ -126,7 +126,7 @@ import {
 ## Custom Colors
 
 <ComponentPreview className='gap-6 items-start'>
-  <Card className='relative w-[340px] overflow-hidden'>
+  <Card className='relative w-85 overflow-hidden'>
     <BorderBeam colorFrom='#00c6ff' colorTo='#0072ff' duration={4} />
     <CardHeader>
       <CardTitle>Custom Colors</CardTitle>
@@ -138,7 +138,7 @@ import {
       </p>
     </CardContent>
   </Card>
-  <Card className='relative w-[340px] overflow-hidden'>
+  <Card className='relative w-85 overflow-hidden'>
     <BorderBeam colorFrom='#f7971e' colorTo='#ffd200' reverse />
     <CardHeader>
       <CardTitle>Reversed Beam</CardTitle>
@@ -173,7 +173,7 @@ import {
 Stack two `<BorderBeam />` instances with opposite directions and a delay offset for a more dynamic effect.
 
 <ComponentPreview className='gap-6 items-start'>
-  <Card className='relative w-[340px] overflow-hidden'>
+  <Card className='relative w-85 overflow-hidden'>
     <BorderBeam duration={6} />
     <BorderBeam duration={6} delay={3} reverse />
     <CardHeader>
