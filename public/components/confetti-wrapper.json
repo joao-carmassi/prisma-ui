@@ -1,18 +1,1 @@
-{
-  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
-  "name": "confetti-wrapper",
-  "type": "registry:ui",
-  "description": "A Prisma UI component. https://github.com/joao-carmassi/prisma-ui",
-  "author": "Prisma UI",
-  "dependencies": [
-    "canvas-confetti"
-  ],
-  "files": [
-    {
-      "path": "ui/confetti-wrapper.tsx",
-      "content": "'use client';\n\nimport { useCallback } from 'react';\nimport type { ReactNode } from 'react';\nimport { Slot } from 'radix-ui';\nimport confetti from 'canvas-confetti';\n\n/*\n * @author: @joao-carmassi\n * @description: A wrapper component that adds confetti animation to its children when clicked. The confetti launches from the center of the clicked element.\n * @version: 1.0.0\n * @date: 2026-24-03\n * @license: MIT\n * @reference: https://magicui.design/docs/components/confetti\n */\n\ninterface ConfettiWrapperProps {\n  /** Angle (in degrees) at which confetti launches. 90 = straight up. */\n  angle?: number;\n  /** Number of confetti particles to fire. */\n  count?: number;\n  children: ReactNode;\n}\n\nexport const ConfettiWrapper = ({\n  angle = 90,\n  count = 80,\n  children,\n}: ConfettiWrapperProps): React.ReactNode => {\n  const handleClick = useCallback(\n    async (event: React.MouseEvent<HTMLElement>) => {\n      const rect = event.currentTarget.getBoundingClientRect();\n      const x = rect.left + rect.width / 2;\n      const y = rect.top + rect.height / 2;\n\n      await confetti({\n        particleCount: count,\n        angle,\n        spread: 60,\n        origin: {\n          x: x / window.innerWidth,\n          y: y / window.innerHeight,\n        },\n      });\n    },\n    [angle, count],\n  );\n\n  return <Slot.Root onClick={handleClick}>{children}</Slot.Root>;\n};\n",
-      "type": "registry:ui",
-      "target": "components/ui/confetti-wrapper.tsx"
-    }
-  ]
-}
+{"$schema":"https://ui.shadcn.com/schema/registry-item.json","name":"confetti-wrapper","type":"registry:ui","description":"A Prisma UI component. https://github.com/joao-carmassi/prisma-ui","author":"Prisma UI","dependencies":["canvas-confetti"],"devDependencies":["@types/canvas-confetti"],"files":[{"path":"ui/confetti-wrapper.tsx","content":"'use client';\n\nimport { useCallback } from 'react';\nimport type { ReactNode } from 'react';\nimport { Slot } from 'radix-ui';\nimport confetti from 'canvas-confetti';\n\n/*\n * @author: @joao-carmassi\n * @description: A wrapper component that adds confetti animation to its children when clicked. The confetti launches from the center of the clicked element.\n * @version: 1.0.0\n * @date: 2026-24-03\n * @license: MIT\n * @reference: https://magicui.design/docs/components/confetti\n */\n\ninterface ConfettiWrapperProps {\n  /** Angle (in degrees) at which confetti launches. 90 = straight up. */\n  angle?: number;\n  /** Number of confetti particles to fire. */\n  count?: number;\n  children: ReactNode;\n}\n\nexport const ConfettiWrapper = ({\n  angle = 90,\n  count = 80,\n  children,\n}: ConfettiWrapperProps): React.ReactNode => {\n  const handleClick = useCallback(\n    async (event: React.MouseEvent<HTMLElement>) => {\n      const rect = event.currentTarget.getBoundingClientRect();\n      const x = rect.left + rect.width / 2;\n      const y = rect.top + rect.height / 2;\n\n      await confetti({\n        particleCount: count,\n        angle,\n        spread: 60,\n        origin: {\n          x: x / window.innerWidth,\n          y: y / window.innerHeight,\n        },\n      });\n    },\n    [angle, count],\n  );\n\n  return <Slot.Root onClick={handleClick}>{children}</Slot.Root>;\n};\n","type":"registry:ui","target":"components/ui/confetti-wrapper.tsx"}]}
