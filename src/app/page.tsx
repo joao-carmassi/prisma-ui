@@ -159,6 +159,7 @@ export default function Home(): React.ReactNode {
             variant='outline'
             size='lg'
             className='border-violet-500/40 bg-violet-950/40 text-violet-300 backdrop-blur-sm'
+            effect={'shine'}
           >
             v1.0.0 — Available now
           </Badge>
@@ -170,7 +171,7 @@ export default function Home(): React.ReactNode {
             </span>
           </h1>
 
-          <p className='max-w-2xl text-base text-slate-400 sm:text-lg'>
+          <p className='max-w-2xl text-base text-slate-300 sm:text-lg text-shadow-lg'>
             Prisma UI is an advanced component library built on top of Radix UI
             and Tailwind CSS. Variants, visual effects, icons, and loading
             states&nbsp;— all ready to use.
@@ -189,7 +190,7 @@ export default function Home(): React.ReactNode {
             </Link>
             <a href={getGithubUrl()} target='_blank' rel='noopener noreferrer'>
               <Button
-                effect='shineHover'
+                effect='pulsating'
                 variant='outline'
                 size='lg'
                 className='border-white/20 bg-white/5 text-white backdrop-blur-sm hover:bg-white/10'
@@ -358,7 +359,7 @@ export default function Home(): React.ReactNode {
               </Button>
             </Link>
             <a href={getGithubUrl()} target='_blank' rel='noopener noreferrer'>
-              <Button variant='outline' size='lg' effect='shineHover'>
+              <Button variant='outline' size='lg' effect='pulsating'>
                 <Github />
                 Star on GitHub
               </Button>
