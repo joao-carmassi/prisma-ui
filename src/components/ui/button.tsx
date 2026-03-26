@@ -7,7 +7,7 @@ import { Spinner } from '@/components/ui/spinner';
 /*
  * @author: @joao-carmassi
  * @description: Enhanced button component with multiple variants, sizes, visual effects, icon support, and loading state
- * @version: 1.0.0
+ * @version: 2.1.0
  * @date: 2026-22-02
  * @license: MIT
  * @website: https://joao-carmassi.github.io/enhanced-button-v4/

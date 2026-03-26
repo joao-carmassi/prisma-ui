@@ -1,4 +1,5 @@
 import { FlipCard } from '@/components/ui/flip-card';
+import { FlipCardControlledDemo } from './_demo-controlled';
 import {
   Card,
   CardHeader,
@@ -54,7 +55,7 @@ export const metadata = {
 
 # Flip Card
 
-A hover-triggered 3D flip wrapper that accepts two shadcn `Card` components as its `front` and `back` faces and applies a smooth Y-axis rotation on hover, inspired by [Kokonut UI's Card Flip](https://kokonutui.com/docs/cards/card).
+A 3D flip wrapper that accepts two shadcn `Card` components as its `front` and `back` faces and applies a smooth Y-axis rotation. Works in **hover mode** (default) or **controlled mode** via the `isFlipped` prop, inspired by [Kokonut UI's Card Flip](https://kokonutui.com/docs/cards/card).
 
 ## Installation
 
@@ -203,18 +204,48 @@ import {
 
 ---
 
+## Controlled Mode
+
+Pass `isFlipped` to control the flip with external state. When provided, hover has no effect.
+
+<ComponentPreview className='gap-6 items-start'>
+  <FlipCardControlledDemo />
+</ComponentPreview>
+
+```tsx
+import { useState } from 'react';
+
+const [flipped, setFlipped] = useState(false);
+
+<div className='flex flex-col items-center gap-4'>
+  <FlipCard
+    className='h-70 w-75'
+    isFlipped={flipped}
+    front={<Card className='h-full'>...</Card>}
+    back={<Card className='h-full'>...</Card>}
+  />
+  <Button onClick={() => setFlipped((f) => !f)}>
+    {flipped ? 'Show Front' : 'Show Back'}
+  </Button>
+</div>;
+```
+
+---
+
 ## Usage Notes
 
 - The `FlipCard` container requires an explicit **height** (and optionally width) via `className` — e.g. `className="h-70 w-75"`.
 - Both `front` and `back` Cards should include `className="h-full"` to fill the container.
-- The flip is triggered on **hover** (`group-hover`). No JavaScript state is needed.
+- **Hover mode** (default): the flip is triggered on hover when `isFlipped` is not provided.
+- **Controlled mode**: pass `isFlipped` to drive the flip from external state; hover is disabled.
 
 ---
 
 ## Props
 
-| Prop        | Type              | Default | Description                                      |
-| ----------- | ----------------- | ------- | ------------------------------------------------ |
-| `front`     | `React.ReactNode` | —       | Content rendered on the front face               |
-| `back`      | `React.ReactNode` | —       | Content rendered on the back face                |
-| `className` | `string`          | —       | Applied to the outer container (set height here) |
+| Prop        | Type              | Default     | Description                                                           |
+| ----------- | ----------------- | ----------- | --------------------------------------------------------------------- |
+| `front`     | `React.ReactNode` | —           | Content rendered on the front face                                    |
+| `back`      | `React.ReactNode` | —           | Content rendered on the back face                                     |
+| `isFlipped` | `boolean`         | `undefined` | Controls flip state externally. When omitted, hover triggers the flip |
+| `className` | `string`          | —           | Applied to the outer container (set height here)                      |

@@ -7,7 +7,7 @@ import { cn } from '@/lib/utils';
 /*
  * @author: @joao-carmassi
  * @description: Enhanced badge component with multiple variants, sizes, and visual effects
- * @version: 1.0.0
+ * @version: 2.1.0
  * @date: 2026-08-03
  * @license: MIT
  * @website: https://joao-carmassi.github.io/enhanced-button-v4/
