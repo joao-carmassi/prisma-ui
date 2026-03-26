@@ -11,6 +11,7 @@ import 'nextra-theme-docs/style.css';
 import { JsonLd } from '@/components/seo/json-ld';
 import Logo from '@/components/logo';
 import type { Organization, WebSite, WithContext } from 'schema-dts';
+import ManagerProvider from '@/store/store-managers';
 
 interface RootLayoutProps {
   children: React.ReactNode;
@@ -154,17 +155,19 @@ export default async function RootLayout({ children }: RootLayoutProps) {
         <JsonLd data={orgSchema} />
       </Head>
       <body className='antialiased'>
-        <TooltipProvider delayDuration={300}>
-          <Layout
-            banner={banner}
-            navbar={navbar}
-            pageMap={await getPageMap()}
-            docsRepositoryBase={getDocsRepositoryBase()}
-            footer={footer}
-          >
-            {children}
-          </Layout>
-        </TooltipProvider>
+        <ManagerProvider>
+          <TooltipProvider delayDuration={300}>
+            <Layout
+              banner={banner}
+              navbar={navbar}
+              pageMap={await getPageMap()}
+              docsRepositoryBase={getDocsRepositoryBase()}
+              footer={footer}
+            >
+              {children}
+            </Layout>
+          </TooltipProvider>
+        </ManagerProvider>
       </body>
     </html>
   );

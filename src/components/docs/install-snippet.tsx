@@ -1,6 +1,5 @@
 'use client';
 
-import { useState } from 'react';
 import {
   Snippet,
   SnippetCopyButton,
@@ -9,6 +8,7 @@ import {
   SnippetTabsList,
   SnippetTabsTrigger,
 } from '@/components/kibo-ui/snippet';
+import { useManager, useSetManager } from '@/store/store-managers';
 
 const managers = [
   { label: 'npm', value: 'npm', command: 'npx shadcn@latest add' },
@@ -24,12 +24,13 @@ interface InstallSnippetProps {
 export function InstallSnippet({
   registryUrl,
 }: InstallSnippetProps): React.ReactNode {
-  const [active, setActive] = useState('npm');
+  const active = useManager();
+  const setManager = useSetManager();
   const activeCommand =
     managers.find((m) => m.value === active)?.command ?? managers[0].command;
 
   return (
-    <Snippet defaultValue='npm' onValueChange={setActive}>
+    <Snippet value={active} onValueChange={setManager}>
       <SnippetHeader>
         <SnippetTabsList>
           {managers.map((m) => (
