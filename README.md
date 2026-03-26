@@ -33,12 +33,11 @@ Prisma UI is a production-ready component library that ships accessible, animate
 |---|---|
 | **Button** | Multiple variants, sizes, loading state, and animated effects (pulsating, rainbow, shine, ringHover). |
 | **Badge** | Compact status labels with size and variant support. |
-| **Card** | Flexible card primitive with header, content, and footer slots. |
+| **Confetti Wrapper** | Triggers a canvas-confetti burst on any action. |
+| **Rainbow Border** | Cycling rainbow gradient border. |
 | **Border Beam** | Animated glowing-beam border effect card. |
 | **Shine Border** | Sweeping shine animation around a card border. |
-| **Rainbow Border** | Cycling rainbow gradient border. |
 | **Flip Card** | 3D flip animation with configurable front and back faces. |
-| **Confetti Wrapper** | Triggers a canvas-confetti burst on any action. |
 
 ---
 

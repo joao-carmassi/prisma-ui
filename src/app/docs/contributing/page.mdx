@@ -1,0 +1,180 @@
+import { JsonLd } from '@/components/seo/json-ld';
+
+export const metadata = {
+  title: 'Contributing a Component — Prisma UI',
+  description:
+    'Step-by-step guide for adding a new component to Prisma UI — from implementation to documentation, registry, and versioning.',
+  alternates: { canonical: '/docs/contributing' },
+};
+
+<JsonLd
+  data={{
+    '@context': 'https://schema.org',
+    '@type': 'TechArticle',
+    headline: 'Contributing a Component — Prisma UI',
+    description: 'Step-by-step guide for adding a new component to Prisma UI.',
+    breadcrumb: {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: 'Home',
+          item: 'https://prismaui.com',
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: 'Docs',
+          item: 'https://prismaui.com/docs',
+        },
+        {
+          '@type': 'ListItem',
+          position: 3,
+          name: 'Contributing',
+          item: 'https://prismaui.com/docs/contributing',
+        },
+      ],
+    },
+  }}
+/>
+
+# Contributing a Component
+
+This guide walks through the full process of adding a new component to Prisma UI, from writing the component file to publishing its documentation and registry entry. It also covers what to do when you are only updating an existing component.
+
+> **Using AI?** There is a skill in `.agents/skills/add-component/` that guides an AI agent through this entire workflow automatically. Load it with any agent that supports skills.
+
+---
+
+## Adding a new component
+
+Follow these steps in order. Each step builds on the previous one.
+
+### 1. Create the component file
+
+Add the component source at:
+
+```
+src/components/ui/<component-name>.tsx
+```
+
+Follow the same patterns as existing components — use `class-variance-authority` for variants, forward refs where appropriate, and keep all animation-related CSS custom properties in `style.css` rather than inline.
+
+If the component requires shared animation keyframes or `[data-variant]` CSS properties, you do **not** need to modify `style.css` yourself — it is already included as a registry dependency for components that need it.
+
+### 2. Create the documentation page
+
+Create a new directory and page at:
+
+```
+src/app/docs/components/<component-name>/page.mdx
+```
+
+Use any existing component page as a reference template. Every documentation page must include:
+
+- A `metadata` export with `title`, `description`, and `alternates.canonical`
+- A `<JsonLd />` block with breadcrumb structured data pointing to the correct URL
+- An `## Installation` section with an `<InstallSnippet registryUrl="https://prismaui.com/components/<component-name>.json" />` block — see step 4 for when this becomes valid
+- An `## Import` section
+- Sections for each prop, variant, and size with `<ComponentPreview>` blocks and code snippets
+
+### 3. Register the component in the docs sidebar
+
+Open `src/app/docs/components/_meta.ts` and add an entry for the new component:
+
+```ts
+'<component-name>': {
+  title: '<Display Name>',
+},
+```
+
+Place it under the appropriate separator (`-- general` or `-- cards`), or add a new separator if the component belongs to a new category.
+
+### 4. Add the registry entry
+
+Use the **Component Generator** at `/component-generator` to fill in the component details and generate its registry JSON. This is the standard and official method for creating registry entries.
+
+Download the generated JSON and place it at:
+
+```
+public/components/<component-name>.json
+```
+
+The `<InstallSnippet>` on the documentation page will become valid once this file is in place, since it is served directly from `/public/components/`.
+
+### 5. Add the install snippet to the documentation
+
+If the `<InstallSnippet>` block is not already present in the documentation page, add it to the `## Installation` section:
+
+```mdx
+<InstallSnippet registryUrl='https://prismaui.com/components/<component-name>.json' />
+```
+
+This is typically added in step 2, but verify it is present and points to the correct URL after the registry JSON is generated.
+
+### 6. Add the component to the README
+
+Open `README.md` and add a row to the **Components** table:
+
+```md
+| **<Display Name>** | <One-line description of what the component does.> |
+```
+
+Keep the description concise — one sentence, no trailing period is fine.
+
+### 7. Bump the package version
+
+Open `package.json` and increment the `version` field with a **minor** bump to record that a new component was added:
+
+```json
+{
+  "version": "1.1.0"
+}
+```
+
+A minor bump signals a backward-compatible addition to the library.
+
+---
+
+## Updating an existing component
+
+When you are only changing an existing component — fixing a bug, adding a variant, adjusting styles — the scope is smaller:
+
+1. **Edit the component file** at `src/components/ui/<component-name>.tsx`.
+2. **Update the documentation** if any props, variants, or behavior changed.
+3. **Regenerate the registry entry** using the **Component Generator** at `/component-generator` and replace the file at `public/components/<component-name>.json`.
+
+### Component versioning
+
+When updating a component, bump the version field inside the component's registry JSON (not the root `package.json`) according to the nature of the change:
+
+| Change type                        | Bump      | Example         |
+| ---------------------------------- | --------- | --------------- |
+| New feature, new variant, new prop | **minor** | `1.0.0 → 1.1.0` |
+| Bug fix, style correction          | **patch** | `1.0.0 → 1.0.1` |
+
+**Do not** bump the root `package.json` version for a component update — that is reserved for new additions.
+
+---
+
+## Checklist
+
+Use this as a quick reference before opening a pull request.
+
+### New component
+
+- [ ] Component file created at `src/components/ui/<name>.tsx`
+- [ ] Documentation page created at `src/app/docs/components/<name>/page.mdx`
+- [ ] Entry added to `src/app/docs/components/_meta.ts`
+- [ ] Registry JSON generated via `/component-generator` and placed at `public/components/<name>.json`
+- [ ] `<InstallSnippet>` present in the documentation page
+- [ ] Component row added to `README.md`
+- [ ] `package.json` version bumped (minor)
+
+### Component update
+
+- [ ] Component file updated
+- [ ] Documentation updated if API changed
+- [ ] Registry JSON regenerated via `/component-generator` and replaced at `public/components/<name>.json`
+- [ ] Component version bumped in registry JSON (minor for new feature, patch for bug fix)

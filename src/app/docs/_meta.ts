@@ -6,6 +6,9 @@ export default {
   references: {
     title: 'References',
   },
+  contributing: {
+    title: 'Contributing',
+  },
   'component-generator': {
     title: 'Component Generator',
   },
