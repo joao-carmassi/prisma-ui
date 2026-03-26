@@ -2,7 +2,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const BASE_URL = 'https://prisma-ui-xi.vercel.app/components';
+let registryCounter = 0;
 const uiDir = path.join(__dirname, '..', 'src', 'components', 'ui');
 const outDir = path.join(__dirname, '..', 'public', 'components');
 
@@ -38,6 +38,7 @@ function writeRegistry(name, opts) {
 
   fs.writeFileSync(path.join(outDir, `${name}.json`), JSON.stringify(json));
   console.log(`  ✔ ${name}.json`);
+  registryCounter++;
 }
 
 fs.mkdirSync(outDir, { recursive: true });
@@ -49,9 +50,9 @@ const styleCss = read('style.css');
 // 1. Button
 writeRegistry('button', {
   dependencies: ['class-variance-authority', 'lucide-react'],
+  registryDependencies: ['spinner'],
   files: [
     makeFile('button.tsx', read('button.tsx')),
-    makeFile('spinner.tsx', read('spinner.tsx')),
     makeFile('style.css', styleCss),
   ],
 });
@@ -65,50 +66,47 @@ writeRegistry('badge', {
   ],
 });
 
-// 3. Card
-writeRegistry('card', {
-  files: [makeFile('card.tsx', read('card.tsx'))],
-});
-
-// 4. Confetti Wrapper
+// 3. Confetti Wrapper
 writeRegistry('confetti-wrapper', {
   dependencies: ['canvas-confetti'],
   devDependencies: ['@types/canvas-confetti'],
   files: [makeFile('confetti-wrapper.tsx', read('confetti-wrapper.tsx'))],
 });
 
-// 5. Flip Card
-writeRegistry('flip-card', {
-  registryDependencies: [`${BASE_URL}/card.json`],
-  files: [
-    makeFile('flip-card.tsx', read('flip-card.tsx')),
-    makeFile('style.css', styleCss),
-  ],
-});
-
-// 6. Rainbow Border
+// 4. Rainbow Border
 writeRegistry('rainbow-border', {
-  registryDependencies: [`${BASE_URL}/card.json`],
+  registryDependencies: ['card'],
   files: [
     makeFile('rainbow-border.tsx', read('rainbow-border.tsx')),
     makeFile('style.css', styleCss),
   ],
 });
 
-// 7. Shine Border
+// 5. Border Beam
+writeRegistry('border-beam', {
+  dependencies: ['motion'],
+  registryDependencies: ['card'],
+  files: [makeFile('border-beam.tsx', read('border-beam.tsx'))],
+});
+
+// 6. Shine Border
 writeRegistry('shine-border', {
-  registryDependencies: [`${BASE_URL}/card.json`],
+  registryDependencies: ['card'],
   files: [
     makeFile('shine-border.tsx', read('shine-border.tsx')),
     makeFile('style.css', styleCss),
   ],
 });
 
-// 8. Border Beam
-writeRegistry('border-beam', {
-  dependencies: ['motion'],
-  registryDependencies: [`${BASE_URL}/card.json`],
-  files: [makeFile('border-beam.tsx', read('border-beam.tsx'))],
+// 7. Flip Card
+writeRegistry('flip-card', {
+  registryDependencies: ['card'],
+  files: [
+    makeFile('flip-card.tsx', read('flip-card.tsx')),
+    makeFile('style.css', styleCss),
+  ],
 });
 
-console.log('\nAll 8 registry JSON files created successfully!\n');
+console.log(
+  `\nAll ${registryCounter} registry JSON files created successfully!\n`,
+);
