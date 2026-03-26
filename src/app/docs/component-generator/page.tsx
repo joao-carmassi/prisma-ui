@@ -326,7 +326,7 @@ export default function DashboardPage(): React.ReactNode {
             </div>
 
             {/* Title */}
-            <div className='space-y-2'>
+            {/* <div className='space-y-2'>
               <FieldLabel
                 htmlFor='title'
                 label='Title'
@@ -337,7 +337,7 @@ export default function DashboardPage(): React.ReactNode {
                 placeholder='My Component'
                 {...register('title')}
               />
-            </div>
+            </div> */}
 
             {/* Description */}
             <div className='space-y-2'>
