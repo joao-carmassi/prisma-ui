@@ -24,6 +24,7 @@ import { cn } from '@/lib/utils';
 import { getGithubUrl, getSiteUrl } from '@/lib/env';
 import type { SoftwareApplication, WithContext } from 'schema-dts';
 import { TracingBeam } from '@/components/ui/tracing-beam';
+import { Magnetic } from '@/components/ui/magnetic';
 
 const softwareAppSchema: WithContext<SoftwareApplication> = {
   '@context': 'https://schema.org',
@@ -179,27 +180,35 @@ export default function Home(): React.ReactNode {
           </p>
 
           <div className='flex flex-wrap justify-center gap-4 pt-2'>
-            <Link href='/docs'>
+            <Magnetic>
               <Button
+                asChild
                 size='lg'
                 effect='ringHover'
                 className='bg-violet-600 hover:bg-violet-500 ring-violet-500! text-white border-0'
               >
-                Get Started
-                <ArrowRight />
+                <Link href='/docs'>
+                  Get Started
+                  <ArrowRight />
+                </Link>
               </Button>
-            </Link>
-            <a href={getGithubUrl()} target='_blank' rel='noopener noreferrer'>
-              <Button
-                effect='pulsating'
-                variant='outline'
-                size='lg'
-                className='border-white/20 bg-white/5 text-white backdrop-blur-sm hover:bg-white/10'
+            </Magnetic>
+            <Button
+              asChild
+              effect='pulsating'
+              variant='outline'
+              size='lg'
+              className='border-white/20 bg-white/5 text-white backdrop-blur-sm hover:bg-white/10'
+            >
+              <a
+                href={getGithubUrl()}
+                target='_blank'
+                rel='noopener noreferrer'
               >
                 <Github />
                 GitHub
-              </Button>
-            </a>
+              </a>
+            </Button>
           </div>
         </div>
 
@@ -332,12 +341,12 @@ export default function Home(): React.ReactNode {
           </div>
 
           <div className='mt-8 text-center'>
-            <Link href='/docs'>
-              <Button variant='outline' effect='hoverUnderline'>
+            <Button asChild variant='outline' effect='hoverUnderline'>
+              <Link href='/docs'>
                 View all components
                 <ArrowRight />
-              </Button>
-            </Link>
+              </Link>
+            </Button>
           </div>
         </div>
       </section>
@@ -381,18 +390,22 @@ export default function Home(): React.ReactNode {
             project. No configuration required.
           </p>
           <div className='mt-8 flex flex-wrap justify-center gap-4'>
-            <Link href='/docs'>
-              <Button size='lg' effect='ringHover'>
+            <Button asChild size='lg' effect='ringHover'>
+              <Link href='/docs'>
                 Read the docs
                 <ArrowRight />
-              </Button>
-            </Link>
-            <a href={getGithubUrl()} target='_blank' rel='noopener noreferrer'>
-              <Button variant='outline' size='lg' effect='pulsating'>
+              </Link>
+            </Button>
+            <Button asChild variant='outline' size='lg' effect='pulsating'>
+              <a
+                href={getGithubUrl()}
+                target='_blank'
+                rel='noopener noreferrer'
+              >
                 <Github />
                 Star on GitHub
-              </Button>
-            </a>
+              </a>
+            </Button>
           </div>
         </div>
       </section>

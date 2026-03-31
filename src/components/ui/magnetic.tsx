@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { motion, useMotionValue, useSpring } from 'motion/react';
 import type { SpringOptions } from 'motion/react';
+import { cn } from '@/lib/utils';
 
 /*
  * @author: @joao-carmassi
@@ -23,6 +24,8 @@ const SPRING_CONFIG: SpringOptions = {
 interface MagneticProps {
   /** Content to apply magnetic effect to. */
   children: React.ReactNode;
+  /** Additional CSS classes. */
+  className?: string;
   /** Strength of the magnetic effect. */
   intensity?: number;
   /** Range in pixels within which the effect is applied. */
@@ -35,6 +38,7 @@ interface MagneticProps {
 
 export function Magnetic({
   children,
+  className,
   intensity = 0.6,
   range = 100,
   actionArea = 'self',
@@ -113,6 +117,7 @@ export function Magnetic({
   return (
     <motion.div
       ref={ref}
+      className={cn(className)}
       onMouseEnter={actionArea === 'self' ? handleMouseEnter : undefined}
       onMouseLeave={actionArea === 'self' ? handleMouseLeave : undefined}
       style={{

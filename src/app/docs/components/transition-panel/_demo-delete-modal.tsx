@@ -58,9 +58,6 @@ export function DeleteUserDemo(): React.ReactNode {
         <TransitionPanel activeIndex={activeIndex} custom={direction}>
           {[
             <div key='warning'>
-              <div className='mb-3 flex h-10 w-10 items-center justify-center rounded-full bg-destructive/10 text-destructive'>
-                ⚠
-              </div>
               <span className='text-sm text-muted-foreground'>
                 This action is <strong>permanent and irreversible</strong>. All
                 your data, including projects, settings, and history, will be

@@ -64,7 +64,7 @@ Wrap your page content with `TracingBeam` to add a scroll-tracking beam on the l
 <ComponentPreview>
   <div className='h-72 w-full overflow-y-auto rounded-lg border p-4'>
     <TracingBeam className='max-w-full'>
-      <article className='space-y-8 pl-8'>
+      <article className='flex flex-col gap-8 pl-8'>
         <div>
           <h3 className='mb-2 text-lg font-semibold'>{'Section One'}</h3>
           <span className='block text-sm text-muted-foreground'>
@@ -103,24 +103,22 @@ Wrap your page content with `TracingBeam` to add a scroll-tracking beam on the l
 </ComponentPreview>
 
 ```tsx
-import { TracingBeam } from '@/components/ui/tracing-beam';
-
-export default function Page() {
-  return (
-    <TracingBeam>
-      <article>
-        <h2>Section One</h2>
-        <p>Content goes here...</p>
-
-        <h2>Section Two</h2>
-        <p>More content...</p>
-
-        <h2>Section Three</h2>
-        <p>Even more content...</p>
-      </article>
-    </TracingBeam>
-  );
-}
+<TracingBeam>
+  <article className='flex flex-col gap-8'>
+    <div>
+      <h2>Section One</h2>
+      <p>Content goes here...</p>
+    </div>
+    <div>
+      <h2>Section Two</h2>
+      <p>More content...</p>
+    </div>
+    <div>
+      <h2>Section Three</h2>
+      <p>Even more content...</p>
+    </div>
+  </article>
+</TracingBeam>
 ```
 
 ---
