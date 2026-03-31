@@ -7,7 +7,7 @@ import { useState, useEffect, useRef, useCallback } from 'react';
 /*
  * @author: @joao-carmassi
  * @description: Infinite scrolling slider that smoothly loops children.
- *               Supports horizontal/vertical direction with customizable speed and hover speed.
+ * Supports horizontal/vertical direction with customizable speed and hover speed.
  * @version: 1.0.0
  * @date: 2026-31-03
  * @license: MIT

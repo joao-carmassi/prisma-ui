@@ -7,7 +7,7 @@ import { cn } from '@/lib/utils';
 /*
  * @author: @joao-carmassi
  * @description: Animated panel that transitions between content with enter/exit animations.
- *               Perfect for step-based card flows, onboarding, or any sequential content.
+ * Perfect for step-based card flows, onboarding, or any sequential content.
  * @version: 1.0.0
  * @date: 2026-31-03
  * @license: MIT

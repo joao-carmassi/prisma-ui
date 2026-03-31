@@ -5,7 +5,7 @@ import { cn } from '@/lib/utils';
 /*
  * @author: @joao-carmassi
  * @description: Backlight glow effect for images, videos, and SVGs.
- *               Uses an SVG filter to create a saturated blur glow behind the content.
+ * Uses an SVG filter to create a saturated blur glow behind the content.
  * @version: 1.0.0
  * @date: 2026-31-03
  * @license: MIT

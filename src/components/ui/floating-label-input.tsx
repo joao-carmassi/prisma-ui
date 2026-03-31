@@ -5,7 +5,7 @@ import { Label } from '@/components/ui/label';
 /*
  * @author: @joao-carmassi
  * @description: Floating label input — the label floats above the input when focused or filled.
- *               Uses a compound component pattern: FloatingLabel as root, .Input and .Label as children.
+ * Uses a compound component pattern: FloatingLabel as root, .Input and .Label as children.
  * @version: 2.0.0
  * @date: 2026-31-03
  * @license: MIT

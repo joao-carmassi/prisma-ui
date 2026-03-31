@@ -3,8 +3,8 @@ import './style.css';
 /*
  * @author: @joao-carmassi
  * @description: Animated rainbow gradient border effect — same animation as Button's rainbow effect.
- *               Drop <RainbowBorder /> inside any Card (with `relative` on the Card).
- *               The Card itself needs the rainbow background classes applied; use the `className` on Card.
+ * Drop <RainbowBorder /> inside any Card (with `relative` on the Card).
+ * The Card itself needs the rainbow background classes applied; use the `className` on Card.
  * @version: 1.1.0
  * @date: 2026-24-03
  * @license: MIT

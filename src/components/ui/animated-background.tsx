@@ -9,7 +9,7 @@ import type { ReactElement } from 'react';
 /*
  * @author: @joao-carmassi
  * @description: Highlights selected items by sliding a background into view on hover or click.
- *               Each child must have a unique `data-id` attribute. Ideal for tabs, menus, or card grids.
+ * Each child must have a unique `data-id` attribute. Ideal for tabs, menus, or card grids.
  * @version: 1.0.0
  * @date: 2026-31-03
  * @license: MIT

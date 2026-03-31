@@ -47,11 +47,41 @@ This guide walks through the full process of adding a new component to Prisma UI
 
 ---
 
+## Component conventions
+
+Follow these rules in every component:
+
+- **Class merging**: Always use `cn()` from `@/lib/utils` for conditional/merged class names
+- **Semantic colors**: Use design tokens (`bg-primary`, `text-muted-foreground`), never raw values like `bg-blue-500`
+- **Spacing**: Use `flex` with `gap-*`, never `space-x-*` or `space-y-*`
+- **Variants**: Use `class-variance-authority` (cva) when the component has multiple visual options
+- **Hooks**: Import directly — `import { useState } from 'react'`, never `React.useState`
+- **Return types**: Component functions always return `React.ReactNode`
+- **Client directive**: Add `"use client"` if the component uses hooks, event handlers, or browser APIs
+- **Animations**: Keep keyframe animations in `src/components/ui/style.css`, not inline or in separate CSS files
+- **Default animation props**: When a component accepts `transition` or `variants` props (Framer Motion), provide sensible defaults so it works out of the box — users can override them, but should never be forced to pass them
+
+---
+
 ## Adding a new component
 
 Follow these steps in order. Each step builds on the previous one.
 
-### 1. Create the component file
+### 1. Check shadcn availability
+
+Before writing any new UI component, verify if shadcn/ui already provides it:
+
+```bash
+npx shadcn@latest add <component-name>
+```
+
+- If shadcn has the component → **install it and use it as-is**, or wrap it (see below)
+- If shadcn has something similar → **install it and extend via wrapper**
+- If nothing exists → **create from scratch** following the conventions above
+
+When extending a shadcn component, **create a wrapper file** instead of editing the base. For example, `card-hover-effect.tsx` instead of modifying `card.tsx`.
+
+### 2. Create the component file
 
 Add the component source at:
 
@@ -59,11 +89,11 @@ Add the component source at:
 src/components/ui/<component-name>.tsx
 ```
 
-Follow the same patterns as existing components — use `class-variance-authority` for variants, forward refs where appropriate, and keep all animation-related CSS custom properties in `style.css` rather than inline.
+Follow the component conventions listed above and use existing components as reference.
 
 If the component requires shared animation keyframes or `[data-variant]` CSS properties, you do **not** need to modify `style.css` yourself — it is already included as a registry dependency for components that need it.
 
-### 2. Create the documentation page
+### 3. Create the documentation page
 
 Create a new directory and page at:
 
@@ -71,15 +101,27 @@ Create a new directory and page at:
 src/app/docs/components/<component-name>/page.mdx
 ```
 
-Use any existing component page as a reference template. Every documentation page must include:
+The page **must** follow this exact order:
 
-- A `metadata` export with `title`, `description`, and `alternates.canonical`
-- A `<JsonLd />` block with breadcrumb structured data pointing to the correct URL
-- An `## Installation` section with an `<InstallSnippet registryUrl="https://prismaui.com/components/<component-name>.json" />` block — see step 4 for when this becomes valid
-- An `## Import` section
-- Sections for each prop, variant, and size with `<ComponentPreview>` blocks and code snippets
+1. **`metadata` export** — `title`, `description`, and `alternates.canonical` set to `/docs/components/<name>`
+2. **`<JsonLd />`** — breadcrumb structured data (Home → Docs → Component)
+3. **`# Title`** — component name as heading
+4. **Short description** — one paragraph
+5. **`## Installation`** — `<InstallSnippet registryUrl="https://prismaui.com/components/<name>.json" />`
+6. **`## Import`** — single code block with the import statement
+7. **`---`** separator
+8. **`## Usage` / variant sections** — each with a `<ComponentPreview>` above its code block
+9. **`## Props`** — props table at the very end
 
-### 3. Register the component in the docs sidebar
+#### ComponentPreview rules
+
+- **Every** non-import code block must have a `<ComponentPreview>` above it showing the rendered result
+- Preview blocks should contain **only** the component — no extra explanation, no wrapping layout
+- When a component needs images, use [Lorem Picsum](https://picsum.photos) with `next/image`. Vary dimensions slightly between items for different images
+- If a demo requires `useState` or interactivity, extract it into a `_demo-<variant>.tsx` client component next to the doc page and import it
+- When icons or third-party imports are needed, split them into a **separate code block** before the usage block
+
+### 5. Register the component in the docs sidebar
 
 Open `src/app/docs/components/_meta.ts` and add an entry for the new component:
 
@@ -91,7 +133,7 @@ Open `src/app/docs/components/_meta.ts` and add an entry for the new component:
 
 Place it under the appropriate separator (`-- general` or `-- cards`), or add a new separator if the component belongs to a new category.
 
-### 4. Add the registry entry
+### 6. Add the registry entry
 
 Use the **Component Generator** at `/component-generator` to fill in the component details and generate its registry JSON. This is the standard and official method for creating registry entries.
 
@@ -103,7 +145,7 @@ public/components/<component-name>.json
 
 The `<InstallSnippet>` on the documentation page will become valid once this file is in place, since it is served directly from `/public/components/`.
 
-### 5. Add the install snippet to the documentation
+### 7. Add the install snippet to the documentation
 
 If the `<InstallSnippet>` block is not already present in the documentation page, add it to the `## Installation` section:
 
@@ -113,7 +155,18 @@ If the `<InstallSnippet>` block is not already present in the documentation page
 
 This is typically added in step 2, but verify it is present and points to the correct URL after the registry JSON is generated.
 
-### 6. Add the component to the README
+### 8. Add to sitemap
+
+Open `src/app/sitemap.ts` and add the component slug to the `components` array:
+
+```ts
+const components = [
+  // ... existing entries
+  '<component-name>',
+];
+```
+
+### 9. Add the component to the README
 
 Open `README.md` and add a row to the **Components** table:
 
@@ -123,7 +176,7 @@ Open `README.md` and add a row to the **Components** table:
 
 Keep the description concise — one sentence, no trailing period is fine.
 
-### 7. Bump the package version
+### 10. Bump the package version
 
 Open `package.json` and increment the `version` field with a **minor** bump to record that a new component was added:
 
@@ -164,11 +217,21 @@ Use this as a quick reference before opening a pull request.
 
 ### New component
 
+- [ ] Checked shadcn registry first (`npx shadcn@latest add <name>`)
+- [ ] If shadcn had it: installed via CLI, created wrapper instead of modifying base
 - [ ] Component file created at `src/components/ui/<name>.tsx`
-- [ ] Documentation page created at `src/app/docs/components/<name>/page.mdx`
+- [ ] `"use client"` present if component uses hooks, event handlers, or browser APIs
+- [ ] `cn()` used for all class merging
+- [ ] Semantic color tokens used (no raw `bg-blue-500` etc.)
+- [ ] `gap-*` used for spacing (no `space-x-*` or `space-y-*`)
+- [ ] Hooks imported directly (`import { useState } from 'react'`)
+- [ ] Return type is `React.ReactNode`
+- [ ] Documentation page follows correct order (metadata → title → Installation → Import → --- → sections → Props)
+- [ ] Every non-import code block has a `<ComponentPreview>` above it
 - [ ] Entry added to `src/app/docs/components/_meta.ts`
 - [ ] Registry JSON generated via `/component-generator` and placed at `public/components/<name>.json`
 - [ ] `<InstallSnippet>` present in the documentation page
+- [ ] Component slug added to `src/app/sitemap.ts`
 - [ ] Component row added to `README.md`
 - [ ] `package.json` version bumped (minor)
 

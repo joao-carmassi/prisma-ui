@@ -7,7 +7,7 @@ import { cn } from '@/lib/utils';
 /*
  * @author: @joao-carmassi
  * @description: A beam that traces an SVG path as the user scrolls. The gradient
- *               follows the center of the viewport within the container.
+ * follows the center of the viewport within the container.
  * @version: 1.2.0
  * @date: 2026-31-03
  * @license: MIT

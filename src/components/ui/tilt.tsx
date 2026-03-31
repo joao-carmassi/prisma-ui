@@ -14,7 +14,7 @@ import { cn } from '@/lib/utils';
 /*
  * @author: @joao-carmassi
  * @description: 3D tilt wrapper — applies a perspective tilt effect on mouse move.
- *               Wrap any card or element. Great for interactive cards.
+ * Wrap any card or element. Great for interactive cards.
  * @version: 1.0.0
  * @date: 2026-31-03
  * @license: MIT

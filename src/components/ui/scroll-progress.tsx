@@ -7,7 +7,7 @@ import { cn } from '@/lib/utils';
 /*
  * @author: @joao-carmassi
  * @description: Animated scroll progress bar — a thin gradient line at the top of the page
- *               that scales with scroll position.
+ * that scales with scroll position.
  * @version: 1.0.0
  * @date: 2026-31-03
  * @license: MIT

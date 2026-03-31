@@ -7,7 +7,7 @@ import type { HTMLMotionProps } from 'motion/react';
 /*
  * @author: @joao-carmassi
  * @description: Layered progressive blur effect using gradient masks and backdrop-filter.
- *               Great for fading content edges on images and hero sections.
+ * Great for fading content edges on images and hero sections.
  * @version: 1.0.0
  * @date: 2026-31-03
  * @license: MIT

@@ -8,7 +8,7 @@ import { cn } from '@/lib/utils';
 /*
  * @author: @joao-carmassi
  * @description: Magnetic wrapper — children are attracted towards the mouse cursor.
- *               Supports self, parent, or global action areas.
+ * Supports self, parent, or global action areas.
  * @version: 1.0.0
  * @date: 2026-31-03
  * @license: MIT
