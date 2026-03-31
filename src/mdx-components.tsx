@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { useMDXComponents as getThemeComponents } from 'nextra-theme-docs'; // nextra-theme-blog or your custom theme
+import Image from 'next/image';
 import { ComponentPreview } from '@/components/docs/component-preview';
 import { CodeBlock } from '@/components/docs/code-block';
 import {
@@ -19,6 +20,7 @@ export function useMDXComponents(components: any) {
   return {
     ...themeComponents,
     ComponentPreview,
+    Image,
     pre: CodeBlock,
     table: MdxTable,
     thead: MdxThead,

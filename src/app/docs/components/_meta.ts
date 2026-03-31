@@ -22,9 +22,6 @@ export default {
   'animated-background': {
     title: 'Animated Background',
   },
-  'glow-effect': {
-    title: 'Glow Effect',
-  },
   backlight: {
     title: 'Backlight',
   },

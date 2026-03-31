@@ -63,79 +63,77 @@ import { AnimatedBackground } from '@/components/ui/animated-background';
 Each child must have a `data-id` attribute. Enable hover mode with `enableHover`. Use a grid to make the sliding effect more visible across items.
 
 <ComponentPreview>
-  <div className='grid grid-cols-3 gap-2 w-full max-w-lg'>
-    <AnimatedBackground
-      className='rounded-lg bg-background'
-      transition={{ type: 'spring', bounce: 0.2, duration: 0.6 }}
-      enableHover
-    >
+  <div className='grid grid-cols-3 gap-4 w-full max-w-lg'>
+    <AnimatedBackground className='rounded-lg bg-background/80' enableHover>
       <div
-        data-id='card-1'
-        className='cursor-pointer rounded-lg p-6 text-center'
+        data-id='react'
+        className='flex cursor-pointer flex-col items-center justify-center gap-2 p-6'
       >
-        <div className='text-2xl mb-1'>🎨</div>
-        <p className='text-xs font-medium'>Design</p>
+        <span className='text-xl font-bold text-sky-500'>⚛</span>
+        <span className='text-xs font-medium'>React</span>
       </div>
       <div
-        data-id='card-2'
-        className='cursor-pointer rounded-lg p-6 text-center'
+        data-id='nextjs'
+        className='flex cursor-pointer flex-col items-center justify-center gap-2 p-6'
       >
-        <div className='text-2xl mb-1'>⚡</div>
-        <p className='text-xs font-medium'>Speed</p>
+        <span className='text-xl font-bold'>▲</span>
+        <span className='text-xs font-medium'>Next.js</span>
       </div>
       <div
-        data-id='card-3'
-        className='cursor-pointer rounded-lg p-6 text-center'
+        data-id='typescript'
+        className='flex cursor-pointer flex-col items-center justify-center gap-2 p-6'
       >
-        <div className='text-2xl mb-1'>🔒</div>
-        <p className='text-xs font-medium'>Security</p>
+        <span className='text-xl font-bold text-blue-500'>TS</span>
+        <span className='text-xs font-medium'>TypeScript</span>
       </div>
       <div
-        data-id='card-4'
-        className='cursor-pointer rounded-lg p-6 text-center'
+        data-id='tailwind'
+        className='flex cursor-pointer flex-col items-center justify-center gap-2 p-6'
       >
-        <div className='text-2xl mb-1'>🌐</div>
-        <p className='text-xs font-medium'>Global</p>
+        <span className='text-xl font-bold text-cyan-500'>🌊</span>
+        <span className='text-xs font-medium'>Tailwind</span>
       </div>
       <div
-        data-id='card-5'
-        className='cursor-pointer rounded-lg p-6 text-center'
+        data-id='prisma'
+        className='flex cursor-pointer flex-col items-center justify-center gap-2 p-6'
       >
-        <div className='text-2xl mb-1'>📦</div>
-        <p className='text-xs font-medium'>Modular</p>
+        <span className='text-xl font-bold text-indigo-500'>◆</span>
+        <span className='text-xs font-medium'>Prisma</span>
       </div>
       <div
-        data-id='card-6'
-        className='cursor-pointer rounded-lg p-6 text-center'
+        data-id='vercel'
+        className='flex cursor-pointer flex-col items-center justify-center gap-2 p-6'
       >
-        <div className='text-2xl mb-1'>🤖</div>
-        <p className='text-xs font-medium'>AI</p>
+        <span className='text-xl font-bold'>▼</span>
+        <span className='text-xs font-medium'>Vercel</span>
       </div>
     </AnimatedBackground>
   </div>
 </ComponentPreview>
 
 ```tsx
-<div className='grid grid-cols-3 gap-2'>
-  <AnimatedBackground
-    className='rounded-lg bg-muted'
-    transition={{ type: 'spring', bounce: 0.2, duration: 0.6 }}
-    enableHover
-  >
-    <div data-id='design' className='cursor-pointer rounded-lg p-6 text-center'>
-      <div className='text-2xl mb-1'>🎨</div>
-      <p className='text-xs font-medium'>Design</p>
-    </div>
-    <div data-id='speed' className='cursor-pointer rounded-lg p-6 text-center'>
-      <div className='text-2xl mb-1'>⚡</div>
-      <p className='text-xs font-medium'>Speed</p>
+<div className='grid grid-cols-3 gap-4'>
+  <AnimatedBackground className='rounded-lg bg-muted/60' enableHover>
+    <div
+      data-id='react'
+      className='flex cursor-pointer flex-col items-center justify-center gap-2 p-6'
+    >
+      <span className='text-xl font-bold text-sky-500'>⚛</span>
+      <span className='text-xs font-medium'>React</span>
     </div>
     <div
-      data-id='security'
-      className='cursor-pointer rounded-lg p-6 text-center'
+      data-id='nextjs'
+      className='flex cursor-pointer flex-col items-center justify-center gap-2 p-6'
     >
-      <div className='text-2xl mb-1'>🔒</div>
-      <p className='text-xs font-medium'>Security</p>
+      <span className='text-xl font-bold'>▲</span>
+      <span className='text-xs font-medium'>Next.js</span>
+    </div>
+    <div
+      data-id='typescript'
+      className='flex cursor-pointer flex-col items-center justify-center gap-2 p-6'
+    >
+      <span className='text-xl font-bold text-blue-500'>TS</span>
+      <span className='text-xs font-medium'>TypeScript</span>
     </div>
   </AnimatedBackground>
 </div>
@@ -151,7 +149,6 @@ Omit `enableHover` for click-based selection with a `defaultValue`. Works well a
   <AnimatedBackground
     defaultValue='tab-1'
     className='rounded-full bg-background'
-    transition={{ type: 'spring', bounce: 0.2, duration: 0.3 }}
   >
     <div
       data-id='tab-1'
@@ -181,11 +178,7 @@ Omit `enableHover` for click-based selection with a `defaultValue`. Works well a
 </ComponentPreview>
 
 ```tsx
-<AnimatedBackground
-  defaultValue='tab-1'
-  className='rounded-full bg-muted'
-  transition={{ type: 'spring', bounce: 0.2, duration: 0.3 }}
->
+<AnimatedBackground defaultValue='tab-1' className='rounded-full bg-muted'>
   <div
     data-id='tab-1'
     className='cursor-pointer rounded-full px-5 py-2 text-sm font-medium'

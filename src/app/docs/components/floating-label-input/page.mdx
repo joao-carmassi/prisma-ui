@@ -1,15 +1,11 @@
-import {
-  FloatingLabelInput,
-  FloatingInput,
-  FloatingLabel,
-} from '@/components/ui/floating-label-input';
+import { FloatingLabel } from '@/components/ui/floating-label-input';
 import { JsonLd } from '@/components/seo/json-ld';
 import { InstallSnippet } from '@/components/docs/install-snippet';
 
 export const metadata = {
   title: 'Floating Label Input',
   description:
-    'An input component with a label that floats above when focused or filled. Built on top of the existing shadcn Input and Label components.',
+    'An input component with a label that floats above when focused or filled. Uses a compound component pattern for full styling control.',
   alternates: { canonical: '/docs/components/floating-label-input' },
 };
 
@@ -48,7 +44,7 @@ export const metadata = {
 
 # Floating Label Input
 
-An input component with a label that floats above the field when focused or filled. Uses CSS peer selectors over the existing shadcn Input and Label. Inspired by [shadcn/ui Expansions](https://shadcnui-expansions.typeart.cc/docs/floating-label-input).
+An input component with a label that floats above the field when focused or filled. Uses a compound component pattern (`FloatingLabel`, `FloatingLabel.Input`, `FloatingLabel.Label`) for full styling control. Inspired by [shadcn/ui Expansions](https://shadcnui-expansions.typeart.cc/docs/floating-label-input).
 
 ## Installation
 
@@ -57,7 +53,7 @@ An input component with a label that floats above the field when focused or fill
 ## Import
 
 ```tsx
-import { FloatingLabelInput } from '@/components/ui/floating-label-input';
+import { FloatingLabel } from '@/components/ui/floating-label-input';
 ```
 
 ---
@@ -66,12 +62,20 @@ import { FloatingLabelInput } from '@/components/ui/floating-label-input';
 
 <ComponentPreview>
   <div className='w-72'>
-    <FloatingLabelInput id='demo-email' label='Email' type='email' />
+    <FloatingLabel>
+      <FloatingLabel.Input className='bg-muted!' id='demo-email' type='email' />
+      <FloatingLabel.Label className='bg-muted' htmlFor='demo-email'>
+        Email
+      </FloatingLabel.Label>
+    </FloatingLabel>
   </div>
 </ComponentPreview>
 
 ```tsx
-<FloatingLabelInput id='email' label='Email' type='email' />
+<FloatingLabel>
+  <FloatingLabel.Input id='email' type='email' />
+  <FloatingLabel.Label htmlFor='email'>Email</FloatingLabel.Label>
+</FloatingLabel>
 ```
 
 ---
@@ -80,89 +84,109 @@ import { FloatingLabelInput } from '@/components/ui/floating-label-input';
 
 <ComponentPreview className='gap-4'>
   <div className='flex w-72 flex-col gap-4'>
-    <FloatingLabelInput id='demo-name' label='Full Name' />
-    <FloatingLabelInput id='demo-email-2' label='Email' type='email' />
-    <FloatingLabelInput id='demo-password' label='Password' type='password' />
-  </div>
-</ComponentPreview>
-
-```tsx
-<div className='flex flex-col gap-4'>
-  <FloatingLabelInput id='name' label='Full Name' />
-  <FloatingLabelInput id='email' label='Email' type='email' />
-  <FloatingLabelInput id='password' label='Password' type='password' />
-</div>
-```
-
----
-
-## Individual Components
-
-Use `FloatingInput` and `FloatingLabel` separately for full control over styling.
-
-<ComponentPreview>
-  <div className='relative w-72'>
-    <FloatingInput
-      id='custom-demo'
-      className='border-primary/50 focus:border-primary'
-    />
-    <FloatingLabel htmlFor='custom-demo' className='text-primary'>
-      Custom Label
+    <FloatingLabel>
+      <FloatingLabel.Input className='bg-muted!' id='demo-name' />
+      <FloatingLabel.Label className='bg-muted' htmlFor='demo-name'>
+        Full Name
+      </FloatingLabel.Label>
+    </FloatingLabel>
+    <FloatingLabel>
+      <FloatingLabel.Input
+        className='bg-muted!'
+        id='demo-email-2'
+        type='email'
+      />
+      <FloatingLabel.Label className='bg-muted' htmlFor='demo-email-2'>
+        Email
+      </FloatingLabel.Label>
+    </FloatingLabel>
+    <FloatingLabel>
+      <FloatingLabel.Input
+        className='bg-muted!'
+        id='demo-password'
+        type='password'
+      />
+      <FloatingLabel.Label className='bg-muted' htmlFor='demo-password'>
+        Password
+      </FloatingLabel.Label>
     </FloatingLabel>
   </div>
 </ComponentPreview>
 
 ```tsx
-import {
-  FloatingInput,
-  FloatingLabel,
-} from '@/components/ui/floating-label-input';
-
-<div className='relative'>
-  <FloatingInput
-    id='custom'
-    className='border-primary/50 focus:border-primary'
-  />
-  <FloatingLabel htmlFor='custom' className='text-primary'>
-    Custom Label
+<div className='flex flex-col gap-4'>
+  <FloatingLabel>
+    <FloatingLabel.Input id='name' />
+    <FloatingLabel.Label htmlFor='name'>Full Name</FloatingLabel.Label>
   </FloatingLabel>
-</div>;
+  <FloatingLabel>
+    <FloatingLabel.Input id='email' type='email' />
+    <FloatingLabel.Label htmlFor='email'>Email</FloatingLabel.Label>
+  </FloatingLabel>
+  <FloatingLabel>
+    <FloatingLabel.Input id='password' type='password' />
+    <FloatingLabel.Label htmlFor='password'>Password</FloatingLabel.Label>
+  </FloatingLabel>
+</div>
 ```
 
 ---
 
-## Custom Styling via Props
+## Custom Styling
 
-Use `inputClassName` and `labelClassName` on the convenience wrapper to style each part independently.
+Each sub-component accepts its own `className`, giving full control without extra wrapper props.
 
 <ComponentPreview>
   <div className='w-72'>
-    <FloatingLabelInput
-      id='styled-demo'
-      label='Username'
-      inputClassName='rounded-full px-5'
-      labelClassName='left-3'
-    />
+    <FloatingLabel>
+      <FloatingLabel.Input
+        id='styled-demo'
+        className='rounded-full border-primary/50 px-5 focus:border-primary bg-muted!'
+      />
+      <FloatingLabel.Label
+        htmlFor='styled-demo'
+        className='left-3 text-primary bg-muted'
+      >
+        Username
+      </FloatingLabel.Label>
+    </FloatingLabel>
   </div>
 </ComponentPreview>
 
 ```tsx
-<FloatingLabelInput
-  id='username'
-  label='Username'
-  inputClassName='rounded-full px-5'
-  labelClassName='left-3'
-/>
+<FloatingLabel>
+  <FloatingLabel.Input
+    id='username'
+    className='rounded-full border-primary/50 px-5 focus:border-primary'
+  />
+  <FloatingLabel.Label htmlFor='username' className='left-3 text-primary'>
+    Username
+  </FloatingLabel.Label>
+</FloatingLabel>
 ```
 
 ---
 
 ## Props
 
-| Prop             | Type                  | Default | Description                                     |
-| ---------------- | --------------------- | ------- | ----------------------------------------------- |
-| `id`             | `string`              | —       | Input id, also used for `htmlFor` on the label. |
-| `label`          | `string`              | —       | Text displayed in the floating label.           |
-| `inputClassName` | `string`              | —       | Extra classes forwarded to `FloatingInput`.     |
-| `labelClassName` | `string`              | —       | Extra classes forwarded to `FloatingLabel`.     |
-| `...props`       | `InputHTMLAttributes` | —       | All standard input props.                       |
+### `FloatingLabel` (root)
+
+| Prop        | Type              | Default | Description                                  |
+| ----------- | ----------------- | ------- | -------------------------------------------- |
+| `children`  | `React.ReactNode` | —       | Must contain `.Input` and `.Label`.          |
+| `className` | `string`          | —       | Additional CSS classes for the root wrapper. |
+
+### `FloatingLabel.Input`
+
+| Prop        | Type                  | Default | Description               |
+| ----------- | --------------------- | ------- | ------------------------- |
+| `...props`  | `InputHTMLAttributes` | —       | All standard input props. |
+| `className` | `string`              | —       | Additional CSS classes.   |
+
+### `FloatingLabel.Label`
+
+| Prop        | Type              | Default | Description             |
+| ----------- | ----------------- | ------- | ----------------------- |
+| `htmlFor`   | `string`          | —       | Matches the input `id`. |
+| `children`  | `React.ReactNode` | —       | The label text.         |
+| `className` | `string`          | —       | Additional CSS classes. |

@@ -65,9 +65,11 @@ Place the component over an image or content area with `absolute` positioning.
 
 <ComponentPreview>
   <div className='relative h-64 w-full overflow-hidden rounded-lg'>
-    <img
+    <Image
       src='https://picsum.photos/800/256'
       alt='Progressive blur demo'
+      width={800}
+      height={256}
       className='h-full w-full object-cover'
     />
     <ProgressiveBlur className='absolute inset-0' />
@@ -76,9 +78,11 @@ Place the component over an image or content area with `absolute` positioning.
 
 ```tsx
 <div className='relative h-64 w-full overflow-hidden rounded-lg'>
-  <img
+  <Image
     src='https://picsum.photos/800/256'
     alt='Demo'
+    width={800}
+    height={256}
     className='h-full w-full object-cover'
   />
   <ProgressiveBlur className='absolute inset-0' />
@@ -94,9 +98,11 @@ Change the blur direction with the `direction` prop.
 <ComponentPreview>
   <div className='grid grid-cols-2 gap-4'>
     <div className='relative h-32 overflow-hidden rounded-lg'>
-      <img
+      <Image
         src='https://picsum.photos/400/128'
         alt='top blur'
+        width={400}
+        height={128}
         className='h-full w-full object-cover'
       />
       <ProgressiveBlur direction='top' className='absolute inset-0' />
@@ -105,9 +111,11 @@ Change the blur direction with the `direction` prop.
       </span>
     </div>
     <div className='relative h-32 overflow-hidden rounded-lg'>
-      <img
+      <Image
         src='https://picsum.photos/402/130'
         alt='bottom blur'
+        width={402}
+        height={130}
         className='h-full w-full object-cover'
       />
       <ProgressiveBlur direction='bottom' className='absolute inset-0' />
@@ -116,9 +124,11 @@ Change the blur direction with the `direction` prop.
       </span>
     </div>
     <div className='relative h-32 overflow-hidden rounded-lg'>
-      <img
+      <Image
         src='https://picsum.photos/404/132'
         alt='left blur'
+        width={404}
+        height={132}
         className='h-full w-full object-cover'
       />
       <ProgressiveBlur direction='left' className='absolute inset-0' />
@@ -127,9 +137,11 @@ Change the blur direction with the `direction` prop.
       </span>
     </div>
     <div className='relative h-32 overflow-hidden rounded-lg'>
-      <img
+      <Image
         src='https://picsum.photos/406/134'
         alt='right blur'
+        width={406}
+        height={134}
         className='h-full w-full object-cover'
       />
       <ProgressiveBlur direction='right' className='absolute inset-0' />
@@ -153,9 +165,11 @@ Change the blur direction with the `direction` prop.
 
 <ComponentPreview>
   <div className='relative h-48 w-full overflow-hidden rounded-lg'>
-    <img
+    <Image
       src='https://picsum.photos/800/192'
       alt='Custom intensity blur'
+      width={800}
+      height={192}
       className='h-full w-full object-cover'
     />
     <ProgressiveBlur
@@ -179,34 +193,46 @@ Apply `ProgressiveBlur` over an `InfiniteSlider` to fade the edges of a scrollin
 <ComponentPreview>
   <div className='relative w-full overflow-hidden'>
     <InfiniteSlider gap={16} speed={60}>
-      <img
+      <Image
         src='https://picsum.photos/160/96'
         alt='1'
+        width={160}
+        height={96}
         className='h-24 aspect-video rounded-lg object-cover'
       />
-      <img
+      <Image
         src='https://picsum.photos/162/98'
         alt='2'
+        width={162}
+        height={98}
         className='h-24 aspect-video rounded-lg object-cover'
       />
-      <img
+      <Image
         src='https://picsum.photos/164/96'
         alt='3'
+        width={164}
+        height={96}
         className='h-24 aspect-video rounded-lg object-cover'
       />
-      <img
+      <Image
         src='https://picsum.photos/166/100'
         alt='4'
+        width={166}
+        height={100}
         className='h-24 aspect-video rounded-lg object-cover'
       />
-      <img
+      <Image
         src='https://picsum.photos/168/96'
         alt='5'
+        width={168}
+        height={96}
         className='h-24 aspect-video rounded-lg object-cover'
       />
-      <img
+      <Image
         src='https://picsum.photos/170/98'
         alt='6'
+        width={170}
+        height={98}
         className='h-24 aspect-video rounded-lg object-cover'
       />
     </InfiniteSlider>
@@ -226,20 +252,26 @@ Apply `ProgressiveBlur` over an `InfiniteSlider` to fade the edges of a scrollin
 ```tsx
 <div className='relative w-full overflow-hidden'>
   <InfiniteSlider gap={16} speed={60}>
-    <img
-      src='/img-1.jpg'
+    <Image
+      src='https://picsum.photos/160/96'
       alt='1'
-      className='h-24 aspect-video  rounded-lg object-cover'
+      width={160}
+      height={96}
+      className='h-24 aspect-video rounded-lg object-cover'
     />
-    <img
-      src='/img-2.jpg'
+    <Image
+      src='https://picsum.photos/162/98'
       alt='2'
-      className='h-24 aspect-video  rounded-lg object-cover'
+      width={162}
+      height={98}
+      className='h-24 aspect-video rounded-lg object-cover'
     />
-    <img
-      src='/img-3.jpg'
+    <Image
+      src='https://picsum.photos/164/96'
       alt='3'
-      className='h-24 aspect-video  rounded-lg object-cover'
+      width={164}
+      height={96}
+      className='h-24 aspect-video rounded-lg object-cover'
     />
   </InfiniteSlider>
   {/* Fade left edge */}

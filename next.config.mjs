@@ -9,7 +9,14 @@ const withNextra = nextra({
 
 // Export the final Next.js config with Nextra included
 export default withNextra({
-  // ... Add regular Next.js options here
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'picsum.photos',
+      },
+    ],
+  },
   turbopack: {
     resolveAlias: {
       // Path to your `mdx-components` file with extension

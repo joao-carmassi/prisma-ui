@@ -11,6 +11,7 @@ import { Button } from '@/components/ui/button';
 import { JsonLd } from '@/components/seo/json-ld';
 import { InstallSnippet } from '@/components/docs/install-snippet';
 import { StepCardDemo } from './_demo-steps';
+import { DeleteUserDemo } from './_demo-delete-modal';
 
 export const metadata = {
   title: 'Transition Panel',
@@ -146,6 +147,102 @@ export default function StepCard() {
         >
           Next
         </Button>
+      </CardFooter>
+    </Card>
+  );
+}
+```
+
+---
+
+## Delete Confirmation Modal
+
+A two-step modal flow: first a warning that the action is irreversible, then a confirmation step with the delete button.
+
+<ComponentPreview>
+  <DeleteUserDemo />
+</ComponentPreview>
+
+```tsx
+'use client';
+
+import { useState } from 'react';
+import { TransitionPanel } from '@/components/ui/transition-panel';
+import {
+  Card,
+  CardHeader,
+  CardTitle,
+  CardDescription,
+  CardContent,
+  CardFooter,
+} from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+
+export function DeleteUserModal() {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [direction, setDirection] = useState(1);
+
+  return (
+    <Card className='w-96'>
+      <CardHeader>
+        <CardTitle>Delete Account</CardTitle>
+        <CardDescription>
+          {activeIndex === 0
+            ? 'Please review before proceeding.'
+            : 'Step 2 of 2'}
+        </CardDescription>
+      </CardHeader>
+      <CardContent>
+        <TransitionPanel activeIndex={activeIndex} custom={direction}>
+          {[
+            <div key='warning'>
+              <p className='text-sm text-muted-foreground'>
+                This action is <strong>permanent and irreversible</strong>. All
+                your data will be permanently deleted and cannot be recovered.
+              </p>
+            </div>,
+            <div key='confirm'>
+              <p className='text-sm text-muted-foreground'>
+                Click the button below to confirm deletion.
+              </p>
+            </div>,
+          ]}
+        </TransitionPanel>
+      </CardContent>
+      <CardFooter className='flex justify-between'>
+        {activeIndex === 0 ? (
+          <>
+            <Button variant='outline' size='sm'>
+              Cancel
+            </Button>
+            <Button
+              variant='destructive'
+              size='sm'
+              onClick={() => {
+                setDirection(1);
+                setActiveIndex(1);
+              }}
+            >
+              Continue
+            </Button>
+          </>
+        ) : (
+          <>
+            <Button
+              variant='outline'
+              size='sm'
+              onClick={() => {
+                setDirection(-1);
+                setActiveIndex(0);
+              }}
+            >
+              Go Back
+            </Button>
+            <Button variant='destructive' size='sm'>
+              Delete Account
+            </Button>
+          </>
+        )}
       </CardFooter>
     </Card>
   );

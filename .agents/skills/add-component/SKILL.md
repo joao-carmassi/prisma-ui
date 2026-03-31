@@ -41,6 +41,18 @@ node scripts/generate-registry.js
 - **Semantic colors**: Use design tokens (`bg-primary`, `text-muted-foreground`), never raw values like `bg-blue-500`
 - **Spacing**: Use `flex` with `gap-*`, never `space-x-*` or `space-y-*`
 - **Merge classes**: Always use `cn()` from `@/lib/utils` for conditional/merged class names
+- **Default animation props**: When a component accepts `transition` or `variants` props (Framer Motion), always provide sensible defaults so the component works out of the box. Users should be able to override them, but should never be forced to pass them. For example:
+
+```tsx
+const DEFAULT_TRANSITION = { type: 'spring', bounce: 0, duration: 0.4 };
+const DEFAULT_VARIANTS = {
+  enter: (d: number) => ({ x: d > 0 ? 50 : -50, opacity: 0 }),
+  center: { x: 0, opacity: 1 },
+  exit: (d: number) => ({ x: d > 0 ? -50 : 50, opacity: 0 }),
+};
+
+export function MyPanel({ transition = DEFAULT_TRANSITION, variants = DEFAULT_VARIANTS, ...props }) { ... }
+```
 
 ---
 
@@ -64,12 +76,14 @@ Every non-import code block in a `.mdx` doc page must be preceded by a `<Compone
 
 If the component requires `useState` or other interactivity for a demo, extract it into a `_demo-<variant>.tsx` client component next to the doc page and import it.
 
-**Image placeholders**: When a component accepts or wraps images (e.g. `Backlight`, `ProgressiveBlur`, `InfiniteSlider`), always use [Lorem Picsum](https://picsum.photos) for preview images. Slightly vary the dimensions between items to ensure different images are fetched:
+**Image placeholders**: When a component accepts or wraps images (e.g. `Backlight`, `ProgressiveBlur`, `InfiniteSlider`), always use [Lorem Picsum](https://picsum.photos) for preview images with Next.js `<Image>`. Slightly vary the dimensions between items to ensure different images are fetched:
 
 ```tsx
-<img src='https://picsum.photos/320/200' alt='Demo' className='rounded-lg' width={320} height={200} />
-<img src='https://picsum.photos/322/204' alt='Demo 2' className='rounded-lg' width={322} height={204} />
-<img src='https://picsum.photos/324/200' alt='Demo 3' className='rounded-lg' width={324} height={200} />
+import Image from 'next/image';
+
+<Image src='https://picsum.photos/320/200' alt='Demo' width={320} height={200} className='rounded-lg' />
+<Image src='https://picsum.photos/322/204' alt='Demo 2' width={322} height={204} className='rounded-lg' />
+<Image src='https://picsum.photos/324/200' alt='Demo 3' width={324} height={200} className='rounded-lg' />
 ```
 
 Use these same URLs in the code block below the preview (not `/example.jpg` or `/your-image.jpg`), so copy-pasted code works immediately.

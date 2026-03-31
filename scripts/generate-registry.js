@@ -139,13 +139,7 @@ writeRegistry('infinite-slider', {
   files: [makeFile('infinite-slider.tsx', read('infinite-slider.tsx'))],
 });
 
-// 13. Glow Effect
-writeRegistry('glow-effect', {
-  dependencies: ['motion'],
-  files: [makeFile('glow-effect.tsx', read('glow-effect.tsx'))],
-});
-
-// 14. Tilt
+// 13. Tilt
 writeRegistry('tilt', {
   dependencies: ['motion'],
   files: [makeFile('tilt.tsx', read('tilt.tsx'))],

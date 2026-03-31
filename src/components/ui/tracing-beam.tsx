@@ -1,14 +1,14 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
-import { motion, useScroll, useSpring, useTransform } from 'motion/react';
+import { motion, useTransform, useScroll, useSpring } from 'motion/react';
 import { cn } from '@/lib/utils';
 
 /*
  * @author: @joao-carmassi
- * @description: A beam that traces an SVG path, always positioned at the viewport center
- *               within the container. Wraps page content with a left-side animated beam.
- * @version: 1.1.0
+ * @description: A beam that traces an SVG path as the user scrolls. The gradient
+ *               follows the center of the viewport within the container.
+ * @version: 1.2.0
  * @date: 2026-31-03
  * @license: MIT
  * @reference: https://ui.aceternity.com/components/tracing-beam
@@ -25,53 +25,55 @@ export function TracingBeam({
   children,
   className,
 }: TracingBeamProps): React.ReactNode {
-  const containerRef = useRef<HTMLDivElement>(null);
+  const ref = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ['start center', 'end center'],
+  });
+
   const contentRef = useRef<HTMLDivElement>(null);
   const [svgHeight, setSvgHeight] = useState(0);
-  const containerTopRef = useRef(0);
 
-  // Measure content height
   useEffect(() => {
     if (contentRef.current) {
       setSvgHeight(contentRef.current.offsetHeight);
     }
   }, []);
 
-  // Track container's distance from the page top so we can compute relative position
-  useEffect(() => {
-    const updateTop = () => {
-      if (containerRef.current) {
-        containerTopRef.current =
-          containerRef.current.getBoundingClientRect().top + window.scrollY;
-      }
-    };
-    updateTop();
-    window.addEventListener('resize', updateTop);
-    return () => window.removeEventListener('resize', updateTop);
-  }, [svgHeight]);
-
-  const { scrollY } = useScroll();
-
-  // Map global scrollY to the beam's Y position within the SVG:
-  // beam center = viewport center position relative to container top
-  const beamPosition = useTransform(scrollY, (v) => {
-    const viewportCenter = v + window.innerHeight * 0.5;
-    const relativePos = viewportCenter - containerTopRef.current;
-    return Math.max(50, Math.min(svgHeight - 50, relativePos));
-  });
-
-  const y1 = useSpring(beamPosition, { stiffness: 800, damping: 80 });
-  const y2 = useTransform(y1, (v) => v + 200);
+  const y1 = useSpring(
+    useTransform(scrollYProgress, [0, 0.8], [50, svgHeight]),
+    { stiffness: 500, damping: 90 },
+  );
+  const y2 = useSpring(
+    useTransform(scrollYProgress, [0, 1], [50, svgHeight - 200]),
+    { stiffness: 500, damping: 90 },
+  );
 
   return (
     <motion.div
-      ref={containerRef}
+      ref={ref}
       className={cn('relative mx-auto h-full w-full max-w-4xl', className)}
     >
       <div className='absolute top-3 -left-4 md:-left-20'>
-        <div className='ml-6.75 flex h-4 w-4 items-center justify-center rounded-full border border-neutral-200 shadow-sm'>
-          <div className='h-2 w-2 rounded-full border border-emerald-600 bg-emerald-500' />
-        </div>
+        <motion.div
+          transition={{ duration: 0.2, delay: 0.5 }}
+          animate={{
+            boxShadow:
+              scrollYProgress.get() > 0
+                ? 'none'
+                : 'rgba(0, 0, 0, 0.24) 0px 3px 8px',
+          }}
+          className='ml-6.75 flex h-4 w-4 items-center justify-center rounded-full border border-neutral-200 shadow-sm'
+        >
+          <motion.div
+            transition={{ duration: 0.2, delay: 0.5 }}
+            animate={{
+              backgroundColor: scrollYProgress.get() > 0 ? 'white' : '#10b981',
+              borderColor: scrollYProgress.get() > 0 ? 'white' : '#059669',
+            }}
+            className='h-2 w-2 rounded-full border border-neutral-300 bg-white'
+          />
+        </motion.div>
         <svg
           viewBox={`0 0 20 ${svgHeight}`}
           width='20'
@@ -84,6 +86,7 @@ export function TracingBeam({
             fill='none'
             stroke='#9091A0'
             strokeOpacity='0.16'
+            transition={{ duration: 10 }}
           />
           <motion.path
             d={`M 1 0V -36 l 18 24 V ${svgHeight * 0.8} l -18 24V ${svgHeight}`}
@@ -91,6 +94,7 @@ export function TracingBeam({
             stroke='url(#gradient)'
             strokeWidth='1.25'
             className='motion-reduce:hidden'
+            transition={{ duration: 10 }}
           />
           <defs>
             <motion.linearGradient
