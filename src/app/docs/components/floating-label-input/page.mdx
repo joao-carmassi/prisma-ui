@@ -98,12 +98,17 @@ import { FloatingLabelInput } from '@/components/ui/floating-label-input';
 
 ## Individual Components
 
-You can also use `FloatingInput` and `FloatingLabel` separately for more control.
+Use `FloatingInput` and `FloatingLabel` separately for full control over styling.
 
 <ComponentPreview>
   <div className='relative w-72'>
-    <FloatingInput id='custom-demo' />
-    <FloatingLabel htmlFor='custom-demo'>Custom Label</FloatingLabel>
+    <FloatingInput
+      id='custom-demo'
+      className='border-primary/50 focus:border-primary'
+    />
+    <FloatingLabel htmlFor='custom-demo' className='text-primary'>
+      Custom Label
+    </FloatingLabel>
   </div>
 </ComponentPreview>
 
@@ -114,17 +119,50 @@ import {
 } from '@/components/ui/floating-label-input';
 
 <div className='relative'>
-  <FloatingInput id='custom' />
-  <FloatingLabel htmlFor='custom'>Custom Label</FloatingLabel>
+  <FloatingInput
+    id='custom'
+    className='border-primary/50 focus:border-primary'
+  />
+  <FloatingLabel htmlFor='custom' className='text-primary'>
+    Custom Label
+  </FloatingLabel>
 </div>;
+```
+
+---
+
+## Custom Styling via Props
+
+Use `inputClassName` and `labelClassName` on the convenience wrapper to style each part independently.
+
+<ComponentPreview>
+  <div className='w-72'>
+    <FloatingLabelInput
+      id='styled-demo'
+      label='Username'
+      inputClassName='rounded-full px-5'
+      labelClassName='left-3'
+    />
+  </div>
+</ComponentPreview>
+
+```tsx
+<FloatingLabelInput
+  id='username'
+  label='Username'
+  inputClassName='rounded-full px-5'
+  labelClassName='left-3'
+/>
 ```
 
 ---
 
 ## Props
 
-| Prop       | Type                  | Default | Description                                     |
-| ---------- | --------------------- | ------- | ----------------------------------------------- |
-| `id`       | `string`              | —       | Input id, also used for `htmlFor` on the label. |
-| `label`    | `string`              | —       | Text displayed in the floating label.           |
-| `...props` | `InputHTMLAttributes` | —       | All standard input props.                       |
+| Prop             | Type                  | Default | Description                                     |
+| ---------------- | --------------------- | ------- | ----------------------------------------------- |
+| `id`             | `string`              | —       | Input id, also used for `htmlFor` on the label. |
+| `label`          | `string`              | —       | Text displayed in the floating label.           |
+| `inputClassName` | `string`              | —       | Extra classes forwarded to `FloatingInput`.     |
+| `labelClassName` | `string`              | —       | Extra classes forwarded to `FloatingLabel`.     |
+| `...props`       | `InputHTMLAttributes` | —       | All standard input props.                       |

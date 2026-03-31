@@ -25,19 +25,22 @@ const steps = [
 
 export function StepCardDemo(): React.ReactNode {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [direction, setDirection] = useState(1);
+
+  const handlePrev = () => {
+    setDirection(-1);
+    setActiveIndex((prev) => Math.max(prev - 1, 0));
+  };
+
+  const handleNext = () => {
+    setDirection(1);
+    setActiveIndex((prev) => Math.min(prev + 1, steps.length - 1));
+  };
 
   return (
     <Card className='w-85'>
       <CardContent>
-        <TransitionPanel
-          activeIndex={activeIndex}
-          transition={{ duration: 0.2, ease: 'easeInOut' }}
-          variants={{
-            enter: { opacity: 0, y: -50, filter: 'blur(4px)' },
-            center: { opacity: 1, y: 0, filter: 'blur(0px)' },
-            exit: { opacity: 0, y: 50, filter: 'blur(4px)' },
-          }}
-        >
+        <TransitionPanel activeIndex={activeIndex} custom={direction}>
           {steps.map((step) => (
             <div key={step.title}>
               <h3 className='mb-2 text-lg font-medium'>{step.title}</h3>
@@ -52,16 +55,14 @@ export function StepCardDemo(): React.ReactNode {
         <Button
           variant='outline'
           size='sm'
-          onClick={() => setActiveIndex((prev) => Math.max(prev - 1, 0))}
+          onClick={handlePrev}
           disabled={activeIndex === 0}
         >
           Previous
         </Button>
         <Button
           size='sm'
-          onClick={() =>
-            setActiveIndex((prev) => Math.min(prev + 1, steps.length - 1))
-          }
+          onClick={handleNext}
           disabled={activeIndex === steps.length - 1}
         >
           Next

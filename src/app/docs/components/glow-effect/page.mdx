@@ -68,42 +68,77 @@ import { GlowEffect } from '@/components/ui/glow-effect';
 
 ## Card Glow
 
+Place `GlowEffect` as a **sibling** before the card content inside a `relative` wrapper (no `overflow-hidden` on the parent). The card needs `relative z-10` and an opaque background so the glow glows around it, not through it.
+
 <ComponentPreview>
-  <Card className='relative w-85 overflow-hidden'>
+  <div className='relative'>
     <GlowEffect
       colors={['#FF5733', '#33FF57', '#3357FF', '#F1C40F']}
       mode='rotate'
       blur='medium'
     />
-    <CardHeader>
-      <CardTitle>Glow Effect</CardTitle>
-      <CardDescription>Rotating gradient glow.</CardDescription>
-    </CardHeader>
-    <CardContent>
-      <p className='text-sm text-muted-foreground'>
-        Uses conic-gradient with continuous rotation.
-      </p>
-    </CardContent>
-  </Card>
+    <Card className='relative z-10 w-85'>
+      <CardHeader>
+        <CardTitle>Glow Effect</CardTitle>
+        <CardDescription>
+          Rotating gradient glow around the card.
+        </CardDescription>
+      </CardHeader>
+      <CardContent>
+        <p className='text-sm text-muted-foreground'>
+          The glow sits behind the card as a sibling, creating a halo effect at
+          the edges.
+        </p>
+      </CardContent>
+    </Card>
+  </div>
 </ComponentPreview>
 
 ```tsx
-<Card className='relative w-85 overflow-hidden'>
+<div className='relative'>
   <GlowEffect
     colors={['#FF5733', '#33FF57', '#3357FF', '#F1C40F']}
     mode='rotate'
     blur='medium'
   />
-  <CardHeader>
-    <CardTitle>Glow Effect</CardTitle>
-    <CardDescription>Rotating gradient glow.</CardDescription>
-  </CardHeader>
-  <CardContent>
-    <p className='text-sm text-muted-foreground'>
-      Uses conic-gradient with continuous rotation.
-    </p>
-  </CardContent>
-</Card>
+  <Card className='relative z-10'>
+    <CardHeader>
+      <CardTitle>Glow Effect</CardTitle>
+      <CardDescription>Rotating gradient glow around the card.</CardDescription>
+    </CardHeader>
+    <CardContent>
+      <p className='text-sm text-muted-foreground'>Content goes here.</p>
+    </CardContent>
+  </Card>
+</div>
+```
+
+---
+
+## Button Glow
+
+Works the same with any inline element.
+
+<ComponentPreview>
+  <div className='relative inline-flex'>
+    <GlowEffect
+      colors={['#A97CF8', '#F38CB8', '#FDCC92']}
+      mode='rotate'
+      blur='soft'
+    />
+    <Button className='relative z-10'>Glowing Button</Button>
+  </div>
+</ComponentPreview>
+
+```tsx
+<div className='relative inline-flex'>
+  <GlowEffect
+    colors={['#A97CF8', '#F38CB8', '#FDCC92']}
+    mode='rotate'
+    blur='soft'
+  />
+  <Button className='relative z-10'>Glowing Button</Button>
+</div>
 ```
 
 ---

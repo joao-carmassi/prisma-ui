@@ -23,6 +23,7 @@ import {
 import { cn } from '@/lib/utils';
 import { getGithubUrl, getSiteUrl } from '@/lib/env';
 import type { SoftwareApplication, WithContext } from 'schema-dts';
+import { TracingBeam } from '@/components/ui/tracing-beam';
 
 const softwareAppSchema: WithContext<SoftwareApplication> = {
   '@context': 'https://schema.org',
@@ -207,6 +208,34 @@ export default function Home(): React.ReactNode {
           aria-hidden='true'
           className='absolute bottom-0 left-0 right-0 h-32 bg-linear-to-b from-transparent to-background pointer-events-none'
         />
+      </section>
+
+      <section className='px-4 py-28 grid place-items-center'>
+        <TracingBeam>
+          <article className='space-y-20'>
+            <h2>Section One</h2>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum
+              nesciunt rerum quisquam, dolorum temporibus esse quis nemo
+              adipisci impedit laudantium enim incidunt pariatur quia minima
+              explicabo molestias earum. Perspiciatis, ipsa!
+            </p>
+            <h2>Section Two</h2>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum
+              nesciunt rerum quisquam, dolorum temporibus esse quis nemo
+              adipisci impedit laudantium enim incidunt pariatur quia minima
+              explicabo molestias earum. Perspiciatis, ipsa!
+            </p>
+            <h2>Section Three</h2>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum
+              nesciunt rerum quisquam, dolorum temporibus esse quis nemo
+              adipisci impedit laudantium enim incidunt pariatur quia minima
+              explicabo molestias earum. Perspiciatis, ipsa!
+            </p>{' '}
+          </article>
+        </TracingBeam>
       </section>
 
       {/* ── Features ──────────────────────────────────────── */}

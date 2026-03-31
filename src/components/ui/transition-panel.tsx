@@ -14,6 +14,22 @@ import { cn } from '@/lib/utils';
  * @reference: https://motion-primitives.com/docs/transition-panel
  */
 
+const DEFAULT_TRANSITION: Transition = { duration: 0.2, ease: 'easeInOut' };
+
+const DEFAULT_VARIANTS = {
+  enter: (dir: number) => ({
+    x: dir > 0 ? 50 : -50,
+    opacity: 0,
+    filter: 'blur(4px)',
+  }),
+  center: { x: 0, opacity: 1, filter: 'blur(0px)' },
+  exit: (dir: number) => ({
+    x: dir > 0 ? -50 : 50,
+    opacity: 0,
+    filter: 'blur(4px)',
+  }),
+};
+
 interface TransitionPanelProps extends Omit<
   MotionProps,
   'children' | 'transition'
@@ -33,13 +49,17 @@ interface TransitionPanelProps extends Omit<
 export function TransitionPanel({
   children,
   className,
-  transition,
-  variants,
+  transition = DEFAULT_TRANSITION,
+  variants = DEFAULT_VARIANTS as unknown as {
+    enter: Variant;
+    center: Variant;
+    exit: Variant;
+  },
   activeIndex,
   ...motionProps
 }: TransitionPanelProps): React.ReactNode {
   return (
-    <div className={cn('relative', className)}>
+    <div className={cn('relative overflow-hidden', className)}>
       <AnimatePresence
         initial={false}
         mode='popLayout'
@@ -47,6 +67,7 @@ export function TransitionPanel({
       >
         <motion.div
           key={activeIndex}
+          custom={motionProps.custom}
           variants={variants}
           transition={transition}
           initial='enter'

@@ -12,6 +12,7 @@ import { JsonLd } from '@/components/seo/json-ld';
 import Logo from '@/components/logo';
 import type { Organization, WebSite, WithContext } from 'schema-dts';
 import ManagerProvider from '@/store/store-managers';
+import { ScrollProgress } from '@/components/ui/scroll-progress';
 
 interface RootLayoutProps {
   children: React.ReactNode;
@@ -164,6 +165,7 @@ export default async function RootLayout({ children }: RootLayoutProps) {
               docsRepositoryBase={getDocsRepositoryBase()}
               footer={footer}
             >
+              <ScrollProgress className='top-16 hidden md:block' />
               {children}
             </Layout>
           </TooltipProvider>

@@ -39,17 +39,25 @@ function FloatingLabel({
 
 interface FloatingLabelInputProps extends React.ComponentProps<'input'> {
   label?: string;
+  /** Additional class names forwarded to the underlying FloatingInput. */
+  inputClassName?: string;
+  /** Additional class names forwarded to the underlying FloatingLabel. */
+  labelClassName?: string;
 }
 
 function FloatingLabelInput({
   id,
   label,
+  inputClassName,
+  labelClassName,
   ...props
 }: FloatingLabelInputProps): React.ReactNode {
   return (
     <div className='relative'>
-      <FloatingInput id={id} {...props} />
-      <FloatingLabel htmlFor={id}>{label}</FloatingLabel>
+      <FloatingInput id={id} className={inputClassName} {...props} />
+      <FloatingLabel htmlFor={id} className={labelClassName}>
+        {label}
+      </FloatingLabel>
     </div>
   );
 }

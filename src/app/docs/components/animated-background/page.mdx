@@ -60,82 +60,122 @@ import { AnimatedBackground } from '@/components/ui/animated-background';
 
 ## Animated Card Background (Hover)
 
-Each child must have a `data-id` attribute. Enable hover mode with `enableHover`.
+Each child must have a `data-id` attribute. Enable hover mode with `enableHover`. Use a grid to make the sliding effect more visible across items.
 
 <ComponentPreview>
-  <AnimatedBackground
-    className='rounded-lg bg-background'
-    transition={{ type: 'spring', bounce: 0.2, duration: 0.6 }}
-    enableHover
-  >
-    <div data-id='dialog' className='cursor-pointer rounded-lg p-4'>
-      <h3 className='font-medium'>Dialog</h3>
-      <p className='text-sm text-muted-foreground'>
-        Enhances modal presentations.
-      </p>
-    </div>
-    <div data-id='popover' className='cursor-pointer rounded-lg p-4'>
-      <h3 className='font-medium'>Popover</h3>
-      <p className='text-sm text-muted-foreground'>
-        For small interactive overlays.
-      </p>
-    </div>
-    <div data-id='accordion' className='cursor-pointer rounded-lg p-4'>
-      <h3 className='font-medium'>Accordion</h3>
-      <p className='text-sm text-muted-foreground'>
-        Collapsible sections for more content.
-      </p>
-    </div>
-  </AnimatedBackground>
+  <div className='grid grid-cols-3 gap-2 w-full max-w-lg'>
+    <AnimatedBackground
+      className='rounded-lg bg-background'
+      transition={{ type: 'spring', bounce: 0.2, duration: 0.6 }}
+      enableHover
+    >
+      <div
+        data-id='card-1'
+        className='cursor-pointer rounded-lg p-6 text-center'
+      >
+        <div className='text-2xl mb-1'>🎨</div>
+        <p className='text-xs font-medium'>Design</p>
+      </div>
+      <div
+        data-id='card-2'
+        className='cursor-pointer rounded-lg p-6 text-center'
+      >
+        <div className='text-2xl mb-1'>⚡</div>
+        <p className='text-xs font-medium'>Speed</p>
+      </div>
+      <div
+        data-id='card-3'
+        className='cursor-pointer rounded-lg p-6 text-center'
+      >
+        <div className='text-2xl mb-1'>🔒</div>
+        <p className='text-xs font-medium'>Security</p>
+      </div>
+      <div
+        data-id='card-4'
+        className='cursor-pointer rounded-lg p-6 text-center'
+      >
+        <div className='text-2xl mb-1'>🌐</div>
+        <p className='text-xs font-medium'>Global</p>
+      </div>
+      <div
+        data-id='card-5'
+        className='cursor-pointer rounded-lg p-6 text-center'
+      >
+        <div className='text-2xl mb-1'>📦</div>
+        <p className='text-xs font-medium'>Modular</p>
+      </div>
+      <div
+        data-id='card-6'
+        className='cursor-pointer rounded-lg p-6 text-center'
+      >
+        <div className='text-2xl mb-1'>🤖</div>
+        <p className='text-xs font-medium'>AI</p>
+      </div>
+    </AnimatedBackground>
+  </div>
 </ComponentPreview>
 
 ```tsx
-<AnimatedBackground
-  className='rounded-lg bg-muted'
-  transition={{ type: 'spring', bounce: 0.2, duration: 0.6 }}
-  enableHover
->
-  <div data-id='dialog' className='cursor-pointer rounded-lg p-4'>
-    <h3 className='font-medium'>Dialog</h3>
-    <p className='text-sm text-muted-foreground'>
-      Enhances modal presentations.
-    </p>
-  </div>
-  <div data-id='popover' className='cursor-pointer rounded-lg p-4'>
-    <h3 className='font-medium'>Popover</h3>
-    <p className='text-sm text-muted-foreground'>
-      For small interactive overlays.
-    </p>
-  </div>
-  <div data-id='accordion' className='cursor-pointer rounded-lg p-4'>
-    <h3 className='font-medium'>Accordion</h3>
-    <p className='text-sm text-muted-foreground'>
-      Collapsible sections for more content.
-    </p>
-  </div>
-</AnimatedBackground>
+<div className='grid grid-cols-3 gap-2'>
+  <AnimatedBackground
+    className='rounded-lg bg-muted'
+    transition={{ type: 'spring', bounce: 0.2, duration: 0.6 }}
+    enableHover
+  >
+    <div data-id='design' className='cursor-pointer rounded-lg p-6 text-center'>
+      <div className='text-2xl mb-1'>🎨</div>
+      <p className='text-xs font-medium'>Design</p>
+    </div>
+    <div data-id='speed' className='cursor-pointer rounded-lg p-6 text-center'>
+      <div className='text-2xl mb-1'>⚡</div>
+      <p className='text-xs font-medium'>Speed</p>
+    </div>
+    <div
+      data-id='security'
+      className='cursor-pointer rounded-lg p-6 text-center'
+    >
+      <div className='text-2xl mb-1'>🔒</div>
+      <p className='text-xs font-medium'>Security</p>
+    </div>
+  </AnimatedBackground>
+</div>
 ```
 
 ---
 
 ## Click Mode
 
-Omit `enableHover` for click-based selection with a `defaultValue`.
+Omit `enableHover` for click-based selection with a `defaultValue`. Works well as a tab bar with compact items.
 
 <ComponentPreview>
   <AnimatedBackground
     defaultValue='tab-1'
-    className='rounded-lg bg-background'
+    className='rounded-full bg-background'
     transition={{ type: 'spring', bounce: 0.2, duration: 0.3 }}
   >
-    <div data-id='tab-1' className='cursor-pointer px-4 py-2 text-sm'>
+    <div
+      data-id='tab-1'
+      className='cursor-pointer rounded-full px-5 py-2 text-sm font-medium'
+    >
       Home
     </div>
-    <div data-id='tab-2' className='cursor-pointer px-4 py-2 text-sm'>
+    <div
+      data-id='tab-2'
+      className='cursor-pointer rounded-full px-5 py-2 text-sm font-medium'
+    >
       About
     </div>
-    <div data-id='tab-3' className='cursor-pointer px-4 py-2 text-sm'>
+    <div
+      data-id='tab-3'
+      className='cursor-pointer rounded-full px-5 py-2 text-sm font-medium'
+    >
       Services
+    </div>
+    <div
+      data-id='tab-4'
+      className='cursor-pointer rounded-full px-5 py-2 text-sm font-medium'
+    >
+      Contact
     </div>
   </AnimatedBackground>
 </ComponentPreview>
@@ -143,16 +183,25 @@ Omit `enableHover` for click-based selection with a `defaultValue`.
 ```tsx
 <AnimatedBackground
   defaultValue='tab-1'
-  className='rounded-lg bg-primary'
+  className='rounded-full bg-muted'
   transition={{ type: 'spring', bounce: 0.2, duration: 0.3 }}
 >
-  <div data-id='tab-1' className='cursor-pointer px-4 py-2 text-sm'>
+  <div
+    data-id='tab-1'
+    className='cursor-pointer rounded-full px-5 py-2 text-sm font-medium'
+  >
     Home
   </div>
-  <div data-id='tab-2' className='cursor-pointer px-4 py-2 text-sm'>
+  <div
+    data-id='tab-2'
+    className='cursor-pointer rounded-full px-5 py-2 text-sm font-medium'
+  >
     About
   </div>
-  <div data-id='tab-3' className='cursor-pointer px-4 py-2 text-sm'>
+  <div
+    data-id='tab-3'
+    className='cursor-pointer rounded-full px-5 py-2 text-sm font-medium'
+  >
     Services
   </div>
 </AnimatedBackground>
