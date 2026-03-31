@@ -89,7 +89,59 @@ import Image from 'next/image';
 
 Use these same URLs in the code block below the preview (not `/example.jpg` or `/your-image.jpg`), so copy-pasted code works immediately.
 
-### 2. Always check shadcn FIRST
+### 2. Preview blocks must contain ONLY the component
+
+`<ComponentPreview>` should show **only** the component itself — no extra explanation, no wrapping layout, no boilerplate.
+
+**Correct** — just the component:
+
+```mdx
+<ComponentPreview>
+  <div className='relative h-64 w-full overflow-hidden rounded-lg'>
+    <Image
+      src='https://picsum.photos/800/256'
+      alt='Demo'
+      width={800}
+      height={256}
+      className='h-full w-full object-cover'
+    />
+    <ProgressiveBlur className='absolute inset-0' />
+  </div>
+</ComponentPreview>
+```
+
+Only add extra context (page structure, state logic) when it is **essential to explain a usage pattern**, such as:
+
+- A layout-level component that wraps `{children}` (e.g. `ScrollProgress` in a layout)
+- A stateful interactive demo (e.g. `TransitionPanel` with step navigation)
+
+Never pad a preview with minimal placeholder content just to fill space.
+
+### 3. Split icon/external imports into a separate code block
+
+When a code example uses icons or third-party imports alongside the component, place the imports in their own code block **before** the usage block:
+
+````mdx
+```tsx
+import { ArrowRight, ChevronRight, Mail } from 'lucide-react';
+```
+
+```tsx
+<Button effect="expandIcon" icon={ArrowRight} iconPlacement="right">
+  Continue
+</Button>
+<Button effect="expandIcon" icon={ChevronRight} iconPlacement="right" variant="outline">
+  Next Step
+</Button>
+<Button effect="expandIcon" icon={Mail} iconPlacement="left">
+  Send Email
+</Button>
+```
+````
+
+This keeps the usage block clean and copy-pasteable. The component's own import (shown in the `## Import` section) is never repeated in variant examples.
+
+### 4. Always check shadcn FIRST
 
 Before writing any new UI component, verify if shadcn/ui already provides it:
 
@@ -103,7 +155,7 @@ npx shadcn@latest add <name>
 
 Always preserve shadcn's original styles and API. Only add functionality on top.
 
-### 3. Prefer wrappers over modifying base components
+### 5. Prefer wrappers over modifying base components
 
 When extending a shadcn component, **create a wrapper file** instead of editing the base:
 
@@ -157,13 +209,20 @@ Create `src/components/ui/<name>.tsx`. Follow existing components as reference:
 
 Create `src/app/docs/components/<name>/page.mdx`.
 
-Every doc page needs:
+The page **must** follow this exact order:
 
-- A `metadata` export with `title`, `description`, and `alternates.canonical` set to `/docs/components/<name>`
-- A `<JsonLd />` block with three-level breadcrumb structured data (Home → Docs → Component)
-- `## Installation` with `<InstallSnippet registryUrl="https://prismaui.com/components/<name>.json" />`
-- `## Import` with the import statement
-- Sections per prop/variant/size — each with a `<ComponentPreview>` block and a matching code block
+1. **`metadata` export** — `title`, `description`, and `alternates.canonical` set to `/docs/components/<name>`
+2. **`# Title`** — component name as heading
+3. **Short description** — one paragraph explaining what the component does
+4. **`## Installation`** — `<InstallSnippet registryUrl="https://prismaui.com/components/<name>.json" />`
+5. **`## Import`** — single code block with the import statement
+6. **`---`** separator
+7. **`## Usage` / variant sections** — each with a `<ComponentPreview>` block above its code block (see core rules 1–3)
+8. **`## Props`** — props table at the very end
+
+Additionally:
+
+- Include a `<JsonLd />` block with three-level breadcrumb structured data (Home → Docs → Component)
 - Reference the badge page (`src/app/docs/components/badge/page.mdx`) as a template
 
 ### Step 4 — Register in the sidebar
