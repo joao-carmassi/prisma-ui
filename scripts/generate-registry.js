@@ -107,6 +107,73 @@ writeRegistry('flip-card', {
   ],
 });
 
+// 8. Transition Panel
+writeRegistry('transition-panel', {
+  dependencies: ['motion'],
+  files: [makeFile('transition-panel.tsx', read('transition-panel.tsx'))],
+});
+
+// 9. Floating Label Input
+writeRegistry('floating-label-input', {
+  registryDependencies: ['input', 'label'],
+  files: [
+    makeFile('floating-label-input.tsx', read('floating-label-input.tsx')),
+  ],
+});
+
+// 10. Animated Background
+writeRegistry('animated-background', {
+  dependencies: ['motion'],
+  files: [makeFile('animated-background.tsx', read('animated-background.tsx'))],
+});
+
+// 11. Progressive Blur
+writeRegistry('progressive-blur', {
+  dependencies: ['motion'],
+  files: [makeFile('progressive-blur.tsx', read('progressive-blur.tsx'))],
+});
+
+// 12. Infinite Slider
+writeRegistry('infinite-slider', {
+  dependencies: ['motion'],
+  files: [makeFile('infinite-slider.tsx', read('infinite-slider.tsx'))],
+});
+
+// 13. Glow Effect
+writeRegistry('glow-effect', {
+  dependencies: ['motion'],
+  files: [makeFile('glow-effect.tsx', read('glow-effect.tsx'))],
+});
+
+// 14. Tilt
+writeRegistry('tilt', {
+  dependencies: ['motion'],
+  files: [makeFile('tilt.tsx', read('tilt.tsx'))],
+});
+
+// 15. Magnetic
+writeRegistry('magnetic', {
+  dependencies: ['motion'],
+  files: [makeFile('magnetic.tsx', read('magnetic.tsx'))],
+});
+
+// 16. Scroll Progress
+writeRegistry('scroll-progress', {
+  dependencies: ['motion'],
+  files: [makeFile('scroll-progress.tsx', read('scroll-progress.tsx'))],
+});
+
+// 17. Backlight
+writeRegistry('backlight', {
+  files: [makeFile('backlight.tsx', read('backlight.tsx'))],
+});
+
+// 18. Tracing Beam
+writeRegistry('tracing-beam', {
+  dependencies: ['motion'],
+  files: [makeFile('tracing-beam.tsx', read('tracing-beam.tsx'))],
+});
+
 console.log(
   `\nAll ${registryCounter} registry JSON files created successfully!\n`,
 );

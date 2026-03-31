@@ -1,0 +1,139 @@
+import { Tilt } from '@/components/ui/tilt';
+import {
+  Card,
+  CardHeader,
+  CardTitle,
+  CardDescription,
+  CardContent,
+} from '@/components/ui/card';
+import { JsonLd } from '@/components/seo/json-ld';
+import { InstallSnippet } from '@/components/docs/install-snippet';
+
+export const metadata = {
+  title: 'Tilt Card',
+  description:
+    'A 3D tilt wrapper that applies a perspective tilt effect on mouse move. Wrap any card or element for interactive depth.',
+  alternates: { canonical: '/docs/components/tilt-card' },
+};
+
+<JsonLd
+  data={{
+    '@context': 'https://schema.org',
+    '@type': 'TechArticle',
+    headline: 'Tilt Card — Prisma UI',
+    description:
+      'A 3D tilt wrapper that applies a perspective tilt effect on mouse move.',
+    breadcrumb: {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: 'Home',
+          item: 'https://prismaui.com',
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: 'Docs',
+          item: 'https://prismaui.com/docs',
+        },
+        {
+          '@type': 'ListItem',
+          position: 3,
+          name: 'Tilt Card',
+          item: 'https://prismaui.com/docs/components/tilt-card',
+        },
+      ],
+    },
+  }}
+/>
+
+# Tilt Card
+
+A 3D tilt wrapper that applies a perspective tilt effect on mouse movement. Inspired by [Motion Primitives' Tilt](https://motion-primitives.com/docs/tilt). Wrap any Card or element for interactive depth.
+
+## Installation
+
+<InstallSnippet registryUrl='https://prismaui.com/components/tilt.json' />
+
+## Import
+
+```tsx
+import { Tilt } from '@/components/ui/tilt';
+```
+
+---
+
+## Preview
+
+<ComponentPreview className='gap-6 items-start'>
+  <Tilt rotationFactor={15} springOptions={{ stiffness: 300, damping: 20 }}>
+    <Card className='w-72'>
+      <CardHeader>
+        <CardTitle>Tilt Card</CardTitle>
+        <CardDescription>Hover to see the 3D tilt effect.</CardDescription>
+      </CardHeader>
+      <CardContent>
+        <p className='text-sm text-muted-foreground'>
+          Wrap any element with the Tilt component for interactive depth.
+        </p>
+      </CardContent>
+    </Card>
+  </Tilt>
+</ComponentPreview>
+
+```tsx
+<Tilt rotationFactor={15} springOptions={{ stiffness: 300, damping: 20 }}>
+  <Card className='w-72'>
+    <CardHeader>
+      <CardTitle>Tilt Card</CardTitle>
+      <CardDescription>Hover to see the 3D tilt effect.</CardDescription>
+    </CardHeader>
+    <CardContent>
+      <p className='text-sm text-muted-foreground'>
+        Wrap any element with the Tilt component for interactive depth.
+      </p>
+    </CardContent>
+  </Card>
+</Tilt>
+```
+
+---
+
+## Reversed Tilt
+
+<ComponentPreview>
+  <Tilt isReverse rotationFactor={20}>
+    <Card className='w-72'>
+      <CardHeader>
+        <CardTitle>Reversed</CardTitle>
+        <CardDescription>Tilt moves opposite to cursor.</CardDescription>
+      </CardHeader>
+      <CardContent>
+        <p className='text-sm text-muted-foreground'>
+          Use `isReverse` to invert the tilt direction.
+        </p>
+      </CardContent>
+    </Card>
+  </Tilt>
+</ComponentPreview>
+
+```tsx
+<Tilt isReverse rotationFactor={20}>
+  <Card>...</Card>
+</Tilt>
+```
+
+---
+
+## Props
+
+| Prop             | Type              | Default | Description                    |
+| ---------------- | ----------------- | ------- | ------------------------------ |
+| `children`       | `React.ReactNode` | —       | Content to tilt.               |
+| `className`      | `string`          | —       | Additional CSS classes.        |
+| `style`          | `MotionStyle`     | —       | Motion style overrides.        |
+| `rotationFactor` | `number`          | `15`    | Max rotation angle in degrees. |
+| `isReverse`      | `boolean`         | `false` | Reverse the tilt direction.    |
+| `springOptions`  | `SpringOptions`   | —       | Spring animation config.       |

@@ -1,0 +1,172 @@
+import { AnimatedBackground } from '@/components/ui/animated-background';
+import { JsonLd } from '@/components/seo/json-ld';
+import { InstallSnippet } from '@/components/docs/install-snippet';
+
+export const metadata = {
+  title: 'Animated Background',
+  description:
+    'Visually highlights selected items by sliding a background into view on hover or click. Ideal for tabs, menus, and card grids.',
+  alternates: { canonical: '/docs/components/animated-background' },
+};
+
+<JsonLd
+  data={{
+    '@context': 'https://schema.org',
+    '@type': 'TechArticle',
+    headline: 'Animated Background — Prisma UI',
+    description:
+      'Visually highlights selected items by sliding a background into view.',
+    breadcrumb: {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: 'Home',
+          item: 'https://prismaui.com',
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: 'Docs',
+          item: 'https://prismaui.com/docs',
+        },
+        {
+          '@type': 'ListItem',
+          position: 3,
+          name: 'Animated Background',
+          item: 'https://prismaui.com/docs/components/animated-background',
+        },
+      ],
+    },
+  }}
+/>
+
+# Animated Background
+
+Visually highlights selected items by sliding a background into view when hovered or clicked. Inspired by [Motion Primitives' Animated Background](https://motion-primitives.com/docs/animated-background). Ideal for tabs, menus, and card grids.
+
+## Installation
+
+<InstallSnippet registryUrl='https://prismaui.com/components/animated-background.json' />
+
+## Import
+
+```tsx
+import { AnimatedBackground } from '@/components/ui/animated-background';
+```
+
+---
+
+## Animated Card Background (Hover)
+
+Each child must have a `data-id` attribute. Enable hover mode with `enableHover`.
+
+<ComponentPreview>
+  <AnimatedBackground
+    className='rounded-lg bg-muted'
+    transition={{ type: 'spring', bounce: 0.2, duration: 0.6 }}
+    enableHover
+  >
+    <div data-id='dialog' className='cursor-pointer rounded-lg p-4'>
+      <h3 className='font-medium'>Dialog</h3>
+      <p className='text-sm text-muted-foreground'>
+        Enhances modal presentations.
+      </p>
+    </div>
+    <div data-id='popover' className='cursor-pointer rounded-lg p-4'>
+      <h3 className='font-medium'>Popover</h3>
+      <p className='text-sm text-muted-foreground'>
+        For small interactive overlays.
+      </p>
+    </div>
+    <div data-id='accordion' className='cursor-pointer rounded-lg p-4'>
+      <h3 className='font-medium'>Accordion</h3>
+      <p className='text-sm text-muted-foreground'>
+        Collapsible sections for more content.
+      </p>
+    </div>
+  </AnimatedBackground>
+</ComponentPreview>
+
+```tsx
+<AnimatedBackground
+  className='rounded-lg bg-muted'
+  transition={{ type: 'spring', bounce: 0.2, duration: 0.6 }}
+  enableHover
+>
+  <div data-id='dialog' className='cursor-pointer rounded-lg p-4'>
+    <h3 className='font-medium'>Dialog</h3>
+    <p className='text-sm text-muted-foreground'>
+      Enhances modal presentations.
+    </p>
+  </div>
+  <div data-id='popover' className='cursor-pointer rounded-lg p-4'>
+    <h3 className='font-medium'>Popover</h3>
+    <p className='text-sm text-muted-foreground'>
+      For small interactive overlays.
+    </p>
+  </div>
+  <div data-id='accordion' className='cursor-pointer rounded-lg p-4'>
+    <h3 className='font-medium'>Accordion</h3>
+    <p className='text-sm text-muted-foreground'>
+      Collapsible sections for more content.
+    </p>
+  </div>
+</AnimatedBackground>
+```
+
+---
+
+## Click Mode
+
+Omit `enableHover` for click-based selection with a `defaultValue`.
+
+<ComponentPreview>
+  <AnimatedBackground
+    defaultValue='tab-1'
+    className='rounded-lg bg-primary'
+    transition={{ type: 'spring', bounce: 0.2, duration: 0.3 }}
+  >
+    <div data-id='tab-1' className='cursor-pointer px-4 py-2 text-sm'>
+      Home
+    </div>
+    <div data-id='tab-2' className='cursor-pointer px-4 py-2 text-sm'>
+      About
+    </div>
+    <div data-id='tab-3' className='cursor-pointer px-4 py-2 text-sm'>
+      Services
+    </div>
+  </AnimatedBackground>
+</ComponentPreview>
+
+```tsx
+<AnimatedBackground
+  defaultValue='tab-1'
+  className='rounded-lg bg-primary'
+  transition={{ type: 'spring', bounce: 0.2, duration: 0.3 }}
+>
+  <div data-id='tab-1' className='cursor-pointer px-4 py-2 text-sm'>
+    Home
+  </div>
+  <div data-id='tab-2' className='cursor-pointer px-4 py-2 text-sm'>
+    About
+  </div>
+  <div data-id='tab-3' className='cursor-pointer px-4 py-2 text-sm'>
+    Services
+  </div>
+</AnimatedBackground>
+```
+
+---
+
+## Props
+
+| Prop            | Type                           | Default | Description                         |
+| --------------- | ------------------------------ | ------- | ----------------------------------- |
+| `children`      | `ReactElement[]`               | —       | Children with `data-id` attributes. |
+| `defaultValue`  | `string`                       | —       | Default active item identifier.     |
+| `onValueChange` | `(id: string \| null) => void` | —       | Callback on active change.          |
+| `className`     | `string`                       | —       | Class for the animated background.  |
+| `transition`    | `Transition`                   | —       | Motion transition config.           |
+| `enableHover`   | `boolean`                      | `false` | Enable hover activation.            |

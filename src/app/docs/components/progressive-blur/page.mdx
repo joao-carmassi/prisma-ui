@@ -1,0 +1,157 @@
+import { ProgressiveBlur } from '@/components/ui/progressive-blur';
+import { JsonLd } from '@/components/seo/json-ld';
+import { InstallSnippet } from '@/components/docs/install-snippet';
+
+export const metadata = {
+  title: 'Progressive Blur',
+  description:
+    'A layered blur effect component that progressively blurs content using gradient masks and backdrop-filter.',
+  alternates: { canonical: '/docs/components/progressive-blur' },
+};
+
+<JsonLd
+  data={{
+    '@context': 'https://schema.org',
+    '@type': 'TechArticle',
+    headline: 'Progressive Blur — Prisma UI',
+    description:
+      'A layered progressive blur using gradient masks and backdrop-filter.',
+    breadcrumb: {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: 'Home',
+          item: 'https://prismaui.com',
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: 'Docs',
+          item: 'https://prismaui.com/docs',
+        },
+        {
+          '@type': 'ListItem',
+          position: 3,
+          name: 'Progressive Blur',
+          item: 'https://prismaui.com/docs/components/progressive-blur',
+        },
+      ],
+    },
+  }}
+/>
+
+# Progressive Blur
+
+A layered blur component that progressively blurs content using gradient masks and backdrop-filter. Inspired by [Motion Primitives' Progressive Blur](https://motion-primitives.com/docs/progressive-blur). Great for fading content edges on images and hero sections.
+
+## Installation
+
+<InstallSnippet registryUrl='https://prismaui.com/components/progressive-blur.json' />
+
+## Import
+
+```tsx
+import { ProgressiveBlur } from '@/components/ui/progressive-blur';
+```
+
+---
+
+## Preview
+
+Place the component over an image or content area with `absolute` positioning.
+
+<ComponentPreview>
+  <div className='relative h-64 w-full overflow-hidden rounded-lg'>
+    <div className='h-full w-full bg-gradient-to-br from-purple-500 via-pink-500 to-orange-400' />
+    <ProgressiveBlur className='absolute inset-0' />
+  </div>
+</ComponentPreview>
+
+```tsx
+<div className='relative h-64 w-full overflow-hidden rounded-lg'>
+  <img
+    src='/your-image.jpg'
+    alt='Demo'
+    className='h-full w-full object-cover'
+  />
+  <ProgressiveBlur className='absolute inset-0' />
+</div>
+```
+
+---
+
+## Direction
+
+Change the blur direction with the `direction` prop.
+
+<ComponentPreview>
+  <div className='grid grid-cols-2 gap-4'>
+    <div className='relative h-32 overflow-hidden rounded-lg'>
+      <div className='h-full w-full bg-gradient-to-br from-blue-500 to-cyan-400' />
+      <ProgressiveBlur direction='top' className='absolute inset-0' />
+      <span className='absolute bottom-2 left-2 text-xs font-medium text-white'>
+        top
+      </span>
+    </div>
+    <div className='relative h-32 overflow-hidden rounded-lg'>
+      <div className='h-full w-full bg-gradient-to-br from-green-500 to-emerald-400' />
+      <ProgressiveBlur direction='bottom' className='absolute inset-0' />
+      <span className='absolute top-2 left-2 text-xs font-medium text-white'>
+        bottom
+      </span>
+    </div>
+    <div className='relative h-32 overflow-hidden rounded-lg'>
+      <div className='h-full w-full bg-gradient-to-br from-red-500 to-rose-400' />
+      <ProgressiveBlur direction='left' className='absolute inset-0' />
+      <span className='absolute top-2 right-2 text-xs font-medium text-white'>
+        left
+      </span>
+    </div>
+    <div className='relative h-32 overflow-hidden rounded-lg'>
+      <div className='h-full w-full bg-gradient-to-br from-yellow-500 to-amber-400' />
+      <ProgressiveBlur direction='right' className='absolute inset-0' />
+      <span className='absolute top-2 left-2 text-xs font-medium text-white'>
+        right
+      </span>
+    </div>
+  </div>
+</ComponentPreview>
+
+```tsx
+<ProgressiveBlur direction='top' />
+<ProgressiveBlur direction='bottom' />
+<ProgressiveBlur direction='left' />
+<ProgressiveBlur direction='right' />
+```
+
+---
+
+## Custom Intensity
+
+<ComponentPreview>
+  <div className='relative h-48 w-full overflow-hidden rounded-lg'>
+    <div className='h-full w-full bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500' />
+    <ProgressiveBlur
+      blurIntensity={0.5}
+      blurLayers={12}
+      className='absolute inset-0'
+    />
+  </div>
+</ComponentPreview>
+
+```tsx
+<ProgressiveBlur blurIntensity={0.5} blurLayers={12} />
+```
+
+---
+
+## Props
+
+| Prop            | Type                                     | Default    | Description                |
+| --------------- | ---------------------------------------- | ---------- | -------------------------- |
+| `direction`     | `'top' \| 'right' \| 'bottom' \| 'left'` | `'bottom'` | Blur fade direction.       |
+| `blurLayers`    | `number`                                 | `8`        | Number of blur layers.     |
+| `blurIntensity` | `number`                                 | `0.25`     | Blur intensity multiplier. |
+| `className`     | `string`                                 | —          | Additional CSS classes.    |

@@ -1,0 +1,129 @@
+import { TracingBeam } from '@/components/ui/tracing-beam';
+import { JsonLd } from '@/components/seo/json-ld';
+import { InstallSnippet } from '@/components/docs/install-snippet';
+
+export const metadata = {
+  title: 'Tracing Beam',
+  description:
+    'An SVG beam that traces a path as the user scrolls. Ideal for timelines and long-form content.',
+  alternates: { canonical: '/docs/components/tracing-beam' },
+};
+
+<JsonLd
+  data={{
+    '@context': 'https://schema.org',
+    '@type': 'TechArticle',
+    headline: 'Tracing Beam — Prisma UI',
+    description: 'An SVG beam that traces a path as the user scrolls.',
+    breadcrumb: {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: 'Home',
+          item: 'https://prismaui.com',
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: 'Docs',
+          item: 'https://prismaui.com/docs',
+        },
+        {
+          '@type': 'ListItem',
+          position: 3,
+          name: 'Tracing Beam',
+          item: 'https://prismaui.com/docs/components/tracing-beam',
+        },
+      ],
+    },
+  }}
+/>
+
+# Tracing Beam
+
+An animated SVG beam that traces a path as the user scrolls through content. Inspired by [Aceternity UI's Tracing Beam](https://ui.aceternity.com/components/tracing-beam). Perfect for timelines and long-form pages.
+
+## Installation
+
+<InstallSnippet registryUrl='https://prismaui.com/components/tracing-beam.json' />
+
+## Import
+
+```tsx
+import { TracingBeam } from '@/components/ui/tracing-beam';
+```
+
+---
+
+## Basic Usage
+
+Wrap your page content with `TracingBeam` to add a scroll-tracking beam on the left side.
+
+<ComponentPreview>
+  <div className='h-72 w-full overflow-y-auto rounded-lg border p-4'>
+    <TracingBeam className='max-w-full'>
+      <article className='space-y-8 pl-8'>
+        <div>
+          <h3 className='mb-2 text-lg font-semibold'>Section One</h3>
+          <p className='text-sm text-muted-foreground'>
+            Scroll down to see the beam follow your position through the
+            content.
+          </p>
+        </div>
+        <div>
+          <h3 className='mb-2 text-lg font-semibold'>Section Two</h3>
+          <p className='text-sm text-muted-foreground'>
+            The beam traces an SVG path that responds to scroll position with
+            spring physics.
+          </p>
+        </div>
+        <div>
+          <h3 className='mb-2 text-lg font-semibold'>Section Three</h3>
+          <p className='text-sm text-muted-foreground'>
+            Perfect for timelines, changelogs, and long-form documentation
+            pages.
+          </p>
+        </div>
+        <div>
+          <h3 className='mb-2 text-lg font-semibold'>Section Four</h3>
+          <p className='text-sm text-muted-foreground'>
+            The gradient beam provides a visual progress indicator as users
+            scroll.
+          </p>
+        </div>
+      </article>
+    </TracingBeam>
+  </div>
+</ComponentPreview>
+
+```tsx
+import { TracingBeam } from '@/components/ui/tracing-beam';
+
+export default function Page() {
+  return (
+    <TracingBeam>
+      <article>
+        <h2>Section One</h2>
+        <p>Content goes here...</p>
+
+        <h2>Section Two</h2>
+        <p>More content...</p>
+
+        <h2>Section Three</h2>
+        <p>Even more content...</p>
+      </article>
+    </TracingBeam>
+  );
+}
+```
+
+---
+
+## Props
+
+| Prop        | Type              | Default | Description                                   |
+| ----------- | ----------------- | ------- | --------------------------------------------- |
+| `children`  | `React.ReactNode` | —       | The page content rendered alongside the beam. |
+| `className` | `string`          | —       | Additional CSS classes for the wrapper.       |

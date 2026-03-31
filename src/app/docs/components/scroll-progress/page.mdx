@@ -1,0 +1,119 @@
+import { ScrollProgress } from '@/components/ui/scroll-progress';
+import { JsonLd } from '@/components/seo/json-ld';
+import { InstallSnippet } from '@/components/docs/install-snippet';
+
+export const metadata = {
+  title: 'Scroll Progress',
+  description:
+    'An animated scroll progress bar fixed to the top of the page. Scales with scroll position using a gradient line.',
+  alternates: { canonical: '/docs/components/scroll-progress' },
+};
+
+<JsonLd
+  data={{
+    '@context': 'https://schema.org',
+    '@type': 'TechArticle',
+    headline: 'Scroll Progress — Prisma UI',
+    description:
+      'An animated scroll progress bar fixed to the top of the viewport.',
+    breadcrumb: {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: 'Home',
+          item: 'https://prismaui.com',
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: 'Docs',
+          item: 'https://prismaui.com/docs',
+        },
+        {
+          '@type': 'ListItem',
+          position: 3,
+          name: 'Scroll Progress',
+          item: 'https://prismaui.com/docs/components/scroll-progress',
+        },
+      ],
+    },
+  }}
+/>
+
+# Scroll Progress
+
+An animated scroll progress bar fixed to the top of the page. Inspired by [Magic UI's Scroll Progress](https://magicui.design/docs/components/scroll-progress). The gradient line scales with the user's scroll position.
+
+## Installation
+
+<InstallSnippet registryUrl='https://prismaui.com/components/scroll-progress.json' />
+
+## Import
+
+```tsx
+import { ScrollProgress } from '@/components/ui/scroll-progress';
+```
+
+---
+
+## Usage
+
+Place the component at the root of your layout or page:
+
+<ComponentPreview>
+  <div className='relative h-2 w-full overflow-hidden rounded-full bg-muted'>
+    <div className='h-full w-3/5 rounded-full bg-linear-to-r from-[#A97CF8] via-[#F38CB8] to-[#FDCC92]' />
+  </div>
+</ComponentPreview>
+
+```tsx
+export default function Layout({ children }) {
+  return (
+    <>
+      <ScrollProgress />
+      {children}
+    </>
+  );
+}
+```
+
+---
+
+## Custom Colors
+
+Override the default gradient with your own colors via `className`:
+
+<ComponentPreview>
+  <div className='relative h-2 w-full overflow-hidden rounded-full bg-muted'>
+    <div className='h-full w-3/5 rounded-full bg-linear-to-r from-blue-500 via-purple-500 to-pink-500' />
+  </div>
+</ComponentPreview>
+
+```tsx
+<ScrollProgress className='bg-linear-to-r from-blue-500 via-purple-500 to-pink-500' />
+```
+
+---
+
+## Thicker Bar
+
+<ComponentPreview>
+  <div className='relative h-2 w-full overflow-hidden rounded-full bg-muted'>
+    <div className='h-full w-3/5 rounded-full bg-linear-to-r from-[#A97CF8] via-[#F38CB8] to-[#FDCC92]' />
+  </div>
+</ComponentPreview>
+
+```tsx
+<ScrollProgress className='h-0.5' />
+```
+
+---
+
+## Props
+
+| Prop        | Type        | Default | Description                      |
+| ----------- | ----------- | ------- | -------------------------------- |
+| `className` | `string`    | —       | Additional CSS classes.          |
+| `ref`       | `React.Ref` | —       | Ref forwarded to the motion div. |

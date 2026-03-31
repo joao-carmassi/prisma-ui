@@ -1,0 +1,186 @@
+import { GlowEffect } from '@/components/ui/glow-effect';
+import {
+  Card,
+  CardHeader,
+  CardTitle,
+  CardDescription,
+  CardContent,
+} from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { JsonLd } from '@/components/seo/json-ld';
+import { InstallSnippet } from '@/components/docs/install-snippet';
+
+export const metadata = {
+  title: 'Glow Effect',
+  description:
+    'A customizable animated glow effect with multiple animation modes, colors, blur, and transitions.',
+  alternates: { canonical: '/docs/components/glow-effect' },
+};
+
+<JsonLd
+  data={{
+    '@context': 'https://schema.org',
+    '@type': 'TechArticle',
+    headline: 'Glow Effect — Prisma UI',
+    description:
+      'A customizable animated glow effect with multiple animation modes.',
+    breadcrumb: {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: 'Home',
+          item: 'https://prismaui.com',
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: 'Docs',
+          item: 'https://prismaui.com/docs',
+        },
+        {
+          '@type': 'ListItem',
+          position: 3,
+          name: 'Glow Effect',
+          item: 'https://prismaui.com/docs/components/glow-effect',
+        },
+      ],
+    },
+  }}
+/>
+
+# Glow Effect
+
+A customizable animated glow effect with multiple animation modes. Inspired by [Motion Primitives' Glow Effect](https://motion-primitives.com/docs/glow-effect). Drop inside any element with `relative overflow-hidden`.
+
+## Installation
+
+<InstallSnippet registryUrl='https://prismaui.com/components/glow-effect.json' />
+
+## Import
+
+```tsx
+import { GlowEffect } from '@/components/ui/glow-effect';
+```
+
+---
+
+## Card Glow
+
+<ComponentPreview>
+  <Card className='relative w-85 overflow-hidden'>
+    <GlowEffect
+      colors={['#FF5733', '#33FF57', '#3357FF', '#F1C40F']}
+      mode='rotate'
+      blur='medium'
+    />
+    <CardHeader>
+      <CardTitle>Glow Effect</CardTitle>
+      <CardDescription>Rotating gradient glow.</CardDescription>
+    </CardHeader>
+    <CardContent>
+      <p className='text-sm text-muted-foreground'>
+        Uses conic-gradient with continuous rotation.
+      </p>
+    </CardContent>
+  </Card>
+</ComponentPreview>
+
+```tsx
+<Card className='relative w-85 overflow-hidden'>
+  <GlowEffect
+    colors={['#FF5733', '#33FF57', '#3357FF', '#F1C40F']}
+    mode='rotate'
+    blur='medium'
+  />
+  <CardHeader>
+    <CardTitle>Glow Effect</CardTitle>
+    <CardDescription>Rotating gradient glow.</CardDescription>
+  </CardHeader>
+  <CardContent>
+    <p className='text-sm text-muted-foreground'>
+      Uses conic-gradient with continuous rotation.
+    </p>
+  </CardContent>
+</Card>
+```
+
+---
+
+## Animation Modes
+
+Use the `mode` prop to change the glow animation: `rotate`, `pulse`, `breathe`, `colorShift`, `flowHorizontal`, or `static`.
+
+<ComponentPreview className='gap-6'>
+  <div className='relative h-20 w-32 overflow-hidden rounded-lg bg-card'>
+    <GlowEffect mode='pulse' />
+    <span className='relative flex h-full items-center justify-center text-sm font-medium'>
+      pulse
+    </span>
+  </div>
+  <div className='relative h-20 w-32 overflow-hidden rounded-lg bg-card'>
+    <GlowEffect mode='breathe' />
+    <span className='relative flex h-full items-center justify-center text-sm font-medium'>
+      breathe
+    </span>
+  </div>
+  <div className='relative h-20 w-32 overflow-hidden rounded-lg bg-card'>
+    <GlowEffect mode='colorShift' />
+    <span className='relative flex h-full items-center justify-center text-sm font-medium'>
+      colorShift
+    </span>
+  </div>
+  <div className='relative h-20 w-32 overflow-hidden rounded-lg bg-card'>
+    <GlowEffect mode='flowHorizontal' />
+    <span className='relative flex h-full items-center justify-center text-sm font-medium'>
+      flowHorizontal
+    </span>
+  </div>
+  <div className='relative h-20 w-32 overflow-hidden rounded-lg bg-card'>
+    <GlowEffect mode='static' />
+    <span className='relative flex h-full items-center justify-center text-sm font-medium'>
+      static
+    </span>
+  </div>
+</ComponentPreview>
+
+```tsx
+<GlowEffect mode='pulse' />
+<GlowEffect mode='breathe' />
+<GlowEffect mode='colorShift' />
+<GlowEffect mode='flowHorizontal' />
+<GlowEffect mode='static' />
+```
+
+---
+
+## Custom Colors
+
+<ComponentPreview>
+  <div className='relative h-20 w-48 overflow-hidden rounded-lg bg-card'>
+    <GlowEffect colors={['#A97CF8', '#F38CB8', '#FDCC92']} mode='rotate' />
+    <span className='relative flex h-full items-center justify-center text-sm font-medium'>
+      Custom palette
+    </span>
+  </div>
+</ComponentPreview>
+
+```tsx
+<GlowEffect colors={['#A97CF8', '#F38CB8', '#FDCC92']} mode='rotate' />
+```
+
+---
+
+## Props
+
+| Prop         | Type                                                                                           | Default                                        | Description                    |
+| ------------ | ---------------------------------------------------------------------------------------------- | ---------------------------------------------- | ------------------------------ |
+| `colors`     | `string[]`                                                                                     | `['#FF5733', '#33FF57', '#3357FF', '#F1C40F']` | Glow colors.                   |
+| `mode`       | `'rotate' \| 'pulse' \| 'breathe' \| 'colorShift' \| 'flowHorizontal' \| 'static'`             | `'rotate'`                                     | Animation mode.                |
+| `blur`       | `number \| 'softest' \| 'soft' \| 'medium' \| 'strong' \| 'stronger' \| 'strongest' \| 'none'` | `'medium'`                                     | Blur intensity.                |
+| `transition` | `Transition`                                                                                   | —                                              | Motion transition override.    |
+| `scale`      | `number`                                                                                       | `1`                                            | Scale of the glow.             |
+| `duration`   | `number`                                                                                       | `5`                                            | Duration per cycle in seconds. |
+| `className`  | `string`                                                                                       | —                                              | Additional CSS classes.        |
+| `style`      | `React.CSSProperties`                                                                          | —                                              | Inline styles.                 |

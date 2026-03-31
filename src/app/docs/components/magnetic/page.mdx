@@ -1,0 +1,140 @@
+import { Magnetic } from '@/components/ui/magnetic';
+import { Button } from '@/components/ui/button';
+import { JsonLd } from '@/components/seo/json-ld';
+import { InstallSnippet } from '@/components/docs/install-snippet';
+
+export const metadata = {
+  title: 'Magnetic',
+  description:
+    'A magnetic wrapper that attracts its children towards the mouse cursor. Supports self, parent, and global action areas.',
+  alternates: { canonical: '/docs/components/magnetic' },
+};
+
+<JsonLd
+  data={{
+    '@context': 'https://schema.org',
+    '@type': 'TechArticle',
+    headline: 'Magnetic — Prisma UI',
+    description:
+      'A magnetic wrapper that attracts elements towards the cursor.',
+    breadcrumb: {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: 'Home',
+          item: 'https://prismaui.com',
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: 'Docs',
+          item: 'https://prismaui.com/docs',
+        },
+        {
+          '@type': 'ListItem',
+          position: 3,
+          name: 'Magnetic',
+          item: 'https://prismaui.com/docs/components/magnetic',
+        },
+      ],
+    },
+  }}
+/>
+
+# Magnetic
+
+A magnetic wrapper component that attracts its children towards the mouse cursor. Inspired by [Motion Primitives' Magnetic](https://motion-primitives.com/docs/magnetic). Supports self, parent, and global action areas.
+
+## Installation
+
+<InstallSnippet registryUrl='https://prismaui.com/components/magnetic.json' />
+
+## Import
+
+```tsx
+import { Magnetic } from '@/components/ui/magnetic';
+```
+
+---
+
+## Preview
+
+<ComponentPreview>
+  <Magnetic>
+    <Button>Hover me</Button>
+  </Magnetic>
+</ComponentPreview>
+
+```tsx
+<Magnetic>
+  <Button>Hover me</Button>
+</Magnetic>
+```
+
+---
+
+## Custom Intensity & Range
+
+<ComponentPreview>
+  <Magnetic intensity={0.8} range={200}>
+    <Button variant='outline'>Stronger pull</Button>
+  </Magnetic>
+</ComponentPreview>
+
+```tsx
+<Magnetic intensity={0.8} range={200}>
+  <Button variant='outline'>Stronger pull</Button>
+</Magnetic>
+```
+
+---
+
+## Action Areas
+
+Control which element triggers the magnetic effect.
+
+<ComponentPreview className='gap-6'>
+  <Magnetic actionArea='self'>
+    <Button variant='outline'>Self</Button>
+  </Magnetic>
+  <Magnetic actionArea='parent'>
+    <Button variant='outline'>Parent</Button>
+  </Magnetic>
+</ComponentPreview>
+
+```tsx
+{
+  /* Default: self */
+}
+<Magnetic actionArea='self'>
+  <Button>Self</Button>
+</Magnetic>;
+
+{
+  /* Parent triggers the effect */
+}
+<Magnetic actionArea='parent'>
+  <Button>Parent</Button>
+</Magnetic>;
+
+{
+  /* Global mouse tracking */
+}
+<Magnetic actionArea='global' range={300}>
+  <Button>Global</Button>
+</Magnetic>;
+```
+
+---
+
+## Props
+
+| Prop            | Type                             | Default                                        | Description                     |
+| --------------- | -------------------------------- | ---------------------------------------------- | ------------------------------- |
+| `children`      | `React.ReactNode`                | —                                              | Content to apply the effect to. |
+| `intensity`     | `number`                         | `0.6`                                          | Strength of the magnetic pull.  |
+| `range`         | `number`                         | `100`                                          | Effective range in pixels.      |
+| `actionArea`    | `'self' \| 'parent' \| 'global'` | `'self'`                                       | Trigger area.                   |
+| `springOptions` | `SpringOptions`                  | `{ stiffness: 26.7, damping: 4.1, mass: 0.2 }` | Spring config.                  |

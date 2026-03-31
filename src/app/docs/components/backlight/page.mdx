@@ -1,0 +1,114 @@
+import { Backlight } from '@/components/ui/backlight';
+import { JsonLd } from '@/components/seo/json-ld';
+import { InstallSnippet } from '@/components/docs/install-snippet';
+
+export const metadata = {
+  title: 'Backlight',
+  description:
+    'SVG-based glow effect for images, videos, and SVGs. Creates a saturated blur behind content.',
+  alternates: { canonical: '/docs/components/backlight' },
+};
+
+<JsonLd
+  data={{
+    '@context': 'https://schema.org',
+    '@type': 'TechArticle',
+    headline: 'Backlight — Prisma UI',
+    description: 'SVG-based glow effect for images, videos, and SVGs.',
+    breadcrumb: {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: 'Home',
+          item: 'https://prismaui.com',
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: 'Docs',
+          item: 'https://prismaui.com/docs',
+        },
+        {
+          '@type': 'ListItem',
+          position: 3,
+          name: 'Backlight',
+          item: 'https://prismaui.com/docs/components/backlight',
+        },
+      ],
+    },
+  }}
+/>
+
+# Backlight
+
+An SVG-based glow effect that creates a saturated blur behind images, videos, and SVGs. Inspired by [Magic UI's Backlight](https://magicui.design/docs/components/backlight).
+
+## Installation
+
+<InstallSnippet registryUrl='https://prismaui.com/components/backlight.json' />
+
+## Import
+
+```tsx
+import { Backlight } from '@/components/ui/backlight';
+```
+
+---
+
+## Image Glow
+
+Wrap any image to create a vivid glow effect behind it.
+
+<ComponentPreview>
+  <Backlight className='rounded-lg'>
+    <div className='h-48 w-64 rounded-lg bg-gradient-to-br from-purple-500 via-pink-500 to-orange-400' />
+  </Backlight>
+</ComponentPreview>
+
+```tsx
+<Backlight className='rounded-lg'>
+  <img
+    src='/example.jpg'
+    alt='Example'
+    className='rounded-lg'
+    width={400}
+    height={300}
+  />
+</Backlight>
+```
+
+---
+
+## Custom Blur
+
+Adjust the `blur` prop to control the glow intensity.
+
+<ComponentPreview>
+  <Backlight blur={40} className='rounded-lg'>
+    <div className='h-48 w-64 rounded-lg bg-gradient-to-br from-blue-500 via-cyan-400 to-emerald-400' />
+  </Backlight>
+</ComponentPreview>
+
+```tsx
+<Backlight blur={40} className='rounded-lg'>
+  <img
+    src='/example.jpg'
+    alt='Strong glow'
+    className='rounded-lg'
+    width={400}
+    height={300}
+  />
+</Backlight>
+```
+
+---
+
+## Props
+
+| Prop        | Type           | Default | Description                                         |
+| ----------- | -------------- | ------- | --------------------------------------------------- |
+| `children`  | `ReactElement` | —       | The image, video, or SVG to apply the backlight to. |
+| `className` | `string`       | —       | Additional CSS classes for the wrapper.             |
+| `blur`      | `number`       | `20`    | Blur intensity of the glow.                         |

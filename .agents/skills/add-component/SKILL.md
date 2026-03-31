@@ -27,6 +27,75 @@ node scripts/generate-registry.js
 
 ---
 
+## Project conventions
+
+- **Framework**: Next.js with App Router, RSC enabled
+- **Styling**: Tailwind CSS v4 with `@theme inline` blocks
+- **Component lib**: shadcn/ui (`new-york` style)
+- **Variants**: `class-variance-authority` (cva)
+- **Animation**: `motion/react` (Framer Motion), CSS keyframes in `src/components/ui/style.css`
+- **Icons**: `lucide-react`
+- **Imports**: Use `@/` alias (e.g., `@/components/ui/button`, `@/lib/utils`)
+- **React hooks**: Always import directly — `import { useState } from 'react'`, never `React.useState`
+- **Return types**: React component functions always return `React.ReactNode`
+- **Semantic colors**: Use design tokens (`bg-primary`, `text-muted-foreground`), never raw values like `bg-blue-500`
+- **Spacing**: Use `flex` with `gap-*`, never `space-x-*` or `space-y-*`
+- **Merge classes**: Always use `cn()` from `@/lib/utils` for conditional/merged class names
+
+---
+
+## Core rules
+
+### 1. Every code block in docs MUST have a `<ComponentPreview>` above it
+
+Every non-import code block in a `.mdx` doc page must be preceded by a `<ComponentPreview>` block showing the rendered result. This applies to all variant/size/prop sections.
+
+**Pattern:**
+
+````mdx
+<ComponentPreview>
+  <MyComponent variant='default'>Example</MyComponent>
+</ComponentPreview>
+
+```tsx
+<MyComponent variant='default'>Example</MyComponent>
+```
+````
+
+If the component requires `useState` or other interactivity for a demo, extract it into a `_demo-<variant>.tsx` client component next to the doc page and import it.
+
+### 2. Always check shadcn FIRST
+
+Before writing any new UI component, verify if shadcn/ui already provides it:
+
+```bash
+npx shadcn@latest add <name>
+```
+
+- If shadcn has it → **install it**, use as-is or wrap it (see rule 3)
+- If shadcn has something similar → **install it and extend via wrapper**
+- If nothing exists → create from scratch following project conventions
+
+Always preserve shadcn's original styles and API. Only add functionality on top.
+
+### 3. Prefer wrappers over modifying base components
+
+When extending a shadcn component, **create a wrapper file** instead of editing the base:
+
+```
+src/components/ui/button.tsx          ← shadcn base (DO NOT modify for new features)
+src/components/ui/card.tsx            ← shadcn base (DO NOT modify for new features)
+src/components/ui/card-hover-effect.tsx  ← wrapper (add features here)
+```
+
+**Acceptable** reasons to edit a base component:
+
+- Fixing a bug in the base component itself
+- Syncing with a shadcn upstream update
+- Purely structural change (adding a `data-slot` attribute, etc.)
+
+---
+
 ## Decision: new component vs. update
 
 Before starting, determine which path applies.
@@ -40,15 +109,26 @@ Before starting, determine which path applies.
 
 Work through all steps in order.
 
-### Step 1 — Implement the component
+### Step 1 — Check shadcn availability
+
+```bash
+npx shadcn@latest add <name>
+```
+
+If a matching component is installed, use it as-is or proceed to create a wrapper (see core rule 3). If nothing exists, proceed to Step 2.
+
+### Step 2 — Implement the component
 
 Create `src/components/ui/<name>.tsx`. Follow existing components as reference:
 
-- Use `class-variance-authority` for variants
-- Forward refs where the component wraps a DOM element
-- If the component needs `data-variant` CSS custom properties or keyframe animations, rely on the existing `style.css` — do not duplicate its contents
+- Use `class-variance-authority` for variants when the component has multiple visual options
+- Use `cn()` from `@/lib/utils` for all class merging
+- Forward refs where the component wraps a DOM element (`React.ComponentProps<"element">` pattern)
+- Add `"use client"` if the component uses hooks, event handlers, or browser APIs
+- If the component needs keyframe animations, add them to `src/components/ui/style.css` — do not create separate CSS files
+- Semantic color tokens only — never raw Tailwind colors like `bg-blue-500`
 
-### Step 2 — Write the documentation page
+### Step 3 — Write the documentation page
 
 Create `src/app/docs/components/<name>/page.mdx`.
 
@@ -61,7 +141,7 @@ Every doc page needs:
 - Sections per prop/variant/size — each with a `<ComponentPreview>` block and a matching code block
 - Reference the badge page (`src/app/docs/components/badge/page.mdx`) as a template
 
-### Step 3 — Register in the sidebar
+### Step 4 — Register in the sidebar
 
 In `src/app/docs/components/_meta.ts`, add:
 
@@ -73,7 +153,7 @@ In `src/app/docs/components/_meta.ts`, add:
 
 Place it under the correct separator (`-- general` or `-- cards`), or add a new one if needed.
 
-### Step 4 — Add registry entry
+### Step 5 — Add registry entry
 
 In `scripts/generate-registry.js` add a `writeRegistry` call:
 
@@ -97,11 +177,11 @@ node scripts/generate-registry.js
 
 Confirm the file `public/components/<name>.json` exists afterward.
 
-### Step 5 — Verify the install snippet
+### Step 6 — Verify the install snippet
 
 Open the documentation page and confirm `<InstallSnippet registryUrl="https://prismaui.com/components/<name>.json" />` is present in the `## Installation` section. Add it if it was omitted.
 
-### Step 6 — Update README
+### Step 7 — Update README
 
 Add a row to the Components table in `README.md`:
 
@@ -109,7 +189,7 @@ Add a row to the Components table in `README.md`:
 | **<Display Name>** | <One-line description.> |
 ```
 
-### Step 7 — Bump package version (minor)
+### Step 8 — Bump package version (minor)
 
 In `package.json`, increment `version` by a **minor** bump (e.g. `1.0.0` → `1.1.0`). Only do this for new components, not updates.
 
@@ -132,8 +212,27 @@ Do **not** bump `package.json` for a component update.
 
 Before finishing, verify:
 
+**Component**
+
+- [ ] Checked shadcn registry first (`npx shadcn@latest add <name>`)
+- [ ] If shadcn had it: installed via CLI, created wrapper instead of modifying base
 - [ ] Component file present at `src/components/ui/<name>.tsx`
+- [ ] `"use client"` directive present if component uses hooks, event handlers, or browser APIs
+- [ ] `cn()` used for all class merging
+- [ ] Semantic color tokens used (no raw `bg-blue-500` etc.)
+- [ ] `gap-*` used for spacing (no `space-x-*` or `space-y-*`)
+- [ ] React hooks imported directly (`import { useState } from 'react'`)
+- [ ] Component return type is `React.ReactNode`
+- [ ] Keyframe animations are in `style.css`, not inline or in separate CSS files
+
+**Documentation**
+
 - [ ] Docs page at `src/app/docs/components/<name>/page.mdx` with metadata, JsonLd, InstallSnippet
+- [ ] Every non-import code block has a `<ComponentPreview>` block above it
+- [ ] Interactive demos extracted to `_demo-<variant>.tsx` client components where needed
+
+**Registry & project**
+
 - [ ] Sidebar entry in `src/app/docs/components/_meta.ts`
 - [ ] `writeRegistry` call in `scripts/generate-registry.js`
 - [ ] `public/components/<name>.json` exists (run script if not)

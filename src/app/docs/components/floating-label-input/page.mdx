@@ -1,0 +1,130 @@
+import {
+  FloatingLabelInput,
+  FloatingInput,
+  FloatingLabel,
+} from '@/components/ui/floating-label-input';
+import { JsonLd } from '@/components/seo/json-ld';
+import { InstallSnippet } from '@/components/docs/install-snippet';
+
+export const metadata = {
+  title: 'Floating Label Input',
+  description:
+    'An input component with a label that floats above when focused or filled. Built on top of the existing shadcn Input and Label components.',
+  alternates: { canonical: '/docs/components/floating-label-input' },
+};
+
+<JsonLd
+  data={{
+    '@context': 'https://schema.org',
+    '@type': 'TechArticle',
+    headline: 'Floating Label Input — Prisma UI',
+    description:
+      'An input with a floating label effect using peer CSS selectors.',
+    breadcrumb: {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: 'Home',
+          item: 'https://prismaui.com',
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: 'Docs',
+          item: 'https://prismaui.com/docs',
+        },
+        {
+          '@type': 'ListItem',
+          position: 3,
+          name: 'Floating Label Input',
+          item: 'https://prismaui.com/docs/components/floating-label-input',
+        },
+      ],
+    },
+  }}
+/>
+
+# Floating Label Input
+
+An input component with a label that floats above the field when focused or filled. Uses CSS peer selectors over the existing shadcn Input and Label. Inspired by [shadcn/ui Expansions](https://shadcnui-expansions.typeart.cc/docs/floating-label-input).
+
+## Installation
+
+<InstallSnippet registryUrl='https://prismaui.com/components/floating-label-input.json' />
+
+## Import
+
+```tsx
+import { FloatingLabelInput } from '@/components/ui/floating-label-input';
+```
+
+---
+
+## Preview
+
+<ComponentPreview>
+  <div className='w-72'>
+    <FloatingLabelInput id='demo-email' label='Email' type='email' />
+  </div>
+</ComponentPreview>
+
+```tsx
+<FloatingLabelInput id='email' label='Email' type='email' />
+```
+
+---
+
+## Multiple Fields
+
+<ComponentPreview className='gap-4'>
+  <div className='flex w-72 flex-col gap-4'>
+    <FloatingLabelInput id='demo-name' label='Full Name' />
+    <FloatingLabelInput id='demo-email-2' label='Email' type='email' />
+    <FloatingLabelInput id='demo-password' label='Password' type='password' />
+  </div>
+</ComponentPreview>
+
+```tsx
+<div className='flex flex-col gap-4'>
+  <FloatingLabelInput id='name' label='Full Name' />
+  <FloatingLabelInput id='email' label='Email' type='email' />
+  <FloatingLabelInput id='password' label='Password' type='password' />
+</div>
+```
+
+---
+
+## Individual Components
+
+You can also use `FloatingInput` and `FloatingLabel` separately for more control.
+
+<ComponentPreview>
+  <div className='relative w-72'>
+    <FloatingInput id='custom-demo' />
+    <FloatingLabel htmlFor='custom-demo'>Custom Label</FloatingLabel>
+  </div>
+</ComponentPreview>
+
+```tsx
+import {
+  FloatingInput,
+  FloatingLabel,
+} from '@/components/ui/floating-label-input';
+
+<div className='relative'>
+  <FloatingInput id='custom' />
+  <FloatingLabel htmlFor='custom'>Custom Label</FloatingLabel>
+</div>;
+```
+
+---
+
+## Props
+
+| Prop       | Type                  | Default | Description                                     |
+| ---------- | --------------------- | ------- | ----------------------------------------------- |
+| `id`       | `string`              | —       | Input id, also used for `htmlFor` on the label. |
+| `label`    | `string`              | —       | Text displayed in the floating label.           |
+| `...props` | `InputHTMLAttributes` | —       | All standard input props.                       |

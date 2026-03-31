@@ -1,0 +1,177 @@
+import { InfiniteSlider } from '@/components/ui/infinite-slider';
+import { JsonLd } from '@/components/seo/json-ld';
+import { InstallSnippet } from '@/components/docs/install-snippet';
+
+export const metadata = {
+  title: 'Infinite Slider',
+  description:
+    'Infinite scrolling slider that smoothly loops through its children. Supports horizontal and vertical directions with customizable speed.',
+  alternates: { canonical: '/docs/components/infinite-slider' },
+};
+
+<JsonLd
+  data={{
+    '@context': 'https://schema.org',
+    '@type': 'TechArticle',
+    headline: 'Infinite Slider — Prisma UI',
+    description:
+      'Infinite scrolling slider with customizable speed and direction.',
+    breadcrumb: {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: 'Home',
+          item: 'https://prismaui.com',
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: 'Docs',
+          item: 'https://prismaui.com/docs',
+        },
+        {
+          '@type': 'ListItem',
+          position: 3,
+          name: 'Infinite Slider',
+          item: 'https://prismaui.com/docs/components/infinite-slider',
+        },
+      ],
+    },
+  }}
+/>
+
+# Infinite Slider
+
+An infinite scrolling slider that smoothly loops through its children. Inspired by [Motion Primitives' Infinite Slider](https://motion-primitives.com/docs/infinite-slider). Supports horizontal and vertical directions with customizable speed.
+
+## Installation
+
+<InstallSnippet registryUrl='https://prismaui.com/components/infinite-slider.json' />
+
+## Import
+
+```tsx
+import { InfiniteSlider } from '@/components/ui/infinite-slider';
+```
+
+---
+
+## Preview
+
+<ComponentPreview>
+  <InfiniteSlider gap={24} speed={80}>
+    <div className='flex h-8 items-center rounded-md bg-primary px-3 text-sm font-medium text-primary-foreground'>
+      Prisma
+    </div>
+    <div className='flex h-8 items-center rounded-md bg-secondary px-3 text-sm font-medium text-secondary-foreground'>
+      React
+    </div>
+    <div className='flex h-8 items-center rounded-md bg-accent px-3 text-sm font-medium text-accent-foreground'>
+      Next.js
+    </div>
+    <div className='flex h-8 items-center rounded-md bg-muted px-3 text-sm font-medium text-muted-foreground'>
+      Tailwind
+    </div>
+  </InfiniteSlider>
+</ComponentPreview>
+
+```tsx
+<InfiniteSlider gap={24} speed={80}>
+  <img src='/logo-1.svg' alt='Logo 1' className='h-8 w-auto' />
+  <img src='/logo-2.svg' alt='Logo 2' className='h-8 w-auto' />
+  <img src='/logo-3.svg' alt='Logo 3' className='h-8 w-auto' />
+  <img src='/logo-4.svg' alt='Logo 4' className='h-8 w-auto' />
+</InfiniteSlider>
+```
+
+---
+
+## Reverse Direction
+
+<ComponentPreview>
+  <InfiniteSlider reverse>
+    <div className='rounded-lg bg-muted px-4 py-2'>Item 1</div>
+    <div className='rounded-lg bg-muted px-4 py-2'>Item 2</div>
+    <div className='rounded-lg bg-muted px-4 py-2'>Item 3</div>
+  </InfiniteSlider>
+</ComponentPreview>
+
+```tsx
+<InfiniteSlider reverse>
+  <div className='rounded-lg bg-muted px-4 py-2'>Item 1</div>
+  <div className='rounded-lg bg-muted px-4 py-2'>Item 2</div>
+  <div className='rounded-lg bg-muted px-4 py-2'>Item 3</div>
+</InfiniteSlider>
+```
+
+---
+
+## Speed on Hover
+
+Slow down the slider on hover.
+
+<ComponentPreview>
+  <InfiniteSlider speed={100} speedOnHover={40}>
+    <div className='rounded-lg bg-primary px-4 py-2 text-primary-foreground'>
+      Fast
+    </div>
+    <div className='rounded-lg bg-secondary px-4 py-2 text-secondary-foreground'>
+      Hover me
+    </div>
+    <div className='rounded-lg bg-accent px-4 py-2 text-accent-foreground'>
+      To slow
+    </div>
+  </InfiniteSlider>
+</ComponentPreview>
+
+```tsx
+<InfiniteSlider speed={100} speedOnHover={40}>
+  <div className='rounded-lg bg-primary px-4 py-2 text-primary-foreground'>
+    Fast
+  </div>
+  <div className='rounded-lg bg-secondary px-4 py-2 text-secondary-foreground'>
+    Hover me
+  </div>
+  <div className='rounded-lg bg-accent px-4 py-2 text-accent-foreground'>
+    To slow
+  </div>
+</InfiniteSlider>
+```
+
+---
+
+## Vertical
+
+<ComponentPreview>
+  <InfiniteSlider direction='vertical' className='h-48'>
+    <div className='rounded-lg bg-muted px-4 py-2'>Row 1</div>
+    <div className='rounded-lg bg-muted px-4 py-2'>Row 2</div>
+    <div className='rounded-lg bg-muted px-4 py-2'>Row 3</div>
+    <div className='rounded-lg bg-muted px-4 py-2'>Row 4</div>
+  </InfiniteSlider>
+</ComponentPreview>
+
+```tsx
+<InfiniteSlider direction='vertical' className='h-64'>
+  <div className='rounded-lg bg-muted px-4 py-2'>Row 1</div>
+  <div className='rounded-lg bg-muted px-4 py-2'>Row 2</div>
+  <div className='rounded-lg bg-muted px-4 py-2'>Row 3</div>
+  <div className='rounded-lg bg-muted px-4 py-2'>Row 4</div>
+</InfiniteSlider>
+```
+
+---
+
+## Props
+
+| Prop           | Type                         | Default        | Description                  |
+| -------------- | ---------------------------- | -------------- | ---------------------------- |
+| `children`     | `React.ReactNode`            | —              | Slider content.              |
+| `gap`          | `number`                     | `16`           | Gap between items in pixels. |
+| `speed`        | `number`                     | `100`          | Speed in pixels per second.  |
+| `speedOnHover` | `number`                     | —              | Speed when hovered.          |
+| `direction`    | `'horizontal' \| 'vertical'` | `'horizontal'` | Scroll direction.            |
+| `reverse`      | `boolean`                    | `false`        | Reverse direction.           |
+| `className`    | `string`                     | —              | Additional CSS classes.      |
