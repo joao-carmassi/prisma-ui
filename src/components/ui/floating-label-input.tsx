@@ -41,11 +41,11 @@ function FloatingLabelRoot({
   className,
   children,
   ...props
-}: React.ComponentProps<'div'>): React.ReactNode {
+}: React.ComponentProps<'fieldset'>): React.ReactNode {
   return (
-    <div className={cn('relative', className)} {...props}>
+    <fieldset className={cn('relative', className)} {...props}>
       {children}
-    </div>
+    </fieldset>
   );
 }
 
