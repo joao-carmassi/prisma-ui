@@ -34,6 +34,9 @@ export default {
   'tracing-beam': {
     title: 'Tracing Beam',
   },
+  'transition-panel': {
+    title: 'Transition Panel',
+  },
   '-- inputs': {
     type: 'separator',
     title: 'Inputs',
@@ -59,8 +62,5 @@ export default {
   },
   'tilt-card': {
     title: 'Tilt Card',
-  },
-  'transition-panel': {
-    title: 'Transition Panel',
   },
 };

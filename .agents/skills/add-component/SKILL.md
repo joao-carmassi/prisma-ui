@@ -16,13 +16,14 @@ This skill drives the full lifecycle for shipping a component in the Prisma UI p
 | Docs sidebar config | `src/app/docs/components/_meta.ts`        |
 | Registry script     | `scripts/generate-registry.js`            |
 | Generated JSON      | `public/components/<name>.json`           |
+| Sitemap             | `src/app/sitemap.ts`                      |
 | README              | `README.md`                               |
 | Package version     | `package.json` → `version`                |
 
 To regenerate all registry JSON files, run:
 
 ```bash
-node scripts/generate-registry.js
+npm run build-components
 ```
 
 ---
@@ -196,16 +197,27 @@ writeRegistry('<name>', {
 Then run:
 
 ```bash
-node scripts/generate-registry.js
+npm run build-components
 ```
 
 Confirm the file `public/components/<name>.json` exists afterward.
 
-### Step 6 — Verify the install snippet
+### Step 6 — Add to sitemap
+
+In `src/app/sitemap.ts`, add the component slug to the `components` array:
+
+```ts
+const components = [
+  // ... existing entries
+  '<name>',
+];
+```
+
+### Step 7 — Verify the install snippet
 
 Open the documentation page and confirm `<InstallSnippet registryUrl="https://prismaui.com/components/<name>.json" />` is present in the `## Installation` section. Add it if it was omitted.
 
-### Step 7 — Update README
+### Step 8 — Update README
 
 Add a row to the Components table in `README.md`:
 
@@ -213,7 +225,7 @@ Add a row to the Components table in `README.md`:
 | **<Display Name>** | <One-line description.> |
 ```
 
-### Step 8 — Bump package version (minor)
+### Step 9 — Bump package version (minor)
 
 In `package.json`, increment `version` by a **minor** bump (e.g. `1.0.0` → `1.1.0`). Only do this for new components, not updates.
 
@@ -223,7 +235,7 @@ In `package.json`, increment `version` by a **minor** bump (e.g. `1.0.0` → `1.
 
 1. Edit `src/components/ui/<name>.tsx` with the change.
 2. Update `src/app/docs/components/<name>/page.mdx` if the API or behavior changed.
-3. Run `node scripts/generate-registry.js` to regenerate the JSON.
+3. Run `npm run build-components` to regenerate the JSON.
 4. Bump the version in the generated `public/components/<name>.json`:
    - **New feature or variant** → minor bump (e.g. `1.0.0` → `1.1.0`)
    - **Bug fix** → patch bump (e.g. `1.0.0` → `1.0.1`)
@@ -259,7 +271,8 @@ Before finishing, verify:
 
 - [ ] Sidebar entry in `src/app/docs/components/_meta.ts`
 - [ ] `writeRegistry` call in `scripts/generate-registry.js`
-- [ ] `public/components/<name>.json` exists (run script if not)
+- [ ] `public/components/<name>.json` exists (run `npm run build-components` if not)
+- [ ] Component slug added to `src/app/sitemap.ts` `components` array _(new components only)_
 - [ ] README Components table updated _(new components only)_
 - [ ] `package.json` version bumped by **minor** _(new components only)_
 - [ ] Component registry JSON version bumped (minor for feature, patch for bug fix) _(updates only)_

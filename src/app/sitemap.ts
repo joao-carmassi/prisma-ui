@@ -11,6 +11,16 @@ const components = [
   'flip-card',
   'rainbow-card',
   'shine-border-card',
+  'transition-panel',
+  'floating-label-input',
+  'animated-background',
+  'progressive-blur',
+  'infinite-slider',
+  'tilt-card',
+  'magnetic',
+  'scroll-progress',
+  'backlight',
+  'tracing-beam',
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
