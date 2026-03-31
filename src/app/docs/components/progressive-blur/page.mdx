@@ -64,7 +64,11 @@ Place the component over an image or content area with `absolute` positioning.
 
 <ComponentPreview>
   <div className='relative h-64 w-full overflow-hidden rounded-lg'>
-    <div className='h-full w-full bg-gradient-to-br from-purple-500 via-pink-500 to-orange-400' />
+    <img
+      src='https://picsum.photos/800/256'
+      alt='Progressive blur demo'
+      className='h-full w-full object-cover'
+    />
     <ProgressiveBlur className='absolute inset-0' />
   </div>
 </ComponentPreview>
@@ -72,7 +76,7 @@ Place the component over an image or content area with `absolute` positioning.
 ```tsx
 <div className='relative h-64 w-full overflow-hidden rounded-lg'>
   <img
-    src='/your-image.jpg'
+    src='https://picsum.photos/800/256'
     alt='Demo'
     className='h-full w-full object-cover'
   />
@@ -89,31 +93,47 @@ Change the blur direction with the `direction` prop.
 <ComponentPreview>
   <div className='grid grid-cols-2 gap-4'>
     <div className='relative h-32 overflow-hidden rounded-lg'>
-      <div className='h-full w-full bg-gradient-to-br from-blue-500 to-cyan-400' />
+      <img
+        src='https://picsum.photos/400/128'
+        alt='top blur'
+        className='h-full w-full object-cover'
+      />
       <ProgressiveBlur direction='top' className='absolute inset-0' />
-      <span className='absolute bottom-2 left-2 text-xs font-medium text-white'>
-        top
+      <span className='absolute top-1 left-1/2 -translate-x-1/2 text-xs font-medium text-white text-shadow-lg'>
+        Top
       </span>
     </div>
     <div className='relative h-32 overflow-hidden rounded-lg'>
-      <div className='h-full w-full bg-gradient-to-br from-green-500 to-emerald-400' />
+      <img
+        src='https://picsum.photos/402/130'
+        alt='bottom blur'
+        className='h-full w-full object-cover'
+      />
       <ProgressiveBlur direction='bottom' className='absolute inset-0' />
-      <span className='absolute top-2 left-2 text-xs font-medium text-white'>
-        bottom
+      <span className='absolute bottom-1 left-1/2 -translate-x-1/2 text-xs font-medium text-white text-shadow-lg'>
+        Bottom
       </span>
     </div>
     <div className='relative h-32 overflow-hidden rounded-lg'>
-      <div className='h-full w-full bg-gradient-to-br from-red-500 to-rose-400' />
+      <img
+        src='https://picsum.photos/404/132'
+        alt='left blur'
+        className='h-full w-full object-cover'
+      />
       <ProgressiveBlur direction='left' className='absolute inset-0' />
-      <span className='absolute top-2 right-2 text-xs font-medium text-white'>
-        left
+      <span className='absolute top-1/2 -translate-y-1/2 left-2 text-xs font-medium text-white text-shadow-lg'>
+        Left
       </span>
     </div>
     <div className='relative h-32 overflow-hidden rounded-lg'>
-      <div className='h-full w-full bg-gradient-to-br from-yellow-500 to-amber-400' />
+      <img
+        src='https://picsum.photos/406/134'
+        alt='right blur'
+        className='h-full w-full object-cover'
+      />
       <ProgressiveBlur direction='right' className='absolute inset-0' />
-      <span className='absolute top-2 left-2 text-xs font-medium text-white'>
-        right
+      <span className='absolute top-1/2 -translate-y-1/2 right-2 text-xs font-medium text-white text-shadow-lg'>
+        Right
       </span>
     </div>
   </div>
@@ -132,7 +152,11 @@ Change the blur direction with the `direction` prop.
 
 <ComponentPreview>
   <div className='relative h-48 w-full overflow-hidden rounded-lg'>
-    <div className='h-full w-full bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500' />
+    <img
+      src='https://picsum.photos/800/192'
+      alt='Custom intensity blur'
+      className='h-full w-full object-cover'
+    />
     <ProgressiveBlur
       blurIntensity={0.5}
       blurLayers={12}

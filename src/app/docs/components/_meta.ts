@@ -13,6 +13,30 @@ export default {
   'confetti-wrapper': {
     title: 'Confetti Button',
   },
+  magnetic: {
+    title: 'Magnetic',
+  },
+  'infinite-slider': {
+    title: 'Infinite Slider',
+  },
+  'animated-background': {
+    title: 'Animated Background',
+  },
+  'glow-effect': {
+    title: 'Glow Effect',
+  },
+  backlight: {
+    title: 'Backlight',
+  },
+  'progressive-blur': {
+    title: 'Progressive Blur',
+  },
+  'scroll-progress': {
+    title: 'Scroll Progress',
+  },
+  'tracing-beam': {
+    title: 'Tracing Beam',
+  },
   '-- inputs': {
     type: 'separator',
     title: 'Inputs',
@@ -41,37 +65,5 @@ export default {
   },
   'transition-panel': {
     title: 'Transition Panel',
-  },
-  '-- effects': {
-    type: 'separator',
-    title: 'Effects',
-  },
-  'animated-background': {
-    title: 'Animated Background',
-  },
-  'glow-effect': {
-    title: 'Glow Effect',
-  },
-  backlight: {
-    title: 'Backlight',
-  },
-  'progressive-blur': {
-    title: 'Progressive Blur',
-  },
-  'scroll-progress': {
-    title: 'Scroll Progress',
-  },
-  'tracing-beam': {
-    title: 'Tracing Beam',
-  },
-  '-- wrappers': {
-    type: 'separator',
-    title: 'Wrappers',
-  },
-  magnetic: {
-    title: 'Magnetic',
-  },
-  'infinite-slider': {
-    title: 'Infinite Slider',
   },
 };

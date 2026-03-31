@@ -63,18 +63,24 @@ Wrap any image to create a vivid glow effect behind it.
 
 <ComponentPreview>
   <Backlight className='rounded-lg'>
-    <div className='h-48 w-64 rounded-lg bg-gradient-to-br from-purple-500 via-pink-500 to-orange-400' />
+    <img
+      src='https://picsum.photos/320/200'
+      alt='Backlight demo'
+      className='rounded-lg'
+      width={320}
+      height={200}
+    />
   </Backlight>
 </ComponentPreview>
 
 ```tsx
 <Backlight className='rounded-lg'>
   <img
-    src='/example.jpg'
+    src='https://picsum.photos/320/200'
     alt='Example'
     className='rounded-lg'
-    width={400}
-    height={300}
+    width={320}
+    height={200}
   />
 </Backlight>
 ```
@@ -87,18 +93,24 @@ Adjust the `blur` prop to control the glow intensity.
 
 <ComponentPreview>
   <Backlight blur={40} className='rounded-lg'>
-    <div className='h-48 w-64 rounded-lg bg-gradient-to-br from-blue-500 via-cyan-400 to-emerald-400' />
+    <img
+      src='https://picsum.photos/322/204'
+      alt='Strong glow'
+      className='rounded-lg'
+      width={322}
+      height={204}
+    />
   </Backlight>
 </ComponentPreview>
 
 ```tsx
 <Backlight blur={40} className='rounded-lg'>
   <img
-    src='/example.jpg'
+    src='https://picsum.photos/322/204'
     alt='Strong glow'
     className='rounded-lg'
-    width={400}
-    height={300}
+    width={322}
+    height={204}
   />
 </Backlight>
 ```

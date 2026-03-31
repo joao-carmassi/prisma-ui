@@ -64,6 +64,16 @@ Every non-import code block in a `.mdx` doc page must be preceded by a `<Compone
 
 If the component requires `useState` or other interactivity for a demo, extract it into a `_demo-<variant>.tsx` client component next to the doc page and import it.
 
+**Image placeholders**: When a component accepts or wraps images (e.g. `Backlight`, `ProgressiveBlur`, `InfiniteSlider`), always use [Lorem Picsum](https://picsum.photos) for preview images. Slightly vary the dimensions between items to ensure different images are fetched:
+
+```tsx
+<img src='https://picsum.photos/320/200' alt='Demo' className='rounded-lg' width={320} height={200} />
+<img src='https://picsum.photos/322/204' alt='Demo 2' className='rounded-lg' width={322} height={204} />
+<img src='https://picsum.photos/324/200' alt='Demo 3' className='rounded-lg' width={324} height={200} />
+```
+
+Use these same URLs in the code block below the preview (not `/example.jpg` or `/your-image.jpg`), so copy-pasted code works immediately.
+
 ### 2. Always check shadcn FIRST
 
 Before writing any new UI component, verify if shadcn/ui already provides it:
