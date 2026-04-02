@@ -27,9 +27,9 @@ function FloatingLabelText({
   return (
     <Label
       className={cn(
-        'absolute inset-s-2 top-0.5 z-10 origin-left -translate-x-0.5 -translate-y-4 scale-75 transform bg-background px-2 text-sm text-muted-foreground duration-300',
-        'peer-placeholder-shown:top-4.5 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100',
-        'peer-focus:top-0.5 peer-focus:-translate-y-4 peer-focus:scale-75 peer-focus:px-2 peer-focus:text-foreground',
+        'absolute inset-s-2 top-0.5 z-10 origin-left -translate-y-4 scale-75 transform bg-background px-2 text-sm text-muted-foreground duration-300',
+        'peer-placeholder-shown:top-4.5 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-x-1',
+        'peer-focus:top-0.5 peer-focus:-translate-y-4 peer-focus:scale-75 peer-focus:px-2 peer-focus:text-foreground peer-focus:translate-x-0',
         'cursor-text',
         className,
       )}
