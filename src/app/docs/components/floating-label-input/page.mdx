@@ -1,6 +1,15 @@
 import { FloatingLabel } from '@/components/ui/floating-label-input';
+import {
+  Field,
+  FieldDescription,
+  FieldError,
+  FieldGroup,
+  FieldSet,
+  FieldLegend,
+} from '@/components/ui/field';
 import { JsonLd } from '@/components/seo/json-ld';
 import { InstallSnippet } from '@/components/docs/install-snippet';
+import { FieldValidationDemo } from './_demo-field-validation';
 
 export const metadata = {
   title: 'Floating Label Input',
@@ -163,6 +172,224 @@ Each sub-component accepts its own `className`, giving full control without extr
     Username
   </FloatingLabel.Label>
 </FloatingLabel>
+```
+
+---
+
+## With Field (Description)
+
+Wrap `FloatingLabel` inside a shadcn `Field` to add descriptions, errors, and accessible form layouts.
+
+<ComponentPreview>
+  <div className='w-72'>
+    <Field>
+      <FloatingLabel>
+        <FloatingLabel.Input
+          className='bg-muted!'
+          id='demo-field-email'
+          type='email'
+        />
+        <FloatingLabel.Label className='bg-muted' htmlFor='demo-field-email'>
+          Email
+        </FloatingLabel.Label>
+      </FloatingLabel>
+      <FieldDescription>We&apos;ll never share your email.</FieldDescription>
+    </Field>
+  </div>
+</ComponentPreview>
+
+```tsx
+import { Field, FieldDescription } from '@/components/ui/field';
+```
+
+```tsx
+<Field>
+  <FloatingLabel>
+    <FloatingLabel.Input id='email' type='email' />
+    <FloatingLabel.Label htmlFor='email'>Email</FloatingLabel.Label>
+  </FloatingLabel>
+  <FieldDescription>We'll never share your email.</FieldDescription>
+</Field>
+```
+
+---
+
+## With Field (Error)
+
+Use `data-invalid` on `Field` and `aria-invalid` on the input to show validation errors.
+
+<ComponentPreview>
+  <div className='w-72'>
+    <Field data-invalid>
+      <FloatingLabel>
+        <FloatingLabel.Input
+          className='bg-muted!'
+          id='demo-field-error'
+          type='email'
+          aria-invalid
+        />
+        <FloatingLabel.Label className='bg-muted' htmlFor='demo-field-error'>
+          Email
+        </FloatingLabel.Label>
+      </FloatingLabel>
+      <FieldError>Enter a valid email address.</FieldError>
+    </Field>
+  </div>
+</ComponentPreview>
+
+```tsx
+import { Field, FieldError } from '@/components/ui/field';
+```
+
+```tsx
+<Field data-invalid>
+  <FloatingLabel>
+    <FloatingLabel.Input id='email' type='email' aria-invalid />
+    <FloatingLabel.Label htmlFor='email'>Email</FloatingLabel.Label>
+  </FloatingLabel>
+  <FieldError>Enter a valid email address.</FieldError>
+</Field>
+```
+
+---
+
+## With Field (Validation)
+
+A complete example with interactive validation — the error appears when the input loses focus and the value is too short.
+
+<ComponentPreview>
+  <FieldValidationDemo />
+</ComponentPreview>
+
+```tsx
+'use client';
+
+import { useState } from 'react';
+import { FloatingLabel } from '@/components/ui/floating-label-input';
+import { Field, FieldDescription, FieldError } from '@/components/ui/field';
+
+export function FieldValidationDemo() {
+  const [value, setValue] = useState('');
+  const [touched, setTouched] = useState(false);
+
+  const isInvalid = touched && value.length < 3;
+
+  return (
+    <Field data-invalid={isInvalid || undefined}>
+      <FloatingLabel>
+        <FloatingLabel.Input
+          id='username'
+          value={value}
+          onChange={(e) => setValue(e.target.value)}
+          onBlur={() => setTouched(true)}
+          aria-invalid={isInvalid || undefined}
+        />
+        <FloatingLabel.Label htmlFor='username'>Username</FloatingLabel.Label>
+      </FloatingLabel>
+      <FieldDescription>Must be at least 3 characters.</FieldDescription>
+      {isInvalid && (
+        <FieldError>Username must be at least 3 characters.</FieldError>
+      )}
+    </Field>
+  );
+}
+```
+
+---
+
+## With FieldSet (Form)
+
+Group multiple floating label inputs inside a `FieldSet` with `FieldGroup` for a complete form layout.
+
+<ComponentPreview>
+  <div className='w-80'>
+    <FieldSet>
+      <FieldLegend>Account Information</FieldLegend>
+      <FieldDescription>Fill in your account details below.</FieldDescription>
+      <FieldGroup>
+        <Field>
+          <FloatingLabel>
+            <FloatingLabel.Input className='bg-muted!' id='demo-fs-name' />
+            <FloatingLabel.Label className='bg-muted' htmlFor='demo-fs-name'>
+              Full Name
+            </FloatingLabel.Label>
+          </FloatingLabel>
+        </Field>
+        <Field>
+          <FloatingLabel>
+            <FloatingLabel.Input
+              className='bg-muted!'
+              id='demo-fs-email'
+              type='email'
+            />
+            <FloatingLabel.Label className='bg-muted' htmlFor='demo-fs-email'>
+              Email
+            </FloatingLabel.Label>
+          </FloatingLabel>
+          <FieldDescription>
+            We&apos;ll send a confirmation to this address.
+          </FieldDescription>
+        </Field>
+        <Field>
+          <FloatingLabel>
+            <FloatingLabel.Input
+              className='bg-muted!'
+              id='demo-fs-password'
+              type='password'
+            />
+            <FloatingLabel.Label
+              className='bg-muted'
+              htmlFor='demo-fs-password'
+            >
+              Password
+            </FloatingLabel.Label>
+          </FloatingLabel>
+          <FieldDescription>Must be at least 8 characters.</FieldDescription>
+        </Field>
+      </FieldGroup>
+    </FieldSet>
+  </div>
+</ComponentPreview>
+
+```tsx
+import {
+  Field,
+  FieldDescription,
+  FieldGroup,
+  FieldSet,
+  FieldLegend,
+} from '@/components/ui/field';
+```
+
+```tsx
+<FieldSet>
+  <FieldLegend>Account Information</FieldLegend>
+  <FieldDescription>Fill in your account details below.</FieldDescription>
+  <FieldGroup>
+    <Field>
+      <FloatingLabel>
+        <FloatingLabel.Input id='name' />
+        <FloatingLabel.Label htmlFor='name'>Full Name</FloatingLabel.Label>
+      </FloatingLabel>
+    </Field>
+    <Field>
+      <FloatingLabel>
+        <FloatingLabel.Input id='email' type='email' />
+        <FloatingLabel.Label htmlFor='email'>Email</FloatingLabel.Label>
+      </FloatingLabel>
+      <FieldDescription>
+        We'll send a confirmation to this address.
+      </FieldDescription>
+    </Field>
+    <Field>
+      <FloatingLabel>
+        <FloatingLabel.Input id='password' type='password' />
+        <FloatingLabel.Label htmlFor='password'>Password</FloatingLabel.Label>
+      </FloatingLabel>
+      <FieldDescription>Must be at least 8 characters.</FieldDescription>
+    </Field>
+  </FieldGroup>
+</FieldSet>
 ```
 
 ---
