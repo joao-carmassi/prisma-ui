@@ -96,6 +96,7 @@ export function BorderGlow({
 }: BorderGlowProps): React.ReactNode {
   const cardRef = useRef<HTMLDivElement>(null);
   const borderGlowRef = useRef<HTMLDivElement>(null);
+  const innerGlowRef = useRef<HTMLDivElement>(null);
   const outerGlowRef = useRef<HTMLDivElement>(null);
   const sweepRef = useRef<number | null>(null);
   const isSweepingRef = useRef(false);
@@ -106,9 +107,16 @@ export function BorderGlow({
       const [c1, c2, c3] = glowColors;
       const r = coneSpread;
 
+      // Thin crisp ring on the border
       if (borderGlowRef.current) {
         borderGlowRef.current.style.background = `radial-gradient(circle ${r}px at ${x}px ${y}px, ${c1}, ${c2}, ${c3}, transparent)`;
         borderGlowRef.current.style.opacity = String(Math.min(opacity, 1));
+      }
+
+      // Soft blurred glow that spreads visibly from the cursor position
+      if (innerGlowRef.current) {
+        innerGlowRef.current.style.background = `radial-gradient(circle ${r * 1.4}px at ${x}px ${y}px, ${c1}99, ${c2}77, ${c3}44, transparent 70%)`;
+        innerGlowRef.current.style.opacity = String(Math.min(opacity * 0.85, 1));
       }
 
       if (outerGlowRef.current) {
@@ -125,6 +133,7 @@ export function BorderGlow({
 
   const hideGlow = useCallback(() => {
     if (borderGlowRef.current) borderGlowRef.current.style.opacity = '0';
+    if (innerGlowRef.current) innerGlowRef.current.style.opacity = '0';
     if (outerGlowRef.current) outerGlowRef.current.style.opacity = '0';
   }, []);
 
@@ -210,7 +219,7 @@ export function BorderGlow({
         }}
       />
 
-      {/* ── Border glow ring — overlaid on top of children, pointer-events-none ── */}
+      {/* ── Border glow ring — masked to 1px border, crisp colored line ── */}
       <div
         ref={borderGlowRef}
         aria-hidden
@@ -225,6 +234,19 @@ export function BorderGlow({
           maskComposite: 'exclude',
           WebkitMaskComposite: 'xor',
           padding: '1px',
+        }}
+      />
+
+      {/* ── Inner soft glow — blurred, not masked, creates the visible light spread ── */}
+      <div
+        ref={innerGlowRef}
+        aria-hidden
+        className='pointer-events-none absolute inset-0 z-10'
+        style={{
+          borderRadius,
+          opacity: 0,
+          transition: 'opacity 0.18s ease',
+          filter: 'blur(14px)',
         }}
       />
 

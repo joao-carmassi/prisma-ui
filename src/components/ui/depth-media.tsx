@@ -54,13 +54,13 @@ export function DepthMedia({
   const rotateX = tilt?.rotateX ?? fallbackY;
   const rotateY = tilt?.rotateY ?? fallbackX;
 
-  // Foreground: shifts strongly (closer layer moves more in parallax)
-  const fgX = useTransform(rotateY, (v) => v * -(depthIntensity / 10));
-  const fgY = useTransform(rotateX, (v) => v * -(depthIntensity / 10));
+  // Foreground: shifts in the same direction as the tilt (appears elevated/floating)
+  const fgX = useTransform(rotateY, (v) => v * (depthIntensity / 10));
+  const fgY = useTransform(rotateX, (v) => v * (depthIntensity / 10));
 
-  // Background: shifts slightly in the opposite direction (far layer barely moves)
-  const bgX = useTransform(rotateY, (v) => v * (depthIntensity / 22));
-  const bgY = useTransform(rotateX, (v) => v * (depthIntensity / 22));
+  // Background: shifts opposite (far layer recedes away from tilt direction)
+  const bgX = useTransform(rotateY, (v) => v * -(depthIntensity / 22));
+  const bgY = useTransform(rotateX, (v) => v * -(depthIntensity / 22));
 
   // Overscale: grow each layer so the void never peeks through when shifting.
   // The foreground shifts ±(rotationFactor * depthIntensity/10)px so we add
