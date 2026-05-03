@@ -198,7 +198,11 @@ Increase `depthIntensity` for more pronounced layer separation.
   <Tilt rotationFactor={15} springOptions={{ stiffness: 300, damping: 20 }}>
     <Card className='w-60 overflow-hidden'>
       <div className='relative h-40'>
-        <DepthMedia src='https://picsum.photos/240/160' alt='Low intensity' depthIntensity={4} />
+        <DepthMedia
+          src='https://picsum.photos/240/160'
+          alt='Low intensity'
+          depthIntensity={4}
+        />
       </div>
       <CardContent className='py-3'>
         <p className='text-xs text-muted-foreground'>{'depthIntensity={4}'}</p>
@@ -208,7 +212,11 @@ Increase `depthIntensity` for more pronounced layer separation.
   <Tilt rotationFactor={15} springOptions={{ stiffness: 300, damping: 20 }}>
     <Card className='w-60 overflow-hidden'>
       <div className='relative h-40'>
-        <DepthMedia src='https://picsum.photos/242/162' alt='High intensity' depthIntensity={16} />
+        <DepthMedia
+          src='https://picsum.photos/242/162'
+          alt='High intensity'
+          depthIntensity={16}
+        />
       </div>
       <CardContent className='py-3'>
         <p className='text-xs text-muted-foreground'>{'depthIntensity={16}'}</p>
@@ -218,11 +226,15 @@ Increase `depthIntensity` for more pronounced layer separation.
 </ComponentPreview>
 
 ```tsx
-{/* Subtle */}
-<DepthMedia src='...' depthIntensity={4} />
+{
+  /* Subtle */
+}
+<DepthMedia src='...' depthIntensity={4} />;
 
-{/* Dramatic */}
-<DepthMedia src='...' depthIntensity={16} />
+{
+  /* Dramatic */
+}
+<DepthMedia src='...' depthIntensity={16} />;
 ```
 
 ### DepthMedia Props
@@ -233,4 +245,3 @@ Increase `depthIntensity` for more pronounced layer separation.
 | `alt`            | `string` | `''`    | Accessible alt text for the foreground image.             |
 | `className`      | `string` | —       | Additional CSS classes for the container.                 |
 | `depthIntensity` | `number` | `8`     | Parallax multiplier — higher values increase layer shift. |
-

@@ -96,7 +96,6 @@ export function BorderGlow({
 }: BorderGlowProps): React.ReactNode {
   const cardRef = useRef<HTMLDivElement>(null);
   const borderGlowRef = useRef<HTMLDivElement>(null);
-  const innerGlowRef = useRef<HTMLDivElement>(null);
   const outerGlowRef = useRef<HTMLDivElement>(null);
   const sweepRef = useRef<number | null>(null);
   const isSweepingRef = useRef(false);
@@ -113,18 +112,13 @@ export function BorderGlow({
         borderGlowRef.current.style.opacity = String(Math.min(opacity, 1));
       }
 
-      // Soft blurred glow that spreads visibly from the cursor position
-      if (innerGlowRef.current) {
-        innerGlowRef.current.style.background = `radial-gradient(circle ${r * 1.4}px at ${x}px ${y}px, ${c1}99, ${c2}77, ${c3}44, transparent 70%)`;
-        innerGlowRef.current.style.opacity = String(Math.min(opacity * 0.85, 1));
-      }
-
+      // Outer halo — positioned outside the card bounds, never clipped by card's overflow:hidden
       if (outerGlowRef.current) {
         const ox = x + glowRadius;
         const oy = y + glowRadius;
-        outerGlowRef.current.style.background = `radial-gradient(circle ${glowRadius * 1.8}px at ${ox}px ${oy}px, ${c1}55, ${c2}33, transparent)`;
+        outerGlowRef.current.style.background = `radial-gradient(circle ${glowRadius * 2.5}px at ${ox}px ${oy}px, ${c1}cc, ${c2}99, ${c3}55, transparent)`;
         outerGlowRef.current.style.opacity = String(
-          Math.min(opacity * 0.65, 1),
+          Math.min(opacity * glowIntensity, 1),
         );
       }
     },
@@ -133,7 +127,6 @@ export function BorderGlow({
 
   const hideGlow = useCallback(() => {
     if (borderGlowRef.current) borderGlowRef.current.style.opacity = '0';
-    if (innerGlowRef.current) innerGlowRef.current.style.opacity = '0';
     if (outerGlowRef.current) outerGlowRef.current.style.opacity = '0';
   }, []);
 
@@ -178,12 +171,7 @@ export function BorderGlow({
       const x = e.clientX - rect.left;
       const y = e.clientY - rect.top;
 
-      const distToEdge = Math.min(
-        x,
-        rect.width - x,
-        y,
-        rect.height - y,
-      );
+      const distToEdge = Math.min(x, rect.width - x, y, rect.height - y);
       const proximity = Math.max(
         0,
         1 - distToEdge / Math.max(edgeSensitivity, 1),
@@ -215,7 +203,7 @@ export function BorderGlow({
           borderRadius: borderRadius + glowRadius,
           opacity: 0,
           transition: 'opacity 0.18s ease',
-          filter: `blur(${Math.round(glowRadius * 0.55)}px)`,
+          filter: `blur(${Math.round(glowRadius * 0.3)}px)`,
         }}
       />
 
@@ -234,19 +222,6 @@ export function BorderGlow({
           maskComposite: 'exclude',
           WebkitMaskComposite: 'xor',
           padding: '1px',
-        }}
-      />
-
-      {/* ── Inner soft glow — blurred, not masked, creates the visible light spread ── */}
-      <div
-        ref={innerGlowRef}
-        aria-hidden
-        className='pointer-events-none absolute inset-0 z-10'
-        style={{
-          borderRadius,
-          opacity: 0,
-          transition: 'opacity 0.18s ease',
-          filter: 'blur(14px)',
         }}
       />
 

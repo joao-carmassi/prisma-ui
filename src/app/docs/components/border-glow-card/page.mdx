@@ -23,8 +23,7 @@ export const metadata = {
     '@context': 'https://schema.org',
     '@type': 'TechArticle',
     headline: 'Border Glow Card — Prisma UI',
-    description:
-      'A card wrapper with a cursor-proximity border glow effect.',
+    description: 'A card wrapper with a cursor-proximity border glow effect.',
     breadcrumb: {
       '@type': 'BreadcrumbList',
       itemListElement: [
@@ -141,15 +140,19 @@ Pass three hex colors to `glowColors` to theme the gradient.
 </ComponentPreview>
 
 ```tsx
-{/* Warm */}
+{
+  /* Warm */
+}
 <BorderGlow glowColors={['#f59e0b', '#ef4444', '#f97316']}>
   <Card>...</Card>
-</BorderGlow>
+</BorderGlow>;
 
-{/* Cool */}
+{
+  /* Cool */
+}
 <BorderGlow glowColors={['#34d399', '#06b6d4', '#6366f1']}>
   <Card>...</Card>
-</BorderGlow>
+</BorderGlow>;
 ```
 
 ---
@@ -203,11 +206,19 @@ Set `animated` to sweep the glow around the border once on mount.
 </ComponentPreview>
 
 ```tsx
-{/* Tight */}
-<BorderGlow edgeSensitivity={10}><Card>...</Card></BorderGlow>
+{
+  /* Tight */
+}
+<BorderGlow edgeSensitivity={10}>
+  <Card>...</Card>
+</BorderGlow>;
 
-{/* Wide */}
-<BorderGlow edgeSensitivity={80}><Card>...</Card></BorderGlow>
+{
+  /* Wide */
+}
+<BorderGlow edgeSensitivity={80}>
+  <Card>...</Card>
+</BorderGlow>;
 ```
 
 ---

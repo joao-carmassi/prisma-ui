@@ -54,50 +54,18 @@ export function DepthMedia({
   const rotateX = tilt?.rotateX ?? fallbackY;
   const rotateY = tilt?.rotateY ?? fallbackX;
 
-  // Foreground: shifts in the same direction as the tilt (appears elevated/floating)
-  const fgX = useTransform(rotateY, (v) => v * (depthIntensity / 10));
+  // Foreground: shifts toward the hovered corner (correct parallax direction)
+  const fgX = useTransform(rotateY, (v) => -v * (depthIntensity / 10));
   const fgY = useTransform(rotateX, (v) => v * (depthIntensity / 10));
 
-  // Background: shifts opposite (far layer recedes away from tilt direction)
-  const bgX = useTransform(rotateY, (v) => v * -(depthIntensity / 22));
-  const bgY = useTransform(rotateX, (v) => v * -(depthIntensity / 22));
-
-  // Overscale: grow each layer so the void never peeks through when shifting.
-  // The foreground shifts ±(rotationFactor * depthIntensity/10)px so we add
-  // a proportional scale buffer. Background shift is smaller so less scale needed.
+  // Overscale: grow the layer so void never peeks through when shifting.
   const fgScale = 1 + depthIntensity * 0.016;
-  const bgScale = 1.1 + depthIntensity * 0.006;
 
   return (
     <div className={cn('relative size-full overflow-hidden', className)}>
-      {/* ── Layer 1: Background — blurry, desaturated, barely moves ── */}
+      {/* ── Layer 1: Foreground — sharp, elevated, shifts with tilt ── */}
       <motion.div
-        className='absolute inset-0'
-        style={{ x: bgX, y: bgY, scale: bgScale }}
-        aria-hidden
-      >
-        <Image
-          src={src}
-          alt=''
-          fill
-          className='object-cover brightness-[0.72] contrast-[0.65] saturate-[0.75]'
-          style={{ filter: 'blur(7px)' }}
-        />
-      </motion.div>
-
-      {/* ── Layer 2: Mid vignette — fixed depth-shadow overlay ── */}
-      <div
-        className='pointer-events-none absolute inset-0 z-10 rounded-[inherit]'
-        style={{
-          background:
-            'linear-gradient(to bottom, rgba(0,0,0,0.06) 0%, transparent 40%, rgba(0,0,0,0.28) 100%)',
-        }}
-        aria-hidden
-      />
-
-      {/* ── Layer 3: Foreground — sharp, elevated, shifts most ── */}
-      <motion.div
-        className='absolute inset-0 z-20 rounded-[inherit]'
+        className='absolute inset-0 z-10 rounded-[inherit]'
         style={{
           x: fgX,
           y: fgY,
@@ -112,7 +80,17 @@ export function DepthMedia({
         />
       </motion.div>
 
-      {/* ── Layer 4: Inner-edge shadow — frames the depth ── */}
+      {/* ── Layer 2: Vignette + bottom depth edge — above image ── */}
+      <div
+        className='pointer-events-none absolute inset-0 z-20 rounded-[inherit]'
+        style={{
+          background:
+            'linear-gradient(to bottom, rgba(0,0,0,0.04) 0%, transparent 30%, rgba(0,0,0,0.72) 100%)',
+        }}
+        aria-hidden
+      />
+
+      {/* ── Layer 3: Inner-edge shadow — frames the depth ── */}
       <div
         className='pointer-events-none absolute inset-0 z-30 rounded-[inherit]'
         style={{ boxShadow: 'inset 0 0 18px rgba(0,0,0,0.22)' }}
