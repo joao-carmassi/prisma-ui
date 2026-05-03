@@ -67,16 +67,16 @@ export function Tilt({
     ySpring,
     [-0.5, 0.5],
     isReverse
-      ? [rotationFactor, -rotationFactor]
-      : [-rotationFactor, rotationFactor],
+      ? [-rotationFactor, rotationFactor]
+      : [rotationFactor, -rotationFactor],
   );
 
   const rotateY = useTransform(
     xSpring,
     [-0.5, 0.5],
     isReverse
-      ? [-rotationFactor, rotationFactor]
-      : [rotationFactor, -rotationFactor],
+      ? [rotationFactor, -rotationFactor]
+      : [-rotationFactor, rotationFactor],
   );
 
   const transform = useMotionTemplate`perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;

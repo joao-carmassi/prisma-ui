@@ -63,9 +63,6 @@ export default {
   'tilt-card': {
     title: 'Tilt Card',
   },
-  'depth-media': {
-    title: 'Depth Media',
-  },
   'border-glow-card': {
     title: 'Border Glow Card',
   },

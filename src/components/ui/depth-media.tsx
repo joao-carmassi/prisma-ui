@@ -62,12 +62,18 @@ export function DepthMedia({
   const bgX = useTransform(rotateY, (v) => v * (depthIntensity / 22));
   const bgY = useTransform(rotateX, (v) => v * (depthIntensity / 22));
 
+  // Overscale: grow each layer so the void never peeks through when shifting.
+  // The foreground shifts ±(rotationFactor * depthIntensity/10)px so we add
+  // a proportional scale buffer. Background shift is smaller so less scale needed.
+  const fgScale = 1 + depthIntensity * 0.016;
+  const bgScale = 1.1 + depthIntensity * 0.006;
+
   return (
     <div className={cn('relative size-full overflow-hidden', className)}>
       {/* ── Layer 1: Background — blurry, desaturated, barely moves ── */}
       <motion.div
         className='absolute inset-0'
-        style={{ x: bgX, y: bgY, scale: 1.12 }}
+        style={{ x: bgX, y: bgY, scale: bgScale }}
         aria-hidden
       >
         <Image
@@ -91,11 +97,11 @@ export function DepthMedia({
 
       {/* ── Layer 3: Foreground — sharp, elevated, shifts most ── */}
       <motion.div
-        className='absolute inset-[5%] z-20 rounded-[inherit]'
+        className='absolute inset-0 z-20 rounded-[inherit]'
         style={{
           x: fgX,
           y: fgY,
-          filter: 'drop-shadow(0 10px 28px rgba(0,0,0,0.42))',
+          scale: fgScale,
         }}
       >
         <Image

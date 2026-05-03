@@ -1,4 +1,13 @@
 import { BorderGlow } from '@/components/ui/border-glow';
+import {
+  Card,
+  CardHeader,
+  CardTitle,
+  CardDescription,
+  CardContent,
+  CardFooter,
+} from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
 import { JsonLd } from '@/components/seo/json-ld';
 import { InstallSnippet } from '@/components/docs/install-snippet';
 
@@ -44,7 +53,7 @@ export const metadata = {
 
 # Border Glow
 
-A card wrapper that emits a colorful gradient glow along its border when the pointer approaches any edge. Inspired by [React Bits' Border Glow](https://www.reactbits.dev/components/border-glow). The glow is directional — it follows the exact cursor position along the border — and fades out as the pointer moves toward the card center.
+A cursor-proximity border glow effect. Drop `<BorderGlow>` around any Card — it adds a colorful gradient glow that follows the pointer along the border when the cursor approaches any edge. Inspired by [React Bits' Border Glow](https://www.reactbits.dev/components/border-glow).
 
 ## Installation
 
@@ -54,6 +63,14 @@ A card wrapper that emits a colorful gradient glow along its border when the poi
 
 ```tsx
 import { BorderGlow } from '@/components/ui/border-glow';
+import {
+  Card,
+  CardHeader,
+  CardTitle,
+  CardDescription,
+  CardContent,
+  CardFooter,
+} from '@/components/ui/card';
 ```
 
 ---
@@ -63,20 +80,38 @@ import { BorderGlow } from '@/components/ui/border-glow';
 Move your cursor near the card edges to see the glow follow the pointer.
 
 <ComponentPreview>
-  <BorderGlow className='w-72 p-6'>
-    <h3 className='text-base font-semibold'>Border Glow</h3>
-    <p className='mt-2 text-sm text-muted-foreground'>
-      {'Move your cursor near the edges to see the glow effect follow your pointer.'}
-    </p>
+  <BorderGlow className='w-72'>
+    <Card>
+      <CardHeader>
+        <CardTitle>Border Glow</CardTitle>
+        <CardDescription>Move your cursor near the edges.</CardDescription>
+      </CardHeader>
+      <CardContent>
+        <span className='text-sm text-muted-foreground'>
+          {'Wrap any Card with '}
+          <code>{'<BorderGlow>'}</code>
+          {' to add the glow effect.'}
+        </span>
+      </CardContent>
+      <CardFooter>
+        <Button size='sm'>Action</Button>
+      </CardFooter>
+    </Card>
   </BorderGlow>
 </ComponentPreview>
 
 ```tsx
-<BorderGlow className='w-72 p-6'>
-  <h3 className='text-base font-semibold'>Border Glow</h3>
-  <p className='mt-2 text-sm text-muted-foreground'>
-    Move your cursor near the edges to see the glow effect.
-  </p>
+<BorderGlow className='w-72'>
+  <Card>
+    <CardHeader>
+      <CardTitle>Border Glow</CardTitle>
+      <CardDescription>Move your cursor near the edges.</CardDescription>
+    </CardHeader>
+    <CardContent>...</CardContent>
+    <CardFooter>
+      <Button size='sm'>Action</Button>
+    </CardFooter>
+  </Card>
 </BorderGlow>
 ```
 
@@ -87,28 +122,34 @@ Move your cursor near the card edges to see the glow follow the pointer.
 Pass three hex colors to `glowColors` to theme the gradient.
 
 <ComponentPreview className='gap-6 items-start flex-wrap'>
-  <BorderGlow
-    className='w-64 p-5'
-    glowColors={['#f59e0b', '#ef4444', '#f97316']}
-  >
-    <p className='text-sm font-medium'>Warm tones</p>
-    <p className='mt-1 text-xs text-muted-foreground'>amber → red → orange</p>
+  <BorderGlow className='w-64' glowColors={['#f59e0b', '#ef4444', '#f97316']}>
+    <Card>
+      <CardHeader>
+        <CardTitle>Warm tones</CardTitle>
+        <CardDescription>amber → red → orange</CardDescription>
+      </CardHeader>
+    </Card>
   </BorderGlow>
-  <BorderGlow
-    className='w-64 p-5'
-    glowColors={['#34d399', '#06b6d4', '#6366f1']}
-  >
-    <p className='text-sm font-medium'>Cool tones</p>
-    <p className='mt-1 text-xs text-muted-foreground'>emerald → cyan → indigo</p>
+  <BorderGlow className='w-64' glowColors={['#34d399', '#06b6d4', '#6366f1']}>
+    <Card>
+      <CardHeader>
+        <CardTitle>Cool tones</CardTitle>
+        <CardDescription>emerald → cyan → indigo</CardDescription>
+      </CardHeader>
+    </Card>
   </BorderGlow>
 </ComponentPreview>
 
 ```tsx
 {/* Warm */}
-<BorderGlow glowColors={['#f59e0b', '#ef4444', '#f97316']}>...</BorderGlow>
+<BorderGlow glowColors={['#f59e0b', '#ef4444', '#f97316']}>
+  <Card>...</Card>
+</BorderGlow>
 
 {/* Cool */}
-<BorderGlow glowColors={['#34d399', '#06b6d4', '#6366f1']}>...</BorderGlow>
+<BorderGlow glowColors={['#34d399', '#06b6d4', '#6366f1']}>
+  <Card>...</Card>
+</BorderGlow>
 ```
 
 ---
@@ -118,17 +159,21 @@ Pass three hex colors to `glowColors` to theme the gradient.
 Set `animated` to sweep the glow around the border once on mount.
 
 <ComponentPreview>
-  <BorderGlow className='w-72 p-6' animated>
-    <h3 className='text-base font-semibold'>Animated Intro</h3>
-    <p className='mt-2 text-sm text-muted-foreground'>
-      {'Reload the page — the glow sweeps once around the border on mount.'}
-    </p>
+  <BorderGlow className='w-72' animated>
+    <Card>
+      <CardHeader>
+        <CardTitle>Animated Intro</CardTitle>
+        <CardDescription>
+          {'The glow sweeps once around the border on mount.'}
+        </CardDescription>
+      </CardHeader>
+    </Card>
   </BorderGlow>
 </ComponentPreview>
 
 ```tsx
-<BorderGlow className='w-72 p-6' animated>
-  ...
+<BorderGlow className='w-72' animated>
+  <Card>...</Card>
 </BorderGlow>
 ```
 
@@ -139,37 +184,44 @@ Set `animated` to sweep the glow around the border once on mount.
 `edgeSensitivity` (px) controls how far from the edge the glow activates.
 
 <ComponentPreview className='gap-6 items-start flex-wrap'>
-  <BorderGlow className='w-60 p-5' edgeSensitivity={10}>
-    <p className='text-sm font-medium'>Tight (10 px)</p>
-    <p className='mt-1 text-xs text-muted-foreground'>Glow only on the edge itself</p>
+  <BorderGlow className='w-60' edgeSensitivity={10}>
+    <Card>
+      <CardHeader>
+        <CardTitle>Tight (10 px)</CardTitle>
+        <CardDescription>Glow only on the edge itself</CardDescription>
+      </CardHeader>
+    </Card>
   </BorderGlow>
-  <BorderGlow className='w-60 p-5' edgeSensitivity={80}>
-    <p className='text-sm font-medium'>Wide (80 px)</p>
-    <p className='mt-1 text-xs text-muted-foreground'>Glow activates anywhere near edges</p>
+  <BorderGlow className='w-60' edgeSensitivity={80}>
+    <Card>
+      <CardHeader>
+        <CardTitle>Wide (80 px)</CardTitle>
+        <CardDescription>Activates anywhere near the edges</CardDescription>
+      </CardHeader>
+    </Card>
   </BorderGlow>
 </ComponentPreview>
 
 ```tsx
-{/* Tight — only right on the border */}
-<BorderGlow edgeSensitivity={10}>...</BorderGlow>
+{/* Tight */}
+<BorderGlow edgeSensitivity={10}><Card>...</Card></BorderGlow>
 
-{/* Wide — activates well before reaching the edge */}
-<BorderGlow edgeSensitivity={80}>...</BorderGlow>
+{/* Wide */}
+<BorderGlow edgeSensitivity={80}><Card>...</Card></BorderGlow>
 ```
 
 ---
 
 ## Props
 
-| Prop              | Type                        | Default                              | Description                                               |
-| ----------------- | --------------------------- | ------------------------------------ | --------------------------------------------------------- |
-| `children`        | `React.ReactNode`           | —                                    | Content rendered inside the card.                         |
-| `className`       | `string`                    | —                                    | Additional CSS classes for the outer wrapper.             |
-| `edgeSensitivity` | `number`                    | `30`                                 | Distance in px from edge where glow activates.            |
-| `glowColors`      | `[string, string, string]`  | `['#c084fc','#f472b6','#38bdf8']`    | Three hex colors for the gradient.                        |
-| `backgroundColor` | `string`                    | `'hsl(var(--card))'`                 | Background color of the inner card area.                  |
-| `borderRadius`    | `number`                    | `12`                                 | Corner radius in pixels.                                  |
-| `glowRadius`      | `number`                    | `40`                                 | Outer glow spread in pixels beyond the card.              |
-| `glowIntensity`   | `number`                    | `1`                                  | Glow brightness multiplier (0.1 – 3.0).                   |
-| `coneSpread`      | `number`                    | `100`                                | Gradient radius controlling glow width along the border.  |
-| `animated`        | `boolean`                   | `false`                              | Play a one-shot border sweep animation on mount.          |
+| Prop              | Type                       | Default                           | Description                                              |
+| ----------------- | -------------------------- | --------------------------------- | -------------------------------------------------------- |
+| `children`        | `React.ReactNode`          | —                                 | Content rendered inside (typically a Card).              |
+| `className`       | `string`                   | —                                 | Additional CSS classes for the outer wrapper.            |
+| `edgeSensitivity` | `number`                   | `30`                              | Distance in px from edge where glow activates.           |
+| `glowColors`      | `[string, string, string]` | `['#c084fc','#f472b6','#38bdf8']` | Three hex colors for the gradient.                       |
+| `borderRadius`    | `number`                   | `12`                              | Corner radius — must match the child Card's radius.      |
+| `glowRadius`      | `number`                   | `40`                              | Outer glow spread in px beyond the card.                 |
+| `glowIntensity`   | `number`                   | `1`                               | Glow brightness multiplier (0.1 – 3.0).                  |
+| `coneSpread`      | `number`                   | `100`                             | Gradient radius controlling glow width along the border. |
+| `animated`        | `boolean`                  | `false`                           | Play a one-shot border sweep animation on mount.         |

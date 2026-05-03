@@ -31,12 +31,8 @@ interface BorderGlowProps {
    */
   glowColors?: [string, string, string];
   /**
-   * Background color of the card inner area.
-   * @default 'hsl(var(--card))'
-   */
-  backgroundColor?: string;
-  /**
-   * Corner radius of the card in pixels.
+   * Corner radius in pixels — should match the Card's border-radius.
+   * shadcn new-york Card uses 12px (rounded-xl).
    * @default 12
    */
   borderRadius?: number;
@@ -92,7 +88,6 @@ export function BorderGlow({
   className,
   edgeSensitivity = 30,
   glowColors = ['#c084fc', '#f472b6', '#38bdf8'],
-  backgroundColor = 'hsl(var(--card))',
   borderRadius = 12,
   glowRadius = 40,
   glowIntensity = 1,
@@ -201,29 +196,11 @@ export function BorderGlow({
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
     >
-      {/* ── Border glow layer (masked to border ring) ── */}
-      <div
-        ref={borderGlowRef}
-        aria-hidden
-        className='pointer-events-none absolute inset-0'
-        style={{
-          borderRadius,
-          opacity: 0,
-          transition: 'opacity 0.18s ease',
-          mask: 'linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)',
-          WebkitMask:
-            'linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)',
-          maskComposite: 'exclude',
-          WebkitMaskComposite: 'xor',
-          padding: '1.5px',
-        }}
-      />
-
-      {/* ── Outer ambient glow (soft halo beyond card edges) ── */}
+      {/* ── Outer ambient halo — behind the card, not clipped ── */}
       <div
         ref={outerGlowRef}
         aria-hidden
-        className='pointer-events-none absolute'
+        className='pointer-events-none absolute -z-10'
         style={{
           inset: -glowRadius,
           borderRadius: borderRadius + glowRadius,
@@ -233,17 +210,26 @@ export function BorderGlow({
         }}
       />
 
-      {/* ── Card inner content area ── */}
+      {/* ── Border glow ring — overlaid on top of children, pointer-events-none ── */}
       <div
-        className='relative z-10 m-[1.5px]'
+        ref={borderGlowRef}
+        aria-hidden
+        className='pointer-events-none absolute inset-0 z-10'
         style={{
-          borderRadius: Math.max(0, borderRadius - 1.5),
-          backgroundColor,
-          overflow: 'hidden',
+          borderRadius,
+          opacity: 0,
+          transition: 'opacity 0.18s ease',
+          mask: 'linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)',
+          WebkitMask:
+            'linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)',
+          maskComposite: 'exclude',
+          WebkitMaskComposite: 'xor',
+          padding: '1px',
         }}
-      >
-        {children}
-      </div>
+      />
+
+      {/* ── Card or any children ── */}
+      {children}
     </div>
   );
 }

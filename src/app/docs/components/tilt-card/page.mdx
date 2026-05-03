@@ -1,4 +1,5 @@
 import { Tilt } from '@/components/ui/tilt';
+import { DepthMedia } from '@/components/ui/depth-media';
 import {
   Card,
   CardHeader,
@@ -137,3 +138,99 @@ import { Tilt } from '@/components/ui/tilt';
 | `rotationFactor` | `number`          | `15`    | Max rotation angle in degrees. |
 | `isReverse`      | `boolean`         | `false` | Reverse the tilt direction.    |
 | `springOptions`  | `SpringOptions`   | —       | Spring animation config.       |
+
+---
+
+## DepthMedia
+
+A companion component that places an image inside the Tilt card and gives it real parallax depth. A blurry, desaturated background layer and a sharp foreground layer shift at different rates as the card tilts, creating the illusion that the image has volume.
+
+### Installation
+
+<InstallSnippet registryUrl='https://prismaui.com/components/depth-media.json' />
+
+### Import
+
+```tsx
+import { DepthMedia } from '@/components/ui/depth-media';
+```
+
+### Preview
+
+Place `DepthMedia` inside a **positioned container** (e.g. `relative h-48`) within a Tilt card and hover to see the parallax layers in action.
+
+<ComponentPreview>
+  <Tilt rotationFactor={15} springOptions={{ stiffness: 300, damping: 20 }}>
+    <Card className='w-72 overflow-hidden'>
+      <div className='relative h-48'>
+        <DepthMedia
+          src='https://picsum.photos/288/192'
+          alt='Mountain landscape'
+        />
+      </div>
+      <CardHeader>
+        <CardTitle>Depth Media</CardTitle>
+        <CardDescription>Hover to feel the parallax depth.</CardDescription>
+      </CardHeader>
+    </Card>
+  </Tilt>
+</ComponentPreview>
+
+```tsx
+<Tilt rotationFactor={15} springOptions={{ stiffness: 300, damping: 20 }}>
+  <Card className='w-72 overflow-hidden'>
+    <div className='relative h-48'>
+      <DepthMedia src='https://picsum.photos/288/192' alt='...' />
+    </div>
+    <CardHeader>
+      <CardTitle>Depth Media</CardTitle>
+      <CardDescription>Hover to feel the parallax depth.</CardDescription>
+    </CardHeader>
+  </Card>
+</Tilt>
+```
+
+### Depth Intensity
+
+Increase `depthIntensity` for more pronounced layer separation.
+
+<ComponentPreview className='gap-6 items-start'>
+  <Tilt rotationFactor={15} springOptions={{ stiffness: 300, damping: 20 }}>
+    <Card className='w-60 overflow-hidden'>
+      <div className='relative h-40'>
+        <DepthMedia src='https://picsum.photos/240/160' alt='Low intensity' depthIntensity={4} />
+      </div>
+      <CardContent className='py-3'>
+        <p className='text-xs text-muted-foreground'>{'depthIntensity={4}'}</p>
+      </CardContent>
+    </Card>
+  </Tilt>
+  <Tilt rotationFactor={15} springOptions={{ stiffness: 300, damping: 20 }}>
+    <Card className='w-60 overflow-hidden'>
+      <div className='relative h-40'>
+        <DepthMedia src='https://picsum.photos/242/162' alt='High intensity' depthIntensity={16} />
+      </div>
+      <CardContent className='py-3'>
+        <p className='text-xs text-muted-foreground'>{'depthIntensity={16}'}</p>
+      </CardContent>
+    </Card>
+  </Tilt>
+</ComponentPreview>
+
+```tsx
+{/* Subtle */}
+<DepthMedia src='...' depthIntensity={4} />
+
+{/* Dramatic */}
+<DepthMedia src='...' depthIntensity={16} />
+```
+
+### DepthMedia Props
+
+| Prop             | Type     | Default | Description                                               |
+| ---------------- | -------- | ------- | --------------------------------------------------------- |
+| `src`            | `string` | —       | Image URL passed to all parallax layers.                  |
+| `alt`            | `string` | `''`    | Accessible alt text for the foreground image.             |
+| `className`      | `string` | —       | Additional CSS classes for the container.                 |
+| `depthIntensity` | `number` | `8`     | Parallax multiplier — higher values increase layer shift. |
+

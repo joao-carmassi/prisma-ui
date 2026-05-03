@@ -21,7 +21,6 @@ const components = [
   'scroll-progress',
   'backlight',
   'tracing-beam',
-  'depth-media',
   'border-glow-card',
 ];
 
