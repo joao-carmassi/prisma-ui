@@ -45,6 +45,8 @@ Prisma UI is a production-ready component library that ships accessible, animate
 | **Rainbow Border** | Cycling rainbow gradient border. |
 | **Scroll Progress** | Scroll progress indicator bar. |
 | **Shine Border** | Sweeping shine animation around a card border. |
+| **Border Glow Card** | Cursor-proximity border glow card — a colorful gradient follows the pointer along the card edges. |
+| **Depth Media** | Parallax depth image — splits a single image into multiple layers that shift at different rates inside a Tilt card. |
 | **Tilt Card** | 3D perspective tilt wrapper for cards and elements. |
 | **Tracing Beam** | SVG beam that traces scroll position alongside content. |
 | **Transition Panel** | Animated step panel with direction-aware enter/exit transitions. |

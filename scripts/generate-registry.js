@@ -168,6 +168,17 @@ writeRegistry('tracing-beam', {
   files: [makeFile('tracing-beam.tsx', read('tracing-beam.tsx'))],
 });
 
+// 19. Depth Media
+writeRegistry('depth-media', {
+  dependencies: ['motion'],
+  files: [makeFile('depth-media.tsx', read('depth-media.tsx'))],
+});
+
+// 20. Border Glow
+writeRegistry('border-glow', {
+  files: [makeFile('border-glow.tsx', read('border-glow.tsx'))],
+});
+
 console.log(
   `\nAll ${registryCounter} registry JSON files created successfully!\n`,
 );

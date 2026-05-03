@@ -1,6 +1,6 @@
 'use client';
 
-import { useRef } from 'react';
+import { createContext, useContext, useRef } from 'react';
 import {
   motion,
   useMotionTemplate,
@@ -8,8 +8,19 @@ import {
   useSpring,
   useTransform,
 } from 'motion/react';
-import type { MotionStyle, SpringOptions } from 'motion/react';
+import type { MotionStyle, MotionValue, SpringOptions } from 'motion/react';
 import { cn } from '@/lib/utils';
+
+interface TiltContextValue {
+  rotateX: MotionValue<number>;
+  rotateY: MotionValue<number>;
+}
+
+const TiltContext = createContext<TiltContextValue | null>(null);
+
+export function useTiltContext(): TiltContextValue | null {
+  return useContext(TiltContext);
+}
 
 /*
  * @author: @joao-carmassi
@@ -90,18 +101,20 @@ export function Tilt({
   };
 
   return (
-    <motion.div
-      ref={ref}
-      className={cn(className)}
-      style={{
-        transformStyle: 'preserve-3d',
-        ...style,
-        transform,
-      }}
-      onMouseMove={handleMouseMove}
-      onMouseLeave={handleMouseLeave}
-    >
-      {children}
-    </motion.div>
+    <TiltContext.Provider value={{ rotateX, rotateY }}>
+      <motion.div
+        ref={ref}
+        className={cn(className)}
+        style={{
+          transformStyle: 'preserve-3d',
+          ...style,
+          transform,
+        }}
+        onMouseMove={handleMouseMove}
+        onMouseLeave={handleMouseLeave}
+      >
+        {children}
+      </motion.div>
+    </TiltContext.Provider>
   );
 }
