@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import type { ImageProps } from 'next/image';
 import { useMotionValue, useTransform, motion } from 'motion/react';
 import { cn } from '@/lib/utils';
 import { useTiltContext } from '@/components/ui/tilt';
@@ -11,12 +12,15 @@ import { useTiltContext } from '@/components/ui/tilt';
  * Renders the image across three parallax layers (background, mid-shadow, foreground)
  * that respond to the parent Tilt's rotation, creating a real parallax depth effect.
  * Works as a standalone component too — falls back gracefully without a Tilt parent.
- * @version: 1.0.0
+ * @version: 1.1.0
  * @date: 2026-02-05
  * @license: MIT
  */
 
-interface DepthMediaProps {
+interface DepthMediaProps extends Omit<
+  ImageProps,
+  'src' | 'alt' | 'fill' | 'className'
+> {
   /** Image URL to apply the depth effect to. */
   src: string;
   /** Alt text for the foreground (accessible) image. */
@@ -44,6 +48,7 @@ export function DepthMedia({
   alt = '',
   className,
   depthIntensity = 8,
+  ...imageProps
 }: DepthMediaProps): React.ReactNode {
   const tilt = useTiltContext();
 
@@ -77,23 +82,20 @@ export function DepthMedia({
           alt={alt}
           fill
           className='rounded-[inherit] object-cover'
+          {...imageProps}
         />
       </motion.div>
 
       {/* ── Layer 2: Vignette + bottom depth edge — above image ── */}
       <div
         className='pointer-events-none absolute inset-0 z-20 rounded-[inherit]'
-        style={{
-          background:
-            'linear-gradient(to bottom, rgba(0,0,0,0.04) 0%, transparent 30%, rgba(0,0,0,0.72) 100%)',
-        }}
         aria-hidden
       />
 
       {/* ── Layer 3: Inner-edge shadow — frames the depth ── */}
       <div
         className='pointer-events-none absolute inset-0 z-30 rounded-[inherit]'
-        style={{ boxShadow: 'inset 0 0 18px rgba(0,0,0,0.22)' }}
+        style={{ boxShadow: 'inset 0 0 18px rgba(0,0,0,0.18)' }}
         aria-hidden
       />
     </div>

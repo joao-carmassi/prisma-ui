@@ -239,9 +239,24 @@ Increase `depthIntensity` for more pronounced layer separation.
 
 ### DepthMedia Props
 
-| Prop             | Type     | Default | Description                                               |
-| ---------------- | -------- | ------- | --------------------------------------------------------- |
-| `src`            | `string` | —       | Image URL passed to all parallax layers.                  |
-| `alt`            | `string` | `''`    | Accessible alt text for the foreground image.             |
-| `className`      | `string` | —       | Additional CSS classes for the container.                 |
-| `depthIntensity` | `number` | `8`     | Parallax multiplier — higher values increase layer shift. |
+| Prop                  | Type                                                        | Default | Description                                                       |
+| --------------------- | ----------------------------------------------------------- | ------- | ----------------------------------------------------------------- |
+| `src`                 | `string`                                                    | —       | Image URL passed to the parallax image.                           |
+| `alt`                 | `string`                                                    | `''`    | Accessible alt text for the foreground image.                     |
+| `className`           | `string`                                                    | —       | Additional CSS classes for the container.                         |
+| `depthIntensity`      | `number`                                                    | `8`     | Parallax multiplier — higher values increase layer shift.         |
+| `...next/image props` | `Omit<ImageProps, 'src' \| 'alt' \| 'fill' \| 'className'>` | —       | Forwarded to `next/image` (`priority`, `loading`, `sizes`, etc.). |
+
+### Using image props
+
+You can pass regular `next/image` props directly to `DepthMedia`.
+
+```tsx
+<DepthMedia
+  src='https://picsum.photos/288/192'
+  alt='Mountain landscape'
+  sizes='(max-width: 768px) 100vw, 288px'
+  loading='lazy'
+  quality={85}
+/>
+```
