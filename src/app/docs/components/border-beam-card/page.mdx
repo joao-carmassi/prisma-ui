@@ -1,20 +1,9 @@
-import { BorderBeam } from '@/components/ui/border-beam';
-import {
-  Card,
-  CardHeader,
-  CardTitle,
-  CardDescription,
-  CardContent,
-  CardFooter,
-} from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
 import { JsonLd } from '@/components/seo/json-ld';
-import { InstallSnippet } from '@/components/docs/install-snippet';
 
 export const metadata = {
   title: 'Border Beam Card',
   description:
-    'A card component with an animated beam of light that travels along its border. Uses offset-path CSS animations.',
+    'Border Beam Card has been replaced by AuraBeam with variant="beam". See the Aura Beam Card docs for the new API.',
   alternates: { canonical: '/docs/components/border-beam-card' },
 };
 
@@ -23,29 +12,13 @@ export const metadata = {
     '@context': 'https://schema.org',
     '@type': 'TechArticle',
     headline: 'Border Beam Card — Prisma UI',
-    description:
-      'A card component with an animated border-beam light effect using CSS offset-path.',
+    description: 'Replaced by AuraBeam variant="beam".',
     breadcrumb: {
       '@type': 'BreadcrumbList',
       itemListElement: [
-        {
-          '@type': 'ListItem',
-          position: 1,
-          name: 'Home',
-          item: 'https://prismaui.com',
-        },
-        {
-          '@type': 'ListItem',
-          position: 2,
-          name: 'Docs',
-          item: 'https://prismaui.com/docs',
-        },
-        {
-          '@type': 'ListItem',
-          position: 3,
-          name: 'Border Beam Card',
-          item: 'https://prismaui.com/docs/components/border-beam-card',
-        },
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://prismaui.com' },
+        { '@type': 'ListItem', position: 2, name: 'Docs', item: 'https://prismaui.com/docs' },
+        { '@type': 'ListItem', position: 3, name: 'Border Beam Card', item: 'https://prismaui.com/docs/components/border-beam-card' },
       ],
     },
   }}
@@ -53,160 +26,38 @@ export const metadata = {
 
 # Border Beam
 
-An animated beam of light that travels along the border of any Card. Inspired by [Magic UI's Border Beam](https://magicui.design/docs/components/border-beam). Implemented with pure CSS — no external animation library required.
+> **This component has been superseded by [`<AuraBeam variant="beam">`](/docs/components/aura-beam-card#beam).**
+> The new component preserves the travelling-arc behavior while adding the high-quality glow and blur layers of the AuraBeam aesthetic.
 
-## Installation
+## Migration
 
-<InstallSnippet registryUrl='https://prismaui.com/components/border-beam.json' />
-
-## Import
-
-```tsx
-import { BorderBeam } from '@/components/ui/border-beam';
-import {
-  Card,
-  CardHeader,
-  CardTitle,
-  CardDescription,
-  CardContent,
-  CardFooter,
-} from '@/components/ui/card';
-```
-
----
-
-## Preview
-
-<ComponentPreview className='gap-6 items-start'>
-  <Card className='relative w-85 overflow-hidden'>
-    <BorderBeam />
-    <CardHeader>
-      <CardTitle>Border Beam</CardTitle>
-      <CardDescription>
-        An animated beam travels along the border.
-      </CardDescription>
-    </CardHeader>
-    <CardContent>
-      <p className='text-sm text-muted-foreground'>
-        {'Drop '}
-        <code>{'<BorderBeam />'}</code>
-        {' inside any Card with '}
-        <code>{'relative overflow-hidden'}</code>
-        {'.'}
-      </p>
-    </CardContent>
-    <CardFooter>
-      <Button size='sm'>Action</Button>
-    </CardFooter>
-  </Card>
-</ComponentPreview>
-
-```tsx
-<Card className='relative w-85 overflow-hidden'>
-  <BorderBeam />
-  <CardHeader>
-    <CardTitle>Border Beam</CardTitle>
-    <CardDescription>
-      An animated beam travels along the border.
-    </CardDescription>
-  </CardHeader>
-  <CardContent>
-    <p className='text-sm text-muted-foreground'>
-      Drop &lt;BorderBeam /&gt; inside any Card with relative overflow-hidden.
-    </p>
-  </CardContent>
-  <CardFooter>
-    <Button size='sm'>Action</Button>
-  </CardFooter>
-</Card>
-```
-
----
-
-## Custom Colors
-
-<ComponentPreview className='gap-6 items-start'>
-  <Card className='relative w-85 overflow-hidden'>
-    <BorderBeam colorFrom='#00c6ff' colorTo='#0072ff' duration={4} />
-    <CardHeader>
-      <CardTitle>Custom Colors</CardTitle>
-      <CardDescription>Blue gradient, faster speed.</CardDescription>
-    </CardHeader>
-    <CardContent>
-      <p className='text-sm text-muted-foreground'>
-        {'Customize the beam colors and speed with props.'}
-      </p>
-    </CardContent>
-  </Card>
-  <Card className='relative w-85 overflow-hidden'>
-    <BorderBeam colorFrom='#f7971e' colorTo='#ffd200' reverse />
-    <CardHeader>
-      <CardTitle>Reversed Beam</CardTitle>
-      <CardDescription>Gold colors, reversed direction.</CardDescription>
-    </CardHeader>
-    <CardContent>
-      <p className='text-sm text-muted-foreground'>
-        {'Use the '}
-        <code>{'reverse'}</code>
-        {' prop to flip the beam direction.'}
-      </p>
-    </CardContent>
-  </Card>
-</ComponentPreview>
-
-```tsx
-<Card className="relative overflow-hidden">
-  <BorderBeam colorFrom="#00c6ff" colorTo="#0072ff" duration={4} />
-  ...
-</Card>
-
-<Card className="relative overflow-hidden">
-  <BorderBeam colorFrom="#f7971e" colorTo="#ffd200" reverse />
-  ...
-</Card>
-```
-
----
-
-## Double Beam
-
-Stack two `<BorderBeam />` instances with opposite directions and a delay offset for a more dynamic effect.
-
-<ComponentPreview className='gap-6 items-start'>
-  <Card className='relative w-85 overflow-hidden'>
-    <BorderBeam duration={6} />
-    <BorderBeam duration={6} delay={3} reverse />
-    <CardHeader>
-      <CardTitle>Double Beam</CardTitle>
-      <CardDescription>Two beams, opposite directions.</CardDescription>
-    </CardHeader>
-    <CardContent>
-      <p className='text-sm text-muted-foreground'>
-        {
-          'Stacking two beams with a half-period delay creates a symmetric loop.'
-        }
-      </p>
-    </CardContent>
-  </Card>
-</ComponentPreview>
+Replace the old `BorderBeam` usage:
 
 ```tsx
 <Card className='relative overflow-hidden'>
-  <BorderBeam duration={6} />
-  <BorderBeam duration={6} delay={3} reverse />
+  <BorderBeam />
   ...
 </Card>
 ```
 
----
+With the new `AuraBeam`:
 
-## Props
+```tsx
+<AuraBeam variant='beam'>
+  <Card className='rounded-[inherit] border bg-background'>
+    ...
+  </Card>
+</AuraBeam>
+```
 
-| Prop        | Type      | Default   | Description                                |
-| ----------- | --------- | --------- | ------------------------------------------ |
-| `size`      | `number`  | `50`      | Size of the beam in pixels                 |
-| `duration`  | `number`  | `6`       | Duration of one full loop in seconds       |
-| `delay`     | `number`  | `0`       | Delay before the animation starts          |
-| `colorFrom` | `string`  | `#ffaa40` | Start color of the beam gradient           |
-| `colorTo`   | `string`  | `#9c40ff` | End color of the beam gradient             |
-| `reverse`   | `boolean` | `false`   | Whether to reverse the animation direction |
+For custom colors and duration:
+
+```tsx
+<AuraBeam variant='beam' color={['#ffaa40', '#9c40ff']} duration={4}>
+  <Card className='rounded-[inherit] border bg-background'>
+    ...
+  </Card>
+</AuraBeam>
+```
+
+See the full [Aura Beam Card documentation](/docs/components/aura-beam-card) for all available props.

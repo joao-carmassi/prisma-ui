@@ -94,6 +94,8 @@
   --aura-radius: 0.75rem;
   --aura-duration: 6s;
   --aura-color: hsl(var(--primary));
+  --aura-color-from: var(--aura-color);
+  --aura-color-to: var(--aura-color);
 
   position: relative;
   display: inline-block;
@@ -173,4 +175,65 @@
 .aura-beam-glow::after {
   filter: blur(28px);
   opacity: 0.55;
+}
+
+/* ─── Beam variant ────────────────────────────────────────────────────────── */
+
+.aura-beam[data-variant='beam'] {
+  background-image: conic-gradient(
+    from var(--aura-angle),
+    transparent 0deg,
+    transparent 275deg,
+    var(--aura-color-from) 305deg,
+    var(--aura-color-to) 325deg,
+    transparent 360deg
+  );
+}
+
+.aura-beam[data-variant='beam']::before {
+  filter: blur(4px);
+  opacity: 0.85;
+}
+
+.aura-beam[data-variant='beam']::after {
+  filter: blur(22px);
+  opacity: 0.55;
+}
+
+/* ─── Shine variant ───────────────────────────────────────────────────────── */
+
+@keyframes aura-shine {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+.aura-beam[data-variant='shine'] {
+  background-image: radial-gradient(
+    transparent,
+    transparent,
+    var(--aura-color),
+    transparent,
+    transparent
+  );
+  background-size: 300% 300%;
+  animation: aura-shine var(--aura-duration) linear infinite;
+}
+
+.aura-beam[data-variant='shine']::before {
+  filter: blur(8px);
+  opacity: 0.7;
+  animation: aura-shine var(--aura-duration) linear infinite;
+}
+
+.aura-beam[data-variant='shine']::after {
+  filter: blur(26px);
+  opacity: 0.42;
+  animation: aura-shine var(--aura-duration) linear infinite;
 }

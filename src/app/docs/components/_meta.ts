@@ -51,11 +51,8 @@ export default {
   'rainbow-card': {
     title: 'Rainbow Card',
   },
-  'border-beam-card': {
-    title: 'Border Beam Card',
-  },
-  'shine-border-card': {
-    title: 'Shine Border Card',
+  'aura-beam-card': {
+    title: 'Aura Beam Card',
   },
   'flip-card': {
     title: 'Flip Card',
@@ -66,7 +63,10 @@ export default {
   'border-glow-card': {
     title: 'Border Glow Card',
   },
-  'aura-beam-card': {
-    title: 'Aura Beam Card',
+  'border-beam-card': {
+    display: 'hidden',
+  },
+  'shine-border-card': {
+    display: 'hidden',
   },
 };

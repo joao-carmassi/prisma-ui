@@ -6,11 +6,10 @@ const baseUrl = getSiteUrl();
 const components = [
   'button',
   'badge',
-  'border-beam-card',
   'confetti-wrapper',
   'flip-card',
   'rainbow-card',
-  'shine-border-card',
+  'aura-beam-card',
   'transition-panel',
   'floating-label-input',
   'animated-background',
@@ -22,7 +21,6 @@ const components = [
   'backlight',
   'tracing-beam',
   'border-glow-card',
-  'aura-beam-card',
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
