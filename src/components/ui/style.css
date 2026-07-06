@@ -93,7 +93,7 @@
   --aura-padding: 2px;
   --aura-radius: 0.75rem;
   --aura-duration: 6s;
-  --aura-color: hsl(var(--primary));
+  --aura-color: var(--primary);
   --aura-color-from: var(--aura-color);
   --aura-color-to: var(--aura-color);
 
