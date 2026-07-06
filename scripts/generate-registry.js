@@ -179,6 +179,15 @@ writeRegistry('border-glow', {
   files: [makeFile('border-glow.tsx', read('border-glow.tsx'))],
 });
 
+// 21. Aura Beam
+writeRegistry('aura-beam', {
+  registryDependencies: ['card'],
+  files: [
+    makeFile('aura-beam.tsx', read('aura-beam.tsx')),
+    makeFile('style.css', styleCss),
+  ],
+});
+
 console.log(
   `\nAll ${registryCounter} registry JSON files created successfully!\n`,
 );

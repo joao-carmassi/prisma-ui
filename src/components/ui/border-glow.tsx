@@ -122,7 +122,7 @@ export function BorderGlow({
         );
       }
     },
-    [glowColors, coneSpread, glowRadius],
+    [glowColors, coneSpread, glowRadius, glowIntensity],
   );
 
   const hideGlow = useCallback(() => {

@@ -74,3 +74,103 @@
     background-position: 0% 0%;
   }
 }
+
+/* ─── Aura Beam ─────────────────────────────────────────────────────────── */
+
+@property --aura-angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@keyframes aura-spin {
+  to {
+    --aura-angle: 360deg;
+  }
+}
+
+.aura-beam {
+  --aura-padding: 2px;
+  --aura-radius: 0.75rem;
+  --aura-duration: 6s;
+  --aura-color: hsl(var(--primary));
+
+  position: relative;
+  display: inline-block;
+  padding: var(--aura-padding);
+  border-radius: calc(var(--aura-radius) + var(--aura-padding));
+  color: var(--aura-color);
+
+  background-image: conic-gradient(
+    from var(--aura-angle),
+    transparent 0deg,
+    transparent 220deg,
+    currentColor 280deg,
+    currentColor 360deg
+  );
+
+  animation: aura-spin var(--aura-duration) linear infinite;
+}
+
+.aura-beam > * {
+  position: relative;
+  z-index: 2;
+  border-radius: var(--aura-radius);
+}
+
+.aura-beam::before,
+.aura-beam::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: inherit;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.aura-beam::before {
+  filter: blur(6px);
+  opacity: 0.65;
+}
+
+.aura-beam::after {
+  filter: blur(18px);
+  opacity: 0.35;
+}
+
+.aura-beam-rainbow {
+  background-image: conic-gradient(
+    from var(--aura-angle),
+    #ef4444,
+    #f97316,
+    #eab308,
+    #22c55e,
+    #06b6d4,
+    #3b82f6,
+    #a855f7,
+    #ef4444
+  );
+}
+
+.aura-beam-holo {
+  background-image: conic-gradient(
+    from var(--aura-angle),
+    transparent 0deg,
+    #22d3ee 60deg,
+    #a78bfa 140deg,
+    #f0abfc 220deg,
+    #67e8f9 300deg,
+    transparent 360deg
+  );
+}
+
+.aura-beam-glow::before {
+  filter: blur(10px);
+  opacity: 0.8;
+}
+
+.aura-beam-glow::after {
+  filter: blur(28px);
+  opacity: 0.55;
+}

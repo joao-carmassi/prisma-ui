@@ -22,6 +22,7 @@ const components = [
   'backlight',
   'tracing-beam',
   'border-glow-card',
+  'aura-beam-card',
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {

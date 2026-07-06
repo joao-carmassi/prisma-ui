@@ -66,4 +66,7 @@ export default {
   'border-glow-card': {
     title: 'Border Glow Card',
   },
+  'aura-beam-card': {
+    title: 'Aura Beam Card',
+  },
 };

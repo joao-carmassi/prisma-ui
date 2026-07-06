@@ -1,0 +1,247 @@
+import { AuraBeam } from '@/components/ui/aura-beam';
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { JsonLd } from '@/components/seo/json-ld';
+import { InstallSnippet } from '@/components/docs/install-snippet';
+
+export const metadata = {
+  title: 'Aura Beam Card',
+  description:
+    "An ambient aura wrapper that projects a diffuse, rotating conic-gradient glow around any component. Inspired by daisyUI's Aura effect.",
+  alternates: { canonical: '/docs/components/aura-beam-card' },
+};
+
+<JsonLd
+  data={{
+    '@context': 'https://schema.org',
+    '@type': 'TechArticle',
+    headline: 'Aura Beam Card — Prisma UI',
+    description:
+      'An ambient aura wrapper that projects a diffuse, rotating conic-gradient glow around any component.',
+    breadcrumb: {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: 'Home',
+          item: 'https://prismaui.com',
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: 'Docs',
+          item: 'https://prismaui.com/docs',
+        },
+        {
+          '@type': 'ListItem',
+          position: 3,
+          name: 'Aura Beam Card',
+          item: 'https://prismaui.com/docs/components/aura-beam-card',
+        },
+      ],
+    },
+  }}
+/>
+
+# Aura Beam
+
+An ambient glow wrapper that rotates a conic-gradient around any element, inspired by [daisyUI's Aura](https://daisyui.com/components/aura/). Unlike `BorderBeam`, which projects a sharp laser along the inner border, `AuraBeam` wraps the component from outside and produces a soft, diffuse halo effect with blurred glow layers behind it.
+
+## Installation
+
+<InstallSnippet registryUrl='https://prismaui.com/components/aura-beam.json' />
+
+## Import
+
+```tsx
+import { AuraBeam } from '@/components/ui/aura-beam';
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from '@/components/ui/card';
+```
+
+---
+
+## Default
+
+The default variant uses the theme's `--primary` color as the aura beam.
+
+<ComponentPreview>
+  <AuraBeam className='w-[340px]'>
+    <Card className='rounded-[inherit] border bg-background'>
+      <CardHeader>
+        <CardTitle>Aura Beam</CardTitle>
+        <CardDescription>
+          Ambient glow wrapping the card from outside.
+        </CardDescription>
+      </CardHeader>
+      <CardContent>
+        <p className='text-sm text-muted-foreground'>
+          Wrap any Card with <code>{'<AuraBeam>'}</code> to apply the effect.
+        </p>
+      </CardContent>
+      <CardFooter>
+        <Button size='sm'>Action</Button>
+      </CardFooter>
+    </Card>
+  </AuraBeam>
+</ComponentPreview>
+
+```tsx
+<AuraBeam className='w-[340px]'>
+  <Card className='rounded-[inherit] border bg-background'>
+    <CardHeader>
+      <CardTitle>Aura Beam</CardTitle>
+      <CardDescription>
+        Ambient glow wrapping the card from outside.
+      </CardDescription>
+    </CardHeader>
+    <CardContent>
+      <p className='text-sm text-muted-foreground'>
+        Wrap any Card with &lt;AuraBeam&gt; to apply the effect.
+      </p>
+    </CardContent>
+    <CardFooter>
+      <Button size='sm'>Action</Button>
+    </CardFooter>
+  </Card>
+</AuraBeam>
+```
+
+---
+
+## Rainbow
+
+Add the `aura-beam-rainbow` class for a full-spectrum cycling gradient.
+
+<ComponentPreview>
+  <AuraBeam className='aura-beam-rainbow w-[340px]'>
+    <Card className='rounded-[inherit] border bg-background'>
+      <CardHeader>
+        <CardTitle>Rainbow Aura</CardTitle>
+        <CardDescription>Full-spectrum rotating gradient.</CardDescription>
+      </CardHeader>
+      <CardContent>
+        <p className='text-sm text-muted-foreground'>
+          Add <code>aura-beam-rainbow</code> for a vivid color sweep.
+        </p>
+      </CardContent>
+    </Card>
+  </AuraBeam>
+</ComponentPreview>
+
+```tsx
+<AuraBeam className='aura-beam-rainbow w-[340px]'>
+  <Card className='rounded-[inherit] border bg-background'>...</Card>
+</AuraBeam>
+```
+
+---
+
+## Holo
+
+The `aura-beam-holo` class produces a cool holographic palette — cyan, violet, and pink — with transparent stops between them for a subtler glow.
+
+<ComponentPreview>
+  <AuraBeam className='aura-beam-holo w-[340px]'>
+    <Card className='rounded-[inherit] border bg-background'>
+      <CardHeader>
+        <CardTitle>Holo Aura</CardTitle>
+        <CardDescription>Holographic cyan-violet-pink palette.</CardDescription>
+      </CardHeader>
+      <CardContent>
+        <p className='text-sm text-muted-foreground'>
+          Add <code>aura-beam-holo</code> for a cool holographic look.
+        </p>
+      </CardContent>
+    </Card>
+  </AuraBeam>
+</ComponentPreview>
+
+```tsx
+<AuraBeam className='aura-beam-holo w-[340px]'>
+  <Card className='rounded-[inherit] border bg-background'>...</Card>
+</AuraBeam>
+```
+
+---
+
+## Holo + Glow
+
+Combine `aura-beam-holo` and `aura-beam-glow` for stronger blur layers, similar to daisyUI's `aura-glow`.
+
+<ComponentPreview>
+  <AuraBeam className='aura-beam-holo aura-beam-glow w-[340px]'>
+    <Card className='rounded-[inherit] border bg-background'>
+      <CardHeader>
+        <CardTitle>Holo Glow</CardTitle>
+        <CardDescription>Enhanced blur intensity.</CardDescription>
+      </CardHeader>
+      <CardContent>
+        <p className='text-sm text-muted-foreground'>
+          Combine <code>aura-beam-holo</code> and <code>aura-beam-glow</code>{' '}
+          for a stronger ambient glow.
+        </p>
+      </CardContent>
+    </Card>
+  </AuraBeam>
+</ComponentPreview>
+
+```tsx
+<AuraBeam className='aura-beam-holo aura-beam-glow w-[340px]'>
+  <Card className='rounded-[inherit] border bg-background'>...</Card>
+</AuraBeam>
+```
+
+---
+
+## CSS Custom Properties
+
+Override these CSS variables on the `AuraBeam` element to tweak the effect without extra classes:
+
+| Variable          | Default               | Description                        |
+| ----------------- | --------------------- | ---------------------------------- |
+| `--aura-padding`  | `2px`                 | Thickness of the glow border       |
+| `--aura-radius`   | `0.75rem`             | Corner radius (match your card)    |
+| `--aura-duration` | `6s`                  | Full rotation duration             |
+| `--aura-color`    | `hsl(var(--primary))` | Base color for the default variant |
+
+```tsx
+<AuraBeam
+  style={
+    { '--aura-padding': '3px', '--aura-duration': '8s' } as React.CSSProperties
+  }
+>
+  <Card className='rounded-[inherit] border bg-background'>...</Card>
+</AuraBeam>
+```
+
+---
+
+## Modifier classes
+
+| Class               | Effect                                               |
+| ------------------- | ---------------------------------------------------- |
+| `aura-beam-rainbow` | Full-spectrum rainbow conic gradient                 |
+| `aura-beam-holo`    | Holographic cyan / violet / pink palette             |
+| `aura-beam-glow`    | Stronger blur layers for a more intense ambient glow |
+
+## Props
+
+| Prop        | Type                  | Default | Description                                        |
+| ----------- | --------------------- | ------- | -------------------------------------------------- |
+| `children`  | `React.ReactNode`     | —       | Content wrapped by the aura                        |
+| `className` | `string`              | —       | Additional CSS classes (use modifier classes here) |
+| `style`     | `React.CSSProperties` | —       | Override CSS custom properties inline              |

@@ -50,6 +50,7 @@ Prisma UI is a production-ready component library that ships accessible, animate
 | **Tilt Card** | 3D perspective tilt wrapper for cards and elements. |
 | **Tracing Beam** | SVG beam that traces scroll position alongside content. |
 | **Transition Panel** | Animated step panel with direction-aware enter/exit transitions. |
+| **Aura Beam** | Ambient rotating conic-gradient glow wrapper. Inspired by daisyUI's Aura. Supports rainbow, holo, and glow variants. |
 
 ---
 
