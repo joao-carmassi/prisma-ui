@@ -141,42 +141,6 @@
   opacity: 0.35;
 }
 
-.aura-beam-rainbow {
-  background-image: conic-gradient(
-    from var(--aura-angle),
-    #ef4444,
-    #f97316,
-    #eab308,
-    #22c55e,
-    #06b6d4,
-    #3b82f6,
-    #a855f7,
-    #ef4444
-  );
-}
-
-.aura-beam-holo {
-  background-image: conic-gradient(
-    from var(--aura-angle),
-    transparent 0deg,
-    #22d3ee 60deg,
-    #a78bfa 140deg,
-    #f0abfc 220deg,
-    #67e8f9 300deg,
-    transparent 360deg
-  );
-}
-
-.aura-beam-glow::before {
-  filter: blur(10px);
-  opacity: 0.8;
-}
-
-.aura-beam-glow::after {
-  filter: blur(28px);
-  opacity: 0.55;
-}
-
 /* ─── Beam variant ────────────────────────────────────────────────────────── */
 
 .aura-beam[data-variant='beam'] {
@@ -204,13 +168,13 @@
 
 @keyframes aura-shine {
   0% {
-    background-position: 0% 0%;
+    background-position: 00% 00%;
   }
   50% {
     background-position: 100% 100%;
   }
   100% {
-    background-position: 0% 0%;
+    background-position: 00% 00%;
   }
 }
 
@@ -223,17 +187,17 @@
     transparent
   );
   background-size: 300% 300%;
-  animation: aura-shine var(--aura-duration) linear infinite;
+  animation: aura-shine var(--aura-duration) ease-in-out infinite;
 }
 
 .aura-beam[data-variant='shine']::before {
   filter: blur(8px);
   opacity: 0.7;
-  animation: aura-shine var(--aura-duration) linear infinite;
+  animation: aura-shine var(--aura-duration) ease-in-out infinite;
 }
 
 .aura-beam[data-variant='shine']::after {
   filter: blur(26px);
   opacity: 0.42;
-  animation: aura-shine var(--aura-duration) linear infinite;
+  animation: aura-shine var(--aura-duration) ease-in-out infinite;
 }
