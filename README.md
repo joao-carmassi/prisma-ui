@@ -32,24 +32,19 @@ Prisma UI is a production-ready component library that ships accessible, animate
 | Component | Description |
 |---|---|
 | **Animated Background** | Sliding highlight background for tabs, menus, and card grids. |
-| **Backlight** | Animated backlight glow behind elements. |
 | **Badge** | Compact status labels with size and variant support. |
 | **Border Beam** | Animated glowing-beam border effect card. |
 | **Button** | Multiple variants, sizes, loading state, and animated effects (pulsating, rainbow, shine, ringHover). |
 | **Confetti Wrapper** | Triggers a canvas-confetti burst on any action. |
 | **Flip Card** | 3D flip animation with configurable front and back faces. |
 | **Floating Label Input** | Floating label input using a compound component pattern. |
-| **Infinite Slider** | Smooth infinite-loop slider with horizontal and vertical support. |
 | **Magnetic** | Magnetic cursor-attraction wrapper for interactive elements. |
-| **Progressive Blur** | Layered gradient blur with backdrop-filter. |
 | **Rainbow Border** | Cycling rainbow gradient border. |
-| **Scroll Progress** | Scroll progress indicator bar. |
 | **Shine Border** | Sweeping shine animation around a card border. |
 | **Border Glow Card** | Cursor-proximity border glow card — a colorful gradient follows the pointer along the card edges. |
 | **Depth Media** | Parallax depth image — splits a single image into multiple layers that shift at different rates inside a Tilt card. |
 | **Tilt Card** | 3D perspective tilt wrapper for cards and elements. |
 | **Tracing Beam** | SVG beam that traces scroll position alongside content. |
-| **Transition Panel** | Animated step panel with direction-aware enter/exit transitions. |
 | **Aura Beam** | Ambient rotating conic-gradient glow wrapper. Inspired by daisyUI's Aura. Supports rainbow, holo, and glow variants. |
 
 ---

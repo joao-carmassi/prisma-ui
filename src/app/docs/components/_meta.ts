@@ -16,26 +16,11 @@ export default {
   magnetic: {
     title: 'Magnetic',
   },
-  'infinite-slider': {
-    title: 'Infinite Slider',
-  },
   'animated-background': {
     title: 'Animated Background',
   },
-  backlight: {
-    title: 'Backlight',
-  },
-  'progressive-blur': {
-    title: 'Progressive Blur',
-  },
-  'scroll-progress': {
-    title: 'Scroll Progress',
-  },
   'tracing-beam': {
     title: 'Tracing Beam',
-  },
-  'transition-panel': {
-    title: 'Transition Panel',
   },
   '-- inputs': {
     type: 'separator',
