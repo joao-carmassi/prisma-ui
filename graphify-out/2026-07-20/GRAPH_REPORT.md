@@ -1,13 +1,18 @@
-# Graph Report - .  (2026-07-17)
+# Graph Report - prisma-ui  (2026-07-20)
 
 ## Corpus Check
-- 263 files · ~130,692 words
+- 234 files · ~125,062 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 1012 nodes · 1387 edges · 110 communities (74 shown, 36 thin omitted)
-- Extraction: 90% EXTRACTED · 10% INFERRED · 0% AMBIGUOUS · INFERRED: 134 edges (avg confidence: 0.79)
+- 943 nodes · 1281 edges · 104 communities (67 shown, 37 thin omitted)
+- Extraction: 90% EXTRACTED · 10% INFERRED · 0% AMBIGUOUS · INFERRED: 129 edges (avg confidence: 0.78)
 - Token cost: 0 input · 0 output
+
+## Graph Freshness
+- Built from commit: `50ddd82a`
+- Run `git rev-parse HEAD` and compare to check if the graph is stale.
+- Run `graphify update .` after code changes (no API cost).
 
 ## Community Hubs (Navigation)
 - UI Inspiration Libraries & Stack
@@ -34,7 +39,6 @@
 - Benchmark Aggregation Script
 - Confetti Wrapper Registry Entry
 - Border Beam Registry Entry
-- Confetti Demo & Button Component
 - Dropzone Component
 - shadcn Skill Reference Docs
 - Skill Eval Agents & Schemas
@@ -49,18 +53,13 @@
 - Button Registry Entry
 - Depth Media Registry Entry
 - Flip Card Registry Entry
-- Infinite Slider Registry Entry
 - Magnetic Registry Entry
-- Progressive Blur Registry Entry
 - Rainbow Border Registry Entry
-- Scroll Progress Registry Entry
 - Shine Border Registry Entry
 - Tilt Registry Entry
 - Tracing Beam Registry Entry
-- Transition Panel Registry Entry
 - Component Registry Generator Script
 - Derived State & Transition Rules
-- Backlight Registry Entry
 - Border Glow Registry Entry
 - PWA Manifest Config
 - Find Skills Skill
@@ -119,14 +118,14 @@
 - PWA Icon (192x192) & Brand
 
 ## God Nodes (most connected - your core abstractions)
-1. `cn()` - 110 edges
-2. `Prisma UI README` - 30 edges
+1. `cn()` - 100 edges
+2. `Prisma UI README` - 25 edges
 3. `Next.js Best Practices Skill` - 20 edges
 4. `Rule Sections Overview` - 20 edges
 5. `Rule File Template` - 20 edges
 6. `compilerOptions` - 16 edges
 7. `Add Component Skill` - 14 edges
-8. `Button()` - 13 edges
+8. `Button()` - 11 edges
 9. `run_loop()` - 10 edges
 10. `Vercel React Best Practices Skill` - 10 edges
 
@@ -137,10 +136,10 @@
   README.md → package.json
 - `References Doc Page` --cites--> `nextra`  [EXTRACTED]
   src/app/docs/references/page.mdx → package.json
-- `Prisma UI README` --conceptually_related_to--> `Transition Panel Doc Page`  [INFERRED]
-  README.md → src/app/docs/components/transition-panel/page.mdx
-- `Backlight Doc Page` --references--> `Backlight()`  [EXTRACTED]
-  src/app/docs/components/backlight/page.mdx → src/components/ui/backlight.tsx
+- `Badge Doc Page` --references--> `Badge()`  [EXTRACTED]
+  src/app/docs/components/badge/page.mdx → src/components/ui/badge.tsx
+- `Button Doc Page` --references--> `Button()`  [EXTRACTED]
+  src/app/docs/components/button/page.mdx → src/components/ui/button.tsx
 
 ## Import Cycles
 - None detected.
@@ -165,10 +164,9 @@
 - **Server-Side Data Fetching & Caching Rule Set** — agents_skills_vercel_react_best_practices_rules_server_after_nonblocking_use_after_for_nonblocking_operations, agents_skills_vercel_react_best_practices_rules_server_auth_actions_authenticate_server_actions_like_api_routes, agents_skills_vercel_react_best_practices_rules_server_cache_lru_crossrequest_lru_caching, agents_skills_vercel_react_best_practices_rules_server_cache_react_perrequest_deduplication_with_react_cache, agents_skills_vercel_react_best_practices_rules_server_dedup_props_avoid_duplicate_serialization_in_rsc_props, agents_skills_vercel_react_best_practices_rules_server_hoist_static_io_hoist_static_io_to_module_level, agents_skills_vercel_react_best_practices_rules_server_parallel_fetching_parallel_data_fetching_with_component_composition, agents_skills_vercel_react_best_practices_rules_server_serialization_minimize_serialization_at_rsc_boundaries [INFERRED 0.85]
 - **Concurrent Rendering APIs for UI Responsiveness** — agents_skills_vercel_react_best_practices_rules_rerender_transitions_use_transitions_for_nonurgent_updates, agents_skills_vercel_react_best_practices_rules_rerender_use_deferred_value_use_usedeferredvalue_for_expensive_derived_renders, agents_skills_vercel_react_best_practices_rules_rerender_derived_state_subscribe_to_derived_state [INFERRED 0.70]
 - **Card Border/Hover Decoration Effects** — src_app_docs_components_border_beam_card_page, src_app_docs_components_border_glow_card_page, src_app_docs_components_rainbow_card_page, src_app_docs_components_shine_border_card_page, src_app_docs_components_tilt_card_page, src_app_docs_components_aura_beam_card_page [INFERRED 0.75]
-- **Components Inspired by Motion Primitives** — src_app_docs_components_animated_background_page, src_app_docs_components_infinite_slider_page, src_app_docs_components_magnetic_page, src_app_docs_components_progressive_blur_page, src_app_docs_components_tilt_card_page, src_app_docs_components_transition_panel_page [INFERRED 0.75]
 - **Deprecated Components Migrated to AuraBeam** — src_app_docs_components_border_beam_card_page, src_app_docs_components_shine_border_card_page, src_app_docs_components_aura_beam_card_page [EXTRACTED 1.00]
 
-## Communities (110 total, 36 thin omitted)
+## Communities (104 total, 37 thin omitted)
 
 ### Community 0 - "UI Inspiration Libraries & Stack"
 Cohesion: 0.05
@@ -215,36 +213,32 @@ Cohesion: 0.08
 Nodes (25): aliases, components, hooks, lib, ui, utils, Authorization, iconLibrary (+17 more)
 
 ### Community 11 - "Card Effect UI Components"
-Cohesion: 0.14
-Nodes (19): Backlight(), BacklightProps, BorderBeam(), BorderBeamProps, Field(), FieldContent(), FieldDescription(), FieldError() (+11 more)
+Cohesion: 0.18
+Nodes (18): Field(), FieldContent(), FieldDescription(), FieldError(), FieldGroup(), FieldLabel(), FieldLegend(), FieldSeparator() (+10 more)
 
 ### Community 12 - "Root Layout & Metadata"
 Cohesion: 0.10
 Nodes (18): geistMono, geistSans, metadata, orgSchema, RootLayout(), RootLayoutProps, syne, websiteSchema (+10 more)
 
 ### Community 13 - "MDX Docs Rendering Components"
-Cohesion: 0.16
-Nodes (21): ComponentPreview(), ComponentPreviewProps, MdxTable(), MdxTableProps, MdxTbody(), MdxTd(), MdxTh(), MdxThead() (+13 more)
+Cohesion: 0.25
+Nodes (12): CodeBlock, ComponentPreview(), ComponentPreviewProps, MdxTable(), MdxTbody(), MdxTd(), MdxTh(), MdxThead() (+4 more)
 
 ### Community 14 - "Eval Review Generator Script"
 Cohesion: 0.15
 Nodes (19): build_run(), embed_file(), find_runs(), _find_runs_recursive(), generate_html(), get_mime_type(), _kill_port(), load_previous_iteration() (+11 more)
 
 ### Community 15 - "Component Generator Dashboard"
-Cohesion: 0.15
-Nodes (14): DashboardPage(), downloadJson(), formSchema, FormValues, parseList(), readFileAsText(), REGISTRY_TYPES, FloatingInput() (+6 more)
+Cohesion: 0.26
+Nodes (10): MdxTableProps, TableSectionProps, Table(), TableBody(), TableCaption(), TableCell(), TableFooter(), TableHead() (+2 more)
 
 ### Community 16 - "Transition Panel & Dialog Demo"
-Cohesion: 0.15
-Nodes (13): Transition Panel Doc Page, Dialog(), DialogContent(), DialogDescription(), DialogFooter(), DialogHeader(), DialogOverlay(), DialogTitle() (+5 more)
-
-### Community 17 - "Border & Blur Effect Components"
-Cohesion: 0.12
-Nodes (11): AuraBeamProps, BorderGlow(), BorderGlowProps, getBorderPosition(), GRADIENT_ANGLES, ProgressiveBlur(), ProgressiveBlurProps, ScrollProgress() (+3 more)
+Cohesion: 0.10
+Nodes (16): dependencies, class-variance-authority, lucide-react, Button(), ButtonIconProps, ButtonProps, buttonVariants, IconProps (+8 more)
 
 ### Community 18 - "Flip Card & Card Primitives"
-Cohesion: 0.20
-Nodes (10): steps, Card(), CardAction(), CardContent(), CardDescription(), CardFooter(), CardHeader(), CardTitle() (+2 more)
+Cohesion: 0.14
+Nodes (17): DashboardPage(), downloadJson(), formSchema, FormValues, parseList(), readFileAsText(), REGISTRY_TYPES, Card() (+9 more)
 
 ### Community 19 - "Badge Component & Landing Page"
 Cohesion: 0.16
@@ -259,16 +253,12 @@ Cohesion: 0.23
 Nodes (12): aggregate_results(), calculate_stats(), generate_benchmark(), generate_markdown(), load_run_results(), main(), Path, Aggregate run results into summary statistics.      Returns run_summary with s (+4 more)
 
 ### Community 22 - "Confetti Wrapper Registry Entry"
-Cohesion: 0.15
-Nodes (11): author, dependencies, description, devDependencies, files, name, $schema, type (+3 more)
+Cohesion: 0.13
+Nodes (12): author, dependencies, description, devDependencies, files, name, $schema, type (+4 more)
 
 ### Community 23 - "Border Beam Registry Entry"
 Cohesion: 0.18
 Nodes (10): author, dependencies, description, files, card, motion, name, registryDependencies (+2 more)
-
-### Community 24 - "Confetti Demo & Button Component"
-Cohesion: 0.24
-Nodes (7): Button(), ButtonIconProps, ButtonProps, buttonVariants, IconProps, IconRefProps, Spinner()
 
 ### Community 25 - "Dropzone Component"
 Cohesion: 0.24
@@ -287,8 +277,8 @@ Cohesion: 0.29
 Nodes (8): main(), package_skill(), Path, Check if a path should be excluded from packaging., Package a skill folder into a .skill file.      Args:         skill_path: Pat, should_exclude(), Basic validation of a skill, validate_skill()
 
 ### Community 29 - "Code Block & Tooltip Components"
-Cohesion: 0.27
-Nodes (8): dependencies, class-variance-authority, lucide-react, CodeBlock, CodeBlockInner(), Tooltip(), TooltipContent(), TooltipTrigger()
+Cohesion: 0.19
+Nodes (8): CodeBlockInner(), AuraBeamProps, BorderBeam(), BorderBeamProps, Tooltip(), TooltipContent(), TooltipTrigger(), TracingBeamProps
 
 ### Community 30 - "Floating Label Input Registry Entry"
 Cohesion: 0.20
@@ -326,25 +316,13 @@ Nodes (8): author, dependencies, description, files, motion, name, $schema, type
 Cohesion: 0.22
 Nodes (8): author, description, files, card, name, registryDependencies, $schema, type
 
-### Community 39 - "Infinite Slider Registry Entry"
-Cohesion: 0.22
-Nodes (8): author, dependencies, description, files, motion, name, $schema, type
-
 ### Community 40 - "Magnetic Registry Entry"
-Cohesion: 0.22
-Nodes (8): author, dependencies, description, files, motion, name, $schema, type
-
-### Community 41 - "Progressive Blur Registry Entry"
 Cohesion: 0.22
 Nodes (8): author, dependencies, description, files, motion, name, $schema, type
 
 ### Community 42 - "Rainbow Border Registry Entry"
 Cohesion: 0.22
 Nodes (8): author, description, files, card, name, registryDependencies, $schema, type
-
-### Community 43 - "Scroll Progress Registry Entry"
-Cohesion: 0.22
-Nodes (8): author, dependencies, description, files, motion, name, $schema, type
 
 ### Community 44 - "Shine Border Registry Entry"
 Cohesion: 0.22
@@ -358,10 +336,6 @@ Nodes (8): author, dependencies, description, files, motion, name, $schema, type
 Cohesion: 0.22
 Nodes (8): author, dependencies, description, files, motion, name, $schema, type
 
-### Community 47 - "Transition Panel Registry Entry"
-Cohesion: 0.22
-Nodes (8): author, dependencies, description, files, motion, name, $schema, type
-
 ### Community 48 - "Component Registry Generator Script"
 Cohesion: 0.22
 Nodes (5): fs, outDir, path, styleCss, uiDir
@@ -369,10 +343,6 @@ Nodes (5): fs, outDir, path, styleCss, uiDir
 ### Community 49 - "Derived State & Transition Rules"
 Cohesion: 0.25
 Nodes (8): Calculate Derived State During Rendering, You Might Not Need an Effect (React Docs), Subscribe to Derived State, Put Interaction Logic in Event Handlers, Should This Code Move to an Event Handler? (React Docs), Use Transitions for Non-Urgent Updates, React useDeferredValue Reference, Use useDeferredValue for Expensive Derived Renders
-
-### Community 50 - "Backlight Registry Entry"
-Cohesion: 0.29
-Nodes (6): author, description, files, name, $schema, type
 
 ### Community 51 - "Border Glow Registry Entry"
 Cohesion: 0.29
@@ -459,24 +429,24 @@ Nodes (3): icon0.svg - Next.js app icon (black angular gem/crystal glyph favicon
   .agents/skills/skill-creator/assets/eval_review.html · relation: references
 
 ## Knowledge Gaps
-- **468 isolated node(s):** `$schema`, `style`, `rsc`, `tsx`, `config` (+463 more)
+- **427 isolated node(s):** `$schema`, `style`, `rsc`, `tsx`, `config` (+422 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **36 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **37 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
 - **What is the exact relationship between `Eval Set Review HTML Tool` and `evals.json Schema`?**
   _Edge tagged AMBIGUOUS (relation: references) - confidence is low._
-- **Why does `Prisma UI README` connect `UI Inspiration Libraries & Stack` to `Transition Panel & Dialog Demo`, `NPM Runtime Dependencies`?**
-  _High betweenness centrality (0.070) - this node is a cross-community bridge._
-- **Why does `cn()` connect `Card Effect UI Components` to `UI Inspiration Libraries & Stack`, `Install Snippet Component`, `Root Layout & Metadata`, `MDX Docs Rendering Components`, `Component Generator Dashboard`, `Transition Panel & Dialog Demo`, `Border & Blur Effect Components`, `Flip Card & Card Primitives`, `Badge Component & Landing Page`, `Confetti Demo & Button Component`, `Dropzone Component`, `Code Block & Tooltip Components`, `Shader Background Component`?**
-  _High betweenness centrality (0.061) - this node is a cross-community bridge._
+- **Why does `Prisma UI README` connect `UI Inspiration Libraries & Stack` to `NPM Runtime Dependencies`?**
+  _High betweenness centrality (0.090) - this node is a cross-community bridge._
+- **Why does `cn()` connect `Card Effect UI Components` to `UI Inspiration Libraries & Stack`, `Install Snippet Component`, `Root Layout & Metadata`, `MDX Docs Rendering Components`, `Component Generator Dashboard`, `Transition Panel & Dialog Demo`, `Flip Card & Card Primitives`, `Badge Component & Landing Page`, `Dropzone Component`, `Code Block & Tooltip Components`, `Shader Background Component`?**
+  _High betweenness centrality (0.077) - this node is a cross-community bridge._
 - **Why does `dependencies` connect `NPM Runtime Dependencies` to `UI Inspiration Libraries & Stack`, `Dev Tooling & Linting Dependencies`?**
-  _High betweenness centrality (0.045) - this node is a cross-community bridge._
-- **Are the 19 inferred relationships involving `Prisma UI README` (e.g. with `Animated Background Doc Page` and `Aura Beam Card Doc Page`) actually correct?**
-  _`Prisma UI README` has 19 INFERRED edges - model-reasoned connections that need verification._
+  _High betweenness centrality (0.066) - this node is a cross-community bridge._
+- **Are the 14 inferred relationships involving `Prisma UI README` (e.g. with `Animated Background Doc Page` and `Aura Beam Card Doc Page`) actually correct?**
+  _`Prisma UI README` has 14 INFERRED edges - model-reasoned connections that need verification._
 - **What connects `$schema`, `style`, `rsc` to the rest of the system?**
-  _468 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _427 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `UI Inspiration Libraries & Stack` be split into smaller, more focused modules?**
-  _Cohesion score 0.05376972530683811 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.05028248587570622 - nodes in this community are weakly interconnected._

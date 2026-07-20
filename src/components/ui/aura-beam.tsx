@@ -6,27 +6,27 @@ import { cn } from '@/lib/utils';
 
 /*
  * @author: @joao-carmassi
- * @description: Unified ambient aura wrapper with beam and shine variants.
- * - Default (no variant): diffuse rotating conic-gradient halo.
+ * @description: Unified ambient glow wrapper with aura, beam, and shine variants.
+ * - variant="aura" (default): diffuse rotating conic-gradient halo.
  * - variant="beam": focused narrow arc of light that travels around the border.
  * - variant="shine": sweeping radial-gradient highlight that glides across the border.
  * All variants share the same high-quality blur/glow layers.
- * @version: 2.0.0
- * @date: 2026-07-06
+ * @version: 3.0.0
+ * @date: 2026-07-20
  * @license: MIT
  */
 
-interface AuraBeamProps extends Omit<
+interface AuraEffectProps extends Omit<
   React.HTMLAttributes<HTMLDivElement>,
   'color'
 > {
   /**
    * Visual variant of the effect.
-   * - omitted: diffuse rotating conic-gradient aura (default)
+   * - "aura" (default): diffuse rotating conic-gradient halo
    * - "beam": focused narrow arc that continuously travels along the border
    * - "shine": sweeping radial-gradient highlight that passes across the border
    */
-  variant?: 'beam' | 'shine';
+  variant?: 'aura' | 'beam' | 'shine';
   /**
    * Animation cycle duration in seconds.
    * @default 6
@@ -52,7 +52,7 @@ interface AuraBeamProps extends Omit<
   children: React.ReactNode;
 }
 
-export function AuraBeam({
+export function AuraEffect({
   variant,
   duration,
   color,
@@ -62,7 +62,7 @@ export function AuraBeam({
   style,
   children,
   ...props
-}: AuraBeamProps): React.ReactNode {
+}: AuraEffectProps): React.ReactNode {
   const cssVars = {} as React.CSSProperties & Record<string, string>;
 
   if (duration !== undefined) cssVars['--aura-duration'] = `${duration}s`;
@@ -76,7 +76,6 @@ export function AuraBeam({
     cssVars['--aura-color-to'] = colors[1] ?? colors[0];
   }
 
-  // Shine with multiple colors: inject a multi-stop radial gradient inline
   const shineInline: React.CSSProperties =
     variant === 'shine' && colors.length > 1
       ? {
@@ -87,7 +86,7 @@ export function AuraBeam({
   return (
     <div
       className={cn('aura-beam', className)}
-      data-variant={variant}
+      data-variant={variant ?? 'aura'}
       style={{ ...cssVars, ...shineInline, ...style }}
       {...props}
     >

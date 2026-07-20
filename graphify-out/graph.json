@@ -5144,8 +5144,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_components_shader",
-      "community": 57,
-      "community_name": "Shader Background Component",
+      "community": 19,
+      "community_name": "Badge Component & Landing Page",
       "norm_label": "shader.tsx"
     },
     {
@@ -5155,8 +5155,8 @@
       "source_location": "L9",
       "_origin": "ast",
       "id": "src_components_shader_shaderplaneprops",
-      "community": 57,
-      "community_name": "Shader Background Component",
+      "community": 19,
+      "community_name": "Badge Component & Landing Page",
       "norm_label": "shaderplaneprops"
     },
     {
@@ -5166,8 +5166,8 @@
       "source_location": "L15",
       "_origin": "ast",
       "id": "src_components_shader_shaderplane",
-      "community": 57,
-      "community_name": "Shader Background Component",
+      "community": 19,
+      "community_name": "Badge Component & Landing Page",
       "norm_label": "shaderplane()"
     },
     {
@@ -5177,8 +5177,8 @@
       "source_location": "L46",
       "_origin": "ast",
       "id": "src_components_shader_shaderbackgroundprops",
-      "community": 57,
-      "community_name": "Shader Background Component",
+      "community": 19,
+      "community_name": "Badge Component & Landing Page",
       "norm_label": "shaderbackgroundprops"
     },
     {
@@ -5188,8 +5188,8 @@
       "source_location": "L53",
       "_origin": "ast",
       "id": "src_components_shader_shader",
-      "community": 57,
-      "community_name": "Shader Background Component",
+      "community": 19,
+      "community_name": "Badge Component & Landing Page",
       "norm_label": "shader()"
     },
     {
@@ -5248,26 +5248,26 @@
       "norm_label": "aura-beam.tsx"
     },
     {
-      "label": "AuraBeamProps",
+      "label": "AuraEffectProps",
       "file_type": "code",
       "source_file": "src/components/ui/aura-beam.tsx",
-      "source_location": "L19",
+      "source_location": "L123",
       "_origin": "ast",
-      "id": "src_components_ui_aura_beam_aurabeamprops",
+      "id": "src_components_ui_aura_beam_auraeffectprops",
       "community": 29,
       "community_name": "Code Block & Tooltip Components",
-      "norm_label": "aurabeamprops"
+      "norm_label": "auraeffectprops"
     },
     {
-      "label": "AuraBeam()",
+      "label": "AuraEffect()",
       "file_type": "code",
       "source_file": "src/components/ui/aura-beam.tsx",
-      "source_location": "L55",
+      "source_location": "L159",
       "_origin": "ast",
-      "id": "src_components_ui_aura_beam_aurabeam",
-      "community": 0,
-      "community_name": "UI Inspiration Libraries & Stack",
-      "norm_label": "aurabeam()"
+      "id": "src_components_ui_aura_beam_auraeffect",
+      "community": 29,
+      "community_name": "Code Block & Tooltip Components",
+      "norm_label": "auraeffect()"
     },
     {
       "label": "badge.tsx",
@@ -7029,8 +7029,8 @@
       "contributor": null,
       "community": 8,
       "norm_label": "add component skill",
-      "id": "agents_skills_add_component_skill",
-      "community_name": "Component & Skill Authoring Guides"
+      "community_name": "Component & Skill Authoring Guides",
+      "id": "agents_skills_add_component_skill"
     },
     {
       "label": "Create Skill Skill",
@@ -7043,8 +7043,8 @@
       "contributor": null,
       "community": 8,
       "norm_label": "create skill skill",
-      "id": "agents_skills_create_skill_skill",
-      "community_name": "Component & Skill Authoring Guides"
+      "community_name": "Component & Skill Authoring Guides",
+      "id": "agents_skills_create_skill_skill"
     },
     {
       "label": "Skill Authoring Best Practices",
@@ -7057,8 +7057,8 @@
       "contributor": null,
       "community": 8,
       "norm_label": "skill authoring best practices",
-      "id": "agents_skills_create_skill_references_best_practices",
-      "community_name": "Component & Skill Authoring Guides"
+      "community_name": "Component & Skill Authoring Guides",
+      "id": "agents_skills_create_skill_references_best_practices"
     },
     {
       "label": "Good Skill Examples",
@@ -7071,8 +7071,8 @@
       "contributor": null,
       "community": 8,
       "norm_label": "good skill examples",
-      "id": "agents_skills_create_skill_references_examples",
-      "community_name": "Component & Skill Authoring Guides"
+      "community_name": "Component & Skill Authoring Guides",
+      "id": "agents_skills_create_skill_references_examples"
     },
     {
       "label": "Progressive Disclosure Reference",
@@ -7085,8 +7085,8 @@
       "contributor": null,
       "community": 8,
       "norm_label": "progressive disclosure reference",
-      "id": "agents_skills_create_skill_references_progressive_disclosure",
-      "community_name": "Component & Skill Authoring Guides"
+      "community_name": "Component & Skill Authoring Guides",
+      "id": "agents_skills_create_skill_references_progressive_disclosure"
     },
     {
       "label": "Skill Structure Reference",
@@ -7099,8 +7099,8 @@
       "contributor": null,
       "community": 8,
       "norm_label": "skill structure reference",
-      "id": "agents_skills_create_skill_references_skill_structure",
-      "community_name": "Component & Skill Authoring Guides"
+      "community_name": "Component & Skill Authoring Guides",
+      "id": "agents_skills_create_skill_references_skill_structure"
     },
     {
       "label": "Find Skills Skill",
@@ -7113,8 +7113,8 @@
       "contributor": null,
       "community": 53,
       "norm_label": "find skills skill",
-      "id": "agents_skills_find_skills_skill",
-      "community_name": "Find Skills Skill"
+      "community_name": "Find Skills Skill",
+      "id": "agents_skills_find_skills_skill"
     },
     {
       "label": "Frontend Design Skill License (Apache 2.0)",
@@ -7127,8 +7127,8 @@
       "contributor": null,
       "community": 8,
       "norm_label": "frontend design skill license (apache 2.0)",
-      "id": "agents_skills_frontend_design_license",
-      "community_name": "Component & Skill Authoring Guides"
+      "community_name": "Component & Skill Authoring Guides",
+      "id": "agents_skills_frontend_design_license"
     },
     {
       "label": "Frontend Design Skill",
@@ -7141,8 +7141,8 @@
       "contributor": null,
       "community": 8,
       "norm_label": "frontend design skill",
-      "id": "agents_skills_frontend_design_skill",
-      "community_name": "Component & Skill Authoring Guides"
+      "community_name": "Component & Skill Authoring Guides",
+      "id": "agents_skills_frontend_design_skill"
     },
     {
       "label": "Next.js Best Practices Skill",
@@ -7155,8 +7155,8 @@
       "contributor": null,
       "community": 3,
       "norm_label": "next.js best practices skill",
-      "id": "agents_skills_next_best_practices_skill",
-      "community_name": "Next.js Best Practices Docs"
+      "community_name": "Next.js Best Practices Docs",
+      "id": "agents_skills_next_best_practices_skill"
     },
     {
       "label": "Next.js Async Patterns Reference",
@@ -7169,8 +7169,8 @@
       "contributor": null,
       "community": 3,
       "norm_label": "next.js async patterns reference",
-      "id": "agents_skills_next_best_practices_async_patterns",
-      "community_name": "Next.js Best Practices Docs"
+      "community_name": "Next.js Best Practices Docs",
+      "id": "agents_skills_next_best_practices_async_patterns"
     },
     {
       "label": "Next.js Bundling Reference",
@@ -7183,8 +7183,8 @@
       "contributor": null,
       "community": 3,
       "norm_label": "next.js bundling reference",
-      "id": "agents_skills_next_best_practices_bundling",
-      "community_name": "Next.js Best Practices Docs"
+      "community_name": "Next.js Best Practices Docs",
+      "id": "agents_skills_next_best_practices_bundling"
     },
     {
       "label": "Next.js Data Patterns Reference",
@@ -7197,8 +7197,8 @@
       "contributor": null,
       "community": 3,
       "norm_label": "next.js data patterns reference",
-      "id": "agents_skills_next_best_practices_data_patterns",
-      "community_name": "Next.js Best Practices Docs"
+      "community_name": "Next.js Best Practices Docs",
+      "id": "agents_skills_next_best_practices_data_patterns"
     },
     {
       "label": "Next.js Debug Tricks Reference",
@@ -7211,8 +7211,8 @@
       "contributor": null,
       "community": 3,
       "norm_label": "next.js debug tricks reference",
-      "id": "agents_skills_next_best_practices_debug_tricks",
-      "community_name": "Next.js Best Practices Docs"
+      "community_name": "Next.js Best Practices Docs",
+      "id": "agents_skills_next_best_practices_debug_tricks"
     },
     {
       "label": "Next.js Directives Reference",
@@ -7225,8 +7225,8 @@
       "contributor": null,
       "community": 3,
       "norm_label": "next.js directives reference",
-      "id": "agents_skills_next_best_practices_directives",
-      "community_name": "Next.js Best Practices Docs"
+      "community_name": "Next.js Best Practices Docs",
+      "id": "agents_skills_next_best_practices_directives"
     },
     {
       "label": "Next.js Error Handling Reference",
@@ -7239,8 +7239,8 @@
       "contributor": null,
       "community": 3,
       "norm_label": "next.js error handling reference",
-      "id": "agents_skills_next_best_practices_error_handling",
-      "community_name": "Next.js Best Practices Docs"
+      "community_name": "Next.js Best Practices Docs",
+      "id": "agents_skills_next_best_practices_error_handling"
     },
     {
       "label": "Next.js File Conventions Reference",
@@ -7253,8 +7253,8 @@
       "contributor": null,
       "community": 3,
       "norm_label": "next.js file conventions reference",
-      "id": "agents_skills_next_best_practices_file_conventions",
-      "community_name": "Next.js Best Practices Docs"
+      "community_name": "Next.js Best Practices Docs",
+      "id": "agents_skills_next_best_practices_file_conventions"
     },
     {
       "label": "Next.js Font Optimization Reference",
@@ -7267,8 +7267,8 @@
       "contributor": null,
       "community": 3,
       "norm_label": "next.js font optimization reference",
-      "id": "agents_skills_next_best_practices_font",
-      "community_name": "Next.js Best Practices Docs"
+      "community_name": "Next.js Best Practices Docs",
+      "id": "agents_skills_next_best_practices_font"
     },
     {
       "label": "Next.js Functions Reference",
@@ -7281,8 +7281,8 @@
       "contributor": null,
       "community": 3,
       "norm_label": "next.js functions reference",
-      "id": "agents_skills_next_best_practices_functions",
-      "community_name": "Next.js Best Practices Docs"
+      "community_name": "Next.js Best Practices Docs",
+      "id": "agents_skills_next_best_practices_functions"
     },
     {
       "label": "Next.js Hydration Errors Reference",
@@ -7295,8 +7295,8 @@
       "contributor": null,
       "community": 3,
       "norm_label": "next.js hydration errors reference",
-      "id": "agents_skills_next_best_practices_hydration_error",
-      "community_name": "Next.js Best Practices Docs"
+      "community_name": "Next.js Best Practices Docs",
+      "id": "agents_skills_next_best_practices_hydration_error"
     },
     {
       "label": "Next.js Image Optimization Reference",
@@ -7309,8 +7309,8 @@
       "contributor": null,
       "community": 3,
       "norm_label": "next.js image optimization reference",
-      "id": "agents_skills_next_best_practices_image",
-      "community_name": "Next.js Best Practices Docs"
+      "community_name": "Next.js Best Practices Docs",
+      "id": "agents_skills_next_best_practices_image"
     },
     {
       "label": "Next.js Metadata Reference",
@@ -7323,8 +7323,8 @@
       "contributor": null,
       "community": 3,
       "norm_label": "next.js metadata reference",
-      "id": "agents_skills_next_best_practices_metadata",
-      "community_name": "Next.js Best Practices Docs"
+      "community_name": "Next.js Best Practices Docs",
+      "id": "agents_skills_next_best_practices_metadata"
     },
     {
       "label": "Next.js RSC Boundaries Reference (stub)",
@@ -7337,8 +7337,8 @@
       "contributor": null,
       "community": 3,
       "norm_label": "next.js rsc boundaries reference (stub)",
-      "id": "agents_skills_next_best_practices_rsc_boundaries",
-      "community_name": "Next.js Best Practices Docs"
+      "community_name": "Next.js Best Practices Docs",
+      "id": "agents_skills_next_best_practices_rsc_boundaries"
     },
     {
       "label": "Next.js Runtime Selection Reference (stub)",
@@ -7351,8 +7351,8 @@
       "contributor": null,
       "community": 3,
       "norm_label": "next.js runtime selection reference (stub)",
-      "id": "agents_skills_next_best_practices_runtime_selection",
-      "community_name": "Next.js Best Practices Docs"
+      "community_name": "Next.js Best Practices Docs",
+      "id": "agents_skills_next_best_practices_runtime_selection"
     },
     {
       "label": "Next.js Route Handlers Reference (stub)",
@@ -7365,8 +7365,8 @@
       "contributor": null,
       "community": 3,
       "norm_label": "next.js route handlers reference (stub)",
-      "id": "agents_skills_next_best_practices_route_handlers",
-      "community_name": "Next.js Best Practices Docs"
+      "community_name": "Next.js Best Practices Docs",
+      "id": "agents_skills_next_best_practices_route_handlers"
     },
     {
       "label": "Next.js Scripts Reference (stub)",
@@ -7379,8 +7379,8 @@
       "contributor": null,
       "community": 3,
       "norm_label": "next.js scripts reference (stub)",
-      "id": "agents_skills_next_best_practices_scripts",
-      "community_name": "Next.js Best Practices Docs"
+      "community_name": "Next.js Best Practices Docs",
+      "id": "agents_skills_next_best_practices_scripts"
     },
     {
       "label": "Next.js Suspense Boundaries Reference (stub)",
@@ -7393,8 +7393,8 @@
       "contributor": null,
       "community": 3,
       "norm_label": "next.js suspense boundaries reference (stub)",
-      "id": "agents_skills_next_best_practices_suspense_boundaries",
-      "community_name": "Next.js Best Practices Docs"
+      "community_name": "Next.js Best Practices Docs",
+      "id": "agents_skills_next_best_practices_suspense_boundaries"
     },
     {
       "label": "Next.js Parallel and Intercepting Routes Reference (stub)",
@@ -7407,8 +7407,8 @@
       "contributor": null,
       "community": 3,
       "norm_label": "next.js parallel and intercepting routes reference (stub)",
-      "id": "agents_skills_next_best_practices_parallel_routes",
-      "community_name": "Next.js Best Practices Docs"
+      "community_name": "Next.js Best Practices Docs",
+      "id": "agents_skills_next_best_practices_parallel_routes"
     },
     {
       "label": "Next.js Self-Hosting Reference (stub)",
@@ -7421,8 +7421,8 @@
       "contributor": null,
       "community": 3,
       "norm_label": "next.js self-hosting reference (stub)",
-      "id": "agents_skills_next_best_practices_self_hosting",
-      "community_name": "Next.js Best Practices Docs"
+      "community_name": "Next.js Best Practices Docs",
+      "id": "agents_skills_next_best_practices_self_hosting"
     },
     {
       "label": "Prefer Wrappers Over Modifying Base Components",
@@ -7436,8 +7436,8 @@
       "rationale": "Wrapping a shadcn base component instead of editing it preserves the upstream API and styling and avoids losing fixes on shadcn updates; editing the base file is only acceptable for bug fixes, upstream sync, or purely structural changes such as adding a data-slot attribute.",
       "community": 8,
       "norm_label": "prefer wrappers over modifying base components",
-      "id": "agents_skills_add_component_skill_wrapper_pattern",
-      "community_name": "Component & Skill Authoring Guides"
+      "community_name": "Component & Skill Authoring Guides",
+      "id": "agents_skills_add_component_skill_wrapper_pattern"
     },
     {
       "label": "Default Animation Props Convention",
@@ -7451,8 +7451,8 @@
       "rationale": "Components that accept Framer Motion transition or variants props should ship sensible defaults so the component works out of the box, while still letting consumers override them, so users are never forced to pass animation config.",
       "community": 8,
       "norm_label": "default animation props convention",
-      "id": "agents_skills_add_component_skill_default_animation_props",
-      "community_name": "Component & Skill Authoring Guides"
+      "community_name": "Component & Skill Authoring Guides",
+      "id": "agents_skills_add_component_skill_default_animation_props"
     },
     {
       "label": "Concise is Key Principle",
@@ -7466,8 +7466,8 @@
       "rationale": "The context window is shared across conversation history, other skills' metadata, and the current request, so skill content should be pared down to only what the agent doesn't already know; every paragraph must justify its token cost.",
       "community": 8,
       "norm_label": "concise is key principle",
-      "id": "agents_skills_create_skill_references_best_practices_concise_principle",
-      "community_name": "Component & Skill Authoring Guides"
+      "community_name": "Component & Skill Authoring Guides",
+      "id": "agents_skills_create_skill_references_best_practices_concise_principle"
     },
     {
       "label": "Evaluation-Driven Skill Development",
@@ -7481,8 +7481,8 @@
       "rationale": "Build evaluations before writing extensive documentation so a skill solves real, observed gaps rather than imagined problems: run the agent without the skill, identify failures, build three test scenarios, establish a baseline, then write minimal instructions and iterate against the evaluations.",
       "community": 8,
       "norm_label": "evaluation-driven skill development",
-      "id": "agents_skills_create_skill_references_best_practices_eval_driven",
-      "community_name": "Component & Skill Authoring Guides"
+      "community_name": "Component & Skill Authoring Guides",
+      "id": "agents_skills_create_skill_references_best_practices_eval_driven"
     },
     {
       "label": "Commit to a Bold Aesthetic Direction",
@@ -7496,8 +7496,8 @@
       "rationale": "Choosing one clear, extreme conceptual direction (brutalist, maximalist, minimal, etc.) and executing it with precision produces distinctive, memorable interfaces; intentionality matters more than intensity, and implementation complexity should scale to match the chosen aesthetic vision.",
       "community": 8,
       "norm_label": "commit to a bold aesthetic direction",
-      "id": "agents_skills_frontend_design_skill_bold_direction",
-      "community_name": "Component & Skill Authoring Guides"
+      "community_name": "Component & Skill Authoring Guides",
+      "id": "agents_skills_frontend_design_skill_bold_direction"
     },
     {
       "label": "Avoiding Data Waterfalls",
@@ -7511,8 +7511,8 @@
       "rationale": "Sequential awaits inside Server Components create request waterfalls; using Promise.all, Suspense streaming, or a cache()-plus-preload pattern lets independent fetches run concurrently and improves time-to-content.",
       "community": 3,
       "norm_label": "avoiding data waterfalls",
-      "id": "agents_skills_next_best_practices_data_patterns_data_waterfall_rationale",
-      "community_name": "Next.js Best Practices Docs"
+      "community_name": "Next.js Best Practices Docs",
+      "id": "agents_skills_next_best_practices_data_patterns_data_waterfall_rationale"
     },
     {
       "label": "Do Not Wrap Navigation APIs in Try-Catch",
@@ -7526,8 +7526,8 @@
       "rationale": "redirect(), notFound(), forbidden(), and unauthorized() work by throwing a special Next.js-internal error; wrapping them in try-catch swallows that throw and breaks navigation, so these calls must sit outside try-catch or be re-thrown via unstable_rethrow().",
       "community": 3,
       "norm_label": "do not wrap navigation apis in try-catch",
-      "id": "agents_skills_next_best_practices_error_handling_navigation_gotcha",
-      "community_name": "Next.js Best Practices Docs"
+      "community_name": "Next.js Best Practices Docs",
+      "id": "agents_skills_next_best_practices_error_handling_navigation_gotcha"
     },
     {
       "label": "Import Fonts Once in Root Layout",
@@ -7541,8 +7541,8 @@
       "rationale": "Calling next/font in every component creates a new font instance each time; importing the font once in the root layout and exposing it as a CSS variable avoids duplicate loading and layout shift.",
       "community": 3,
       "norm_label": "import fonts once in root layout",
-      "id": "agents_skills_next_best_practices_font_single_import_rationale",
-      "community_name": "Next.js Best Practices Docs"
+      "community_name": "Next.js Best Practices Docs",
+      "id": "agents_skills_next_best_practices_font_single_import_rationale"
     },
     {
       "label": "shadcn/ui component library",
@@ -7555,8 +7555,8 @@
       "contributor": null,
       "community": 8,
       "norm_label": "shadcn/ui component library",
-      "id": "concept_shadcn_ui",
-      "community_name": "Component & Skill Authoring Guides"
+      "community_name": "Component & Skill Authoring Guides",
+      "id": "concept_shadcn_ui"
     },
     {
       "label": "class-variance-authority (cva)",
@@ -7569,8 +7569,8 @@
       "contributor": null,
       "community": 8,
       "norm_label": "class-variance-authority (cva)",
-      "id": "concept_class_variance_authority",
-      "community_name": "Component & Skill Authoring Guides"
+      "community_name": "Component & Skill Authoring Guides",
+      "id": "concept_class_variance_authority"
     },
     {
       "label": "Framer Motion (motion/react)",
@@ -7583,8 +7583,8 @@
       "contributor": null,
       "community": 8,
       "norm_label": "framer motion (motion/react)",
-      "id": "concept_framer_motion",
-      "community_name": "Component & Skill Authoring Guides"
+      "community_name": "Component & Skill Authoring Guides",
+      "id": "concept_framer_motion"
     },
     {
       "label": "lucide-react icon library",
@@ -7597,8 +7597,8 @@
       "contributor": null,
       "community": 8,
       "norm_label": "lucide-react icon library",
-      "id": "concept_lucide_react",
-      "community_name": "Component & Skill Authoring Guides"
+      "community_name": "Component & Skill Authoring Guides",
+      "id": "concept_lucide_react"
     },
     {
       "label": "Tailwind CSS v4",
@@ -7611,8 +7611,8 @@
       "contributor": null,
       "community": 8,
       "norm_label": "tailwind css v4",
-      "id": "concept_tailwindcss_v4",
-      "community_name": "Component & Skill Authoring Guides"
+      "community_name": "Component & Skill Authoring Guides",
+      "id": "concept_tailwindcss_v4"
     },
     {
       "label": "Next.js App Router",
@@ -7625,8 +7625,8 @@
       "contributor": null,
       "community": 8,
       "norm_label": "next.js app router",
-      "id": "concept_nextjs_app_router",
-      "community_name": "Component & Skill Authoring Guides"
+      "community_name": "Component & Skill Authoring Guides",
+      "id": "concept_nextjs_app_router"
     },
     {
       "label": "cn() class-merging utility",
@@ -7639,8 +7639,8 @@
       "contributor": null,
       "community": 8,
       "norm_label": "cn() class-merging utility",
-      "id": "concept_cn_utility",
-      "community_name": "Component & Skill Authoring Guides"
+      "community_name": "Component & Skill Authoring Guides",
+      "id": "concept_cn_utility"
     },
     {
       "label": "generate-registry.js script (referenced)",
@@ -7653,8 +7653,8 @@
       "contributor": null,
       "community": 8,
       "norm_label": "generate-registry.js script (referenced)",
-      "id": "agents_skills_add_component_skill_generate_registry_js",
-      "community_name": "Component & Skill Authoring Guides"
+      "community_name": "Component & Skill Authoring Guides",
+      "id": "agents_skills_add_component_skill_generate_registry_js"
     },
     {
       "label": "npm run build-components script (referenced)",
@@ -7667,8 +7667,8 @@
       "contributor": null,
       "community": 8,
       "norm_label": "npm run build-components script (referenced)",
-      "id": "agents_skills_add_component_skill_build_components_script",
-      "community_name": "Component & Skill Authoring Guides"
+      "community_name": "Component & Skill Authoring Guides",
+      "id": "agents_skills_add_component_skill_build_components_script"
     },
     {
       "label": "Progressive Disclosure Principle (skills)",
@@ -7681,8 +7681,8 @@
       "contributor": null,
       "community": 8,
       "norm_label": "progressive disclosure principle (skills)",
-      "id": "concept_progressive_disclosure",
-      "community_name": "Component & Skill Authoring Guides"
+      "community_name": "Component & Skill Authoring Guides",
+      "id": "concept_progressive_disclosure"
     },
     {
       "label": "Degrees of Freedom (skill instruction design)",
@@ -7695,8 +7695,8 @@
       "contributor": null,
       "community": 8,
       "norm_label": "degrees of freedom (skill instruction design)",
-      "id": "concept_degrees_of_freedom",
-      "community_name": "Component & Skill Authoring Guides"
+      "community_name": "Component & Skill Authoring Guides",
+      "id": "concept_degrees_of_freedom"
     },
     {
       "label": "Skill Directory Structure (SKILL.md + scripts/ + references/ + assets/)",
@@ -7709,8 +7709,8 @@
       "contributor": null,
       "community": 8,
       "norm_label": "skill directory structure (skill.md + scripts/ + references/ + assets/)",
-      "id": "concept_skill_structure",
-      "community_name": "Component & Skill Authoring Guides"
+      "community_name": "Component & Skill Authoring Guides",
+      "id": "concept_skill_structure"
     },
     {
       "label": "Skills CLI (npx skills)",
@@ -7723,8 +7723,8 @@
       "contributor": null,
       "community": 53,
       "norm_label": "skills cli (npx skills)",
-      "id": "concept_skills_cli",
-      "community_name": "Find Skills Skill"
+      "community_name": "Find Skills Skill",
+      "id": "concept_skills_cli"
     },
     {
       "label": "skills.sh Leaderboard",
@@ -7737,8 +7737,8 @@
       "contributor": null,
       "community": 53,
       "norm_label": "skills.sh leaderboard",
-      "id": "concept_skills_sh_leaderboard",
-      "community_name": "Find Skills Skill"
+      "community_name": "Find Skills Skill",
+      "id": "concept_skills_sh_leaderboard"
     },
     {
       "label": "vercel-labs/agent-skills repository",
@@ -7751,8 +7751,8 @@
       "contributor": null,
       "community": 53,
       "norm_label": "vercel-labs/agent-skills repository",
-      "id": "concept_vercel_labs_agent_skills",
-      "community_name": "Find Skills Skill"
+      "community_name": "Find Skills Skill",
+      "id": "concept_vercel_labs_agent_skills"
     },
     {
       "label": "anthropics/skills repository",
@@ -7765,8 +7765,8 @@
       "contributor": null,
       "community": 53,
       "norm_label": "anthropics/skills repository",
-      "id": "concept_anthropics_skills",
-      "community_name": "Find Skills Skill"
+      "community_name": "Find Skills Skill",
+      "id": "concept_anthropics_skills"
     },
     {
       "label": "ComposioHQ/awesome-claude-skills repository",
@@ -7779,8 +7779,8 @@
       "contributor": null,
       "community": 53,
       "norm_label": "composiohq/awesome-claude-skills repository",
-      "id": "concept_composiohq_awesome_claude_skills",
-      "community_name": "Find Skills Skill"
+      "community_name": "Find Skills Skill",
+      "id": "concept_composiohq_awesome_claude_skills"
     },
     {
       "label": "Apache License, Version 2.0",
@@ -7793,8 +7793,8 @@
       "contributor": null,
       "community": 8,
       "norm_label": "apache license, version 2.0",
-      "id": "concept_apache_license_2_0",
-      "community_name": "Component & Skill Authoring Guides"
+      "community_name": "Component & Skill Authoring Guides",
+      "id": "concept_apache_license_2_0"
     },
     {
       "label": "Generic AI Aesthetic (\"AI slop\")",
@@ -7807,8 +7807,8 @@
       "contributor": null,
       "community": 8,
       "norm_label": "generic ai aesthetic (\"ai slop\")",
-      "id": "concept_ai_slop_aesthetic",
-      "community_name": "Component & Skill Authoring Guides"
+      "community_name": "Component & Skill Authoring Guides",
+      "id": "concept_ai_slop_aesthetic"
     },
     {
       "label": "React Server Components (RSC)",
@@ -7821,8 +7821,8 @@
       "contributor": null,
       "community": 3,
       "norm_label": "react server components (rsc)",
-      "id": "concept_react_server_components",
-      "community_name": "Next.js Best Practices Docs"
+      "community_name": "Next.js Best Practices Docs",
+      "id": "concept_react_server_components"
     },
     {
       "label": "Next.js Server Actions",
@@ -7835,8 +7835,8 @@
       "contributor": null,
       "community": 3,
       "norm_label": "next.js server actions",
-      "id": "concept_server_actions",
-      "community_name": "Next.js Best Practices Docs"
+      "community_name": "Next.js Best Practices Docs",
+      "id": "concept_server_actions"
     },
     {
       "label": "Next.js Route Handlers",
@@ -7849,8 +7849,8 @@
       "contributor": null,
       "community": 3,
       "norm_label": "next.js route handlers",
-      "id": "concept_route_handlers",
-      "community_name": "Next.js Best Practices Docs"
+      "community_name": "Next.js Best Practices Docs",
+      "id": "concept_route_handlers"
     },
     {
       "label": "Data Waterfall Anti-pattern",
@@ -7863,8 +7863,8 @@
       "contributor": null,
       "community": 3,
       "norm_label": "data waterfall anti-pattern",
-      "id": "concept_data_waterfall_antipattern",
-      "community_name": "Next.js Best Practices Docs"
+      "community_name": "Next.js Best Practices Docs",
+      "id": "concept_data_waterfall_antipattern"
     },
     {
       "label": "Next.js Image Optimization (next/image)",
@@ -7877,8 +7877,8 @@
       "contributor": null,
       "community": 3,
       "norm_label": "next.js image optimization (next/image)",
-      "id": "concept_nextjs_image_optimization",
-      "community_name": "Next.js Best Practices Docs"
+      "community_name": "Next.js Best Practices Docs",
+      "id": "concept_nextjs_image_optimization"
     },
     {
       "label": "Next.js Font Optimization (next/font)",
@@ -7891,8 +7891,8 @@
       "contributor": null,
       "community": 3,
       "norm_label": "next.js font optimization (next/font)",
-      "id": "concept_nextjs_font_optimization",
-      "community_name": "Next.js Best Practices Docs"
+      "community_name": "Next.js Best Practices Docs",
+      "id": "concept_nextjs_font_optimization"
     },
     {
       "label": "Next.js Metadata API",
@@ -7905,8 +7905,8 @@
       "contributor": null,
       "community": 3,
       "norm_label": "next.js metadata api",
-      "id": "concept_nextjs_metadata_api",
-      "community_name": "Next.js Best Practices Docs"
+      "community_name": "Next.js Best Practices Docs",
+      "id": "concept_nextjs_metadata_api"
     },
     {
       "label": "React Hydration Mismatch Errors",
@@ -7919,8 +7919,8 @@
       "contributor": null,
       "community": 3,
       "norm_label": "react hydration mismatch errors",
-      "id": "concept_hydration_error_pattern",
-      "community_name": "Next.js Best Practices Docs"
+      "community_name": "Next.js Best Practices Docs",
+      "id": "concept_hydration_error_pattern"
     },
     {
       "label": "Turbopack Bundler",
@@ -7933,8 +7933,8 @@
       "contributor": null,
       "community": 3,
       "norm_label": "turbopack bundler",
-      "id": "concept_turbopack",
-      "community_name": "Next.js Best Practices Docs"
+      "community_name": "Next.js Best Practices Docs",
+      "id": "concept_turbopack"
     },
     {
       "label": "Next.js /_next/mcp Debug Endpoint",
@@ -7947,8 +7947,8 @@
       "contributor": null,
       "community": 3,
       "norm_label": "next.js /_next/mcp debug endpoint",
-      "id": "concept_nextjs_mcp_debug_endpoint",
-      "community_name": "Next.js Best Practices Docs"
+      "community_name": "Next.js Best Practices Docs",
+      "id": "concept_nextjs_mcp_debug_endpoint"
     },
     {
       "label": "Parallel & Intercepting Routes Guide",
@@ -7961,8 +7961,8 @@
       "contributor": null,
       "community": 95,
       "norm_label": "parallel & intercepting routes guide",
-      "id": "_agents_skills_next_best_practices_parallel_routes_doc",
-      "community_name": "Parallel/Intercepting Routes Guide"
+      "community_name": "Parallel/Intercepting Routes Guide",
+      "id": "_agents_skills_next_best_practices_parallel_routes_doc"
     },
     {
       "label": "Parallel Routes",
@@ -7975,8 +7975,8 @@
       "contributor": null,
       "community": 55,
       "norm_label": "parallel routes",
-      "id": "_agents_skills_next_best_practices_parallel_routes_parallelroutes",
-      "community_name": "Parallel & Intercepting Routes"
+      "community_name": "Parallel & Intercepting Routes",
+      "id": "_agents_skills_next_best_practices_parallel_routes_parallelroutes"
     },
     {
       "label": "Intercepting Routes",
@@ -7989,8 +7989,8 @@
       "contributor": null,
       "community": 55,
       "norm_label": "intercepting routes",
-      "id": "_agents_skills_next_best_practices_parallel_routes_interceptingroutes",
-      "community_name": "Parallel & Intercepting Routes"
+      "community_name": "Parallel & Intercepting Routes",
+      "id": "_agents_skills_next_best_practices_parallel_routes_interceptingroutes"
     },
     {
       "label": "default.tsx Required for Parallel Route Slots",
@@ -8003,8 +8003,8 @@
       "contributor": null,
       "community": 55,
       "norm_label": "default.tsx required for parallel route slots",
-      "id": "_agents_skills_next_best_practices_parallel_routes_defaulttsx_requirement",
-      "community_name": "Parallel & Intercepting Routes"
+      "community_name": "Parallel & Intercepting Routes",
+      "id": "_agents_skills_next_best_practices_parallel_routes_defaulttsx_requirement"
     },
     {
       "label": "Use router.back() to Close Modals",
@@ -8017,8 +8017,8 @@
       "contributor": null,
       "community": 55,
       "norm_label": "use router.back() to close modals",
-      "id": "_agents_skills_next_best_practices_parallel_routes_routerback_pattern",
-      "community_name": "Parallel & Intercepting Routes"
+      "community_name": "Parallel & Intercepting Routes",
+      "id": "_agents_skills_next_best_practices_parallel_routes_routerback_pattern"
     },
     {
       "label": "Route Matcher Syntax: (.)(..)(...)",
@@ -8031,8 +8031,8 @@
       "contributor": null,
       "community": 55,
       "norm_label": "route matcher syntax: (.)(..)(...)",
-      "id": "_agents_skills_next_best_practices_parallel_routes_routematcher",
-      "community_name": "Parallel & Intercepting Routes"
+      "community_name": "Parallel & Intercepting Routes",
+      "id": "_agents_skills_next_best_practices_parallel_routes_routematcher"
     },
     {
       "label": "Route Handlers Guide",
@@ -8045,8 +8045,8 @@
       "contributor": null,
       "community": 96,
       "norm_label": "route handlers guide",
-      "id": "_agents_skills_next_best_practices_route_handlers_doc",
-      "community_name": "Route Handlers Guide"
+      "community_name": "Route Handlers Guide",
+      "id": "_agents_skills_next_best_practices_route_handlers_doc"
     },
     {
       "label": "Route Handlers (route.ts)",
@@ -8059,8 +8059,8 @@
       "contributor": null,
       "community": 58,
       "norm_label": "route handlers (route.ts)",
-      "id": "_agents_skills_next_best_practices_route_handlers_routehandlers",
-      "community_name": "Route Handlers Guidance"
+      "community_name": "Route Handlers Guidance",
+      "id": "_agents_skills_next_best_practices_route_handlers_routehandlers"
     },
     {
       "label": "Route Handlers vs Server Actions Guidance",
@@ -8073,8 +8073,8 @@
       "contributor": null,
       "community": 58,
       "norm_label": "route handlers vs server actions guidance",
-      "id": "_agents_skills_next_best_practices_route_handlers_serveractions_comparison",
-      "community_name": "Route Handlers Guidance"
+      "community_name": "Route Handlers Guidance",
+      "id": "_agents_skills_next_best_practices_route_handlers_serveractions_comparison"
     },
     {
       "label": "RSC Boundaries Guide",
@@ -8087,8 +8087,8 @@
       "contributor": null,
       "community": 71,
       "norm_label": "rsc boundaries guide",
-      "id": "_agents_skills_next_best_practices_rsc_boundaries_doc",
-      "community_name": "RSC & Suspense Boundaries"
+      "community_name": "RSC & Suspense Boundaries",
+      "id": "_agents_skills_next_best_practices_rsc_boundaries_doc"
     },
     {
       "label": "Async Client Components Are Invalid",
@@ -8101,8 +8101,8 @@
       "contributor": null,
       "community": 97,
       "norm_label": "async client components are invalid",
-      "id": "_agents_skills_next_best_practices_rsc_boundaries_asyncclientinvalid",
-      "community_name": "Async Client Components Rule"
+      "community_name": "Async Client Components Rule",
+      "id": "_agents_skills_next_best_practices_rsc_boundaries_asyncclientinvalid"
     },
     {
       "label": "Non-Serializable Props Rule (Server to Client)",
@@ -8115,8 +8115,8 @@
       "contributor": null,
       "community": 58,
       "norm_label": "non-serializable props rule (server to client)",
-      "id": "_agents_skills_next_best_practices_rsc_boundaries_nonserializableprops",
-      "community_name": "Route Handlers Guidance"
+      "community_name": "Route Handlers Guidance",
+      "id": "_agents_skills_next_best_practices_rsc_boundaries_nonserializableprops"
     },
     {
       "label": "Server Actions as RSC Boundary Exception",
@@ -8129,8 +8129,8 @@
       "contributor": null,
       "community": 58,
       "norm_label": "server actions as rsc boundary exception",
-      "id": "_agents_skills_next_best_practices_rsc_boundaries_serveractionsexception",
-      "community_name": "Route Handlers Guidance"
+      "community_name": "Route Handlers Guidance",
+      "id": "_agents_skills_next_best_practices_rsc_boundaries_serveractionsexception"
     },
     {
       "label": "Runtime Selection Guide",
@@ -8143,8 +8143,8 @@
       "contributor": null,
       "community": 98,
       "norm_label": "runtime selection guide",
-      "id": "_agents_skills_next_best_practices_runtime_selection_doc",
-      "community_name": "Runtime Selection Guide"
+      "community_name": "Runtime Selection Guide",
+      "id": "_agents_skills_next_best_practices_runtime_selection_doc"
     },
     {
       "label": "Node.js Runtime (Default)",
@@ -8157,8 +8157,8 @@
       "contributor": null,
       "community": 72,
       "norm_label": "node.js runtime (default)",
-      "id": "_agents_skills_next_best_practices_runtime_selection_nodejsruntime",
-      "community_name": "Runtime Selection (Edge/Node)"
+      "community_name": "Runtime Selection (Edge/Node)",
+      "id": "_agents_skills_next_best_practices_runtime_selection_nodejsruntime"
     },
     {
       "label": "Edge Runtime",
@@ -8171,8 +8171,8 @@
       "contributor": null,
       "community": 72,
       "norm_label": "edge runtime",
-      "id": "_agents_skills_next_best_practices_runtime_selection_edgeruntime",
-      "community_name": "Runtime Selection (Edge/Node)"
+      "community_name": "Runtime Selection (Edge/Node)",
+      "id": "_agents_skills_next_best_practices_runtime_selection_edgeruntime"
     },
     {
       "label": "Scripts Guide",
@@ -8185,8 +8185,8 @@
       "contributor": null,
       "community": 99,
       "norm_label": "scripts guide",
-      "id": "_agents_skills_next_best_practices_scripts_doc",
-      "community_name": "Scripts Guide"
+      "community_name": "Scripts Guide",
+      "id": "_agents_skills_next_best_practices_scripts_doc"
     },
     {
       "label": "next/script Component",
@@ -8199,8 +8199,8 @@
       "contributor": null,
       "community": 63,
       "norm_label": "next/script component",
-      "id": "_agents_skills_next_best_practices_scripts_nextscript",
-      "community_name": "Script Loading Strategies"
+      "community_name": "Script Loading Strategies",
+      "id": "_agents_skills_next_best_practices_scripts_nextscript"
     },
     {
       "label": "Script Loading Strategies",
@@ -8213,8 +8213,8 @@
       "contributor": null,
       "community": 63,
       "norm_label": "script loading strategies",
-      "id": "_agents_skills_next_best_practices_scripts_loadingstrategies",
-      "community_name": "Script Loading Strategies"
+      "community_name": "Script Loading Strategies",
+      "id": "_agents_skills_next_best_practices_scripts_loadingstrategies"
     },
     {
       "label": "@next/third-parties (GA/GTM/YouTube/Maps)",
@@ -8227,8 +8227,8 @@
       "contributor": null,
       "community": 63,
       "norm_label": "@next/third-parties (ga/gtm/youtube/maps)",
-      "id": "_agents_skills_next_best_practices_scripts_thirdparties",
-      "community_name": "Script Loading Strategies"
+      "community_name": "Script Loading Strategies",
+      "id": "_agents_skills_next_best_practices_scripts_thirdparties"
     },
     {
       "label": "Self-Hosting Next.js Guide",
@@ -8241,8 +8241,8 @@
       "contributor": null,
       "community": 100,
       "norm_label": "self-hosting next.js guide",
-      "id": "_agents_skills_next_best_practices_self_hosting_doc",
-      "community_name": "Self-Hosting Guide"
+      "community_name": "Self-Hosting Guide",
+      "id": "_agents_skills_next_best_practices_self_hosting_doc"
     },
     {
       "label": "Standalone Output (output: 'standalone')",
@@ -8255,8 +8255,8 @@
       "contributor": null,
       "community": 59,
       "norm_label": "standalone output (output: 'standalone')",
-      "id": "_agents_skills_next_best_practices_self_hosting_standaloneoutput",
-      "community_name": "Self-Hosting Deployment Guide"
+      "community_name": "Self-Hosting Deployment Guide",
+      "id": "_agents_skills_next_best_practices_self_hosting_standaloneoutput"
     },
     {
       "label": "Docker Deployment",
@@ -8269,8 +8269,8 @@
       "contributor": null,
       "community": 59,
       "norm_label": "docker deployment",
-      "id": "_agents_skills_next_best_practices_self_hosting_dockerdeployment",
-      "community_name": "Self-Hosting Deployment Guide"
+      "community_name": "Self-Hosting Deployment Guide",
+      "id": "_agents_skills_next_best_practices_self_hosting_dockerdeployment"
     },
     {
       "label": "ISR Filesystem Cache Breaks Multi-Instance Deployments",
@@ -8283,8 +8283,8 @@
       "contributor": null,
       "community": 73,
       "norm_label": "isr filesystem cache breaks multi-instance deployments",
-      "id": "_agents_skills_next_best_practices_self_hosting_isrcacheproblem",
-      "community_name": "ISR Cache Handler Guidance"
+      "community_name": "ISR Cache Handler Guidance",
+      "id": "_agents_skills_next_best_practices_self_hosting_isrcacheproblem"
     },
     {
       "label": "Custom Cache Handler (Redis/S3)",
@@ -8297,8 +8297,8 @@
       "contributor": null,
       "community": 73,
       "norm_label": "custom cache handler (redis/s3)",
-      "id": "_agents_skills_next_best_practices_self_hosting_customcachehandler",
-      "community_name": "ISR Cache Handler Guidance"
+      "community_name": "ISR Cache Handler Guidance",
+      "id": "_agents_skills_next_best_practices_self_hosting_customcachehandler"
     },
     {
       "label": "OpenNext Serverless Adapter",
@@ -8311,8 +8311,8 @@
       "contributor": null,
       "community": 59,
       "norm_label": "opennext serverless adapter",
-      "id": "_agents_skills_next_best_practices_self_hosting_opennext",
-      "community_name": "Self-Hosting Deployment Guide"
+      "community_name": "Self-Hosting Deployment Guide",
+      "id": "_agents_skills_next_best_practices_self_hosting_opennext"
     },
     {
       "label": "Health Check Endpoint",
@@ -8325,8 +8325,8 @@
       "contributor": null,
       "community": 59,
       "norm_label": "health check endpoint",
-      "id": "_agents_skills_next_best_practices_self_hosting_healthcheck",
-      "community_name": "Self-Hosting Deployment Guide"
+      "community_name": "Self-Hosting Deployment Guide",
+      "id": "_agents_skills_next_best_practices_self_hosting_healthcheck"
     },
     {
       "label": "Suspense Boundaries Guide",
@@ -8339,8 +8339,8 @@
       "contributor": null,
       "community": 71,
       "norm_label": "suspense boundaries guide",
-      "id": "_agents_skills_next_best_practices_suspense_boundaries_doc",
-      "community_name": "RSC & Suspense Boundaries"
+      "community_name": "RSC & Suspense Boundaries",
+      "id": "_agents_skills_next_best_practices_suspense_boundaries_doc"
     },
     {
       "label": "useSearchParams Suspense Requirement",
@@ -8353,8 +8353,8 @@
       "contributor": null,
       "community": 74,
       "norm_label": "usesearchparams suspense requirement",
-      "id": "_agents_skills_next_best_practices_suspense_boundaries_usesearchparams",
-      "community_name": "Suspense-Required Hooks"
+      "community_name": "Suspense-Required Hooks",
+      "id": "_agents_skills_next_best_practices_suspense_boundaries_usesearchparams"
     },
     {
       "label": "usePathname Suspense Requirement",
@@ -8367,8 +8367,8 @@
       "contributor": null,
       "community": 74,
       "norm_label": "usepathname suspense requirement",
-      "id": "_agents_skills_next_best_practices_suspense_boundaries_usepathname",
-      "community_name": "Suspense-Required Hooks"
+      "community_name": "Suspense-Required Hooks",
+      "id": "_agents_skills_next_best_practices_suspense_boundaries_usepathname"
     },
     {
       "label": "SEO Audit Skill",
@@ -8381,8 +8381,8 @@
       "contributor": null,
       "community": 75,
       "norm_label": "seo audit skill",
-      "id": "_agents_skills_seo_audit_skill_doc",
-      "community_name": "SEO Audit Skill & Reference"
+      "community_name": "SEO Audit Skill & Reference",
+      "id": "_agents_skills_seo_audit_skill_doc"
     },
     {
       "label": "Schema Markup Detection Limitation (web_fetch/curl miss JS-injected JSON-LD)",
@@ -8395,8 +8395,8 @@
       "contributor": null,
       "community": 60,
       "norm_label": "schema markup detection limitation (web_fetch/curl miss js-injected json-ld)",
-      "id": "_agents_skills_seo_audit_skill_schemamarkuplimitation",
-      "community_name": "SEO Audit Framework"
+      "community_name": "SEO Audit Framework",
+      "id": "_agents_skills_seo_audit_skill_schemamarkuplimitation"
     },
     {
       "label": "SEO Audit Priority Framework",
@@ -8409,8 +8409,8 @@
       "contributor": null,
       "community": 60,
       "norm_label": "seo audit priority framework",
-      "id": "_agents_skills_seo_audit_skill_auditframework",
-      "community_name": "SEO Audit Framework"
+      "community_name": "SEO Audit Framework",
+      "id": "_agents_skills_seo_audit_skill_auditframework"
     },
     {
       "label": "Core Web Vitals (LCP/INP/CLS)",
@@ -8423,8 +8423,8 @@
       "contributor": null,
       "community": 60,
       "norm_label": "core web vitals (lcp/inp/cls)",
-      "id": "_agents_skills_seo_audit_skill_corewebvitals",
-      "community_name": "SEO Audit Framework"
+      "community_name": "SEO Audit Framework",
+      "id": "_agents_skills_seo_audit_skill_corewebvitals"
     },
     {
       "label": "E-E-A-T Signals",
@@ -8437,8 +8437,8 @@
       "contributor": null,
       "community": 60,
       "norm_label": "e-e-a-t signals",
-      "id": "_agents_skills_seo_audit_skill_eeat",
-      "community_name": "SEO Audit Framework"
+      "community_name": "SEO Audit Framework",
+      "id": "_agents_skills_seo_audit_skill_eeat"
     },
     {
       "label": "AI Writing Detection Reference",
@@ -8451,8 +8451,8 @@
       "contributor": null,
       "community": 75,
       "norm_label": "ai writing detection reference",
-      "id": "_agents_skills_seo_audit_references_ai_writing_detection_doc",
-      "community_name": "SEO Audit Skill & Reference"
+      "community_name": "SEO Audit Skill & Reference",
+      "id": "_agents_skills_seo_audit_references_ai_writing_detection_doc"
     },
     {
       "label": "Em Dash as Primary AI Writing Tell",
@@ -8465,8 +8465,8 @@
       "contributor": null,
       "community": 20,
       "norm_label": "em dash as primary ai writing tell",
-      "id": "_agents_skills_seo_audit_references_ai_writing_detection_emdash",
-      "community_name": "AI Writing Detection Reference"
+      "community_name": "AI Writing Detection Reference",
+      "id": "_agents_skills_seo_audit_references_ai_writing_detection_emdash"
     },
     {
       "label": "Overused AI Verbs (delve, leverage, foster...)",
@@ -8479,8 +8479,8 @@
       "contributor": null,
       "community": 20,
       "norm_label": "overused ai verbs (delve, leverage, foster...)",
-      "id": "_agents_skills_seo_audit_references_ai_writing_detection_overusedverbs",
-      "community_name": "AI Writing Detection Reference"
+      "community_name": "AI Writing Detection Reference",
+      "id": "_agents_skills_seo_audit_references_ai_writing_detection_overusedverbs"
     },
     {
       "label": "Filler Words / Empty Intensifiers",
@@ -8493,8 +8493,8 @@
       "contributor": null,
       "community": 20,
       "norm_label": "filler words / empty intensifiers",
-      "id": "_agents_skills_seo_audit_references_ai_writing_detection_fillerwords",
-      "community_name": "AI Writing Detection Reference"
+      "community_name": "AI Writing Detection Reference",
+      "id": "_agents_skills_seo_audit_references_ai_writing_detection_fillerwords"
     },
     {
       "label": "AI-Signal Opening/Transitional/Concluding Phrases",
@@ -8507,8 +8507,8 @@
       "contributor": null,
       "community": 20,
       "norm_label": "ai-signal opening/transitional/concluding phrases",
-      "id": "_agents_skills_seo_audit_references_ai_writing_detection_aiphrases",
-      "community_name": "AI Writing Detection Reference"
+      "community_name": "AI Writing Detection Reference",
+      "id": "_agents_skills_seo_audit_references_ai_writing_detection_aiphrases"
     },
     {
       "label": "shadcn/ui Skill",
@@ -8521,8 +8521,8 @@
       "contributor": null,
       "community": 26,
       "norm_label": "shadcn/ui skill",
-      "id": "_agents_skills_shadcn_skill_doc",
-      "community_name": "shadcn Skill Reference Docs"
+      "community_name": "shadcn Skill Reference Docs",
+      "id": "_agents_skills_shadcn_skill_doc"
     },
     {
       "label": "shadcn Critical Rules",
@@ -8535,8 +8535,8 @@
       "contributor": null,
       "community": 69,
       "norm_label": "shadcn critical rules",
-      "id": "_agents_skills_shadcn_skill_criticalrules",
-      "community_name": "shadcn Update Workflow"
+      "community_name": "shadcn Update Workflow",
+      "id": "_agents_skills_shadcn_skill_criticalrules"
     },
     {
       "label": "shadcn Component Workflow",
@@ -8549,8 +8549,8 @@
       "contributor": null,
       "community": 69,
       "norm_label": "shadcn component workflow",
-      "id": "_agents_skills_shadcn_skill_workflow",
-      "community_name": "shadcn Update Workflow"
+      "community_name": "shadcn Update Workflow",
+      "id": "_agents_skills_shadcn_skill_workflow"
     },
     {
       "label": "Updating Components (Smart Merge)",
@@ -8563,8 +8563,8 @@
       "contributor": null,
       "community": 69,
       "norm_label": "updating components (smart merge)",
-      "id": "_agents_skills_shadcn_skill_updatingcomponents",
-      "community_name": "shadcn Update Workflow"
+      "community_name": "shadcn Update Workflow",
+      "id": "_agents_skills_shadcn_skill_updatingcomponents"
     },
     {
       "label": "shadcn OpenAI Agent Interface Config",
@@ -8577,8 +8577,8 @@
       "contributor": null,
       "community": 26,
       "norm_label": "shadcn openai agent interface config",
-      "id": "_agents_skills_shadcn_agents_openai_doc",
-      "community_name": "shadcn Skill Reference Docs"
+      "community_name": "shadcn Skill Reference Docs",
+      "id": "_agents_skills_shadcn_agents_openai_doc"
     },
     {
       "label": "shadcn CLI Reference",
@@ -8591,8 +8591,8 @@
       "contributor": null,
       "community": 26,
       "norm_label": "shadcn cli reference",
-      "id": "_agents_skills_shadcn_cli_doc",
-      "community_name": "shadcn Skill Reference Docs"
+      "community_name": "shadcn Skill Reference Docs",
+      "id": "_agents_skills_shadcn_cli_doc"
     },
     {
       "label": "shadcn init command",
@@ -8605,8 +8605,8 @@
       "contributor": null,
       "community": 64,
       "norm_label": "shadcn init command",
-      "id": "_agents_skills_shadcn_cli_initcommand",
-      "community_name": "shadcn CLI Commands"
+      "community_name": "shadcn CLI Commands",
+      "id": "_agents_skills_shadcn_cli_initcommand"
     },
     {
       "label": "shadcn add command (dry-run/diff/view)",
@@ -8619,8 +8619,8 @@
       "contributor": null,
       "community": 64,
       "norm_label": "shadcn add command (dry-run/diff/view)",
-      "id": "_agents_skills_shadcn_cli_addcommand",
-      "community_name": "shadcn CLI Commands"
+      "community_name": "shadcn CLI Commands",
+      "id": "_agents_skills_shadcn_cli_addcommand"
     },
     {
       "label": "shadcn Presets (named/code/URL)",
@@ -8633,8 +8633,8 @@
       "contributor": null,
       "community": 64,
       "norm_label": "shadcn presets (named/code/url)",
-      "id": "_agents_skills_shadcn_cli_presets",
-      "community_name": "shadcn CLI Commands"
+      "community_name": "shadcn CLI Commands",
+      "id": "_agents_skills_shadcn_cli_presets"
     },
     {
       "label": "shadcn Customization & Theming",
@@ -8647,8 +8647,8 @@
       "contributor": null,
       "community": 26,
       "norm_label": "shadcn customization & theming",
-      "id": "_agents_skills_shadcn_customization_doc",
-      "community_name": "shadcn Skill Reference Docs"
+      "community_name": "shadcn Skill Reference Docs",
+      "id": "_agents_skills_shadcn_customization_doc"
     },
     {
       "label": "Semantic CSS Variable Tokens",
@@ -8661,8 +8661,8 @@
       "contributor": null,
       "community": 61,
       "norm_label": "semantic css variable tokens",
-      "id": "_agents_skills_shadcn_customization_cssvariables",
-      "community_name": "Design Tokens & Dark Mode"
+      "community_name": "Design Tokens & Dark Mode",
+      "id": "_agents_skills_shadcn_customization_cssvariables"
     },
     {
       "label": "OKLCH Color Format",
@@ -8675,8 +8675,8 @@
       "contributor": null,
       "community": 61,
       "norm_label": "oklch color format",
-      "id": "_agents_skills_shadcn_customization_oklch",
-      "community_name": "Design Tokens & Dark Mode"
+      "community_name": "Design Tokens & Dark Mode",
+      "id": "_agents_skills_shadcn_customization_oklch"
     },
     {
       "label": "Dark Mode via next-themes",
@@ -8689,8 +8689,8 @@
       "contributor": null,
       "community": 61,
       "norm_label": "dark mode via next-themes",
-      "id": "_agents_skills_shadcn_customization_darkmode",
-      "community_name": "Design Tokens & Dark Mode"
+      "community_name": "Design Tokens & Dark Mode",
+      "id": "_agents_skills_shadcn_customization_darkmode"
     },
     {
       "label": "shadcn MCP Server",
@@ -8703,8 +8703,8 @@
       "contributor": null,
       "community": 26,
       "norm_label": "shadcn mcp server",
-      "id": "_agents_skills_shadcn_mcp_doc",
-      "community_name": "shadcn Skill Reference Docs"
+      "community_name": "shadcn Skill Reference Docs",
+      "id": "_agents_skills_shadcn_mcp_doc"
     },
     {
       "label": "shadcn MCP Tools (search/view/install)",
@@ -8717,8 +8717,8 @@
       "contributor": null,
       "community": 76,
       "norm_label": "shadcn mcp tools (search/view/install)",
-      "id": "_agents_skills_shadcn_mcp_tools",
-      "community_name": "shadcn Registry & MCP Tools"
+      "community_name": "shadcn Registry & MCP Tools",
+      "id": "_agents_skills_shadcn_mcp_tools"
     },
     {
       "label": "Registry Configuration in components.json",
@@ -8731,8 +8731,8 @@
       "contributor": null,
       "community": 76,
       "norm_label": "registry configuration in components.json",
-      "id": "_agents_skills_shadcn_mcp_registryconfig",
-      "community_name": "shadcn Registry & MCP Tools"
+      "community_name": "shadcn Registry & MCP Tools",
+      "id": "_agents_skills_shadcn_mcp_registryconfig"
     },
     {
       "label": "Base vs Radix Rules",
@@ -8745,8 +8745,8 @@
       "contributor": null,
       "community": 26,
       "norm_label": "base vs radix rules",
-      "id": "_agents_skills_shadcn_rules_base_vs_radix_doc",
-      "community_name": "shadcn Skill Reference Docs"
+      "community_name": "shadcn Skill Reference Docs",
+      "id": "_agents_skills_shadcn_rules_base_vs_radix_doc"
     },
     {
       "label": "asChild (Radix) vs render (Base) Composition",
@@ -8759,8 +8759,8 @@
       "contributor": null,
       "community": 66,
       "norm_label": "aschild (radix) vs render (base) composition",
-      "id": "_agents_skills_shadcn_rules_base_vs_radix_aschildvsrender",
-      "community_name": "Select/Slider API Rules"
+      "community_name": "Select/Slider API Rules",
+      "id": "_agents_skills_shadcn_rules_base_vs_radix_aschildvsrender"
     },
     {
       "label": "Select API Differences (base vs radix)",
@@ -8773,8 +8773,8 @@
       "contributor": null,
       "community": 66,
       "norm_label": "select api differences (base vs radix)",
-      "id": "_agents_skills_shadcn_rules_base_vs_radix_selectdiff",
-      "community_name": "Select/Slider API Rules"
+      "community_name": "Select/Slider API Rules",
+      "id": "_agents_skills_shadcn_rules_base_vs_radix_selectdiff"
     },
     {
       "label": "ToggleGroup API Differences (base vs radix)",
@@ -8787,8 +8787,8 @@
       "contributor": null,
       "community": 65,
       "norm_label": "togglegroup api differences (base vs radix)",
-      "id": "_agents_skills_shadcn_rules_base_vs_radix_togglegroupdiff",
-      "community_name": "Accordion/ToggleGroup API Rules"
+      "community_name": "Accordion/ToggleGroup API Rules",
+      "id": "_agents_skills_shadcn_rules_base_vs_radix_togglegroupdiff"
     },
     {
       "label": "Slider API Differences (base vs radix)",
@@ -8801,8 +8801,8 @@
       "contributor": null,
       "community": 66,
       "norm_label": "slider api differences (base vs radix)",
-      "id": "_agents_skills_shadcn_rules_base_vs_radix_sliderdiff",
-      "community_name": "Select/Slider API Rules"
+      "community_name": "Select/Slider API Rules",
+      "id": "_agents_skills_shadcn_rules_base_vs_radix_sliderdiff"
     },
     {
       "label": "Accordion API Differences (base vs radix)",
@@ -8815,8 +8815,8 @@
       "contributor": null,
       "community": 65,
       "norm_label": "accordion api differences (base vs radix)",
-      "id": "_agents_skills_shadcn_rules_base_vs_radix_accordiondiff",
-      "community_name": "Accordion/ToggleGroup API Rules"
+      "community_name": "Accordion/ToggleGroup API Rules",
+      "id": "_agents_skills_shadcn_rules_base_vs_radix_accordiondiff"
     },
     {
       "label": "Component Composition Rules",
@@ -8829,8 +8829,8 @@
       "contributor": null,
       "community": 26,
       "norm_label": "component composition rules",
-      "id": "_agents_skills_shadcn_rules_composition_doc",
-      "community_name": "shadcn Skill Reference Docs"
+      "community_name": "shadcn Skill Reference Docs",
+      "id": "_agents_skills_shadcn_rules_composition_doc"
     },
     {
       "label": "Items-Inside-Group Pattern",
@@ -8843,8 +8843,8 @@
       "contributor": null,
       "community": 77,
       "norm_label": "items-inside-group pattern",
-      "id": "_agents_skills_shadcn_rules_composition_grouppattern",
-      "community_name": "Button Loading Pattern"
+      "community_name": "Button Loading Pattern",
+      "id": "_agents_skills_shadcn_rules_composition_grouppattern"
     },
     {
       "label": "Overlay Component Selection (Dialog/Sheet/Drawer/AlertDialog)",
@@ -8857,8 +8857,8 @@
       "contributor": null,
       "community": 67,
       "norm_label": "overlay component selection (dialog/sheet/drawer/alertdialog)",
-      "id": "_agents_skills_shadcn_rules_composition_overlaychoice",
-      "community_name": "Overlay Component Selection Rules"
+      "community_name": "Overlay Component Selection Rules",
+      "id": "_agents_skills_shadcn_rules_composition_overlaychoice"
     },
     {
       "label": "Dialog/Sheet/Drawer Always Need a Title",
@@ -8871,8 +8871,8 @@
       "contributor": null,
       "community": 67,
       "norm_label": "dialog/sheet/drawer always need a title",
-      "id": "_agents_skills_shadcn_rules_composition_titlerequirement",
-      "community_name": "Overlay Component Selection Rules"
+      "community_name": "Overlay Component Selection Rules",
+      "id": "_agents_skills_shadcn_rules_composition_titlerequirement"
     },
     {
       "label": "Button Loading via Spinner + data-icon + disabled",
@@ -8885,8 +8885,8 @@
       "contributor": null,
       "community": 77,
       "norm_label": "button loading via spinner + data-icon + disabled",
-      "id": "_agents_skills_shadcn_rules_composition_buttonloading",
-      "community_name": "Button Loading Pattern"
+      "community_name": "Button Loading Pattern",
+      "id": "_agents_skills_shadcn_rules_composition_buttonloading"
     },
     {
       "label": "Forms & Inputs Rules",
@@ -8899,8 +8899,8 @@
       "contributor": null,
       "community": 26,
       "norm_label": "forms & inputs rules",
-      "id": "_agents_skills_shadcn_rules_forms_doc",
-      "community_name": "shadcn Skill Reference Docs"
+      "community_name": "shadcn Skill Reference Docs",
+      "id": "_agents_skills_shadcn_rules_forms_doc"
     },
     {
       "label": "FieldGroup + Field Form Layout Pattern",
@@ -8913,8 +8913,8 @@
       "contributor": null,
       "community": 68,
       "norm_label": "fieldgroup + field form layout pattern",
-      "id": "_agents_skills_shadcn_rules_forms_fieldgrouppattern",
-      "community_name": "Form Field Layout Patterns"
+      "community_name": "Form Field Layout Patterns",
+      "id": "_agents_skills_shadcn_rules_forms_fieldgrouppattern"
     },
     {
       "label": "InputGroup + InputGroupAddon Pattern",
@@ -8927,8 +8927,8 @@
       "contributor": null,
       "community": 68,
       "norm_label": "inputgroup + inputgroupaddon pattern",
-      "id": "_agents_skills_shadcn_rules_forms_inputgrouppattern",
-      "community_name": "Form Field Layout Patterns"
+      "community_name": "Form Field Layout Patterns",
+      "id": "_agents_skills_shadcn_rules_forms_inputgrouppattern"
     },
     {
       "label": "ToggleGroup for Option Sets (2-7 choices)",
@@ -8941,8 +8941,8 @@
       "contributor": null,
       "community": 65,
       "norm_label": "togglegroup for option sets (2-7 choices)",
-      "id": "_agents_skills_shadcn_rules_forms_togglegroupoptionsets",
-      "community_name": "Accordion/ToggleGroup API Rules"
+      "community_name": "Accordion/ToggleGroup API Rules",
+      "id": "_agents_skills_shadcn_rules_forms_togglegroupoptionsets"
     },
     {
       "label": "Field Validation (data-invalid/aria-invalid)",
@@ -8955,8 +8955,8 @@
       "contributor": null,
       "community": 68,
       "norm_label": "field validation (data-invalid/aria-invalid)",
-      "id": "_agents_skills_shadcn_rules_forms_fieldvalidation",
-      "community_name": "Form Field Layout Patterns"
+      "community_name": "Form Field Layout Patterns",
+      "id": "_agents_skills_shadcn_rules_forms_fieldvalidation"
     },
     {
       "label": "Icons Rules",
@@ -8969,8 +8969,8 @@
       "contributor": null,
       "community": 26,
       "norm_label": "icons rules",
-      "id": "_agents_skills_shadcn_rules_icons_doc",
-      "community_name": "shadcn Skill Reference Docs"
+      "community_name": "shadcn Skill Reference Docs",
+      "id": "_agents_skills_shadcn_rules_icons_doc"
     },
     {
       "label": "data-icon Attribute Pattern",
@@ -8983,8 +8983,8 @@
       "contributor": null,
       "community": 78,
       "norm_label": "data-icon attribute pattern",
-      "id": "_agents_skills_shadcn_rules_icons_dataiconattribute",
-      "community_name": "Icon Component Pattern"
+      "community_name": "Icon Component Pattern",
+      "id": "_agents_skills_shadcn_rules_icons_dataiconattribute"
     },
     {
       "label": "Pass Icons as Component Objects, Not String Keys",
@@ -8997,8 +8997,8 @@
       "contributor": null,
       "community": 78,
       "norm_label": "pass icons as component objects, not string keys",
-      "id": "_agents_skills_shadcn_rules_icons_iconobjectpattern",
-      "community_name": "Icon Component Pattern"
+      "community_name": "Icon Component Pattern",
+      "id": "_agents_skills_shadcn_rules_icons_iconobjectpattern"
     },
     {
       "label": "Styling & Customization Rules",
@@ -9011,8 +9011,8 @@
       "contributor": null,
       "community": 26,
       "norm_label": "styling & customization rules",
-      "id": "_agents_skills_shadcn_rules_styling_doc",
-      "community_name": "shadcn Skill Reference Docs"
+      "community_name": "shadcn Skill Reference Docs",
+      "id": "_agents_skills_shadcn_rules_styling_doc"
     },
     {
       "label": "Semantic Color Tokens Rule",
@@ -9025,8 +9025,8 @@
       "contributor": null,
       "community": 61,
       "norm_label": "semantic color tokens rule",
-      "id": "_agents_skills_shadcn_rules_styling_semanticcolors",
-      "community_name": "Design Tokens & Dark Mode"
+      "community_name": "Design Tokens & Dark Mode",
+      "id": "_agents_skills_shadcn_rules_styling_semanticcolors"
     },
     {
       "label": "gap-* over space-x/y-* Rule",
@@ -9039,8 +9039,8 @@
       "contributor": null,
       "community": 79,
       "norm_label": "gap-* over space-x/y-* rule",
-      "id": "_agents_skills_shadcn_rules_styling_gaputility",
-      "community_name": "Tailwind Utility Conventions"
+      "community_name": "Tailwind Utility Conventions",
+      "id": "_agents_skills_shadcn_rules_styling_gaputility"
     },
     {
       "label": "cn() Utility for Conditional Classes",
@@ -9053,8 +9053,8 @@
       "contributor": null,
       "community": 79,
       "norm_label": "cn() utility for conditional classes",
-      "id": "_agents_skills_shadcn_rules_styling_cnutility",
-      "community_name": "Tailwind Utility Conventions"
+      "community_name": "Tailwind Utility Conventions",
+      "id": "_agents_skills_shadcn_rules_styling_cnutility"
     },
     {
       "label": "No Manual z-index on Overlay Components",
@@ -9067,8 +9067,8 @@
       "contributor": null,
       "community": 67,
       "norm_label": "no manual z-index on overlay components",
-      "id": "_agents_skills_shadcn_rules_styling_zindexrule",
-      "community_name": "Overlay Component Selection Rules"
+      "community_name": "Overlay Component Selection Rules",
+      "id": "_agents_skills_shadcn_rules_styling_zindexrule"
     },
     {
       "label": "Apache License 2.0",
@@ -9081,8 +9081,8 @@
       "contributor": null,
       "community": 20,
       "norm_label": "apache license 2.0",
-      "id": "_agents_skills_skill_creator_license_doc",
-      "community_name": "AI Writing Detection Reference"
+      "community_name": "AI Writing Detection Reference",
+      "id": "_agents_skills_skill_creator_license_doc"
     },
     {
       "label": "Skill Creator Skill",
@@ -9095,8 +9095,8 @@
       "contributor": null,
       "community": 20,
       "norm_label": "skill creator skill",
-      "id": "_agents_skills_skill_creator_skill_doc",
-      "community_name": "AI Writing Detection Reference"
+      "community_name": "AI Writing Detection Reference",
+      "id": "_agents_skills_skill_creator_skill_doc"
     },
     {
       "label": "Progressive Disclosure (3-level loading)",
@@ -9109,8 +9109,8 @@
       "contributor": null,
       "community": 20,
       "norm_label": "progressive disclosure (3-level loading)",
-      "id": "_agents_skills_skill_creator_skill_progressivedisclosure",
-      "community_name": "AI Writing Detection Reference"
+      "community_name": "AI Writing Detection Reference",
+      "id": "_agents_skills_skill_creator_skill_progressivedisclosure"
     },
     {
       "label": "Skill Eval/Iteration Loop",
@@ -9123,8 +9123,8 @@
       "contributor": null,
       "community": 20,
       "norm_label": "skill eval/iteration loop",
-      "id": "_agents_skills_skill_creator_skill_evalloop",
-      "community_name": "AI Writing Detection Reference"
+      "community_name": "AI Writing Detection Reference",
+      "id": "_agents_skills_skill_creator_skill_evalloop"
     },
     {
       "label": "Blind Comparison for Skill Versions",
@@ -9137,8 +9137,8 @@
       "contributor": null,
       "community": 20,
       "norm_label": "blind comparison for skill versions",
-      "id": "_agents_skills_skill_creator_skill_blindcomparison",
-      "community_name": "AI Writing Detection Reference"
+      "community_name": "AI Writing Detection Reference",
+      "id": "_agents_skills_skill_creator_skill_blindcomparison"
     },
     {
       "label": "Skill Description Trigger Optimization",
@@ -9151,8 +9151,8 @@
       "contributor": null,
       "community": 20,
       "norm_label": "skill description trigger optimization",
-      "id": "_agents_skills_skill_creator_skill_descriptionoptimization",
-      "community_name": "AI Writing Detection Reference"
+      "community_name": "AI Writing Detection Reference",
+      "id": "_agents_skills_skill_creator_skill_descriptionoptimization"
     },
     {
       "label": "Post-hoc Analyzer Agent",
@@ -9165,8 +9165,8 @@
       "contributor": null,
       "community": 20,
       "norm_label": "post-hoc analyzer agent",
-      "id": "_agents_skills_skill_creator_agents_analyzer_doc",
-      "community_name": "AI Writing Detection Reference"
+      "community_name": "AI Writing Detection Reference",
+      "id": "_agents_skills_skill_creator_agents_analyzer_doc"
     },
     {
       "label": "Post-hoc Analyzer (blind comparison unblinding)",
@@ -9179,8 +9179,8 @@
       "contributor": null,
       "community": 20,
       "norm_label": "post-hoc analyzer (blind comparison unblinding)",
-      "id": "_agents_skills_skill_creator_agents_analyzer_posthocanalyzer",
-      "community_name": "AI Writing Detection Reference"
+      "community_name": "AI Writing Detection Reference",
+      "id": "_agents_skills_skill_creator_agents_analyzer_posthocanalyzer"
     },
     {
       "label": "Benchmark Results Analyzer (pattern surfacing)",
@@ -9193,8 +9193,8 @@
       "contributor": null,
       "community": 20,
       "norm_label": "benchmark results analyzer (pattern surfacing)",
-      "id": "_agents_skills_skill_creator_agents_analyzer_benchmarkanalyzer",
-      "community_name": "AI Writing Detection Reference"
+      "community_name": "AI Writing Detection Reference",
+      "id": "_agents_skills_skill_creator_agents_analyzer_benchmarkanalyzer"
     },
     {
       "label": "Blind Comparator Agent",
@@ -9207,8 +9207,8 @@
       "contributor": null,
       "community": 27,
       "norm_label": "blind comparator agent",
-      "id": "agents_skills_skill_creator_agents_comparator_blind_comparator_agent",
-      "community_name": "Skill Eval Agents & Schemas"
+      "community_name": "Skill Eval Agents & Schemas",
+      "id": "agents_skills_skill_creator_agents_comparator_blind_comparator_agent"
     },
     {
       "label": "Grader Agent",
@@ -9221,8 +9221,8 @@
       "contributor": null,
       "community": 27,
       "norm_label": "grader agent",
-      "id": "agents_skills_skill_creator_agents_grader_grader_agent",
-      "community_name": "Skill Eval Agents & Schemas"
+      "community_name": "Skill Eval Agents & Schemas",
+      "id": "agents_skills_skill_creator_agents_grader_grader_agent"
     },
     {
       "label": "Eval Set Review HTML Tool",
@@ -9235,8 +9235,8 @@
       "contributor": null,
       "community": 82,
       "norm_label": "eval set review html tool",
-      "id": "agents_skills_skill_creator_assets_eval_review_eval_set_review_tool",
-      "community_name": "Eval Review Tool & Schema"
+      "community_name": "Eval Review Tool & Schema",
+      "id": "agents_skills_skill_creator_assets_eval_review_eval_set_review_tool"
     },
     {
       "label": "Eval Viewer HTML Tool",
@@ -9249,8 +9249,8 @@
       "contributor": null,
       "community": 27,
       "norm_label": "eval viewer html tool",
-      "id": "agents_skills_skill_creator_eval_viewer_viewer_eval_viewer_tool",
-      "community_name": "Skill Eval Agents & Schemas"
+      "community_name": "Skill Eval Agents & Schemas",
+      "id": "agents_skills_skill_creator_eval_viewer_viewer_eval_viewer_tool"
     },
     {
       "label": "evals.json Schema",
@@ -9263,8 +9263,8 @@
       "contributor": null,
       "community": 82,
       "norm_label": "evals.json schema",
-      "id": "agents_skills_skill_creator_references_schemas_evals_json",
-      "community_name": "Eval Review Tool & Schema"
+      "community_name": "Eval Review Tool & Schema",
+      "id": "agents_skills_skill_creator_references_schemas_evals_json"
     },
     {
       "label": "history.json Schema",
@@ -9277,8 +9277,8 @@
       "contributor": null,
       "community": 27,
       "norm_label": "history.json schema",
-      "id": "agents_skills_skill_creator_references_schemas_history_json",
-      "community_name": "Skill Eval Agents & Schemas"
+      "community_name": "Skill Eval Agents & Schemas",
+      "id": "agents_skills_skill_creator_references_schemas_history_json"
     },
     {
       "label": "grading.json Schema",
@@ -9291,8 +9291,8 @@
       "contributor": null,
       "community": 27,
       "norm_label": "grading.json schema",
-      "id": "agents_skills_skill_creator_references_schemas_grading_json",
-      "community_name": "Skill Eval Agents & Schemas"
+      "community_name": "Skill Eval Agents & Schemas",
+      "id": "agents_skills_skill_creator_references_schemas_grading_json"
     },
     {
       "label": "metrics.json Schema",
@@ -9305,8 +9305,8 @@
       "contributor": null,
       "community": 27,
       "norm_label": "metrics.json schema",
-      "id": "agents_skills_skill_creator_references_schemas_metrics_json",
-      "community_name": "Skill Eval Agents & Schemas"
+      "community_name": "Skill Eval Agents & Schemas",
+      "id": "agents_skills_skill_creator_references_schemas_metrics_json"
     },
     {
       "label": "timing.json Schema",
@@ -9319,8 +9319,8 @@
       "contributor": null,
       "community": 27,
       "norm_label": "timing.json schema",
-      "id": "agents_skills_skill_creator_references_schemas_timing_json",
-      "community_name": "Skill Eval Agents & Schemas"
+      "community_name": "Skill Eval Agents & Schemas",
+      "id": "agents_skills_skill_creator_references_schemas_timing_json"
     },
     {
       "label": "benchmark.json Schema",
@@ -9333,8 +9333,8 @@
       "contributor": null,
       "community": 27,
       "norm_label": "benchmark.json schema",
-      "id": "agents_skills_skill_creator_references_schemas_benchmark_json",
-      "community_name": "Skill Eval Agents & Schemas"
+      "community_name": "Skill Eval Agents & Schemas",
+      "id": "agents_skills_skill_creator_references_schemas_benchmark_json"
     },
     {
       "label": "comparison.json Schema",
@@ -9347,8 +9347,8 @@
       "contributor": null,
       "community": 27,
       "norm_label": "comparison.json schema",
-      "id": "agents_skills_skill_creator_references_schemas_comparison_json",
-      "community_name": "Skill Eval Agents & Schemas"
+      "community_name": "Skill Eval Agents & Schemas",
+      "id": "agents_skills_skill_creator_references_schemas_comparison_json"
     },
     {
       "label": "analysis.json Schema",
@@ -9361,8 +9361,8 @@
       "contributor": null,
       "community": 27,
       "norm_label": "analysis.json schema",
-      "id": "agents_skills_skill_creator_references_schemas_analysis_json",
-      "community_name": "Skill Eval Agents & Schemas"
+      "community_name": "Skill Eval Agents & Schemas",
+      "id": "agents_skills_skill_creator_references_schemas_analysis_json"
     },
     {
       "label": "UI/UX Pro Max Skill",
@@ -9375,8 +9375,8 @@
       "contributor": null,
       "community": 5,
       "norm_label": "ui/ux pro max skill",
-      "id": "agents_skills_ui_ux_pro_max_skill_ui_ux_pro_max_skill",
-      "community_name": "Vercel React/Composition Skill Docs"
+      "community_name": "Vercel React/Composition Skill Docs",
+      "id": "agents_skills_ui_ux_pro_max_skill_ui_ux_pro_max_skill"
     },
     {
       "label": "React Composition Patterns (Compiled Document)",
@@ -9389,8 +9389,8 @@
       "contributor": null,
       "community": 5,
       "norm_label": "react composition patterns (compiled document)",
-      "id": "agents_skills_vercel_composition_patterns_agents_react_composition_patterns_doc",
-      "community_name": "Vercel React/Composition Skill Docs"
+      "community_name": "Vercel React/Composition Skill Docs",
+      "id": "agents_skills_vercel_composition_patterns_agents_react_composition_patterns_doc"
     },
     {
       "label": "React Composition Patterns Repository README",
@@ -9403,8 +9403,8 @@
       "contributor": null,
       "community": 5,
       "norm_label": "react composition patterns repository readme",
-      "id": "agents_skills_vercel_composition_patterns_readme_react_composition_patterns_repo",
-      "community_name": "Vercel React/Composition Skill Docs"
+      "community_name": "Vercel React/Composition Skill Docs",
+      "id": "agents_skills_vercel_composition_patterns_readme_react_composition_patterns_repo"
     },
     {
       "label": "Vercel Composition Patterns Skill",
@@ -9417,8 +9417,8 @@
       "contributor": null,
       "community": 5,
       "norm_label": "vercel composition patterns skill",
-      "id": "agents_skills_vercel_composition_patterns_skill_vercel_composition_patterns_skill",
-      "community_name": "Vercel React/Composition Skill Docs"
+      "community_name": "Vercel React/Composition Skill Docs",
+      "id": "agents_skills_vercel_composition_patterns_skill_vercel_composition_patterns_skill"
     },
     {
       "label": "Composition Patterns Section Definitions",
@@ -9431,8 +9431,8 @@
       "contributor": null,
       "community": 5,
       "norm_label": "composition patterns section definitions",
-      "id": "agents_skills_vercel_composition_patterns_rules_sections_section_definitions",
-      "community_name": "Vercel React/Composition Skill Docs"
+      "community_name": "Vercel React/Composition Skill Docs",
+      "id": "agents_skills_vercel_composition_patterns_rules_sections_section_definitions"
     },
     {
       "label": "Rule File Template",
@@ -9445,8 +9445,8 @@
       "contributor": null,
       "community": 5,
       "norm_label": "rule file template",
-      "id": "agents_skills_vercel_composition_patterns_rules_template_rule_file_template",
-      "community_name": "Vercel React/Composition Skill Docs"
+      "community_name": "Vercel React/Composition Skill Docs",
+      "id": "agents_skills_vercel_composition_patterns_rules_template_rule_file_template"
     },
     {
       "label": "Avoid Boolean Prop Proliferation",
@@ -9459,8 +9459,8 @@
       "contributor": null,
       "community": 5,
       "norm_label": "avoid boolean prop proliferation",
-      "id": "agents_skills_vercel_composition_patterns_rules_architecture_avoid_boolean_props_avoid_boolean_prop_proliferation",
-      "community_name": "Vercel React/Composition Skill Docs"
+      "community_name": "Vercel React/Composition Skill Docs",
+      "id": "agents_skills_vercel_composition_patterns_rules_architecture_avoid_boolean_props_avoid_boolean_prop_proliferation"
     },
     {
       "label": "Use Compound Components",
@@ -9473,8 +9473,8 @@
       "contributor": null,
       "community": 5,
       "norm_label": "use compound components",
-      "id": "agents_skills_vercel_composition_patterns_rules_architecture_compound_components_use_compound_components",
-      "community_name": "Vercel React/Composition Skill Docs"
+      "community_name": "Vercel React/Composition Skill Docs",
+      "id": "agents_skills_vercel_composition_patterns_rules_architecture_compound_components_use_compound_components"
     },
     {
       "label": "Prefer Composing Children Over Render Props",
@@ -9487,8 +9487,8 @@
       "contributor": null,
       "community": 5,
       "norm_label": "prefer composing children over render props",
-      "id": "agents_skills_vercel_composition_patterns_rules_patterns_children_over_render_props_prefer_children_over_render_props",
-      "community_name": "Vercel React/Composition Skill Docs"
+      "community_name": "Vercel React/Composition Skill Docs",
+      "id": "agents_skills_vercel_composition_patterns_rules_patterns_children_over_render_props_prefer_children_over_render_props"
     },
     {
       "label": "Create Explicit Component Variants",
@@ -9501,8 +9501,8 @@
       "contributor": null,
       "community": 5,
       "norm_label": "create explicit component variants",
-      "id": "agents_skills_vercel_composition_patterns_rules_patterns_explicit_variants_create_explicit_component_variants",
-      "community_name": "Vercel React/Composition Skill Docs"
+      "community_name": "Vercel React/Composition Skill Docs",
+      "id": "agents_skills_vercel_composition_patterns_rules_patterns_explicit_variants_create_explicit_component_variants"
     },
     {
       "label": "React 19 API Changes (no forwardRef)",
@@ -9515,8 +9515,8 @@
       "contributor": null,
       "community": 5,
       "norm_label": "react 19 api changes (no forwardref)",
-      "id": "agents_skills_vercel_composition_patterns_rules_react19_no_forwardref_react_19_api_changes",
-      "community_name": "Vercel React/Composition Skill Docs"
+      "community_name": "Vercel React/Composition Skill Docs",
+      "id": "agents_skills_vercel_composition_patterns_rules_react19_no_forwardref_react_19_api_changes"
     },
     {
       "label": "Define Generic Context Interfaces for Dependency Injection",
@@ -9529,8 +9529,8 @@
       "contributor": null,
       "community": 5,
       "norm_label": "define generic context interfaces for dependency injection",
-      "id": "agents_skills_vercel_composition_patterns_rules_state_context_interface_generic_context_interfaces_for_dependency_injection",
-      "community_name": "Vercel React/Composition Skill Docs"
+      "community_name": "Vercel React/Composition Skill Docs",
+      "id": "agents_skills_vercel_composition_patterns_rules_state_context_interface_generic_context_interfaces_for_dependency_injection"
     },
     {
       "label": "Decouple State Management from UI",
@@ -9543,8 +9543,8 @@
       "contributor": null,
       "community": 5,
       "norm_label": "decouple state management from ui",
-      "id": "agents_skills_vercel_composition_patterns_rules_state_decouple_implementation_decouple_state_management_from_ui",
-      "community_name": "Vercel React/Composition Skill Docs"
+      "community_name": "Vercel React/Composition Skill Docs",
+      "id": "agents_skills_vercel_composition_patterns_rules_state_decouple_implementation_decouple_state_management_from_ui"
     },
     {
       "label": "Lift State into Provider Components",
@@ -9557,8 +9557,8 @@
       "contributor": null,
       "community": 5,
       "norm_label": "lift state into provider components",
-      "id": "agents_skills_vercel_composition_patterns_rules_state_lift_state_lift_state_into_provider_components",
-      "community_name": "Vercel React/Composition Skill Docs"
+      "community_name": "Vercel React/Composition Skill Docs",
+      "id": "agents_skills_vercel_composition_patterns_rules_state_lift_state_lift_state_into_provider_components"
     },
     {
       "label": "Eliminating Waterfalls (CRITICAL)",
@@ -9571,8 +9571,8 @@
       "contributor": null,
       "community": 5,
       "norm_label": "eliminating waterfalls (critical)",
-      "id": "agents_skills_vercel_react_best_practices_agents_eliminating_waterfalls",
-      "community_name": "Vercel React/Composition Skill Docs"
+      "community_name": "Vercel React/Composition Skill Docs",
+      "id": "agents_skills_vercel_react_best_practices_agents_eliminating_waterfalls"
     },
     {
       "label": "Bundle Size Optimization (CRITICAL)",
@@ -9585,8 +9585,8 @@
       "contributor": null,
       "community": 5,
       "norm_label": "bundle size optimization (critical)",
-      "id": "agents_skills_vercel_react_best_practices_agents_bundle_size_optimization",
-      "community_name": "Vercel React/Composition Skill Docs"
+      "community_name": "Vercel React/Composition Skill Docs",
+      "id": "agents_skills_vercel_react_best_practices_agents_bundle_size_optimization"
     },
     {
       "label": "Server-Side Performance (HIGH)",
@@ -9599,8 +9599,8 @@
       "contributor": null,
       "community": 5,
       "norm_label": "server-side performance (high)",
-      "id": "agents_skills_vercel_react_best_practices_agents_server_side_performance",
-      "community_name": "Vercel React/Composition Skill Docs"
+      "community_name": "Vercel React/Composition Skill Docs",
+      "id": "agents_skills_vercel_react_best_practices_agents_server_side_performance"
     },
     {
       "label": "Client-Side Data Fetching (MEDIUM-HIGH)",
@@ -9613,8 +9613,8 @@
       "contributor": null,
       "community": 5,
       "norm_label": "client-side data fetching (medium-high)",
-      "id": "agents_skills_vercel_react_best_practices_agents_client_side_data_fetching",
-      "community_name": "Vercel React/Composition Skill Docs"
+      "community_name": "Vercel React/Composition Skill Docs",
+      "id": "agents_skills_vercel_react_best_practices_agents_client_side_data_fetching"
     },
     {
       "label": "Re-render Optimization (MEDIUM)",
@@ -9627,8 +9627,8 @@
       "contributor": null,
       "community": 5,
       "norm_label": "re-render optimization (medium)",
-      "id": "agents_skills_vercel_react_best_practices_agents_rerender_optimization",
-      "community_name": "Vercel React/Composition Skill Docs"
+      "community_name": "Vercel React/Composition Skill Docs",
+      "id": "agents_skills_vercel_react_best_practices_agents_rerender_optimization"
     },
     {
       "label": "Rendering Performance (MEDIUM)",
@@ -9641,8 +9641,8 @@
       "contributor": null,
       "community": 5,
       "norm_label": "rendering performance (medium)",
-      "id": "agents_skills_vercel_react_best_practices_agents_rendering_performance",
-      "community_name": "Vercel React/Composition Skill Docs"
+      "community_name": "Vercel React/Composition Skill Docs",
+      "id": "agents_skills_vercel_react_best_practices_agents_rendering_performance"
     },
     {
       "label": "JavaScript Performance (LOW-MEDIUM)",
@@ -9655,8 +9655,8 @@
       "contributor": null,
       "community": 5,
       "norm_label": "javascript performance (low-medium)",
-      "id": "agents_skills_vercel_react_best_practices_agents_javascript_performance",
-      "community_name": "Vercel React/Composition Skill Docs"
+      "community_name": "Vercel React/Composition Skill Docs",
+      "id": "agents_skills_vercel_react_best_practices_agents_javascript_performance"
     },
     {
       "label": "Advanced Patterns (LOW)",
@@ -9669,8 +9669,8 @@
       "contributor": null,
       "community": 5,
       "norm_label": "advanced patterns (low)",
-      "id": "agents_skills_vercel_react_best_practices_agents_advanced_patterns",
-      "community_name": "Vercel React/Composition Skill Docs"
+      "community_name": "Vercel React/Composition Skill Docs",
+      "id": "agents_skills_vercel_react_best_practices_agents_advanced_patterns"
     },
     {
       "label": "better-all (dependency-based parallelization library)",
@@ -9683,8 +9683,8 @@
       "contributor": null,
       "community": 5,
       "norm_label": "better-all (dependency-based parallelization library)",
-      "id": "agents_skills_vercel_react_best_practices_agents_better_all_library",
-      "community_name": "Vercel React/Composition Skill Docs"
+      "community_name": "Vercel React/Composition Skill Docs",
+      "id": "agents_skills_vercel_react_best_practices_agents_better_all_library"
     },
     {
       "label": "SWR (data fetching library)",
@@ -9697,8 +9697,8 @@
       "contributor": null,
       "community": 5,
       "norm_label": "swr (data fetching library)",
-      "id": "agents_skills_vercel_react_best_practices_agents_swr_library",
-      "community_name": "Vercel React/Composition Skill Docs"
+      "community_name": "Vercel React/Composition Skill Docs",
+      "id": "agents_skills_vercel_react_best_practices_agents_swr_library"
     },
     {
       "label": "React.cache() (per-request memoization)",
@@ -9711,8 +9711,8 @@
       "contributor": null,
       "community": 5,
       "norm_label": "react.cache() (per-request memoization)",
-      "id": "agents_skills_vercel_react_best_practices_agents_react_cache",
-      "community_name": "Vercel React/Composition Skill Docs"
+      "community_name": "Vercel React/Composition Skill Docs",
+      "id": "agents_skills_vercel_react_best_practices_agents_react_cache"
     },
     {
       "label": "LRU Cache (lru-cache, cross-request caching)",
@@ -9725,8 +9725,8 @@
       "contributor": null,
       "community": 5,
       "norm_label": "lru cache (lru-cache, cross-request caching)",
-      "id": "agents_skills_vercel_react_best_practices_agents_lru_cache",
-      "community_name": "Vercel React/Composition Skill Docs"
+      "community_name": "Vercel React/Composition Skill Docs",
+      "id": "agents_skills_vercel_react_best_practices_agents_lru_cache"
     },
     {
       "label": "Next.js after() API",
@@ -9739,8 +9739,8 @@
       "contributor": null,
       "community": 5,
       "norm_label": "next.js after() api",
-      "id": "agents_skills_vercel_react_best_practices_agents_nextjs_after",
-      "community_name": "Vercel React/Composition Skill Docs"
+      "community_name": "Vercel React/Composition Skill Docs",
+      "id": "agents_skills_vercel_react_best_practices_agents_nextjs_after"
     },
     {
       "label": "Vercel Fluid Compute",
@@ -9753,8 +9753,8 @@
       "contributor": null,
       "community": 5,
       "norm_label": "vercel fluid compute",
-      "id": "agents_skills_vercel_react_best_practices_agents_vercel_fluid_compute",
-      "community_name": "Vercel React/Composition Skill Docs"
+      "community_name": "Vercel React/Composition Skill Docs",
+      "id": "agents_skills_vercel_react_best_practices_agents_vercel_fluid_compute"
     },
     {
       "label": "React Compiler",
@@ -9767,8 +9767,8 @@
       "contributor": null,
       "community": 5,
       "norm_label": "react compiler",
-      "id": "agents_skills_vercel_react_best_practices_agents_react_compiler",
-      "community_name": "Vercel React/Composition Skill Docs"
+      "community_name": "Vercel React/Composition Skill Docs",
+      "id": "agents_skills_vercel_react_best_practices_agents_react_compiler"
     },
     {
       "label": "Next.js Server Actions Authentication Guidance",
@@ -9781,8 +9781,8 @@
       "contributor": null,
       "community": 5,
       "norm_label": "next.js server actions authentication guidance",
-      "id": "agents_skills_vercel_react_best_practices_agents_nextjs_server_actions_auth",
-      "community_name": "Vercel React/Composition Skill Docs"
+      "community_name": "Vercel React/Composition Skill Docs",
+      "id": "agents_skills_vercel_react_best_practices_agents_nextjs_server_actions_auth"
     },
     {
       "label": "React Best Practices Repository README",
@@ -9795,8 +9795,8 @@
       "contributor": null,
       "community": 5,
       "norm_label": "react best practices repository readme",
-      "id": "agents_skills_vercel_react_best_practices_readme_react_best_practices_repo",
-      "community_name": "Vercel React/Composition Skill Docs"
+      "community_name": "Vercel React/Composition Skill Docs",
+      "id": "agents_skills_vercel_react_best_practices_readme_react_best_practices_repo"
     },
     {
       "label": "Vercel React Best Practices Skill",
@@ -9809,8 +9809,8 @@
       "contributor": null,
       "community": 5,
       "norm_label": "vercel react best practices skill",
-      "id": "agents_skills_vercel_react_best_practices_skill_vercel_react_best_practices_skill",
-      "community_name": "Vercel React/Composition Skill Docs"
+      "community_name": "Vercel React/Composition Skill Docs",
+      "id": "agents_skills_vercel_react_best_practices_skill_vercel_react_best_practices_skill"
     },
     {
       "label": "Rule Sections Overview",
@@ -9823,8 +9823,8 @@
       "contributor": null,
       "community": 9,
       "norm_label": "rule sections overview",
-      "id": "agents_skills_vercel_react_best_practices_rules_sections_overview",
-      "community_name": "Async/Data-Fetching Libraries"
+      "community_name": "Async/Data-Fetching Libraries",
+      "id": "agents_skills_vercel_react_best_practices_rules_sections_overview"
     },
     {
       "label": "Rule File Template",
@@ -9837,8 +9837,8 @@
       "contributor": null,
       "community": 9,
       "norm_label": "rule file template",
-      "id": "agents_skills_vercel_react_best_practices_rules_template_overview",
-      "community_name": "Async/Data-Fetching Libraries"
+      "community_name": "Async/Data-Fetching Libraries",
+      "id": "agents_skills_vercel_react_best_practices_rules_template_overview"
     },
     {
       "label": "Store Event Handlers in Refs",
@@ -9851,8 +9851,8 @@
       "contributor": null,
       "community": 9,
       "norm_label": "store event handlers in refs",
-      "id": "agents_skills_vercel_react_best_practices_rules_advanced_event_handler_refs_store_handlers_in_refs",
-      "community_name": "Async/Data-Fetching Libraries"
+      "community_name": "Async/Data-Fetching Libraries",
+      "id": "agents_skills_vercel_react_best_practices_rules_advanced_event_handler_refs_store_handlers_in_refs"
     },
     {
       "label": "Initialize App Once, Not Per Mount",
@@ -9865,8 +9865,8 @@
       "contributor": null,
       "community": 9,
       "norm_label": "initialize app once, not per mount",
-      "id": "agents_skills_vercel_react_best_practices_rules_advanced_init_once_initialize_once",
-      "community_name": "Async/Data-Fetching Libraries"
+      "community_name": "Async/Data-Fetching Libraries",
+      "id": "agents_skills_vercel_react_best_practices_rules_advanced_init_once_initialize_once"
     },
     {
       "label": "useEffectEvent for Stable Callback Refs",
@@ -9879,8 +9879,8 @@
       "contributor": null,
       "community": 9,
       "norm_label": "useeffectevent for stable callback refs",
-      "id": "agents_skills_vercel_react_best_practices_rules_advanced_use_latest_use_effect_event",
-      "community_name": "Async/Data-Fetching Libraries"
+      "community_name": "Async/Data-Fetching Libraries",
+      "id": "agents_skills_vercel_react_best_practices_rules_advanced_use_latest_use_effect_event"
     },
     {
       "label": "Prevent Waterfall Chains in API Routes",
@@ -9893,8 +9893,8 @@
       "contributor": null,
       "community": 9,
       "norm_label": "prevent waterfall chains in api routes",
-      "id": "agents_skills_vercel_react_best_practices_rules_async_api_routes_prevent_waterfall_chains",
-      "community_name": "Async/Data-Fetching Libraries"
+      "community_name": "Async/Data-Fetching Libraries",
+      "id": "agents_skills_vercel_react_best_practices_rules_async_api_routes_prevent_waterfall_chains"
     },
     {
       "label": "Defer Await Until Needed",
@@ -9907,8 +9907,8 @@
       "contributor": null,
       "community": 9,
       "norm_label": "defer await until needed",
-      "id": "agents_skills_vercel_react_best_practices_rules_async_defer_await_defer_until_needed",
-      "community_name": "Async/Data-Fetching Libraries"
+      "community_name": "Async/Data-Fetching Libraries",
+      "id": "agents_skills_vercel_react_best_practices_rules_async_defer_await_defer_until_needed"
     },
     {
       "label": "Dependency-Based Parallelization",
@@ -9921,8 +9921,8 @@
       "contributor": null,
       "community": 9,
       "norm_label": "dependency-based parallelization",
-      "id": "agents_skills_vercel_react_best_practices_rules_async_dependencies_dependency_based_parallelization",
-      "community_name": "Async/Data-Fetching Libraries"
+      "community_name": "Async/Data-Fetching Libraries",
+      "id": "agents_skills_vercel_react_best_practices_rules_async_dependencies_dependency_based_parallelization"
     },
     {
       "label": "Promise.all() for Independent Operations",
@@ -9935,8 +9935,8 @@
       "contributor": null,
       "community": 9,
       "norm_label": "promise.all() for independent operations",
-      "id": "agents_skills_vercel_react_best_practices_rules_async_parallel_promise_all",
-      "community_name": "Async/Data-Fetching Libraries"
+      "community_name": "Async/Data-Fetching Libraries",
+      "id": "agents_skills_vercel_react_best_practices_rules_async_parallel_promise_all"
     },
     {
       "label": "Strategic Suspense Boundaries",
@@ -9949,8 +9949,8 @@
       "contributor": null,
       "community": 9,
       "norm_label": "strategic suspense boundaries",
-      "id": "agents_skills_vercel_react_best_practices_rules_async_suspense_boundaries_strategic_suspense",
-      "community_name": "Async/Data-Fetching Libraries"
+      "community_name": "Async/Data-Fetching Libraries",
+      "id": "agents_skills_vercel_react_best_practices_rules_async_suspense_boundaries_strategic_suspense"
     },
     {
       "label": "Avoid Barrel File Imports",
@@ -9963,8 +9963,8 @@
       "contributor": null,
       "community": 9,
       "norm_label": "avoid barrel file imports",
-      "id": "agents_skills_vercel_react_best_practices_rules_bundle_barrel_imports_avoid_barrel_files",
-      "community_name": "Async/Data-Fetching Libraries"
+      "community_name": "Async/Data-Fetching Libraries",
+      "id": "agents_skills_vercel_react_best_practices_rules_bundle_barrel_imports_avoid_barrel_files"
     },
     {
       "label": "Conditional Module Loading",
@@ -9977,8 +9977,8 @@
       "contributor": null,
       "community": 9,
       "norm_label": "conditional module loading",
-      "id": "agents_skills_vercel_react_best_practices_rules_bundle_conditional_conditional_module_loading",
-      "community_name": "Async/Data-Fetching Libraries"
+      "community_name": "Async/Data-Fetching Libraries",
+      "id": "agents_skills_vercel_react_best_practices_rules_bundle_conditional_conditional_module_loading"
     },
     {
       "label": "Defer Non-Critical Third-Party Libraries",
@@ -9991,8 +9991,8 @@
       "contributor": null,
       "community": 9,
       "norm_label": "defer non-critical third-party libraries",
-      "id": "agents_skills_vercel_react_best_practices_rules_bundle_defer_third_party_defer_non_critical_libs",
-      "community_name": "Async/Data-Fetching Libraries"
+      "community_name": "Async/Data-Fetching Libraries",
+      "id": "agents_skills_vercel_react_best_practices_rules_bundle_defer_third_party_defer_non_critical_libs"
     },
     {
       "label": "Dynamic Imports for Heavy Components",
@@ -10005,8 +10005,8 @@
       "contributor": null,
       "community": 9,
       "norm_label": "dynamic imports for heavy components",
-      "id": "agents_skills_vercel_react_best_practices_rules_bundle_dynamic_imports_dynamic_imports_heavy_components",
-      "community_name": "Async/Data-Fetching Libraries"
+      "community_name": "Async/Data-Fetching Libraries",
+      "id": "agents_skills_vercel_react_best_practices_rules_bundle_dynamic_imports_dynamic_imports_heavy_components"
     },
     {
       "label": "Preload Based on User Intent",
@@ -10019,8 +10019,8 @@
       "contributor": null,
       "community": 9,
       "norm_label": "preload based on user intent",
-      "id": "agents_skills_vercel_react_best_practices_rules_bundle_preload_preload_user_intent",
-      "community_name": "Async/Data-Fetching Libraries"
+      "community_name": "Async/Data-Fetching Libraries",
+      "id": "agents_skills_vercel_react_best_practices_rules_bundle_preload_preload_user_intent"
     },
     {
       "label": "Deduplicate Global Event Listeners",
@@ -10033,8 +10033,8 @@
       "contributor": null,
       "community": 9,
       "norm_label": "deduplicate global event listeners",
-      "id": "agents_skills_vercel_react_best_practices_rules_client_event_listeners_deduplicate_global_listeners",
-      "community_name": "Async/Data-Fetching Libraries"
+      "community_name": "Async/Data-Fetching Libraries",
+      "id": "agents_skills_vercel_react_best_practices_rules_client_event_listeners_deduplicate_global_listeners"
     },
     {
       "label": "Version and Minimize localStorage Data",
@@ -10047,8 +10047,8 @@
       "contributor": null,
       "community": 9,
       "norm_label": "version and minimize localstorage data",
-      "id": "agents_skills_vercel_react_best_practices_rules_client_localstorage_schema_version_minimize_storage",
-      "community_name": "Async/Data-Fetching Libraries"
+      "community_name": "Async/Data-Fetching Libraries",
+      "id": "agents_skills_vercel_react_best_practices_rules_client_localstorage_schema_version_minimize_storage"
     },
     {
       "label": "Use Passive Event Listeners for Scrolling Performance",
@@ -10061,8 +10061,8 @@
       "contributor": null,
       "community": 9,
       "norm_label": "use passive event listeners for scrolling performance",
-      "id": "agents_skills_vercel_react_best_practices_rules_client_passive_event_listeners_passive_listeners",
-      "community_name": "Async/Data-Fetching Libraries"
+      "community_name": "Async/Data-Fetching Libraries",
+      "id": "agents_skills_vercel_react_best_practices_rules_client_passive_event_listeners_passive_listeners"
     },
     {
       "label": "Use SWR for Automatic Deduplication",
@@ -10075,8 +10075,8 @@
       "contributor": null,
       "community": 9,
       "norm_label": "use swr for automatic deduplication",
-      "id": "agents_skills_vercel_react_best_practices_rules_client_swr_dedup_swr_automatic_dedup",
-      "community_name": "Async/Data-Fetching Libraries"
+      "community_name": "Async/Data-Fetching Libraries",
+      "id": "agents_skills_vercel_react_best_practices_rules_client_swr_dedup_swr_automatic_dedup"
     },
     {
       "label": "Avoid Layout Thrashing",
@@ -10089,8 +10089,8 @@
       "contributor": null,
       "community": 9,
       "norm_label": "avoid layout thrashing",
-      "id": "agents_skills_vercel_react_best_practices_rules_js_batch_dom_css_avoid_layout_thrashing",
-      "community_name": "Async/Data-Fetching Libraries"
+      "community_name": "Async/Data-Fetching Libraries",
+      "id": "agents_skills_vercel_react_best_practices_rules_js_batch_dom_css_avoid_layout_thrashing"
     },
     {
       "label": "Cache Repeated Function Calls",
@@ -10103,8 +10103,8 @@
       "contributor": null,
       "community": 9,
       "norm_label": "cache repeated function calls",
-      "id": "agents_skills_vercel_react_best_practices_rules_js_cache_function_results_cache_repeated_calls",
-      "community_name": "Async/Data-Fetching Libraries"
+      "community_name": "Async/Data-Fetching Libraries",
+      "id": "agents_skills_vercel_react_best_practices_rules_js_cache_function_results_cache_repeated_calls"
     },
     {
       "label": "Cache Property Access in Loops",
@@ -10117,8 +10117,8 @@
       "contributor": null,
       "community": 9,
       "norm_label": "cache property access in loops",
-      "id": "agents_skills_vercel_react_best_practices_rules_js_cache_property_access_cache_property_access_loops",
-      "community_name": "Async/Data-Fetching Libraries"
+      "community_name": "Async/Data-Fetching Libraries",
+      "id": "agents_skills_vercel_react_best_practices_rules_js_cache_property_access_cache_property_access_loops"
     },
     {
       "label": "better-all Library (Dependency-Based Async Parallelization)",
@@ -10131,8 +10131,8 @@
       "contributor": null,
       "community": 9,
       "norm_label": "better-all library (dependency-based async parallelization)",
-      "id": "concept_better_all",
-      "community_name": "Async/Data-Fetching Libraries"
+      "community_name": "Async/Data-Fetching Libraries",
+      "id": "concept_better_all"
     },
     {
       "label": "useEffectEvent API",
@@ -10145,8 +10145,8 @@
       "contributor": null,
       "community": 9,
       "norm_label": "useeffectevent api",
-      "id": "concept_use_effect_event",
-      "community_name": "Async/Data-Fetching Libraries"
+      "community_name": "Async/Data-Fetching Libraries",
+      "id": "concept_use_effect_event"
     },
     {
       "label": "SWR Library",
@@ -10159,8 +10159,8 @@
       "contributor": null,
       "community": 9,
       "norm_label": "swr library",
-      "id": "concept_swr_library",
-      "community_name": "Async/Data-Fetching Libraries"
+      "community_name": "Async/Data-Fetching Libraries",
+      "id": "concept_swr_library"
     },
     {
       "label": "next/dynamic Code Splitting",
@@ -10173,8 +10173,8 @@
       "contributor": null,
       "community": 9,
       "norm_label": "next/dynamic code splitting",
-      "id": "concept_next_dynamic",
-      "community_name": "Async/Data-Fetching Libraries"
+      "community_name": "Async/Data-Fetching Libraries",
+      "id": "concept_next_dynamic"
     },
     {
       "label": "Cache Storage API Calls",
@@ -10187,8 +10187,8 @@
       "contributor": null,
       "community": 54,
       "norm_label": "cache storage api calls",
-      "id": "agents_skills_vercel_react_best_practices_rules_js_cache_storage",
-      "community_name": "Hydration & Storage Rules"
+      "community_name": "Hydration & Storage Rules",
+      "id": "agents_skills_vercel_react_best_practices_rules_js_cache_storage"
     },
     {
       "label": "Combine Multiple Array Iterations",
@@ -10201,8 +10201,8 @@
       "contributor": null,
       "community": 83,
       "norm_label": "combine multiple array iterations",
-      "id": "agents_skills_vercel_react_best_practices_rules_js_combine_iterations",
-      "community_name": "Array Iteration Combinators"
+      "community_name": "Array Iteration Combinators",
+      "id": "agents_skills_vercel_react_best_practices_rules_js_combine_iterations"
     },
     {
       "label": "Early Return from Functions",
@@ -10215,8 +10215,8 @@
       "contributor": null,
       "community": 62,
       "norm_label": "early return from functions",
-      "id": "agents_skills_vercel_react_best_practices_rules_js_early_exit",
-      "community_name": "Array Loop Micro-optimizations"
+      "community_name": "Array Loop Micro-optimizations",
+      "id": "agents_skills_vercel_react_best_practices_rules_js_early_exit"
     },
     {
       "label": "Use flatMap to Map and Filter in One Pass",
@@ -10229,8 +10229,8 @@
       "contributor": null,
       "community": 83,
       "norm_label": "use flatmap to map and filter in one pass",
-      "id": "agents_skills_vercel_react_best_practices_rules_js_flatmap_filter",
-      "community_name": "Array Iteration Combinators"
+      "community_name": "Array Iteration Combinators",
+      "id": "agents_skills_vercel_react_best_practices_rules_js_flatmap_filter"
     },
     {
       "label": "Hoist RegExp Creation",
@@ -10243,8 +10243,8 @@
       "contributor": null,
       "community": 102,
       "norm_label": "hoist regexp creation",
-      "id": "agents_skills_vercel_react_best_practices_rules_js_hoist_regexp",
-      "community_name": "Hoist RegExp Rule"
+      "community_name": "Hoist RegExp Rule",
+      "id": "agents_skills_vercel_react_best_practices_rules_js_hoist_regexp"
     },
     {
       "label": "Build Index Maps for Repeated Lookups",
@@ -10257,8 +10257,8 @@
       "contributor": null,
       "community": 84,
       "norm_label": "build index maps for repeated lookups",
-      "id": "agents_skills_vercel_react_best_practices_rules_js_index_maps",
-      "community_name": "Lookup Optimization (Map/Set)"
+      "community_name": "Lookup Optimization (Map/Set)",
+      "id": "agents_skills_vercel_react_best_practices_rules_js_index_maps"
     },
     {
       "label": "Early Length Check for Array Comparisons",
@@ -10271,8 +10271,8 @@
       "contributor": null,
       "community": 62,
       "norm_label": "early length check for array comparisons",
-      "id": "agents_skills_vercel_react_best_practices_rules_js_length_check_first",
-      "community_name": "Array Loop Micro-optimizations"
+      "community_name": "Array Loop Micro-optimizations",
+      "id": "agents_skills_vercel_react_best_practices_rules_js_length_check_first"
     },
     {
       "label": "Use Loop for Min/Max Instead of Sort",
@@ -10285,8 +10285,8 @@
       "contributor": null,
       "community": 62,
       "norm_label": "use loop for min/max instead of sort",
-      "id": "agents_skills_vercel_react_best_practices_rules_js_min_max_loop",
-      "community_name": "Array Loop Micro-optimizations"
+      "community_name": "Array Loop Micro-optimizations",
+      "id": "agents_skills_vercel_react_best_practices_rules_js_min_max_loop"
     },
     {
       "label": "Use Set/Map for O(1) Lookups",
@@ -10299,8 +10299,8 @@
       "contributor": null,
       "community": 84,
       "norm_label": "use set/map for o(1) lookups",
-      "id": "agents_skills_vercel_react_best_practices_rules_js_set_map_lookups",
-      "community_name": "Lookup Optimization (Map/Set)"
+      "community_name": "Lookup Optimization (Map/Set)",
+      "id": "agents_skills_vercel_react_best_practices_rules_js_set_map_lookups"
     },
     {
       "label": "Use toSorted() Instead of sort() for Immutability",
@@ -10313,8 +10313,8 @@
       "contributor": null,
       "community": 62,
       "norm_label": "use tosorted() instead of sort() for immutability",
-      "id": "agents_skills_vercel_react_best_practices_rules_js_tosorted_immutable",
-      "community_name": "Array Loop Micro-optimizations"
+      "community_name": "Array Loop Micro-optimizations",
+      "id": "agents_skills_vercel_react_best_practices_rules_js_tosorted_immutable"
     },
     {
       "label": "Use Activity Component for Show/Hide",
@@ -10327,8 +10327,8 @@
       "contributor": null,
       "community": 85,
       "norm_label": "use activity component for show/hide",
-      "id": "agents_skills_vercel_react_best_practices_rules_rendering_activity",
-      "community_name": "Conditional Rendering Rules"
+      "community_name": "Conditional Rendering Rules",
+      "id": "agents_skills_vercel_react_best_practices_rules_rendering_activity"
     },
     {
       "label": "Animate SVG Wrapper Instead of SVG Element",
@@ -10341,8 +10341,8 @@
       "contributor": null,
       "community": 56,
       "norm_label": "animate svg wrapper instead of svg element",
-      "id": "agents_skills_vercel_react_best_practices_rules_rendering_animate_svg_wrapper",
-      "community_name": "SVG Rendering Optimization Rules"
+      "community_name": "SVG Rendering Optimization Rules",
+      "id": "agents_skills_vercel_react_best_practices_rules_rendering_animate_svg_wrapper"
     },
     {
       "label": "Use Explicit Conditional Rendering",
@@ -10355,8 +10355,8 @@
       "contributor": null,
       "community": 85,
       "norm_label": "use explicit conditional rendering",
-      "id": "agents_skills_vercel_react_best_practices_rules_rendering_conditional_render",
-      "community_name": "Conditional Rendering Rules"
+      "community_name": "Conditional Rendering Rules",
+      "id": "agents_skills_vercel_react_best_practices_rules_rendering_conditional_render"
     },
     {
       "label": "CSS content-visibility for Long Lists",
@@ -10369,8 +10369,8 @@
       "contributor": null,
       "community": 56,
       "norm_label": "css content-visibility for long lists",
-      "id": "agents_skills_vercel_react_best_practices_rules_rendering_content_visibility",
-      "community_name": "SVG Rendering Optimization Rules"
+      "community_name": "SVG Rendering Optimization Rules",
+      "id": "agents_skills_vercel_react_best_practices_rules_rendering_content_visibility"
     },
     {
       "label": "Hoist Static JSX Elements",
@@ -10383,8 +10383,8 @@
       "contributor": null,
       "community": 56,
       "norm_label": "hoist static jsx elements",
-      "id": "agents_skills_vercel_react_best_practices_rules_rendering_hoist_jsx",
-      "community_name": "SVG Rendering Optimization Rules"
+      "community_name": "SVG Rendering Optimization Rules",
+      "id": "agents_skills_vercel_react_best_practices_rules_rendering_hoist_jsx"
     },
     {
       "label": "Prevent Hydration Mismatch Without Flickering",
@@ -10397,8 +10397,8 @@
       "contributor": null,
       "community": 54,
       "norm_label": "prevent hydration mismatch without flickering",
-      "id": "agents_skills_vercel_react_best_practices_rules_rendering_hydration_no_flicker",
-      "community_name": "Hydration & Storage Rules"
+      "community_name": "Hydration & Storage Rules",
+      "id": "agents_skills_vercel_react_best_practices_rules_rendering_hydration_no_flicker"
     },
     {
       "label": "Suppress Expected Hydration Mismatches",
@@ -10411,8 +10411,8 @@
       "contributor": null,
       "community": 54,
       "norm_label": "suppress expected hydration mismatches",
-      "id": "agents_skills_vercel_react_best_practices_rules_rendering_hydration_suppress_warning",
-      "community_name": "Hydration & Storage Rules"
+      "community_name": "Hydration & Storage Rules",
+      "id": "agents_skills_vercel_react_best_practices_rules_rendering_hydration_suppress_warning"
     },
     {
       "label": "Use React DOM Resource Hints",
@@ -10425,8 +10425,8 @@
       "contributor": null,
       "community": 86,
       "norm_label": "use react dom resource hints",
-      "id": "agents_skills_vercel_react_best_practices_rules_rendering_resource_hints",
-      "community_name": "Resource Hint & Script Loading Rules"
+      "community_name": "Resource Hint & Script Loading Rules",
+      "id": "agents_skills_vercel_react_best_practices_rules_rendering_resource_hints"
     },
     {
       "label": "Use defer or async on Script Tags",
@@ -10439,8 +10439,8 @@
       "contributor": null,
       "community": 86,
       "norm_label": "use defer or async on script tags",
-      "id": "agents_skills_vercel_react_best_practices_rules_rendering_script_defer_async",
-      "community_name": "Resource Hint & Script Loading Rules"
+      "community_name": "Resource Hint & Script Loading Rules",
+      "id": "agents_skills_vercel_react_best_practices_rules_rendering_script_defer_async"
     },
     {
       "label": "Optimize SVG Precision",
@@ -10453,8 +10453,8 @@
       "contributor": null,
       "community": 56,
       "norm_label": "optimize svg precision",
-      "id": "agents_skills_vercel_react_best_practices_rules_rendering_svg_precision",
-      "community_name": "SVG Rendering Optimization Rules"
+      "community_name": "SVG Rendering Optimization Rules",
+      "id": "agents_skills_vercel_react_best_practices_rules_rendering_svg_precision"
     },
     {
       "label": "Use useTransition Over Manual Loading States",
@@ -10467,8 +10467,8 @@
       "contributor": null,
       "community": 54,
       "norm_label": "use usetransition over manual loading states",
-      "id": "agents_skills_vercel_react_best_practices_rules_rendering_usetransition_loading",
-      "community_name": "Hydration & Storage Rules"
+      "community_name": "Hydration & Storage Rules",
+      "id": "agents_skills_vercel_react_best_practices_rules_rendering_usetransition_loading"
     },
     {
       "label": "Defer State Reads to Usage Point",
@@ -10481,8 +10481,8 @@
       "contributor": null,
       "community": 54,
       "norm_label": "defer state reads to usage point",
-      "id": "agents_skills_vercel_react_best_practices_rules_rerender_defer_reads",
-      "community_name": "Hydration & Storage Rules"
+      "community_name": "Hydration & Storage Rules",
+      "id": "agents_skills_vercel_react_best_practices_rules_rerender_defer_reads"
     },
     {
       "label": "localStorage / Web Storage API",
@@ -10495,8 +10495,8 @@
       "contributor": null,
       "community": 54,
       "norm_label": "localstorage / web storage api",
-      "id": "concept_localstorage_web_storage_api",
-      "community_name": "Hydration & Storage Rules"
+      "community_name": "Hydration & Storage Rules",
+      "id": "concept_localstorage_web_storage_api"
     },
     {
       "label": "SVG Element Rendering Optimization",
@@ -10509,8 +10509,8 @@
       "contributor": null,
       "community": 56,
       "norm_label": "svg element rendering optimization",
-      "id": "concept_svg_element_rendering",
-      "community_name": "SVG Rendering Optimization Rules"
+      "community_name": "SVG Rendering Optimization Rules",
+      "id": "concept_svg_element_rendering"
     },
     {
       "label": "Narrow Effect Dependencies",
@@ -10523,8 +10523,8 @@
       "contributor": null,
       "community": 31,
       "norm_label": "narrow effect dependencies",
-      "id": "agents_skills_vercel_react_best_practices_rules_rerender_dependencies_narrow_effect_dependencies",
-      "community_name": "React Re-render Avoidance Rules"
+      "community_name": "React Re-render Avoidance Rules",
+      "id": "agents_skills_vercel_react_best_practices_rules_rerender_dependencies_narrow_effect_dependencies"
     },
     {
       "label": "Calculate Derived State During Rendering",
@@ -10537,8 +10537,8 @@
       "contributor": null,
       "community": 49,
       "norm_label": "calculate derived state during rendering",
-      "id": "agents_skills_vercel_react_best_practices_rules_rerender_derived_state_no_effect_calculate_derived_state_during_rendering",
-      "community_name": "Derived State & Transition Rules"
+      "community_name": "Derived State & Transition Rules",
+      "id": "agents_skills_vercel_react_best_practices_rules_rerender_derived_state_no_effect_calculate_derived_state_during_rendering"
     },
     {
       "label": "Subscribe to Derived State",
@@ -10551,8 +10551,8 @@
       "contributor": null,
       "community": 49,
       "norm_label": "subscribe to derived state",
-      "id": "agents_skills_vercel_react_best_practices_rules_rerender_derived_state_subscribe_to_derived_state",
-      "community_name": "Derived State & Transition Rules"
+      "community_name": "Derived State & Transition Rules",
+      "id": "agents_skills_vercel_react_best_practices_rules_rerender_derived_state_subscribe_to_derived_state"
     },
     {
       "label": "Use Functional setState Updates",
@@ -10565,8 +10565,8 @@
       "contributor": null,
       "community": 31,
       "norm_label": "use functional setstate updates",
-      "id": "agents_skills_vercel_react_best_practices_rules_rerender_functional_setstate_use_functional_setstate_updates",
-      "community_name": "React Re-render Avoidance Rules"
+      "community_name": "React Re-render Avoidance Rules",
+      "id": "agents_skills_vercel_react_best_practices_rules_rerender_functional_setstate_use_functional_setstate_updates"
     },
     {
       "label": "Use Lazy State Initialization",
@@ -10579,8 +10579,8 @@
       "contributor": null,
       "community": 31,
       "norm_label": "use lazy state initialization",
-      "id": "agents_skills_vercel_react_best_practices_rules_rerender_lazy_state_init_use_lazy_state_initialization",
-      "community_name": "React Re-render Avoidance Rules"
+      "community_name": "React Re-render Avoidance Rules",
+      "id": "agents_skills_vercel_react_best_practices_rules_rerender_lazy_state_init_use_lazy_state_initialization"
     },
     {
       "label": "Extract Default Non-primitive Parameter Value from Memoized Component to Constant",
@@ -10593,8 +10593,8 @@
       "contributor": null,
       "community": 31,
       "norm_label": "extract default non-primitive parameter value from memoized component to constant",
-      "id": "agents_skills_vercel_react_best_practices_rules_rerender_memo_with_default_value_extract_default_nonprimitive_parameter_value",
-      "community_name": "React Re-render Avoidance Rules"
+      "community_name": "React Re-render Avoidance Rules",
+      "id": "agents_skills_vercel_react_best_practices_rules_rerender_memo_with_default_value_extract_default_nonprimitive_parameter_value"
     },
     {
       "label": "Extract to Memoized Components",
@@ -10607,8 +10607,8 @@
       "contributor": null,
       "community": 31,
       "norm_label": "extract to memoized components",
-      "id": "agents_skills_vercel_react_best_practices_rules_rerender_memo_extract_to_memoized_components",
-      "community_name": "React Re-render Avoidance Rules"
+      "community_name": "React Re-render Avoidance Rules",
+      "id": "agents_skills_vercel_react_best_practices_rules_rerender_memo_extract_to_memoized_components"
     },
     {
       "label": "Put Interaction Logic in Event Handlers",
@@ -10621,8 +10621,8 @@
       "contributor": null,
       "community": 49,
       "norm_label": "put interaction logic in event handlers",
-      "id": "agents_skills_vercel_react_best_practices_rules_rerender_move_effect_to_event_put_interaction_logic_in_event_handlers",
-      "community_name": "Derived State & Transition Rules"
+      "community_name": "Derived State & Transition Rules",
+      "id": "agents_skills_vercel_react_best_practices_rules_rerender_move_effect_to_event_put_interaction_logic_in_event_handlers"
     },
     {
       "label": "Don't Define Components Inside Components",
@@ -10635,8 +10635,8 @@
       "contributor": null,
       "community": 31,
       "norm_label": "don't define components inside components",
-      "id": "agents_skills_vercel_react_best_practices_rules_rerender_no_inline_components_dont_define_components_inside_components",
-      "community_name": "React Re-render Avoidance Rules"
+      "community_name": "React Re-render Avoidance Rules",
+      "id": "agents_skills_vercel_react_best_practices_rules_rerender_no_inline_components_dont_define_components_inside_components"
     },
     {
       "label": "Do Not Wrap a Simple Expression in useMemo",
@@ -10649,8 +10649,8 @@
       "contributor": null,
       "community": 103,
       "norm_label": "do not wrap a simple expression in usememo",
-      "id": "agents_skills_vercel_react_best_practices_rules_rerender_simple_expression_in_memo_avoid_usememo_for_simple_expressions",
-      "community_name": "Avoid useMemo on Simple Expressions"
+      "community_name": "Avoid useMemo on Simple Expressions",
+      "id": "agents_skills_vercel_react_best_practices_rules_rerender_simple_expression_in_memo_avoid_usememo_for_simple_expressions"
     },
     {
       "label": "Split Combined Hook Computations",
@@ -10663,8 +10663,8 @@
       "contributor": null,
       "community": 31,
       "norm_label": "split combined hook computations",
-      "id": "agents_skills_vercel_react_best_practices_rules_rerender_split_combined_hooks_split_combined_hook_computations",
-      "community_name": "React Re-render Avoidance Rules"
+      "community_name": "React Re-render Avoidance Rules",
+      "id": "agents_skills_vercel_react_best_practices_rules_rerender_split_combined_hooks_split_combined_hook_computations"
     },
     {
       "label": "Use Transitions for Non-Urgent Updates",
@@ -10677,8 +10677,8 @@
       "contributor": null,
       "community": 49,
       "norm_label": "use transitions for non-urgent updates",
-      "id": "agents_skills_vercel_react_best_practices_rules_rerender_transitions_use_transitions_for_nonurgent_updates",
-      "community_name": "Derived State & Transition Rules"
+      "community_name": "Derived State & Transition Rules",
+      "id": "agents_skills_vercel_react_best_practices_rules_rerender_transitions_use_transitions_for_nonurgent_updates"
     },
     {
       "label": "Use useDeferredValue for Expensive Derived Renders",
@@ -10691,8 +10691,8 @@
       "contributor": null,
       "community": 49,
       "norm_label": "use usedeferredvalue for expensive derived renders",
-      "id": "agents_skills_vercel_react_best_practices_rules_rerender_use_deferred_value_use_usedeferredvalue_for_expensive_derived_renders",
-      "community_name": "Derived State & Transition Rules"
+      "community_name": "Derived State & Transition Rules",
+      "id": "agents_skills_vercel_react_best_practices_rules_rerender_use_deferred_value_use_usedeferredvalue_for_expensive_derived_renders"
     },
     {
       "label": "Use useRef for Transient Values",
@@ -10705,8 +10705,8 @@
       "contributor": null,
       "community": 31,
       "norm_label": "use useref for transient values",
-      "id": "agents_skills_vercel_react_best_practices_rules_rerender_use_ref_transient_values_use_useref_for_transient_values",
-      "community_name": "React Re-render Avoidance Rules"
+      "community_name": "React Re-render Avoidance Rules",
+      "id": "agents_skills_vercel_react_best_practices_rules_rerender_use_ref_transient_values_use_useref_for_transient_values"
     },
     {
       "label": "Use after() for Non-Blocking Operations",
@@ -10719,8 +10719,8 @@
       "contributor": null,
       "community": 32,
       "norm_label": "use after() for non-blocking operations",
-      "id": "agents_skills_vercel_react_best_practices_rules_server_after_nonblocking_use_after_for_nonblocking_operations",
-      "community_name": "Server Caching & Fetching Rules"
+      "community_name": "Server Caching & Fetching Rules",
+      "id": "agents_skills_vercel_react_best_practices_rules_server_after_nonblocking_use_after_for_nonblocking_operations"
     },
     {
       "label": "Authenticate Server Actions Like API Routes",
@@ -10733,8 +10733,8 @@
       "contributor": null,
       "community": 87,
       "norm_label": "authenticate server actions like api routes",
-      "id": "agents_skills_vercel_react_best_practices_rules_server_auth_actions_authenticate_server_actions_like_api_routes",
-      "community_name": "Server Action Authentication"
+      "community_name": "Server Action Authentication",
+      "id": "agents_skills_vercel_react_best_practices_rules_server_auth_actions_authenticate_server_actions_like_api_routes"
     },
     {
       "label": "Cross-Request LRU Caching",
@@ -10747,8 +10747,8 @@
       "contributor": null,
       "community": 32,
       "norm_label": "cross-request lru caching",
-      "id": "agents_skills_vercel_react_best_practices_rules_server_cache_lru_crossrequest_lru_caching",
-      "community_name": "Server Caching & Fetching Rules"
+      "community_name": "Server Caching & Fetching Rules",
+      "id": "agents_skills_vercel_react_best_practices_rules_server_cache_lru_crossrequest_lru_caching"
     },
     {
       "label": "Per-Request Deduplication with React.cache()",
@@ -10761,8 +10761,8 @@
       "contributor": null,
       "community": 32,
       "norm_label": "per-request deduplication with react.cache()",
-      "id": "agents_skills_vercel_react_best_practices_rules_server_cache_react_perrequest_deduplication_with_react_cache",
-      "community_name": "Server Caching & Fetching Rules"
+      "community_name": "Server Caching & Fetching Rules",
+      "id": "agents_skills_vercel_react_best_practices_rules_server_cache_react_perrequest_deduplication_with_react_cache"
     },
     {
       "label": "Avoid Duplicate Serialization in RSC Props",
@@ -10775,8 +10775,8 @@
       "contributor": null,
       "community": 88,
       "norm_label": "avoid duplicate serialization in rsc props",
-      "id": "agents_skills_vercel_react_best_practices_rules_server_dedup_props_avoid_duplicate_serialization_in_rsc_props",
-      "community_name": "RSC Serialization Rules"
+      "community_name": "RSC Serialization Rules",
+      "id": "agents_skills_vercel_react_best_practices_rules_server_dedup_props_avoid_duplicate_serialization_in_rsc_props"
     },
     {
       "label": "Hoist Static I/O to Module Level",
@@ -10789,8 +10789,8 @@
       "contributor": null,
       "community": 32,
       "norm_label": "hoist static i/o to module level",
-      "id": "agents_skills_vercel_react_best_practices_rules_server_hoist_static_io_hoist_static_io_to_module_level",
-      "community_name": "Server Caching & Fetching Rules"
+      "community_name": "Server Caching & Fetching Rules",
+      "id": "agents_skills_vercel_react_best_practices_rules_server_hoist_static_io_hoist_static_io_to_module_level"
     },
     {
       "label": "Parallel Data Fetching with Component Composition",
@@ -10803,8 +10803,8 @@
       "contributor": null,
       "community": 32,
       "norm_label": "parallel data fetching with component composition",
-      "id": "agents_skills_vercel_react_best_practices_rules_server_parallel_fetching_parallel_data_fetching_with_component_composition",
-      "community_name": "Server Caching & Fetching Rules"
+      "community_name": "Server Caching & Fetching Rules",
+      "id": "agents_skills_vercel_react_best_practices_rules_server_parallel_fetching_parallel_data_fetching_with_component_composition"
     },
     {
       "label": "Minimize Serialization at RSC Boundaries",
@@ -10817,8 +10817,8 @@
       "contributor": null,
       "community": 88,
       "norm_label": "minimize serialization at rsc boundaries",
-      "id": "agents_skills_vercel_react_best_practices_rules_server_serialization_minimize_serialization_at_rsc_boundaries",
-      "community_name": "RSC Serialization Rules"
+      "community_name": "RSC Serialization Rules",
+      "id": "agents_skills_vercel_react_best_practices_rules_server_serialization_minimize_serialization_at_rsc_boundaries"
     },
     {
       "label": "You Might Not Need an Effect (React Docs)",
@@ -10831,8 +10831,8 @@
       "contributor": null,
       "community": 49,
       "norm_label": "you might not need an effect (react docs)",
-      "id": "agents_skills_vercel_react_best_practices_rules_rerender_derived_state_no_effect_ref_you_might_not_need_an_effect",
-      "community_name": "Derived State & Transition Rules"
+      "community_name": "Derived State & Transition Rules",
+      "id": "agents_skills_vercel_react_best_practices_rules_rerender_derived_state_no_effect_ref_you_might_not_need_an_effect"
     },
     {
       "label": "Should This Code Move to an Event Handler? (React Docs)",
@@ -10845,8 +10845,8 @@
       "contributor": null,
       "community": 49,
       "norm_label": "should this code move to an event handler? (react docs)",
-      "id": "agents_skills_vercel_react_best_practices_rules_rerender_move_effect_to_event_ref_should_this_code_move_to_an_event_handler",
-      "community_name": "Derived State & Transition Rules"
+      "community_name": "Derived State & Transition Rules",
+      "id": "agents_skills_vercel_react_best_practices_rules_rerender_move_effect_to_event_ref_should_this_code_move_to_an_event_handler"
     },
     {
       "label": "React useDeferredValue Reference",
@@ -10859,8 +10859,8 @@
       "contributor": null,
       "community": 49,
       "norm_label": "react usedeferredvalue reference",
-      "id": "agents_skills_vercel_react_best_practices_rules_rerender_use_deferred_value_ref_react_usedeferredvalue_reference",
-      "community_name": "Derived State & Transition Rules"
+      "community_name": "Derived State & Transition Rules",
+      "id": "agents_skills_vercel_react_best_practices_rules_rerender_use_deferred_value_ref_react_usedeferredvalue_reference"
     },
     {
       "label": "Next.js after() Docs",
@@ -10873,8 +10873,8 @@
       "contributor": null,
       "community": 32,
       "norm_label": "next.js after() docs",
-      "id": "agents_skills_vercel_react_best_practices_rules_server_after_nonblocking_ref_nextjs_after_docs",
-      "community_name": "Server Caching & Fetching Rules"
+      "community_name": "Server Caching & Fetching Rules",
+      "id": "agents_skills_vercel_react_best_practices_rules_server_after_nonblocking_ref_nextjs_after_docs"
     },
     {
       "label": "React.cache Documentation",
@@ -10887,8 +10887,8 @@
       "contributor": null,
       "community": 32,
       "norm_label": "react.cache documentation",
-      "id": "agents_skills_vercel_react_best_practices_rules_server_cache_react_ref_react_cache_documentation",
-      "community_name": "Server Caching & Fetching Rules"
+      "community_name": "Server Caching & Fetching Rules",
+      "id": "agents_skills_vercel_react_best_practices_rules_server_cache_react_ref_react_cache_documentation"
     },
     {
       "label": "node-lru-cache (GitHub)",
@@ -10901,8 +10901,8 @@
       "contributor": null,
       "community": 32,
       "norm_label": "node-lru-cache (github)",
-      "id": "agents_skills_vercel_react_best_practices_rules_server_cache_lru_ref_node_lru_cache_github",
-      "community_name": "Server Caching & Fetching Rules"
+      "community_name": "Server Caching & Fetching Rules",
+      "id": "agents_skills_vercel_react_best_practices_rules_server_cache_lru_ref_node_lru_cache_github"
     },
     {
       "label": "Next.js Authentication Guide",
@@ -10915,8 +10915,8 @@
       "contributor": null,
       "community": 87,
       "norm_label": "next.js authentication guide",
-      "id": "agents_skills_vercel_react_best_practices_rules_server_auth_actions_ref_nextjs_authentication_guide",
-      "community_name": "Server Action Authentication"
+      "community_name": "Server Action Authentication",
+      "id": "agents_skills_vercel_react_best_practices_rules_server_auth_actions_ref_nextjs_authentication_guide"
     },
     {
       "label": "React Compiler",
@@ -10929,8 +10929,8 @@
       "contributor": null,
       "community": 31,
       "norm_label": "react compiler",
-      "id": "concept_react_compiler",
-      "community_name": "React Re-render Avoidance Rules"
+      "community_name": "React Re-render Avoidance Rules",
+      "id": "concept_react_compiler"
     },
     {
       "label": "Vercel Fluid Compute",
@@ -10943,8 +10943,8 @@
       "contributor": null,
       "community": 32,
       "norm_label": "vercel fluid compute",
-      "id": "concept_vercel_fluid_compute",
-      "community_name": "Server Caching & Fetching Rules"
+      "community_name": "Server Caching & Fetching Rules",
+      "id": "concept_vercel_fluid_compute"
     },
     {
       "label": "Web Design Guidelines Skill",
@@ -10957,8 +10957,8 @@
       "contributor": null,
       "community": 89,
       "norm_label": "web design guidelines skill",
-      "id": "agents_skills_web_design_guidelines_skill",
-      "community_name": "Web Design Guidelines"
+      "community_name": "Web Design Guidelines",
+      "id": "agents_skills_web_design_guidelines_skill"
     },
     {
       "label": "Web Interface Guidelines (Vercel Labs)",
@@ -10971,8 +10971,8 @@
       "contributor": null,
       "community": 89,
       "norm_label": "web interface guidelines (vercel labs)",
-      "id": "web_interface_guidelines_doc",
-      "community_name": "Web Design Guidelines"
+      "community_name": "Web Design Guidelines",
+      "id": "web_interface_guidelines_doc"
     },
     {
       "label": "Prisma UI README",
@@ -10985,8 +10985,8 @@
       "contributor": null,
       "community": 0,
       "norm_label": "prisma ui readme",
-      "id": "readme",
-      "community_name": "UI Inspiration Libraries & Stack"
+      "community_name": "UI Inspiration Libraries & Stack",
+      "id": "readme"
     },
     {
       "label": "Google Site Verification File",
@@ -10999,8 +10999,8 @@
       "contributor": null,
       "community": 105,
       "norm_label": "google site verification file",
-      "id": "public_googlefd960e7412fbce49",
-      "community_name": "Google Site Verification File"
+      "community_name": "Google Site Verification File",
+      "id": "public_googlefd960e7412fbce49"
     },
     {
       "label": "Animated Background Doc Page",
@@ -11013,8 +11013,8 @@
       "contributor": null,
       "community": 0,
       "norm_label": "animated background doc page",
-      "id": "src_app_docs_components_animated_background_page",
-      "community_name": "UI Inspiration Libraries & Stack"
+      "community_name": "UI Inspiration Libraries & Stack",
+      "id": "src_app_docs_components_animated_background_page"
     },
     {
       "label": "Aura Beam Card Doc Page",
@@ -11027,8 +11027,8 @@
       "contributor": null,
       "community": 0,
       "norm_label": "aura beam card doc page",
-      "id": "src_app_docs_components_aura_beam_card_page",
-      "community_name": "UI Inspiration Libraries & Stack"
+      "community_name": "UI Inspiration Libraries & Stack",
+      "id": "src_app_docs_components_aura_beam_card_page"
     },
     {
       "label": "Badge Doc Page",
@@ -11041,8 +11041,8 @@
       "contributor": null,
       "community": 0,
       "norm_label": "badge doc page",
-      "id": "src_app_docs_components_badge_page",
-      "community_name": "UI Inspiration Libraries & Stack"
+      "community_name": "UI Inspiration Libraries & Stack",
+      "id": "src_app_docs_components_badge_page"
     },
     {
       "label": "Border Beam Card Doc Page (deprecated, superseded by AuraBeam)",
@@ -11055,8 +11055,8 @@
       "contributor": null,
       "community": 0,
       "norm_label": "border beam card doc page (deprecated, superseded by aurabeam)",
-      "id": "src_app_docs_components_border_beam_card_page",
-      "community_name": "UI Inspiration Libraries & Stack"
+      "community_name": "UI Inspiration Libraries & Stack",
+      "id": "src_app_docs_components_border_beam_card_page"
     },
     {
       "label": "Border Glow Card Doc Page",
@@ -11069,8 +11069,8 @@
       "contributor": null,
       "community": 0,
       "norm_label": "border glow card doc page",
-      "id": "src_app_docs_components_border_glow_card_page",
-      "community_name": "UI Inspiration Libraries & Stack"
+      "community_name": "UI Inspiration Libraries & Stack",
+      "id": "src_app_docs_components_border_glow_card_page"
     },
     {
       "label": "Button Doc Page",
@@ -11083,8 +11083,8 @@
       "contributor": null,
       "community": 0,
       "norm_label": "button doc page",
-      "id": "src_app_docs_components_button_page",
-      "community_name": "UI Inspiration Libraries & Stack"
+      "community_name": "UI Inspiration Libraries & Stack",
+      "id": "src_app_docs_components_button_page"
     },
     {
       "label": "Confetti Wrapper Doc Page",
@@ -11097,8 +11097,8 @@
       "contributor": null,
       "community": 0,
       "norm_label": "confetti wrapper doc page",
-      "id": "src_app_docs_components_confetti_wrapper_page",
-      "community_name": "UI Inspiration Libraries & Stack"
+      "community_name": "UI Inspiration Libraries & Stack",
+      "id": "src_app_docs_components_confetti_wrapper_page"
     },
     {
       "label": "Flip Card Doc Page",
@@ -11111,8 +11111,8 @@
       "contributor": null,
       "community": 0,
       "norm_label": "flip card doc page",
-      "id": "src_app_docs_components_flip_card_page",
-      "community_name": "UI Inspiration Libraries & Stack"
+      "community_name": "UI Inspiration Libraries & Stack",
+      "id": "src_app_docs_components_flip_card_page"
     },
     {
       "label": "Floating Label Input Doc Page",
@@ -11125,8 +11125,8 @@
       "contributor": null,
       "community": 0,
       "norm_label": "floating label input doc page",
-      "id": "src_app_docs_components_floating_label_input_page",
-      "community_name": "UI Inspiration Libraries & Stack"
+      "community_name": "UI Inspiration Libraries & Stack",
+      "id": "src_app_docs_components_floating_label_input_page"
     },
     {
       "label": "Magnetic Doc Page",
@@ -11139,8 +11139,8 @@
       "contributor": null,
       "community": 0,
       "norm_label": "magnetic doc page",
-      "id": "src_app_docs_components_magnetic_page",
-      "community_name": "UI Inspiration Libraries & Stack"
+      "community_name": "UI Inspiration Libraries & Stack",
+      "id": "src_app_docs_components_magnetic_page"
     },
     {
       "label": "Rainbow Card Doc Page",
@@ -11153,8 +11153,8 @@
       "contributor": null,
       "community": 0,
       "norm_label": "rainbow card doc page",
-      "id": "src_app_docs_components_rainbow_card_page",
-      "community_name": "UI Inspiration Libraries & Stack"
+      "community_name": "UI Inspiration Libraries & Stack",
+      "id": "src_app_docs_components_rainbow_card_page"
     },
     {
       "label": "Shine Border Card Doc Page (deprecated, superseded by AuraBeam)",
@@ -11167,8 +11167,8 @@
       "contributor": null,
       "community": 0,
       "norm_label": "shine border card doc page (deprecated, superseded by aurabeam)",
-      "id": "src_app_docs_components_shine_border_card_page",
-      "community_name": "UI Inspiration Libraries & Stack"
+      "community_name": "UI Inspiration Libraries & Stack",
+      "id": "src_app_docs_components_shine_border_card_page"
     },
     {
       "label": "Tilt Card Doc Page",
@@ -11181,8 +11181,8 @@
       "contributor": null,
       "community": 0,
       "norm_label": "tilt card doc page",
-      "id": "src_app_docs_components_tilt_card_page",
-      "community_name": "UI Inspiration Libraries & Stack"
+      "community_name": "UI Inspiration Libraries & Stack",
+      "id": "src_app_docs_components_tilt_card_page"
     },
     {
       "label": "Tracing Beam Doc Page",
@@ -11195,8 +11195,8 @@
       "contributor": null,
       "community": 0,
       "norm_label": "tracing beam doc page",
-      "id": "src_app_docs_components_tracing_beam_page",
-      "community_name": "UI Inspiration Libraries & Stack"
+      "community_name": "UI Inspiration Libraries & Stack",
+      "id": "src_app_docs_components_tracing_beam_page"
     },
     {
       "label": "Contributing a Component Guide",
@@ -11209,8 +11209,8 @@
       "contributor": null,
       "community": 0,
       "norm_label": "contributing a component guide",
-      "id": "src_app_docs_contributing_page",
-      "community_name": "UI Inspiration Libraries & Stack"
+      "community_name": "UI Inspiration Libraries & Stack",
+      "id": "src_app_docs_contributing_page"
     },
     {
       "label": "Installation Doc Page",
@@ -11223,8 +11223,8 @@
       "contributor": null,
       "community": 0,
       "norm_label": "installation doc page",
-      "id": "src_app_docs_page",
-      "community_name": "UI Inspiration Libraries & Stack"
+      "community_name": "UI Inspiration Libraries & Stack",
+      "id": "src_app_docs_page"
     },
     {
       "label": "References Doc Page",
@@ -11237,8 +11237,8 @@
       "contributor": null,
       "community": 0,
       "norm_label": "references doc page",
-      "id": "src_app_docs_references_page",
-      "community_name": "UI Inspiration Libraries & Stack"
+      "community_name": "UI Inspiration Libraries & Stack",
+      "id": "src_app_docs_references_page"
     },
     {
       "label": "Motion Primitives (component library)",
@@ -11251,8 +11251,8 @@
       "contributor": null,
       "community": 0,
       "norm_label": "motion primitives (component library)",
-      "id": "motion_primitives",
-      "community_name": "UI Inspiration Libraries & Stack"
+      "community_name": "UI Inspiration Libraries & Stack",
+      "id": "motion_primitives"
     },
     {
       "label": "Magic UI (component library)",
@@ -11265,8 +11265,8 @@
       "contributor": null,
       "community": 0,
       "norm_label": "magic ui (component library)",
-      "id": "magic_ui",
-      "community_name": "UI Inspiration Libraries & Stack"
+      "community_name": "UI Inspiration Libraries & Stack",
+      "id": "magic_ui"
     },
     {
       "label": "Aceternity UI (component library)",
@@ -11279,8 +11279,8 @@
       "contributor": null,
       "community": 0,
       "norm_label": "aceternity ui (component library)",
-      "id": "aceternity_ui",
-      "community_name": "UI Inspiration Libraries & Stack"
+      "community_name": "UI Inspiration Libraries & Stack",
+      "id": "aceternity_ui"
     },
     {
       "label": "Kokonut UI (component library)",
@@ -11293,8 +11293,8 @@
       "contributor": null,
       "community": 0,
       "norm_label": "kokonut ui (component library)",
-      "id": "kokonut_ui",
-      "community_name": "UI Inspiration Libraries & Stack"
+      "community_name": "UI Inspiration Libraries & Stack",
+      "id": "kokonut_ui"
     },
     {
       "label": "React Bits (component library)",
@@ -11307,8 +11307,8 @@
       "contributor": null,
       "community": 0,
       "norm_label": "react bits (component library)",
-      "id": "react_bits",
-      "community_name": "UI Inspiration Libraries & Stack"
+      "community_name": "UI Inspiration Libraries & Stack",
+      "id": "react_bits"
     },
     {
       "label": "shadcn/ui Expansions",
@@ -11321,8 +11321,8 @@
       "contributor": null,
       "community": 0,
       "norm_label": "shadcn/ui expansions",
-      "id": "shadcn_ui_expansions",
-      "community_name": "UI Inspiration Libraries & Stack"
+      "community_name": "UI Inspiration Libraries & Stack",
+      "id": "shadcn_ui_expansions"
     },
     {
       "label": "daisyUI (Aura component)",
@@ -11335,8 +11335,8 @@
       "contributor": null,
       "community": 0,
       "norm_label": "daisyui (aura component)",
-      "id": "daisyui",
-      "community_name": "UI Inspiration Libraries & Stack"
+      "community_name": "UI Inspiration Libraries & Stack",
+      "id": "daisyui"
     },
     {
       "label": "Enhanced Button (inspiration project)",
@@ -11349,8 +11349,8 @@
       "contributor": null,
       "community": 0,
       "norm_label": "enhanced button (inspiration project)",
-      "id": "enhanced_button",
-      "community_name": "UI Inspiration Libraries & Stack"
+      "community_name": "UI Inspiration Libraries & Stack",
+      "id": "enhanced_button"
     },
     {
       "label": "shadcnblocks",
@@ -11363,8 +11363,8 @@
       "contributor": null,
       "community": 0,
       "norm_label": "shadcnblocks",
-      "id": "shadcnblocks",
-      "community_name": "UI Inspiration Libraries & Stack"
+      "community_name": "UI Inspiration Libraries & Stack",
+      "id": "shadcnblocks"
     },
     {
       "label": "shadcn/ui",
@@ -11377,8 +11377,8 @@
       "contributor": null,
       "community": 0,
       "norm_label": "shadcn/ui",
-      "id": "shadcn_ui",
-      "community_name": "UI Inspiration Libraries & Stack"
+      "community_name": "UI Inspiration Libraries & Stack",
+      "id": "shadcn_ui"
     },
     {
       "label": "Tailwind CSS v4",
@@ -11391,8 +11391,8 @@
       "contributor": null,
       "community": 0,
       "norm_label": "tailwind css v4",
-      "id": "tailwind_css",
-      "community_name": "UI Inspiration Libraries & Stack"
+      "community_name": "UI Inspiration Libraries & Stack",
+      "id": "tailwind_css"
     },
     {
       "label": "Next.js 16",
@@ -11405,8 +11405,8 @@
       "contributor": null,
       "community": 0,
       "norm_label": "next.js 16",
-      "id": "nextjs",
-      "community_name": "UI Inspiration Libraries & Stack"
+      "community_name": "UI Inspiration Libraries & Stack",
+      "id": "nextjs"
     },
     {
       "label": "React 19",
@@ -11419,8 +11419,8 @@
       "contributor": null,
       "community": 0,
       "norm_label": "react 19",
-      "id": "react_library",
-      "community_name": "UI Inspiration Libraries & Stack"
+      "community_name": "UI Inspiration Libraries & Stack",
+      "id": "react_library"
     },
     {
       "label": "Motion (animation library)",
@@ -11433,8 +11433,8 @@
       "contributor": null,
       "community": 0,
       "norm_label": "motion (animation library)",
-      "id": "motion_lib",
-      "community_name": "UI Inspiration Libraries & Stack"
+      "community_name": "UI Inspiration Libraries & Stack",
+      "id": "motion_lib"
     },
     {
       "label": "TypeScript 5",
@@ -11447,8 +11447,8 @@
       "contributor": null,
       "community": 0,
       "norm_label": "typescript 5",
-      "id": "typescript_lang",
-      "community_name": "UI Inspiration Libraries & Stack"
+      "community_name": "UI Inspiration Libraries & Stack",
+      "id": "typescript_lang"
     },
     {
       "label": "Shared style.css (keyframes and data-variant tokens)",
@@ -11461,8 +11461,8 @@
       "contributor": null,
       "community": 0,
       "norm_label": "shared style.css (keyframes and data-variant tokens)",
-      "id": "src_components_ui_style_stylesheet",
-      "community_name": "UI Inspiration Libraries & Stack"
+      "community_name": "UI Inspiration Libraries & Stack",
+      "id": "src_components_ui_style_stylesheet"
     },
     {
       "label": "Component Generator Page",
@@ -11475,8 +11475,8 @@
       "contributor": null,
       "community": 0,
       "norm_label": "component generator page",
-      "id": "src_app_component_generator_page",
-      "community_name": "UI Inspiration Libraries & Stack"
+      "community_name": "UI Inspiration Libraries & Stack",
+      "id": "src_app_component_generator_page"
     },
     {
       "label": "package.json (root package manifest)",
@@ -11489,8 +11489,8 @@
       "contributor": null,
       "community": 0,
       "norm_label": "package.json (root package manifest)",
-      "id": "package_json",
-      "community_name": "UI Inspiration Libraries & Stack"
+      "community_name": "UI Inspiration Libraries & Stack",
+      "id": "package_json"
     },
     {
       "label": "shadcn/ui Logo Icon",
@@ -11503,8 +11503,8 @@
       "contributor": null,
       "community": 81,
       "norm_label": "shadcn/ui logo icon",
-      "id": "agents_skills_shadcn_assets_shadcn_small_logo",
-      "community_name": "shadcn Brand Assets"
+      "community_name": "shadcn Brand Assets",
+      "id": "agents_skills_shadcn_assets_shadcn_small_logo"
     },
     {
       "label": "shadcn/ui Design System",
@@ -11517,8 +11517,8 @@
       "contributor": null,
       "community": 81,
       "norm_label": "shadcn/ui design system",
-      "id": "shadcn_ui_design_system",
-      "community_name": "shadcn Brand Assets"
+      "community_name": "shadcn Brand Assets",
+      "id": "shadcn_ui_design_system"
     },
     {
       "label": "shadcn/ui logo image (black rounded square with two diagonal parallel slash lines)",
@@ -11531,8 +11531,8 @@
       "contributor": null,
       "community": 80,
       "norm_label": "shadcn/ui logo image (black rounded square with two diagonal parallel slash lines)",
-      "id": "agents_skills_shadcn_assets_shadcn_png_logo",
-      "community_name": "Misc Unlabeled Fragment"
+      "community_name": "Misc Unlabeled Fragment",
+      "id": "agents_skills_shadcn_assets_shadcn_png_logo"
     },
     {
       "label": "shadcn skill (asset directory for shadcn/ui related agent skill)",
@@ -11545,8 +11545,8 @@
       "contributor": null,
       "community": 80,
       "norm_label": "shadcn skill (asset directory for shadcn/ui related agent skill)",
-      "id": "agents_skills_shadcn_assets_shadcn_skill_concept",
-      "community_name": "Misc Unlabeled Fragment"
+      "community_name": "Misc Unlabeled Fragment",
+      "id": "agents_skills_shadcn_assets_shadcn_skill_concept"
     },
     {
       "label": "Prisma UI Triangle Logo (prima-svg.svg)",
@@ -11559,8 +11559,8 @@
       "contributor": null,
       "community": 93,
       "norm_label": "prisma ui triangle logo (prima-svg.svg)",
-      "id": "public_prima_svg_logo",
-      "community_name": "Misc Unlabeled Fragment"
+      "community_name": "Misc Unlabeled Fragment",
+      "id": "public_prima_svg_logo"
     },
     {
       "label": "Prisma UI Branding/Logo Concept",
@@ -11573,8 +11573,8 @@
       "contributor": null,
       "community": 93,
       "norm_label": "prisma ui branding/logo concept",
-      "id": "public_prima_svg_brand_concept",
-      "community_name": "Misc Unlabeled Fragment"
+      "community_name": "Misc Unlabeled Fragment",
+      "id": "public_prima_svg_brand_concept"
     },
     {
       "label": "PWA Manifest Icon 192x192 (Prisma triangle logo)",
@@ -11587,8 +11587,8 @@
       "contributor": null,
       "community": 109,
       "norm_label": "pwa manifest icon 192x192 (prisma triangle logo)",
-      "id": "webappmanifest192x192_icon",
-      "community_name": "PWA Icon (192x192) & Brand"
+      "community_name": "PWA Icon (192x192) & Brand",
+      "id": "webappmanifest192x192_icon"
     },
     {
       "label": "PWA manifest icon (512x512) - black prism/triangle logo on white background, representing the Prisma UI brand mark",
@@ -11601,8 +11601,8 @@
       "contributor": null,
       "community": 94,
       "norm_label": "pwa manifest icon (512x512) - black prism/triangle logo on white background, representing the prisma ui brand mark",
-      "id": "webappmanifest512x512_icon",
-      "community_name": "PWA Icon (512x512) & Brand"
+      "community_name": "PWA Icon (512x512) & Brand",
+      "id": "webappmanifest512x512_icon"
     },
     {
       "label": "Prisma UI brand/project identity",
@@ -11615,8 +11615,8 @@
       "contributor": null,
       "community": 94,
       "norm_label": "prisma ui brand/project identity",
-      "id": "webappmanifest512x512_prisma_brand",
-      "community_name": "PWA Icon (512x512) & Brand"
+      "community_name": "PWA Icon (512x512) & Brand",
+      "id": "webappmanifest512x512_prisma_brand"
     },
     {
       "label": "apple-icon.png - Next.js apple touch icon depicting a black faceted triangular prism logo (matches 'prisma-ui' branding) on a transparent/white background",
@@ -11629,8 +11629,8 @@
       "contributor": null,
       "community": 104,
       "norm_label": "apple-icon.png - next.js apple touch icon depicting a black faceted triangular prism logo (matches 'prisma-ui' branding) on a transparent/white background",
-      "id": "appleicon_apple_touch_icon",
-      "community_name": "Apple Touch Icon & Brand"
+      "community_name": "Apple Touch Icon & Brand",
+      "id": "appleicon_apple_touch_icon"
     },
     {
       "label": "icon0.svg - Next.js app icon (black angular gem/crystal glyph favicon)",
@@ -11643,8 +11643,8 @@
       "contributor": null,
       "community": 70,
       "norm_label": "icon0.svg - next.js app icon (black angular gem/crystal glyph favicon)",
-      "id": "src_app_icon0_svg_image",
-      "community_name": "Misc Unlabeled Fragment"
+      "community_name": "Misc Unlabeled Fragment",
+      "id": "src_app_icon0_svg_image"
     },
     {
       "label": "Next.js App Router file-based icon convention (icon.svg / iconN.svg)",
@@ -11657,8 +11657,8 @@
       "contributor": null,
       "community": 70,
       "norm_label": "next.js app router file-based icon convention (icon.svg / iconn.svg)",
-      "id": "src_app_icon0_svg_nextjs_app_icon_convention",
-      "community_name": "Misc Unlabeled Fragment"
+      "community_name": "Misc Unlabeled Fragment",
+      "id": "src_app_icon0_svg_nextjs_app_icon_convention"
     },
     {
       "label": "Prisma UI brand mark - angular black gem/crystal glyph",
@@ -11671,8 +11671,8 @@
       "contributor": null,
       "community": 70,
       "norm_label": "prisma ui brand mark - angular black gem/crystal glyph",
-      "id": "src_app_icon0_svg_prisma_ui_brand_mark",
-      "community_name": "Misc Unlabeled Fragment"
+      "community_name": "Misc Unlabeled Fragment",
+      "id": "src_app_icon0_svg_prisma_ui_brand_mark"
     },
     {
       "label": "icon1.png - triangle/pyramid app icon",
@@ -11685,8 +11685,8 @@
       "contributor": null,
       "community": 107,
       "norm_label": "icon1.png - triangle/pyramid app icon",
-      "id": "src_app_icon1_favicon_image",
-      "community_name": "Misc Unlabeled Fragment"
+      "community_name": "Misc Unlabeled Fragment",
+      "id": "src_app_icon1_favicon_image"
     }
   ],
   "links": [
@@ -19029,22 +19029,22 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/components/ui/aura-beam.tsx",
-      "source_location": "L55",
+      "source_location": "L159",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_ui_aura_beam",
-      "target": "src_components_ui_aura_beam_aurabeam",
+      "target": "src_components_ui_aura_beam_auraeffect",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/components/ui/aura-beam.tsx",
-      "source_location": "L19",
+      "source_location": "L123",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_ui_aura_beam",
-      "target": "src_components_ui_aura_beam_aurabeamprops",
+      "target": "src_components_ui_aura_beam_auraeffectprops",
       "confidence_score": 1.0
     },
     {
@@ -19052,7 +19052,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/ui/aura-beam.tsx",
-      "source_location": "L5",
+      "source_location": "L3",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_ui_aura_beam",
@@ -19064,7 +19064,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/ui/aura-beam.tsx",
-      "source_location": "L5",
+      "source_location": "L3",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_ui_aura_beam",
@@ -19072,45 +19072,15 @@
       "confidence_score": 1.0
     },
     {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "src/app/docs/components/aura-beam-card/page.mdx",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "src_app_docs_components_aura_beam_card_page",
-      "target": "src_components_ui_aura_beam_aurabeam"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "src/app/docs/components/border-beam-card/page.mdx",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "src_app_docs_components_border_beam_card_page",
-      "target": "src_components_ui_aura_beam_aurabeam"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "src/app/docs/components/shine-border-card/page.mdx",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "src_app_docs_components_shine_border_card_page",
-      "target": "src_components_ui_aura_beam_aurabeam"
-    },
-    {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/components/ui/aura-beam.tsx",
-      "source_location": "L89",
+      "source_location": "L194",
       "weight": 1.0,
       "_origin": "ast",
-      "source": "src_components_ui_aura_beam_aurabeam",
+      "source": "src_components_ui_aura_beam_auraeffect",
       "target": "src_lib_utils_cn"
     },
     {
@@ -26131,5 +26101,5 @@
       "source_file": "src/app/docs/components/border-beam-card/page.mdx"
     }
   ],
-  "built_at_commit": "50ddd82ac61b8383c040c1d60092847487b38c24"
+  "built_at_commit": "820526e25684ac68c6767e9b9f938b74bdfd6abd"
 }

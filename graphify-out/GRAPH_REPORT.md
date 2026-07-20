@@ -1,16 +1,16 @@
 # Graph Report - prisma-ui  (2026-07-20)
 
 ## Corpus Check
-- 234 files · ~125,062 words
+- 234 files · ~124,192 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 943 nodes · 1281 edges · 104 communities (67 shown, 37 thin omitted)
+- 943 nodes · 1278 edges · 103 communities (66 shown, 37 thin omitted)
 - Extraction: 90% EXTRACTED · 10% INFERRED · 0% AMBIGUOUS · INFERRED: 129 edges (avg confidence: 0.78)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `50ddd82a`
+- Built from commit: `820526e2`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -66,7 +66,6 @@
 - Hydration & Storage Rules
 - Parallel & Intercepting Routes
 - SVG Rendering Optimization Rules
-- Shader Background Component
 - Route Handlers Guidance
 - Self-Hosting Deployment Guide
 - SEO Audit Framework
@@ -136,10 +135,10 @@
   README.md → package.json
 - `References Doc Page` --cites--> `nextra`  [EXTRACTED]
   src/app/docs/references/page.mdx → package.json
+- `Prisma UI README` --conceptually_related_to--> `Border Beam Card Doc Page (deprecated, superseded by AuraBeam)`  [INFERRED]
+  README.md → src/app/docs/components/border-beam-card/page.mdx
 - `Badge Doc Page` --references--> `Badge()`  [EXTRACTED]
   src/app/docs/components/badge/page.mdx → src/components/ui/badge.tsx
-- `Button Doc Page` --references--> `Button()`  [EXTRACTED]
-  src/app/docs/components/button/page.mdx → src/components/ui/button.tsx
 
 ## Import Cycles
 - None detected.
@@ -166,11 +165,11 @@
 - **Card Border/Hover Decoration Effects** — src_app_docs_components_border_beam_card_page, src_app_docs_components_border_glow_card_page, src_app_docs_components_rainbow_card_page, src_app_docs_components_shine_border_card_page, src_app_docs_components_tilt_card_page, src_app_docs_components_aura_beam_card_page [INFERRED 0.75]
 - **Deprecated Components Migrated to AuraBeam** — src_app_docs_components_border_beam_card_page, src_app_docs_components_shine_border_card_page, src_app_docs_components_aura_beam_card_page [EXTRACTED 1.00]
 
-## Communities (104 total, 37 thin omitted)
+## Communities (103 total, 37 thin omitted)
 
 ### Community 0 - "UI Inspiration Libraries & Stack"
 Cohesion: 0.05
-Nodes (55): Aceternity UI (component library), daisyUI (Aura component), Enhanced Button (inspiration project), Kokonut UI (component library), Magic UI (component library), Motion (animation library), Motion Primitives (component library), Next.js 16 (+47 more)
+Nodes (54): Aceternity UI (component library), daisyUI (Aura component), Enhanced Button (inspiration project), Kokonut UI (component library), Magic UI (component library), Motion (animation library), Motion Primitives (component library), Next.js 16 (+46 more)
 
 ### Community 1 - "NPM Runtime Dependencies"
 Cohesion: 0.05
@@ -241,8 +240,8 @@ Cohesion: 0.14
 Nodes (17): DashboardPage(), downloadJson(), formSchema, FormValues, parseList(), readFileAsText(), REGISTRY_TYPES, Card() (+9 more)
 
 ### Community 19 - "Badge Component & Landing Page"
-Cohesion: 0.16
-Nodes (11): components, features, softwareAppSchema, techStack, Badge(), badgeVariants, MagneticProps, SPRING_CONFIG (+3 more)
+Cohesion: 0.11
+Nodes (14): components, features, softwareAppSchema, techStack, Shader(), ShaderBackgroundProps, ShaderPlaneProps, Badge() (+6 more)
 
 ### Community 20 - "AI Writing Detection Reference"
 Cohesion: 0.17
@@ -277,8 +276,8 @@ Cohesion: 0.29
 Nodes (8): main(), package_skill(), Path, Check if a path should be excluded from packaging., Package a skill folder into a .skill file.      Args:         skill_path: Pat, should_exclude(), Basic validation of a skill, validate_skill()
 
 ### Community 29 - "Code Block & Tooltip Components"
-Cohesion: 0.19
-Nodes (8): CodeBlockInner(), AuraBeamProps, BorderBeam(), BorderBeamProps, Tooltip(), TooltipContent(), TooltipTrigger(), TracingBeamProps
+Cohesion: 0.17
+Nodes (9): CodeBlockInner(), AuraEffect(), AuraEffectProps, BorderBeam(), BorderBeamProps, Tooltip(), TooltipContent(), TooltipTrigger() (+1 more)
 
 ### Community 30 - "Floating Label Input Registry Entry"
 Cohesion: 0.20
@@ -368,10 +367,6 @@ Nodes (5): default.tsx Required for Parallel Route Slots, Intercepting Routes, P
 Cohesion: 0.50
 Nodes (5): Animate SVG Wrapper Instead of SVG Element, CSS content-visibility for Long Lists, Hoist Static JSX Elements, Optimize SVG Precision, SVG Element Rendering Optimization
 
-### Community 57 - "Shader Background Component"
-Cohesion: 0.40
-Nodes (3): Shader(), ShaderBackgroundProps, ShaderPlaneProps
-
 ### Community 58 - "Route Handlers Guidance"
 Cohesion: 0.50
 Nodes (4): Route Handlers (route.ts), Route Handlers vs Server Actions Guidance, Non-Serializable Props Rule (Server to Client), Server Actions as RSC Boundary Exception
@@ -440,8 +435,8 @@ _Questions this graph is uniquely positioned to answer:_
   _Edge tagged AMBIGUOUS (relation: references) - confidence is low._
 - **Why does `Prisma UI README` connect `UI Inspiration Libraries & Stack` to `NPM Runtime Dependencies`?**
   _High betweenness centrality (0.090) - this node is a cross-community bridge._
-- **Why does `cn()` connect `Card Effect UI Components` to `UI Inspiration Libraries & Stack`, `Install Snippet Component`, `Root Layout & Metadata`, `MDX Docs Rendering Components`, `Component Generator Dashboard`, `Transition Panel & Dialog Demo`, `Flip Card & Card Primitives`, `Badge Component & Landing Page`, `Dropzone Component`, `Code Block & Tooltip Components`, `Shader Background Component`?**
-  _High betweenness centrality (0.077) - this node is a cross-community bridge._
+- **Why does `cn()` connect `Card Effect UI Components` to `UI Inspiration Libraries & Stack`, `Install Snippet Component`, `Root Layout & Metadata`, `MDX Docs Rendering Components`, `Component Generator Dashboard`, `Transition Panel & Dialog Demo`, `Flip Card & Card Primitives`, `Badge Component & Landing Page`, `Dropzone Component`, `Code Block & Tooltip Components`?**
+  _High betweenness centrality (0.076) - this node is a cross-community bridge._
 - **Why does `dependencies` connect `NPM Runtime Dependencies` to `UI Inspiration Libraries & Stack`, `Dev Tooling & Linting Dependencies`?**
   _High betweenness centrality (0.066) - this node is a cross-community bridge._
 - **Are the 14 inferred relationships involving `Prisma UI README` (e.g. with `Animated Background Doc Page` and `Aura Beam Card Doc Page`) actually correct?**
@@ -449,4 +444,4 @@ _Questions this graph is uniquely positioned to answer:_
 - **What connects `$schema`, `style`, `rsc` to the rest of the system?**
   _427 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `UI Inspiration Libraries & Stack` be split into smaller, more focused modules?**
-  _Cohesion score 0.05028248587570622 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.05026300409117475 - nodes in this community are weakly interconnected._
