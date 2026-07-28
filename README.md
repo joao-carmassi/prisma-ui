@@ -41,11 +41,10 @@ Prisma UI is a production-ready component library that ships accessible, animate
 | **Magnetic** | Magnetic cursor-attraction wrapper for interactive elements. |
 | **Rainbow Border** | Cycling rainbow gradient border. |
 | **Shine Border** | Sweeping shine animation around a card border. |
-| **Border Glow Card** | Cursor-proximity border glow card — a colorful gradient follows the pointer along the card edges. |
 | **Depth Media** | Parallax depth image — splits a single image into multiple layers that shift at different rates inside a Tilt card. |
 | **Tilt Card** | 3D perspective tilt wrapper for cards and elements. |
 | **Tracing Beam** | SVG beam that traces scroll position alongside content. |
-| **Aura Beam** | Ambient rotating conic-gradient glow wrapper. Inspired by daisyUI's Aura. Supports rainbow, holo, and glow variants. |
+| **Aura Beam** | Ambient glow wrapper with aura, beam, shine, and cursor-proximity glow variants. |
 
 ---
 

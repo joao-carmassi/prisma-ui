@@ -45,9 +45,6 @@ export default {
   'tilt-card': {
     title: 'Tilt Card',
   },
-  'border-glow-card': {
-    title: 'Border Glow Card',
-  },
   'border-beam-card': {
     display: 'hidden',
   },

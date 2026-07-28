@@ -1,16 +1,16 @@
-# Graph Report - prisma-ui  (2026-07-27)
+# Graph Report - prisma-ui  (2026-07-20)
 
 ## Corpus Check
-- 231 files · ~124,851 words
+- 234 files · ~124,192 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 931 nodes · 1262 edges · 103 communities (66 shown, 37 thin omitted)
-- Extraction: 90% EXTRACTED · 10% INFERRED · 0% AMBIGUOUS · INFERRED: 126 edges (avg confidence: 0.78)
+- 943 nodes · 1278 edges · 103 communities (66 shown, 37 thin omitted)
+- Extraction: 90% EXTRACTED · 10% INFERRED · 0% AMBIGUOUS · INFERRED: 129 edges (avg confidence: 0.78)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `29bfcf3e`
+- Built from commit: `820526e2`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -39,7 +39,6 @@
 - Benchmark Aggregation Script
 - Confetti Wrapper Registry Entry
 - Border Beam Registry Entry
-- aura-beam.tsx
 - Dropzone Component
 - shadcn Skill Reference Docs
 - Skill Eval Agents & Schemas
@@ -61,6 +60,7 @@
 - Tracing Beam Registry Entry
 - Component Registry Generator Script
 - Derived State & Transition Rules
+- Border Glow Registry Entry
 - PWA Manifest Config
 - Find Skills Skill
 - Hydration & Storage Rules
@@ -117,8 +117,8 @@
 - PWA Icon (192x192) & Brand
 
 ## God Nodes (most connected - your core abstractions)
-1. `cn()` - 98 edges
-2. `Prisma UI README` - 24 edges
+1. `cn()` - 100 edges
+2. `Prisma UI README` - 25 edges
 3. `Next.js Best Practices Skill` - 20 edges
 4. `Rule Sections Overview` - 20 edges
 5. `Rule File Template` - 20 edges
@@ -135,10 +135,10 @@
   README.md → package.json
 - `References Doc Page` --cites--> `nextra`  [EXTRACTED]
   src/app/docs/references/page.mdx → package.json
-- `Prisma UI README` --conceptually_related_to--> `Animated Background Doc Page`  [INFERRED]
-  README.md → src/app/docs/components/animated-background/page.mdx
 - `Prisma UI README` --conceptually_related_to--> `Border Beam Card Doc Page (deprecated, superseded by AuraBeam)`  [INFERRED]
   README.md → src/app/docs/components/border-beam-card/page.mdx
+- `Badge Doc Page` --references--> `Badge()`  [EXTRACTED]
+  src/app/docs/components/badge/page.mdx → src/components/ui/badge.tsx
 
 ## Import Cycles
 - None detected.
@@ -162,13 +162,14 @@
 - **React Re-render Avoidance Rule Set** — agents_skills_vercel_react_best_practices_rules_rerender_dependencies_narrow_effect_dependencies, agents_skills_vercel_react_best_practices_rules_rerender_derived_state_no_effect_calculate_derived_state_during_rendering, agents_skills_vercel_react_best_practices_rules_rerender_derived_state_subscribe_to_derived_state, agents_skills_vercel_react_best_practices_rules_rerender_functional_setstate_use_functional_setstate_updates, agents_skills_vercel_react_best_practices_rules_rerender_lazy_state_init_use_lazy_state_initialization, agents_skills_vercel_react_best_practices_rules_rerender_memo_with_default_value_extract_default_nonprimitive_parameter_value, agents_skills_vercel_react_best_practices_rules_rerender_memo_extract_to_memoized_components, agents_skills_vercel_react_best_practices_rules_rerender_move_effect_to_event_put_interaction_logic_in_event_handlers, agents_skills_vercel_react_best_practices_rules_rerender_no_inline_components_dont_define_components_inside_components, agents_skills_vercel_react_best_practices_rules_rerender_simple_expression_in_memo_avoid_usememo_for_simple_expressions, agents_skills_vercel_react_best_practices_rules_rerender_split_combined_hooks_split_combined_hook_computations, agents_skills_vercel_react_best_practices_rules_rerender_transitions_use_transitions_for_nonurgent_updates, agents_skills_vercel_react_best_practices_rules_rerender_use_deferred_value_use_usedeferredvalue_for_expensive_derived_renders, agents_skills_vercel_react_best_practices_rules_rerender_use_ref_transient_values_use_useref_for_transient_values [INFERRED 0.85]
 - **Server-Side Data Fetching & Caching Rule Set** — agents_skills_vercel_react_best_practices_rules_server_after_nonblocking_use_after_for_nonblocking_operations, agents_skills_vercel_react_best_practices_rules_server_auth_actions_authenticate_server_actions_like_api_routes, agents_skills_vercel_react_best_practices_rules_server_cache_lru_crossrequest_lru_caching, agents_skills_vercel_react_best_practices_rules_server_cache_react_perrequest_deduplication_with_react_cache, agents_skills_vercel_react_best_practices_rules_server_dedup_props_avoid_duplicate_serialization_in_rsc_props, agents_skills_vercel_react_best_practices_rules_server_hoist_static_io_hoist_static_io_to_module_level, agents_skills_vercel_react_best_practices_rules_server_parallel_fetching_parallel_data_fetching_with_component_composition, agents_skills_vercel_react_best_practices_rules_server_serialization_minimize_serialization_at_rsc_boundaries [INFERRED 0.85]
 - **Concurrent Rendering APIs for UI Responsiveness** — agents_skills_vercel_react_best_practices_rules_rerender_transitions_use_transitions_for_nonurgent_updates, agents_skills_vercel_react_best_practices_rules_rerender_use_deferred_value_use_usedeferredvalue_for_expensive_derived_renders, agents_skills_vercel_react_best_practices_rules_rerender_derived_state_subscribe_to_derived_state [INFERRED 0.70]
+- **Card Border/Hover Decoration Effects** — src_app_docs_components_border_beam_card_page, src_app_docs_components_border_glow_card_page, src_app_docs_components_rainbow_card_page, src_app_docs_components_shine_border_card_page, src_app_docs_components_tilt_card_page, src_app_docs_components_aura_beam_card_page [INFERRED 0.75]
 - **Deprecated Components Migrated to AuraBeam** — src_app_docs_components_border_beam_card_page, src_app_docs_components_shine_border_card_page, src_app_docs_components_aura_beam_card_page [EXTRACTED 1.00]
 
 ## Communities (103 total, 37 thin omitted)
 
 ### Community 0 - "UI Inspiration Libraries & Stack"
-Cohesion: 0.07
-Nodes (41): Aceternity UI (component library), daisyUI (Aura component), Enhanced Button (inspiration project), Kokonut UI (component library), Magic UI (component library), Motion (animation library), Next.js 16, nextra (+33 more)
+Cohesion: 0.05
+Nodes (54): Aceternity UI (component library), daisyUI (Aura component), Enhanced Button (inspiration project), Kokonut UI (component library), Magic UI (component library), Motion (animation library), Motion Primitives (component library), Next.js 16 (+46 more)
 
 ### Community 1 - "NPM Runtime Dependencies"
 Cohesion: 0.05
@@ -215,32 +216,32 @@ Cohesion: 0.18
 Nodes (18): Field(), FieldContent(), FieldDescription(), FieldError(), FieldGroup(), FieldLabel(), FieldLegend(), FieldSeparator() (+10 more)
 
 ### Community 12 - "Root Layout & Metadata"
-Cohesion: 0.11
-Nodes (15): geistMono, geistSans, metadata, orgSchema, RootLayout(), RootLayoutProps, syne, websiteSchema (+7 more)
+Cohesion: 0.10
+Nodes (18): geistMono, geistSans, metadata, orgSchema, RootLayout(), RootLayoutProps, syne, websiteSchema (+10 more)
 
 ### Community 13 - "MDX Docs Rendering Components"
-Cohesion: 0.16
-Nodes (21): ComponentPreview(), ComponentPreviewProps, MdxTable(), MdxTableProps, MdxTbody(), MdxTd(), MdxTh(), MdxThead() (+13 more)
+Cohesion: 0.25
+Nodes (12): CodeBlock, ComponentPreview(), ComponentPreviewProps, MdxTable(), MdxTbody(), MdxTd(), MdxTh(), MdxThead() (+4 more)
 
 ### Community 14 - "Eval Review Generator Script"
 Cohesion: 0.15
 Nodes (19): build_run(), embed_file(), find_runs(), _find_runs_recursive(), generate_html(), get_mime_type(), _kill_port(), load_previous_iteration() (+11 more)
 
 ### Community 15 - "Component Generator Dashboard"
-Cohesion: 0.18
-Nodes (9): Motion Primitives (component library), Animated Background Doc Page, Magnetic Doc Page, AnimatedBackground(), AnimatedBackgroundProps, ChildProps, Magnetic(), MagneticProps (+1 more)
+Cohesion: 0.26
+Nodes (10): MdxTableProps, TableSectionProps, Table(), TableBody(), TableCaption(), TableCell(), TableFooter(), TableHead() (+2 more)
 
 ### Community 16 - "Transition Panel & Dialog Demo"
-Cohesion: 0.12
-Nodes (13): Button(), ButtonIconProps, ButtonProps, buttonVariants, IconProps, IconRefProps, DialogContent(), DialogDescription() (+5 more)
+Cohesion: 0.10
+Nodes (16): dependencies, class-variance-authority, lucide-react, Button(), ButtonIconProps, ButtonProps, buttonVariants, IconProps (+8 more)
 
 ### Community 18 - "Flip Card & Card Primitives"
 Cohesion: 0.14
 Nodes (17): DashboardPage(), downloadJson(), formSchema, FormValues, parseList(), readFileAsText(), REGISTRY_TYPES, Card() (+9 more)
 
 ### Community 19 - "Badge Component & Landing Page"
-Cohesion: 0.13
-Nodes (14): components, features, Home(), softwareAppSchema, techStack, Shader(), ShaderBackgroundProps, ShaderPlaneProps (+6 more)
+Cohesion: 0.11
+Nodes (14): components, features, softwareAppSchema, techStack, Shader(), ShaderBackgroundProps, ShaderPlaneProps, Badge() (+6 more)
 
 ### Community 20 - "AI Writing Detection Reference"
 Cohesion: 0.17
@@ -257,10 +258,6 @@ Nodes (12): author, dependencies, description, devDependencies, files, name, $sc
 ### Community 23 - "Border Beam Registry Entry"
 Cohesion: 0.18
 Nodes (10): author, dependencies, description, files, card, motion, name, registryDependencies (+2 more)
-
-### Community 24 - "aura-beam.tsx"
-Cohesion: 0.67
-Nodes (3): AuraEffect(), AuraEffectProps, getBorderPosition()
 
 ### Community 25 - "Dropzone Component"
 Cohesion: 0.24
@@ -280,7 +277,7 @@ Nodes (8): main(), package_skill(), Path, Check if a path should be excluded fro
 
 ### Community 29 - "Code Block & Tooltip Components"
 Cohesion: 0.17
-Nodes (10): CodeBlock, CodeBlockInner(), BorderBeam(), BorderBeamProps, Tooltip(), TooltipContent(), TooltipProvider(), TooltipTrigger() (+2 more)
+Nodes (9): CodeBlockInner(), AuraEffect(), AuraEffectProps, BorderBeam(), BorderBeamProps, Tooltip(), TooltipContent(), TooltipTrigger() (+1 more)
 
 ### Community 30 - "Floating Label Input Registry Entry"
 Cohesion: 0.20
@@ -307,8 +304,8 @@ Cohesion: 0.22
 Nodes (8): author, dependencies, description, files, class-variance-authority, name, $schema, type
 
 ### Community 36 - "Button Registry Entry"
-Cohesion: 0.17
-Nodes (11): author, dependencies, description, files, class-variance-authority, name, registryDependencies, $schema (+3 more)
+Cohesion: 0.22
+Nodes (8): author, description, files, name, registryDependencies, $schema, type, spinner
 
 ### Community 37 - "Depth Media Registry Entry"
 Cohesion: 0.22
@@ -345,6 +342,10 @@ Nodes (5): fs, outDir, path, styleCss, uiDir
 ### Community 49 - "Derived State & Transition Rules"
 Cohesion: 0.25
 Nodes (8): Calculate Derived State During Rendering, You Might Not Need an Effect (React Docs), Subscribe to Derived State, Put Interaction Logic in Event Handlers, Should This Code Move to an Event Handler? (React Docs), Use Transitions for Non-Urgent Updates, React useDeferredValue Reference, Use useDeferredValue for Expensive Derived Renders
+
+### Community 51 - "Border Glow Registry Entry"
+Cohesion: 0.29
+Nodes (6): author, description, files, name, $schema, type
 
 ### Community 52 - "PWA Manifest Config"
 Cohesion: 0.29
@@ -423,7 +424,7 @@ Nodes (3): icon0.svg - Next.js app icon (black angular gem/crystal glyph favicon
   .agents/skills/skill-creator/assets/eval_review.html · relation: references
 
 ## Knowledge Gaps
-- **419 isolated node(s):** `$schema`, `style`, `rsc`, `tsx`, `config` (+414 more)
+- **427 isolated node(s):** `$schema`, `style`, `rsc`, `tsx`, `config` (+422 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **37 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -432,15 +433,15 @@ _Questions this graph is uniquely positioned to answer:_
 
 - **What is the exact relationship between `Eval Set Review HTML Tool` and `evals.json Schema`?**
   _Edge tagged AMBIGUOUS (relation: references) - confidence is low._
-- **Why does `Prisma UI README` connect `UI Inspiration Libraries & Stack` to `NPM Runtime Dependencies`, `Component Generator Dashboard`?**
+- **Why does `Prisma UI README` connect `UI Inspiration Libraries & Stack` to `NPM Runtime Dependencies`?**
   _High betweenness centrality (0.090) - this node is a cross-community bridge._
-- **Why does `cn()` connect `Card Effect UI Components` to `UI Inspiration Libraries & Stack`, `Install Snippet Component`, `Root Layout & Metadata`, `MDX Docs Rendering Components`, `Component Generator Dashboard`, `Transition Panel & Dialog Demo`, `Flip Card & Card Primitives`, `Badge Component & Landing Page`, `aura-beam.tsx`, `Dropzone Component`, `Code Block & Tooltip Components`?**
+- **Why does `cn()` connect `Card Effect UI Components` to `UI Inspiration Libraries & Stack`, `Install Snippet Component`, `Root Layout & Metadata`, `MDX Docs Rendering Components`, `Component Generator Dashboard`, `Transition Panel & Dialog Demo`, `Flip Card & Card Primitives`, `Badge Component & Landing Page`, `Dropzone Component`, `Code Block & Tooltip Components`?**
   _High betweenness centrality (0.076) - this node is a cross-community bridge._
 - **Why does `dependencies` connect `NPM Runtime Dependencies` to `UI Inspiration Libraries & Stack`, `Dev Tooling & Linting Dependencies`?**
-  _High betweenness centrality (0.067) - this node is a cross-community bridge._
-- **Are the 13 inferred relationships involving `Prisma UI README` (e.g. with `Animated Background Doc Page` and `Aura Beam Card Doc Page`) actually correct?**
-  _`Prisma UI README` has 13 INFERRED edges - model-reasoned connections that need verification._
+  _High betweenness centrality (0.066) - this node is a cross-community bridge._
+- **Are the 14 inferred relationships involving `Prisma UI README` (e.g. with `Animated Background Doc Page` and `Aura Beam Card Doc Page`) actually correct?**
+  _`Prisma UI README` has 14 INFERRED edges - model-reasoned connections that need verification._
 - **What connects `$schema`, `style`, `rsc` to the rest of the system?**
-  _419 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _427 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `UI Inspiration Libraries & Stack` be split into smaller, more focused modules?**
-  _Cohesion score 0.06871035940803383 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.05026300409117475 - nodes in this community are weakly interconnected._

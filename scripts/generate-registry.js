@@ -145,12 +145,7 @@ writeRegistry('depth-media', {
   files: [makeFile('depth-media.tsx', read('depth-media.tsx'))],
 });
 
-// 14. Border Glow
-writeRegistry('border-glow', {
-  files: [makeFile('border-glow.tsx', read('border-glow.tsx'))],
-});
-
-// 15. Aura Beam
+// 14. Aura Beam
 writeRegistry('aura-beam', {
   registryDependencies: ['card'],
   files: [

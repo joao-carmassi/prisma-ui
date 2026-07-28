@@ -277,6 +277,22 @@
         "source_file": ".agents/skills/vercel-react-best-practices/rules/rerender-transitions.md"
       },
       {
+        "id": "card_decoration_effects",
+        "label": "Card Border/Hover Decoration Effects",
+        "nodes": [
+          "src_app_docs_components_border_beam_card_page",
+          "src_app_docs_components_border_glow_card_page",
+          "src_app_docs_components_rainbow_card_page",
+          "src_app_docs_components_shine_border_card_page",
+          "src_app_docs_components_tilt_card_page",
+          "src_app_docs_components_aura_beam_card_page"
+        ],
+        "relation": "participate_in",
+        "confidence": "INFERRED",
+        "confidence_score": 0.75,
+        "source_file": "src/app/docs/components/aura-beam-card/page.mdx"
+      },
+      {
         "id": "deprecated_components_migrated_to_aura_beam",
         "label": "Deprecated Components Migrated to AuraBeam",
         "nodes": [
@@ -2856,6 +2872,83 @@
       "norm_label": "files"
     },
     {
+      "label": "border-glow.json",
+      "file_type": "code",
+      "source_file": "public/components/border-glow.json",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "public_components_border_glow",
+      "community": 51,
+      "community_name": "Border Glow Registry Entry",
+      "norm_label": "border-glow.json"
+    },
+    {
+      "label": "$schema",
+      "file_type": "code",
+      "source_file": "public/components/border-glow.json",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "public_components_border_glow_schema",
+      "community": 51,
+      "community_name": "Border Glow Registry Entry",
+      "norm_label": "$schema"
+    },
+    {
+      "label": "name",
+      "file_type": "code",
+      "source_file": "public/components/border-glow.json",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "public_components_border_glow_name",
+      "community": 51,
+      "community_name": "Border Glow Registry Entry",
+      "norm_label": "name"
+    },
+    {
+      "label": "type",
+      "file_type": "code",
+      "source_file": "public/components/border-glow.json",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "public_components_border_glow_type",
+      "community": 51,
+      "community_name": "Border Glow Registry Entry",
+      "norm_label": "type"
+    },
+    {
+      "label": "description",
+      "file_type": "code",
+      "source_file": "public/components/border-glow.json",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "public_components_border_glow_description",
+      "community": 51,
+      "community_name": "Border Glow Registry Entry",
+      "norm_label": "description"
+    },
+    {
+      "label": "author",
+      "file_type": "code",
+      "source_file": "public/components/border-glow.json",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "public_components_border_glow_author",
+      "community": 51,
+      "community_name": "Border Glow Registry Entry",
+      "norm_label": "author"
+    },
+    {
+      "label": "files",
+      "file_type": "code",
+      "source_file": "public/components/border-glow.json",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "public_components_border_glow_files",
+      "community": 51,
+      "community_name": "Border Glow Registry Entry",
+      "norm_label": "files"
+    },
+    {
       "label": "button.json",
       "file_type": "code",
       "source_file": "public/components/button.json",
@@ -2928,8 +3021,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "public_components_button_dependencies",
-      "community": 36,
-      "community_name": "Button Registry Entry",
+      "community": 16,
+      "community_name": "Transition Panel & Dialog Demo",
       "norm_label": "dependencies"
     },
     {
@@ -2939,8 +3032,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "public_components_button_json_ref_class_variance_authority",
-      "community": 36,
-      "community_name": "Button Registry Entry",
+      "community": 16,
+      "community_name": "Transition Panel & Dialog Demo",
       "norm_label": "class-variance-authority"
     },
     {
@@ -2950,8 +3043,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "ref_lucide_react",
-      "community": 36,
-      "community_name": "Button Registry Entry",
+      "community": 16,
+      "community_name": "Transition Panel & Dialog Demo",
       "norm_label": "lucide-react"
     },
     {
@@ -4446,8 +4539,8 @@
       "source_location": "L143",
       "_origin": "ast",
       "id": "src_app_page_home",
-      "community": 19,
-      "community_name": "Badge Component & Landing Page",
+      "community": 12,
+      "community_name": "Root Layout & Metadata",
       "norm_label": "home()"
     },
     {
@@ -4509,7 +4602,7 @@
       "label": "sitemap()",
       "file_type": "code",
       "source_file": "src/app/sitemap.ts",
-      "source_location": "L20",
+      "source_location": "L21",
       "_origin": "ast",
       "id": "src_app_sitemap_sitemap",
       "community": 12,
@@ -4545,8 +4638,8 @@
       "source_location": "L68",
       "_origin": "ast",
       "id": "src_components_docs_code_block_codeblock",
-      "community": 29,
-      "community_name": "Code Block & Tooltip Components",
+      "community": 13,
+      "community_name": "MDX Docs Rendering Components",
       "norm_label": "codeblock"
     },
     {
@@ -4633,8 +4726,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_components_docs_mdx_table",
-      "community": 13,
-      "community_name": "MDX Docs Rendering Components",
+      "community": 15,
+      "community_name": "Component Generator Dashboard",
       "norm_label": "mdx-table.tsx"
     },
     {
@@ -4644,8 +4737,8 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "src_components_docs_mdx_table_mdxtableprops",
-      "community": 13,
-      "community_name": "MDX Docs Rendering Components",
+      "community": 15,
+      "community_name": "Component Generator Dashboard",
       "norm_label": "mdxtableprops"
     },
     {
@@ -4655,8 +4748,8 @@
       "source_location": "L15",
       "_origin": "ast",
       "id": "src_components_docs_mdx_table_tablesectionprops",
-      "community": 13,
-      "community_name": "MDX Docs Rendering Components",
+      "community": 15,
+      "community_name": "Component Generator Dashboard",
       "norm_label": "tablesectionprops"
     },
     {
@@ -5106,8 +5199,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_components_ui_animated_background",
-      "community": 15,
-      "community_name": "Component Generator Dashboard",
+      "community": 0,
+      "community_name": "UI Inspiration Libraries & Stack",
       "norm_label": "animated-background.tsx"
     },
     {
@@ -5117,8 +5210,8 @@
       "source_location": "L19",
       "_origin": "ast",
       "id": "src_components_ui_animated_background_childprops",
-      "community": 15,
-      "community_name": "Component Generator Dashboard",
+      "community": 0,
+      "community_name": "UI Inspiration Libraries & Stack",
       "norm_label": "childprops"
     },
     {
@@ -5128,8 +5221,8 @@
       "source_location": "L26",
       "_origin": "ast",
       "id": "src_components_ui_animated_background_animatedbackgroundprops",
-      "community": 15,
-      "community_name": "Component Generator Dashboard",
+      "community": 0,
+      "community_name": "UI Inspiration Libraries & Stack",
       "norm_label": "animatedbackgroundprops"
     },
     {
@@ -5139,8 +5232,8 @@
       "source_location": "L43",
       "_origin": "ast",
       "id": "src_components_ui_animated_background_animatedbackground",
-      "community": 15,
-      "community_name": "Component Generator Dashboard",
+      "community": 0,
+      "community_name": "UI Inspiration Libraries & Stack",
       "norm_label": "animatedbackground()"
     },
     {
@@ -5150,41 +5243,30 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_components_ui_aura_beam",
-      "community": 24,
-      "community_name": "aura-beam.tsx",
+      "community": 29,
+      "community_name": "Code Block & Tooltip Components",
       "norm_label": "aura-beam.tsx"
     },
     {
       "label": "AuraEffectProps",
       "file_type": "code",
       "source_file": "src/components/ui/aura-beam.tsx",
-      "source_location": "L22",
+      "source_location": "L123",
       "_origin": "ast",
       "id": "src_components_ui_aura_beam_auraeffectprops",
-      "community": 24,
-      "community_name": "aura-beam.tsx",
+      "community": 29,
+      "community_name": "Code Block & Tooltip Components",
       "norm_label": "auraeffectprops"
-    },
-    {
-      "label": "getBorderPosition()",
-      "file_type": "code",
-      "source_file": "src/components/ui/aura-beam.tsx",
-      "source_location": "L85",
-      "_origin": "ast",
-      "id": "src_components_ui_aura_beam_getborderposition",
-      "community": 24,
-      "community_name": "aura-beam.tsx",
-      "norm_label": "getborderposition()"
     },
     {
       "label": "AuraEffect()",
       "file_type": "code",
       "source_file": "src/components/ui/aura-beam.tsx",
-      "source_location": "L94",
+      "source_location": "L159",
       "_origin": "ast",
       "id": "src_components_ui_aura_beam_auraeffect",
-      "community": 24,
-      "community_name": "aura-beam.tsx",
+      "community": 29,
+      "community_name": "Code Block & Tooltip Components",
       "norm_label": "auraeffect()"
     },
     {
@@ -5252,6 +5334,50 @@
       "community": 29,
       "community_name": "Code Block & Tooltip Components",
       "norm_label": "borderbeam()"
+    },
+    {
+      "label": "border-glow.tsx",
+      "file_type": "code",
+      "source_file": "src/components/ui/border-glow.tsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_components_ui_border_glow",
+      "community": 0,
+      "community_name": "UI Inspiration Libraries & Stack",
+      "norm_label": "border-glow.tsx"
+    },
+    {
+      "label": "BorderGlowProps",
+      "file_type": "code",
+      "source_file": "src/components/ui/border-glow.tsx",
+      "source_location": "L18",
+      "_origin": "ast",
+      "id": "src_components_ui_border_glow_borderglowprops",
+      "community": 0,
+      "community_name": "UI Inspiration Libraries & Stack",
+      "norm_label": "borderglowprops"
+    },
+    {
+      "label": "getBorderPosition()",
+      "file_type": "code",
+      "source_file": "src/components/ui/border-glow.tsx",
+      "source_location": "L63",
+      "_origin": "ast",
+      "id": "src_components_ui_border_glow_getborderposition",
+      "community": 0,
+      "community_name": "UI Inspiration Libraries & Stack",
+      "norm_label": "getborderposition()"
+    },
+    {
+      "label": "BorderGlow()",
+      "file_type": "code",
+      "source_file": "src/components/ui/border-glow.tsx",
+      "source_location": "L86",
+      "_origin": "ast",
+      "id": "src_components_ui_border_glow_borderglow",
+      "community": 0,
+      "community_name": "UI Inspiration Libraries & Stack",
+      "norm_label": "borderglow()"
     },
     {
       "label": "button.tsx",
@@ -5876,8 +6002,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_components_ui_magnetic",
-      "community": 15,
-      "community_name": "Component Generator Dashboard",
+      "community": 19,
+      "community_name": "Badge Component & Landing Page",
       "norm_label": "magnetic.tsx"
     },
     {
@@ -5887,8 +6013,8 @@
       "source_location": "L18",
       "_origin": "ast",
       "id": "src_components_ui_magnetic_spring_config",
-      "community": 15,
-      "community_name": "Component Generator Dashboard",
+      "community": 19,
+      "community_name": "Badge Component & Landing Page",
       "norm_label": "spring_config"
     },
     {
@@ -5898,8 +6024,8 @@
       "source_location": "L24",
       "_origin": "ast",
       "id": "src_components_ui_magnetic_magneticprops",
-      "community": 15,
-      "community_name": "Component Generator Dashboard",
+      "community": 19,
+      "community_name": "Badge Component & Landing Page",
       "norm_label": "magneticprops"
     },
     {
@@ -5909,8 +6035,8 @@
       "source_location": "L39",
       "_origin": "ast",
       "id": "src_components_ui_magnetic_magnetic",
-      "community": 15,
-      "community_name": "Component Generator Dashboard",
+      "community": 0,
+      "community_name": "UI Inspiration Libraries & Stack",
       "norm_label": "magnetic()"
     },
     {
@@ -6019,8 +6145,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_components_ui_table",
-      "community": 13,
-      "community_name": "MDX Docs Rendering Components",
+      "community": 15,
+      "community_name": "Component Generator Dashboard",
       "norm_label": "table.tsx"
     },
     {
@@ -6030,8 +6156,8 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "src_components_ui_table_table",
-      "community": 13,
-      "community_name": "MDX Docs Rendering Components",
+      "community": 15,
+      "community_name": "Component Generator Dashboard",
       "norm_label": "table()"
     },
     {
@@ -6041,8 +6167,8 @@
       "source_location": "L22",
       "_origin": "ast",
       "id": "src_components_ui_table_tableheader",
-      "community": 13,
-      "community_name": "MDX Docs Rendering Components",
+      "community": 15,
+      "community_name": "Component Generator Dashboard",
       "norm_label": "tableheader()"
     },
     {
@@ -6052,8 +6178,8 @@
       "source_location": "L32",
       "_origin": "ast",
       "id": "src_components_ui_table_tablebody",
-      "community": 13,
-      "community_name": "MDX Docs Rendering Components",
+      "community": 15,
+      "community_name": "Component Generator Dashboard",
       "norm_label": "tablebody()"
     },
     {
@@ -6063,8 +6189,8 @@
       "source_location": "L42",
       "_origin": "ast",
       "id": "src_components_ui_table_tablefooter",
-      "community": 13,
-      "community_name": "MDX Docs Rendering Components",
+      "community": 15,
+      "community_name": "Component Generator Dashboard",
       "norm_label": "tablefooter()"
     },
     {
@@ -6074,8 +6200,8 @@
       "source_location": "L55",
       "_origin": "ast",
       "id": "src_components_ui_table_tablerow",
-      "community": 13,
-      "community_name": "MDX Docs Rendering Components",
+      "community": 15,
+      "community_name": "Component Generator Dashboard",
       "norm_label": "tablerow()"
     },
     {
@@ -6085,8 +6211,8 @@
       "source_location": "L68",
       "_origin": "ast",
       "id": "src_components_ui_table_tablehead",
-      "community": 13,
-      "community_name": "MDX Docs Rendering Components",
+      "community": 15,
+      "community_name": "Component Generator Dashboard",
       "norm_label": "tablehead()"
     },
     {
@@ -6096,8 +6222,8 @@
       "source_location": "L81",
       "_origin": "ast",
       "id": "src_components_ui_table_tablecell",
-      "community": 13,
-      "community_name": "MDX Docs Rendering Components",
+      "community": 15,
+      "community_name": "Component Generator Dashboard",
       "norm_label": "tablecell()"
     },
     {
@@ -6107,8 +6233,8 @@
       "source_location": "L94",
       "_origin": "ast",
       "id": "src_components_ui_table_tablecaption",
-      "community": 13,
-      "community_name": "MDX Docs Rendering Components",
+      "community": 15,
+      "community_name": "Component Generator Dashboard",
       "norm_label": "tablecaption()"
     },
     {
@@ -6283,8 +6409,8 @@
       "source_location": "L6",
       "_origin": "ast",
       "id": "src_components_ui_tooltip_tooltipprovider",
-      "community": 29,
-      "community_name": "Code Block & Tooltip Components",
+      "community": 12,
+      "community_name": "Root Layout & Metadata",
       "norm_label": "tooltipprovider()"
     },
     {
@@ -6349,8 +6475,8 @@
       "source_location": "L24",
       "_origin": "ast",
       "id": "src_components_ui_tracing_beam_tracingbeam",
-      "community": 29,
-      "community_name": "Code Block & Tooltip Components",
+      "community": 0,
+      "community_name": "UI Inspiration Libraries & Stack",
       "norm_label": "tracingbeam()"
     },
     {
@@ -6371,8 +6497,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_lib_env_getgithuburl",
-      "community": 19,
-      "community_name": "Badge Component & Landing Page",
+      "community": 12,
+      "community_name": "Root Layout & Metadata",
       "norm_label": "getgithuburl()"
     },
     {
@@ -10885,9 +11011,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 15,
+      "community": 0,
       "norm_label": "animated background doc page",
-      "community_name": "Component Generator Dashboard",
+      "community_name": "UI Inspiration Libraries & Stack",
       "id": "src_app_docs_components_animated_background_page"
     },
     {
@@ -10931,6 +11057,20 @@
       "norm_label": "border beam card doc page (deprecated, superseded by aurabeam)",
       "community_name": "UI Inspiration Libraries & Stack",
       "id": "src_app_docs_components_border_beam_card_page"
+    },
+    {
+      "label": "Border Glow Card Doc Page",
+      "file_type": "document",
+      "source_file": "src/app/docs/components/border-glow-card/page.mdx",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "community": 0,
+      "norm_label": "border glow card doc page",
+      "community_name": "UI Inspiration Libraries & Stack",
+      "id": "src_app_docs_components_border_glow_card_page"
     },
     {
       "label": "Button Doc Page",
@@ -10997,9 +11137,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 15,
+      "community": 0,
       "norm_label": "magnetic doc page",
-      "community_name": "Component Generator Dashboard",
+      "community_name": "UI Inspiration Libraries & Stack",
       "id": "src_app_docs_components_magnetic_page"
     },
     {
@@ -11109,9 +11249,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 15,
+      "community": 0,
       "norm_label": "motion primitives (component library)",
-      "community_name": "Component Generator Dashboard",
+      "community_name": "UI Inspiration Libraries & Stack",
       "id": "motion_primitives"
     },
     {
@@ -11155,6 +11295,20 @@
       "norm_label": "kokonut ui (component library)",
       "community_name": "UI Inspiration Libraries & Stack",
       "id": "kokonut_ui"
+    },
+    {
+      "label": "React Bits (component library)",
+      "file_type": "concept",
+      "source_file": "src/app/docs/components/border-glow-card/page.mdx",
+      "source_location": null,
+      "source_url": "https://www.reactbits.dev",
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "community": 0,
+      "norm_label": "react bits (component library)",
+      "community_name": "UI Inspiration Libraries & Stack",
+      "id": "react_bits"
     },
     {
       "label": "shadcn/ui Expansions",
@@ -14666,6 +14820,72 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "public/components/border-glow.json",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "public_components_border_glow",
+      "target": "public_components_border_glow_author",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "public/components/border-glow.json",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "public_components_border_glow",
+      "target": "public_components_border_glow_description",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "public/components/border-glow.json",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "public_components_border_glow",
+      "target": "public_components_border_glow_files",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "public/components/border-glow.json",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "public_components_border_glow",
+      "target": "public_components_border_glow_name",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "public/components/border-glow.json",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "public_components_border_glow",
+      "target": "public_components_border_glow_schema",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "public/components/border-glow.json",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "public_components_border_glow",
+      "target": "public_components_border_glow_type",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "public/components/button.json",
       "source_location": "L1",
       "weight": 1.0,
@@ -17274,7 +17494,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/app/sitemap.ts",
-      "source_location": "L20",
+      "source_location": "L21",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_app_sitemap",
@@ -18809,7 +19029,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/components/ui/aura-beam.tsx",
-      "source_location": "L94",
+      "source_location": "L159",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_ui_aura_beam",
@@ -18820,7 +19040,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/components/ui/aura-beam.tsx",
-      "source_location": "L22",
+      "source_location": "L123",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_ui_aura_beam",
@@ -18828,22 +19048,11 @@
       "confidence_score": 1.0
     },
     {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/ui/aura-beam.tsx",
-      "source_location": "L85",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_components_ui_aura_beam",
-      "target": "src_components_ui_aura_beam_getborderposition",
-      "confidence_score": 1.0
-    },
-    {
       "relation": "imports_from",
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/ui/aura-beam.tsx",
-      "source_location": "L7",
+      "source_location": "L3",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_ui_aura_beam",
@@ -18855,7 +19064,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/ui/aura-beam.tsx",
-      "source_location": "L7",
+      "source_location": "L3",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_ui_aura_beam",
@@ -18866,21 +19075,9 @@
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
-      "source_file": "src/components/ui/aura-beam.tsx",
-      "source_location": "L171",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_components_ui_aura_beam_auraeffect",
-      "target": "src_components_ui_aura_beam_getborderposition",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/components/ui/aura-beam.tsx",
-      "source_location": "L239",
+      "source_location": "L194",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_ui_aura_beam_auraeffect",
@@ -19022,6 +19219,97 @@
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_ui_border_beam_borderbeam",
+      "target": "src_lib_utils_cn"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/ui/border-glow.tsx",
+      "source_location": "L86",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_ui_border_glow",
+      "target": "src_components_ui_border_glow_borderglow",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/ui/border-glow.tsx",
+      "source_location": "L18",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_ui_border_glow",
+      "target": "src_components_ui_border_glow_borderglowprops",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/ui/border-glow.tsx",
+      "source_location": "L63",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_ui_border_glow",
+      "target": "src_components_ui_border_glow_getborderposition",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/ui/border-glow.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_ui_border_glow",
+      "target": "src_lib_utils",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/ui/border-glow.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_ui_border_glow",
+      "target": "src_lib_utils_cn",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/ui/border-glow.tsx",
+      "source_location": "L147",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_ui_border_glow_borderglow",
+      "target": "src_components_ui_border_glow_getborderposition",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/app/docs/components/border-glow-card/page.mdx",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "src_app_docs_components_border_glow_card_page",
+      "target": "src_components_ui_border_glow_borderglow"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/components/ui/border-glow.tsx",
+      "source_location": "L191",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_ui_border_glow_borderglow",
       "target": "src_lib_utils_cn"
     },
     {
@@ -24956,6 +25244,16 @@
       "source_location": null,
       "weight": 1.0,
       "source": "readme",
+      "target": "src_app_docs_components_border_glow_card_page"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "readme",
       "target": "src_app_docs_components_button_page"
     },
     {
@@ -25111,6 +25409,16 @@
     {
       "relation": "semantically_similar_to",
       "confidence": "INFERRED",
+      "confidence_score": 0.75,
+      "source_file": "src/app/docs/components/border-glow-card/page.mdx",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "src_app_docs_components_border_glow_card_page",
+      "target": "src_app_docs_components_aura_beam_card_page"
+    },
+    {
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
       "confidence_score": 0.65,
       "source_file": "src/app/docs/components/rainbow-card/page.mdx",
       "source_location": null,
@@ -25157,6 +25465,26 @@
       "weight": 1.0,
       "source": "src_app_docs_components_border_beam_card_page",
       "target": "src_app_docs_components_shine_border_card_page"
+    },
+    {
+      "relation": "cites",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/app/docs/components/border-glow-card/page.mdx",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "src_app_docs_components_border_glow_card_page",
+      "target": "react_bits"
+    },
+    {
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.75,
+      "source_file": "src/app/docs/components/border-glow-card/page.mdx",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "src_app_docs_components_border_glow_card_page",
+      "target": "src_app_docs_components_rainbow_card_page"
     },
     {
       "relation": "shares_data_with",
@@ -25744,6 +26072,22 @@
       "source_file": ".agents/skills/vercel-react-best-practices/rules/rerender-transitions.md"
     },
     {
+      "id": "card_decoration_effects",
+      "label": "Card Border/Hover Decoration Effects",
+      "nodes": [
+        "src_app_docs_components_border_beam_card_page",
+        "src_app_docs_components_border_glow_card_page",
+        "src_app_docs_components_rainbow_card_page",
+        "src_app_docs_components_shine_border_card_page",
+        "src_app_docs_components_tilt_card_page",
+        "src_app_docs_components_aura_beam_card_page"
+      ],
+      "relation": "participate_in",
+      "confidence": "INFERRED",
+      "confidence_score": 0.75,
+      "source_file": "src/app/docs/components/aura-beam-card/page.mdx"
+    },
+    {
       "id": "deprecated_components_migrated_to_aura_beam",
       "label": "Deprecated Components Migrated to AuraBeam",
       "nodes": [
@@ -25757,5 +26101,5 @@
       "source_file": "src/app/docs/components/border-beam-card/page.mdx"
     }
   ],
-  "built_at_commit": "29bfcf3e675dc08121f57189710a89b962056c2e"
+  "built_at_commit": "820526e25684ac68c6767e9b9f938b74bdfd6abd"
 }

@@ -85,78 +85,83 @@
     "semantic_hash": "481fac0fdecd70e1821cc30b86030c1a"
   },
   "public/components/animated-background.json": {
-    "mtime": 1785200286.8642404,
+    "mtime": 1784581365.1643558,
     "ast_hash": "57438dcb734434b653910a38cc6ae686",
     "semantic_hash": "57438dcb734434b653910a38cc6ae686"
   },
   "public/components/aura-beam.json": {
-    "mtime": 1785200286.866249,
-    "ast_hash": "083466805a5a3a76f76f44a820dcc8e9",
+    "mtime": 1784581365.1658566,
+    "ast_hash": "9304e62f88fd1fe44a9f2fde07f613e8",
     "semantic_hash": ""
   },
   "public/components/badge.json": {
-    "mtime": 1785200286.8617394,
-    "ast_hash": "525904e5714dbe361fd2526f932debfa",
+    "mtime": 1784581365.162856,
+    "ast_hash": "61fd629025b989770ba8c715cb433cbb",
     "semantic_hash": ""
   },
   "public/components/border-beam.json": {
-    "mtime": 1785200286.8627405,
+    "mtime": 1784581365.1633556,
     "ast_hash": "cf071eb9b5aa571fd065aa5c1b058c7c",
     "semantic_hash": "cf071eb9b5aa571fd065aa5c1b058c7c"
   },
+  "public/components/border-glow.json": {
+    "mtime": 1784581365.1653554,
+    "ast_hash": "cc02ae45c8e75e465014e1b932d7d89b",
+    "semantic_hash": "cc02ae45c8e75e465014e1b932d7d89b"
+  },
   "public/components/button.json": {
-    "mtime": 1785200286.8612404,
-    "ast_hash": "01c95f9a1f8550a4f9a5844cd85e2c32",
+    "mtime": 1784581365.1623526,
+    "ast_hash": "c1740fc3534fdaf6a85f54fc00305394",
     "semantic_hash": ""
   },
   "public/components/confetti-wrapper.json": {
-    "mtime": 1785200286.8617394,
+    "mtime": 1784581365.162856,
     "ast_hash": "9f563d2730b302c62b6edc21cb012159",
     "semantic_hash": "9f563d2730b302c62b6edc21cb012159"
   },
   "public/components/depth-media.json": {
-    "mtime": 1785200286.865749,
+    "mtime": 1784581365.1653554,
     "ast_hash": "8451b31c1d0966c7b7eeddef5aa7ccbd",
     "semantic_hash": "8451b31c1d0966c7b7eeddef5aa7ccbd"
   },
   "public/components/flip-card.json": {
-    "mtime": 1785200286.8637414,
-    "ast_hash": "599226975a346c15eafbd6c42450fafd",
+    "mtime": 1784581365.163856,
+    "ast_hash": "7dbebde3f1052e6f97caf6257564c0bc",
     "semantic_hash": ""
   },
   "public/components/floating-label-input.json": {
-    "mtime": 1785200286.8642404,
+    "mtime": 1784581365.1643558,
     "ast_hash": "93d4fcd54efb64c45a9532a7f59b4c58",
     "semantic_hash": "93d4fcd54efb64c45a9532a7f59b4c58"
   },
   "public/components/magnetic.json": {
-    "mtime": 1785200286.8652434,
+    "mtime": 1784581365.1648562,
     "ast_hash": "c62cec96fa5c49d4c1704cffc331d854",
     "semantic_hash": "c62cec96fa5c49d4c1704cffc331d854"
   },
   "public/components/rainbow-border.json": {
-    "mtime": 1785200286.8622427,
-    "ast_hash": "5bb67d7cebfe9a2618e7b452478c04d2",
+    "mtime": 1784581365.1633556,
+    "ast_hash": "e1caa50c1f98d42b9996364040fdce79",
     "semantic_hash": ""
   },
   "public/components/shine-border.json": {
-    "mtime": 1785200286.8632405,
-    "ast_hash": "8f7f1b93f50cbd7c0fbe5549d43ab077",
+    "mtime": 1784581365.163856,
+    "ast_hash": "3410f7839938d52939a3beb4eb7b69e8",
     "semantic_hash": ""
   },
   "public/components/tilt.json": {
-    "mtime": 1785200286.8642404,
+    "mtime": 1784581365.1648562,
     "ast_hash": "c965e32857c66afe97e99e547ee31f0f",
     "semantic_hash": "c965e32857c66afe97e99e547ee31f0f"
   },
   "public/components/tracing-beam.json": {
-    "mtime": 1785200286.865749,
+    "mtime": 1784581365.1648562,
     "ast_hash": "b32d2c7908d28429c49c6f8bdd45d245",
     "semantic_hash": "b32d2c7908d28429c49c6f8bdd45d245"
   },
   "scripts/generate-registry.js": {
-    "mtime": 1785200254.688562,
-    "ast_hash": "5702e562db5b45881cf795ca6c2a209b",
+    "mtime": 1784581360.9893444,
+    "ast_hash": "7c70d7e43b244cc961b20396add6d2ae",
     "semantic_hash": ""
   },
   "skills-lock.json": {
@@ -180,8 +185,8 @@
     "semantic_hash": "5978666ad30f83226eb059114706bbe4"
   },
   "src/app/docs/components/_meta.ts": {
-    "mtime": 1785200256.1213741,
-    "ast_hash": "7d5d8eb709c3c9e77b83489c5ca07f6c",
+    "mtime": 1784579884.2355165,
+    "ast_hash": "4b17633a281d5cf6b983a656b460db73",
     "semantic_hash": ""
   },
   "src/app/docs/components/confetti-wrapper/_demo-onclick.tsx": {
@@ -220,8 +225,8 @@
     "semantic_hash": "0bdbeb7ce7dc4309f49e91729ca7448d"
   },
   "src/app/sitemap.ts": {
-    "mtime": 1785200257.056226,
-    "ast_hash": "baee3311b94f5e48edd4e80fc5182c76",
+    "mtime": 1784579884.9681275,
+    "ast_hash": "6fd842f5b61348aa1937c381b7fa33fb",
     "semantic_hash": ""
   },
   "src/components/docs/code-block.tsx": {
@@ -275,8 +280,8 @@
     "semantic_hash": "5e1f198c2b6e43d1c4fab17be3505fa8"
   },
   "src/components/ui/aura-beam.tsx": {
-    "mtime": 1785200280.0250413,
-    "ast_hash": "6f9211321014ce4033aab2a19f92b361",
+    "mtime": 1784581355.9959183,
+    "ast_hash": "8be9c76168d80ce63ccb02596a0a619a",
     "semantic_hash": ""
   },
   "src/components/ui/badge.tsx": {
@@ -288,6 +293,11 @@
     "mtime": 1783370070.5098667,
     "ast_hash": "0d3c05848e3a140d11597e5514088a1c",
     "semantic_hash": "0d3c05848e3a140d11597e5514088a1c"
+  },
+  "src/components/ui/border-glow.tsx": {
+    "mtime": 1783370077.942246,
+    "ast_hash": "944b2c842e32f7a8e9233ce69125086d",
+    "semantic_hash": "944b2c842e32f7a8e9233ce69125086d"
   },
   "src/components/ui/button.tsx": {
     "mtime": 1783358098.3494751,
@@ -1085,8 +1095,8 @@
     "semantic_hash": "8d96a7f6f0c5e1908bab8faf8cd2f9b4"
   },
   "README.md": {
-    "mtime": 1785200265.1210933,
-    "ast_hash": "491c371540e0aa918a8a9cf46424e667",
+    "mtime": 1784579889.5228305,
+    "ast_hash": "565c9a77f4ff6c5b630e5a6bd741d4be",
     "semantic_hash": ""
   },
   "public/googlefd960e7412fbce49.html": {
@@ -1100,8 +1110,8 @@
     "semantic_hash": "416534c1dbe8b7c3afe7d85abeba7c29"
   },
   "src/app/docs/components/aura-beam-card/page.mdx": {
-    "mtime": 1785199707.6066442,
-    "ast_hash": "2ad1e10762649dd3e93b4ffe59173d4b",
+    "mtime": 1784581329.9424667,
+    "ast_hash": "e4875656edef102b3618ed445ae58ea6",
     "semantic_hash": ""
   },
   "src/app/docs/components/badge/page.mdx": {
@@ -1113,6 +1123,11 @@
     "mtime": 1783372494.8747873,
     "ast_hash": "5fc1d164292622ecf3cc52e525116897",
     "semantic_hash": "5fc1d164292622ecf3cc52e525116897"
+  },
+  "src/app/docs/components/border-glow-card/page.mdx": {
+    "mtime": 1783370070.5093627,
+    "ast_hash": "c7e47ecdcfd54736a232db7ddf3a412a",
+    "semantic_hash": "c7e47ecdcfd54736a232db7ddf3a412a"
   },
   "src/app/docs/components/button/page.mdx": {
     "mtime": 1783358098.3335588,
@@ -1130,9 +1145,9 @@
     "semantic_hash": "59560ad7c424d7d65a32c24a549cdc3a"
   },
   "src/app/docs/components/floating-label-input/page.mdx": {
-    "mtime": 1785197891.102319,
-    "ast_hash": "22e7a1010af00307770c03772913fb9e",
-    "semantic_hash": ""
+    "mtime": 1783358098.3385754,
+    "ast_hash": "c3898bd75bbb2a30a47acb6e3f87d1c6",
+    "semantic_hash": "c3898bd75bbb2a30a47acb6e3f87d1c6"
   },
   "src/app/docs/components/magnetic/page.mdx": {
     "mtime": 1783358098.3385754,

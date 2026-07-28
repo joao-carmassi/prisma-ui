@@ -202,4 +202,56 @@
   animation: aura-shine var(--aura-duration) ease-in-out infinite;
 }
 
+/* ─── Glow variant (cursor proximity) ─────────────────────────────────────── */
+
+@property --aura-glow-opacity {
+  syntax: '<number>';
+  initial-value: 0;
+  inherits: true;
+}
+
+.aura-beam[data-variant='glow'] {
+  --aura-x: 50%;
+  --aura-y: 0px;
+  --aura-cone: 140px;
+  --aura-color-third: var(--aura-color-to);
+
+  animation: none;
+  transition: --aura-glow-opacity 0.18s ease;
+  background-origin: border-box;
+
+  background-image: radial-gradient(
+    circle var(--aura-cone) at var(--aura-x) var(--aura-y),
+    color-mix(
+        in srgb,
+        var(--aura-color-from) calc(var(--aura-glow-opacity) * 100%),
+        transparent
+      )
+      0%,
+    color-mix(
+        in srgb,
+        var(--aura-color-to) calc(var(--aura-glow-opacity) * 78%),
+        transparent
+      )
+      45%,
+    color-mix(
+        in srgb,
+        var(--aura-color-third) calc(var(--aura-glow-opacity) * 50%),
+        transparent
+      )
+      75%,
+    transparent 100%
+  );
+}
+
+.aura-beam[data-variant='glow']::before {
+  filter: blur(5px);
+  opacity: 0.85;
+}
+
+.aura-beam[data-variant='glow']::after {
+  filter: blur(24px);
+  opacity: 0.5;
+}
+
 

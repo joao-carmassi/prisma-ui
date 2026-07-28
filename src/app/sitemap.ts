@@ -15,7 +15,6 @@ const components = [
   'tilt-card',
   'magnetic',
   'tracing-beam',
-  'border-glow-card',
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
