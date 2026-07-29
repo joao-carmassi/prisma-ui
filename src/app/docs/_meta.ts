@@ -1,5 +1,8 @@
 /* eslint-disable import/no-anonymous-default-export */
 export default {
+  styles: {
+    title: 'Styles & Themes',
+  },
   components: {
     title: 'Components',
   },

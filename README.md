@@ -56,17 +56,29 @@ Components require **shadcn/ui** to be initialized in your project:
 npx shadcn@latest init
 ```
 
-Then add any component individually with:
-
-```bash
-npx shadcn@latest add https://prismaui.com/components/<component-name>.json
-```
-
-Example — adding the Button:
+Then add any component from its registry URL. Example — adding the Button:
 
 ```bash
 npx shadcn@latest add https://prismaui.com/components/button.json
 ```
+
+Direct URLs always serve the `radix-vega` variant. For automatic theme detection, register the `@prisma` namespace once in your project's `components.json`:
+
+```json
+{
+  "registries": {
+    "@prisma": "https://prismaui.com/components/{style}/{name}.json"
+  }
+}
+```
+
+Then install by name:
+
+```bash
+npx shadcn@latest add @prisma/button
+```
+
+The CLI replaces `{style}` with the `style` field from your own `components.json`, so Button and Badge arrive matched to your theme's sizing scale. See the [Styles & Themes](https://prismaui.com/docs/styles) docs for the supported styles.
 
 The CLI automatically downloads the source file into your `components/ui/` directory and installs any required dependencies.
 

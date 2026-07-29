@@ -1,0 +1,196 @@
+import { JsonLd } from '@/components/seo/json-ld';
+import { InstallSnippet } from '@/components/docs/install-snippet';
+
+export const metadata = {
+  title: 'Styles & Themes',
+  description:
+    'Install Prisma UI components matched to your shadcn style. Register the @prisma namespace once and the shadcn CLI resolves the right Button and Badge scale for radix-vega, radix-nova, radix-maia, radix-lyra, radix-mira, radix-luma, radix-rhea, and radix-sera.',
+  alternates: { canonical: '/docs/styles' },
+};
+
+<JsonLd
+  data={{
+    '@context': 'https://schema.org',
+    '@type': 'TechArticle',
+    headline: 'Styles & Themes — Prisma UI',
+    description:
+      'How Prisma UI serves per-style component variants through the shadcn {style} placeholder, and how to register the @prisma namespace.',
+    breadcrumb: {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: 'Home',
+          item: 'https://prismaui.com',
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: 'Docs',
+          item: 'https://prismaui.com/docs',
+        },
+        {
+          '@type': 'ListItem',
+          position: 3,
+          name: 'Styles & Themes',
+          item: 'https://prismaui.com/docs/styles',
+        },
+      ],
+    },
+  }}
+/>
+
+# Styles & Themes
+
+Prisma UI serves a separate build of its registry for every shadcn style. Register the `@prisma` namespace once and the shadcn CLI installs the component variant that matches your project's theme — no manual choice, no visual mismatch.
+
+## What a shadcn style is
+
+When you run `npx shadcn@latest init`, the CLI writes a `style` field into your `components.json`:
+
+```json
+{
+  "$schema": "https://ui.shadcn.com/schema.json",
+  "style": "radix-vega",
+  "iconLibrary": "lucide"
+}
+```
+
+A style is not just a color palette. It defines the **design scale** of every control: heights, horizontal padding, gaps, border radius, and the type scale. A `radix-nova` button is deliberately shorter and tighter than a `radix-vega` one.
+
+That matters for a third-party registry. If Prisma UI shipped a single Button, a `radix-nova` project would end up with a button that is a full step taller than the `@shadcn/input` sitting next to it in the same form. Serving one build per style is what keeps Prisma UI components aligned with the rest of your UI.
+
+---
+
+## Setup
+
+Add the `@prisma` namespace to the `registries` block of your project's `components.json`:
+
+```json
+{
+  "$schema": "https://ui.shadcn.com/schema.json",
+  "style": "radix-vega",
+  "registries": {
+    "@prisma": "https://prismaui.com/components/{style}/{name}.json"
+  }
+}
+```
+
+That single entry covers the whole library. You never edit it again — not when you add another component, and not when you switch themes.
+
+## Adding a component
+
+<InstallSnippet registryUrl='@prisma/button' />
+
+Every component is available under the same namespace:
+
+```bash
+npx shadcn@latest add @prisma/badge
+npx shadcn@latest add @prisma/aura-beam
+npx shadcn@latest add @prisma/button @prisma/badge
+```
+
+---
+
+## How auto-detection works
+
+The shadcn CLI resolves the two placeholders in the registry URL before it fetches anything:
+
+| Placeholder | Replaced with                                   |
+| ----------- | ----------------------------------------------- |
+| `{style}`   | The `style` field from **your** `components.json` |
+| `{name}`    | The item you asked for, e.g. `button`             |
+
+So in a project configured with `"style": "radix-nova"`, this command:
+
+```bash
+npx shadcn@latest add @prisma/button
+```
+
+resolves to:
+
+```
+https://prismaui.com/components/radix-nova/button.json
+```
+
+The substitution is done by the CLI, not by our server. Your `components.json` is the single source of truth, which is why the correct variant arrives with zero flags and zero manual selection.
+
+---
+
+## Supported styles
+
+All eight Radix-based shadcn styles are served:
+
+| `style` value | Resolved registry URL                                   |
+| ------------- | ------------------------------------------------------- |
+| `radix-vega`  | `https://prismaui.com/components/radix-vega/{name}.json` |
+| `radix-nova`  | `https://prismaui.com/components/radix-nova/{name}.json` |
+| `radix-maia`  | `https://prismaui.com/components/radix-maia/{name}.json` |
+| `radix-lyra`  | `https://prismaui.com/components/radix-lyra/{name}.json` |
+| `radix-mira`  | `https://prismaui.com/components/radix-mira/{name}.json` |
+| `radix-luma`  | `https://prismaui.com/components/radix-luma/{name}.json` |
+| `radix-rhea`  | `https://prismaui.com/components/radix-rhea/{name}.json` |
+| `radix-sera`  | `https://prismaui.com/components/radix-sera/{name}.json` |
+
+`radix-vega` is the base style: its sources are the canonical ones in this repository, and it is what every fallback path resolves to.
+
+### Legacy style names
+
+Projects initialized before the current style system still carry `"style": "default"` or `"style": "new-york"` in their `components.json`. Both are served as aliases so the `{style}` URL never breaks:
+
+| Legacy `style` value | Serves            |
+| -------------------- | ----------------- |
+| `default`            | `radix-vega` content |
+| `new-york`           | `radix-vega` content |
+
+They are aliases, not distinct builds. If you are on a legacy style name, re-running `npx shadcn@latest init --preset radix-vega --force` gets you onto a current style without changing what Prisma UI installs.
+
+### React Aria styles are not supported
+
+shadcn also ships `base-*` styles built on React Aria instead of Radix (`base-nova`, `base-vega`, and so on). Prisma UI is built on [Radix UI](https://www.radix-ui.com/) primitives only, so those styles are **not** served — a `base-*` project resolves to a URL that does not exist and the CLI reports a 404.
+
+If your project uses a `base-*` style, install from the direct URL instead (see below) and expect Radix-based markup.
+
+---
+
+## Which components are style-aware
+
+Only **Button**, **Badge**, and **Floating Label Input** have real per-style variants — they are the components whose sizing, radius, and typography have to line up with the surrounding shadcn controls.
+
+Everything else (Aura Beam, Border Beam, Shine Border, Flip Card, Tilt Card, Magnetic, Tracing Beam, Depth Media, Animated Background, Confetti Wrapper, Rainbow Border) is style-independent: the animation and effect components derive their look from your CSS variables, not from the style scale.
+
+They are still published under **every** style path anyway. That is deliberate — it means the one namespace entry above works for the whole library, and you never have to remember which components are style-aware and which are not.
+
+---
+
+## Direct URL installs
+
+The root registry path still works and is unchanged:
+
+<InstallSnippet registryUrl='https://prismaui.com/components/button.json' />
+
+Use it when you cannot edit `components.json`, when you want to pin an exact variant, or for one-off installs.
+
+A direct URL is fetched verbatim — there is no `{style}` in it, so **no substitution happens** and you always get `radix-vega` content. If you are on another style, pin the style folder explicitly:
+
+```bash
+npx shadcn@latest add https://prismaui.com/components/radix-nova/button.json
+```
+
+---
+
+## Caveats
+
+- **Direct URLs skip style detection.** `https://prismaui.com/components/button.json` always serves `radix-vega`. Only the `@prisma/{name}` form reads your `style` field.
+- **Changing your theme later does not update installed files.** shadcn copies source into your project; it does not track it. After switching styles, reinstall the style-aware components:
+
+  ```bash
+  npx shadcn@latest init --preset radix-nova --force
+  npx shadcn@latest add @prisma/button @prisma/badge @prisma/floating-label-input --overwrite
+  ```
+
+  Components you customized after installing will be overwritten — commit before you reinstall.
+
+- **Unknown styles 404.** Anything outside the supported list above — including every `base-*` React Aria style — has no folder in the registry and the CLI will fail to resolve it. Check the `style` value in your `components.json` against the table if an install fails.
+- **The namespace name is yours to choose.** `@prisma` is only the key in your `components.json`; rename it if it collides with another registry, and use your own key in the `add` command.

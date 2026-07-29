@@ -13,6 +13,7 @@ import {
 } from 'lucide-react';
 import { JsonLd } from '@/components/seo/json-ld';
 import { InstallSnippet } from '@/components/docs/install-snippet';
+import { StyleShowcase } from '@/components/docs/style-showcase';
 
 export const metadata = {
   title: 'Button',
@@ -61,6 +62,10 @@ A versatile button component built on top of Radix UI and styled with Tailwind C
 ## Installation
 
 <InstallSnippet registryUrl='https://prismaui.com/components/button.json' />
+
+The direct URL serves the `radix-vega` variant. The Button is style-aware — its sizes, radius, and type scale differ per shadcn style. To let the CLI pick the variant that matches your project's theme automatically, register the `@prisma` namespace once (see [Styles & Themes](/docs/styles)) and install by name:
+
+<InstallSnippet registryUrl='@prisma/button' />
 
 ## Import
 
@@ -488,3 +493,13 @@ import Link from 'next/link';
 | `asChild`       | `boolean`                                                                                                                                              | `false`     | Renders as child element via Radix Slot |
 | `disabled`      | `boolean`                                                                                                                                              | `false`     | Disables the button                     |
 | `className`     | `string`                                                                                                                                               | `undefined` | Additional CSS classes                  |
+
+---
+
+## Theme styles
+
+The Button ships in a dedicated variant for each supported shadcn style. Installed through the `@prisma` namespace, the CLI delivers the one matching the `style` in your `components.json` — same API, different sizing, radius, and type scale:
+
+<StyleShowcase component='button' />
+
+See [Styles & Themes](/docs/styles) for setup and the full list of supported styles.

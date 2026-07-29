@@ -1,16 +1,16 @@
-# Graph Report - prisma-ui  (2026-07-20)
+# Graph Report - prisma-ui  (2026-07-27)
 
 ## Corpus Check
-- 234 files · ~124,192 words
+- 376 files · ~198,418 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 943 nodes · 1278 edges · 103 communities (66 shown, 37 thin omitted)
-- Extraction: 90% EXTRACTED · 10% INFERRED · 0% AMBIGUOUS · INFERRED: 129 edges (avg confidence: 0.78)
+- 2306 nodes · 2515 edges · 245 communities (208 shown, 37 thin omitted)
+- Extraction: 95% EXTRACTED · 5% INFERRED · 0% AMBIGUOUS · INFERRED: 126 edges (avg confidence: 0.78)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `820526e2`
+- Built from commit: `065dffcc`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -39,6 +39,7 @@
 - Benchmark Aggregation Script
 - Confetti Wrapper Registry Entry
 - Border Beam Registry Entry
+- aura-beam.tsx
 - Dropzone Component
 - shadcn Skill Reference Docs
 - Skill Eval Agents & Schemas
@@ -53,19 +54,25 @@
 - Button Registry Entry
 - Depth Media Registry Entry
 - Flip Card Registry Entry
+- button.json
 - Magnetic Registry Entry
+- button.json
 - Rainbow Border Registry Entry
+- button.json
 - Shine Border Registry Entry
 - Tilt Registry Entry
 - Tracing Beam Registry Entry
+- button.json
 - Component Registry Generator Script
 - Derived State & Transition Rules
-- Border Glow Registry Entry
+- button.json
+- button.json
 - PWA Manifest Config
 - Find Skills Skill
 - Hydration & Storage Rules
 - Parallel & Intercepting Routes
 - SVG Rendering Optimization Rules
+- button.json
 - Route Handlers Guidance
 - Self-Hosting Deployment Guide
 - SEO Audit Framework
@@ -115,10 +122,145 @@
 - Google Site Verification File
 - Misc Unlabeled Fragment
 - PWA Icon (192x192) & Brand
+- button.json
+- Next.js Data Patterns Reference
+- border-beam.json
+- confetti-wrapper.json
+- border-beam.json
+- confetti-wrapper.json
+- border-beam.json
+- confetti-wrapper.json
+- border-beam.json
+- confetti-wrapper.json
+- border-beam.json
+- confetti-wrapper.json
+- border-beam.json
+- confetti-wrapper.json
+- border-beam.json
+- confetti-wrapper.json
+- border-beam.json
+- confetti-wrapper.json
+- border-beam.json
+- confetti-wrapper.json
+- border-beam.json
+- confetti-wrapper.json
+- Create Skill Skill
+- floating-label-input.json
+- floating-label-input.json
+- floating-label-input.json
+- floating-label-input.json
+- floating-label-input.json
+- floating-label-input.json
+- floating-label-input.json
+- floating-label-input.json
+- floating-label-input.json
+- floating-label-input.json
+- animated-background.json
+- aura-beam.json
+- badge.json
+- depth-media.json
+- flip-card.json
+- magnetic.json
+- rainbow-border.json
+- shine-border.json
+- tilt.json
+- tracing-beam.json
+- animated-background.json
+- aura-beam.json
+- badge.json
+- depth-media.json
+- flip-card.json
+- magnetic.json
+- rainbow-border.json
+- shine-border.json
+- tilt.json
+- tracing-beam.json
+- animated-background.json
+- aura-beam.json
+- badge.json
+- depth-media.json
+- flip-card.json
+- magnetic.json
+- rainbow-border.json
+- shine-border.json
+- tilt.json
+- tracing-beam.json
+- animated-background.json
+- aura-beam.json
+- badge.json
+- depth-media.json
+- flip-card.json
+- magnetic.json
+- rainbow-border.json
+- shine-border.json
+- tilt.json
+- tracing-beam.json
+- animated-background.json
+- aura-beam.json
+- badge.json
+- depth-media.json
+- flip-card.json
+- magnetic.json
+- rainbow-border.json
+- shine-border.json
+- tilt.json
+- tracing-beam.json
+- animated-background.json
+- aura-beam.json
+- badge.json
+- depth-media.json
+- flip-card.json
+- magnetic.json
+- rainbow-border.json
+- shine-border.json
+- tilt.json
+- tracing-beam.json
+- animated-background.json
+- aura-beam.json
+- badge.json
+- depth-media.json
+- flip-card.json
+- magnetic.json
+- rainbow-border.json
+- shine-border.json
+- tilt.json
+- tracing-beam.json
+- animated-background.json
+- aura-beam.json
+- badge.json
+- depth-media.json
+- flip-card.json
+- magnetic.json
+- rainbow-border.json
+- shine-border.json
+- tilt.json
+- tracing-beam.json
+- animated-background.json
+- aura-beam.json
+- badge.json
+- depth-media.json
+- flip-card.json
+- magnetic.json
+- rainbow-border.json
+- shine-border.json
+- tilt.json
+- tracing-beam.json
+- animated-background.json
+- aura-beam.json
+- badge.json
+- depth-media.json
+- flip-card.json
+- magnetic.json
+- rainbow-border.json
+- shine-border.json
+- tilt.json
+- tracing-beam.json
+- Frontend Design Skill
+- Next.js Font Optimization Reference
 
 ## God Nodes (most connected - your core abstractions)
-1. `cn()` - 100 edges
-2. `Prisma UI README` - 25 edges
+1. `cn()` - 108 edges
+2. `Prisma UI README` - 24 edges
 3. `Next.js Best Practices Skill` - 20 edges
 4. `Rule Sections Overview` - 20 edges
 5. `Rule File Template` - 20 edges
@@ -137,8 +279,8 @@
   src/app/docs/references/page.mdx → package.json
 - `Prisma UI README` --conceptually_related_to--> `Border Beam Card Doc Page (deprecated, superseded by AuraBeam)`  [INFERRED]
   README.md → src/app/docs/components/border-beam-card/page.mdx
-- `Badge Doc Page` --references--> `Badge()`  [EXTRACTED]
-  src/app/docs/components/badge/page.mdx → src/components/ui/badge.tsx
+- `Prisma UI README` --conceptually_related_to--> `Magnetic Doc Page`  [INFERRED]
+  README.md → src/app/docs/components/magnetic/page.mdx
 
 ## Import Cycles
 - None detected.
@@ -162,14 +304,13 @@
 - **React Re-render Avoidance Rule Set** — agents_skills_vercel_react_best_practices_rules_rerender_dependencies_narrow_effect_dependencies, agents_skills_vercel_react_best_practices_rules_rerender_derived_state_no_effect_calculate_derived_state_during_rendering, agents_skills_vercel_react_best_practices_rules_rerender_derived_state_subscribe_to_derived_state, agents_skills_vercel_react_best_practices_rules_rerender_functional_setstate_use_functional_setstate_updates, agents_skills_vercel_react_best_practices_rules_rerender_lazy_state_init_use_lazy_state_initialization, agents_skills_vercel_react_best_practices_rules_rerender_memo_with_default_value_extract_default_nonprimitive_parameter_value, agents_skills_vercel_react_best_practices_rules_rerender_memo_extract_to_memoized_components, agents_skills_vercel_react_best_practices_rules_rerender_move_effect_to_event_put_interaction_logic_in_event_handlers, agents_skills_vercel_react_best_practices_rules_rerender_no_inline_components_dont_define_components_inside_components, agents_skills_vercel_react_best_practices_rules_rerender_simple_expression_in_memo_avoid_usememo_for_simple_expressions, agents_skills_vercel_react_best_practices_rules_rerender_split_combined_hooks_split_combined_hook_computations, agents_skills_vercel_react_best_practices_rules_rerender_transitions_use_transitions_for_nonurgent_updates, agents_skills_vercel_react_best_practices_rules_rerender_use_deferred_value_use_usedeferredvalue_for_expensive_derived_renders, agents_skills_vercel_react_best_practices_rules_rerender_use_ref_transient_values_use_useref_for_transient_values [INFERRED 0.85]
 - **Server-Side Data Fetching & Caching Rule Set** — agents_skills_vercel_react_best_practices_rules_server_after_nonblocking_use_after_for_nonblocking_operations, agents_skills_vercel_react_best_practices_rules_server_auth_actions_authenticate_server_actions_like_api_routes, agents_skills_vercel_react_best_practices_rules_server_cache_lru_crossrequest_lru_caching, agents_skills_vercel_react_best_practices_rules_server_cache_react_perrequest_deduplication_with_react_cache, agents_skills_vercel_react_best_practices_rules_server_dedup_props_avoid_duplicate_serialization_in_rsc_props, agents_skills_vercel_react_best_practices_rules_server_hoist_static_io_hoist_static_io_to_module_level, agents_skills_vercel_react_best_practices_rules_server_parallel_fetching_parallel_data_fetching_with_component_composition, agents_skills_vercel_react_best_practices_rules_server_serialization_minimize_serialization_at_rsc_boundaries [INFERRED 0.85]
 - **Concurrent Rendering APIs for UI Responsiveness** — agents_skills_vercel_react_best_practices_rules_rerender_transitions_use_transitions_for_nonurgent_updates, agents_skills_vercel_react_best_practices_rules_rerender_use_deferred_value_use_usedeferredvalue_for_expensive_derived_renders, agents_skills_vercel_react_best_practices_rules_rerender_derived_state_subscribe_to_derived_state [INFERRED 0.70]
-- **Card Border/Hover Decoration Effects** — src_app_docs_components_border_beam_card_page, src_app_docs_components_border_glow_card_page, src_app_docs_components_rainbow_card_page, src_app_docs_components_shine_border_card_page, src_app_docs_components_tilt_card_page, src_app_docs_components_aura_beam_card_page [INFERRED 0.75]
 - **Deprecated Components Migrated to AuraBeam** — src_app_docs_components_border_beam_card_page, src_app_docs_components_shine_border_card_page, src_app_docs_components_aura_beam_card_page [EXTRACTED 1.00]
 
-## Communities (103 total, 37 thin omitted)
+## Communities (245 total, 37 thin omitted)
 
 ### Community 0 - "UI Inspiration Libraries & Stack"
-Cohesion: 0.05
-Nodes (54): Aceternity UI (component library), daisyUI (Aura component), Enhanced Button (inspiration project), Kokonut UI (component library), Magic UI (component library), Motion (animation library), Motion Primitives (component library), Next.js 16 (+46 more)
+Cohesion: 0.06
+Nodes (47): Aceternity UI (component library), daisyUI (Aura component), Enhanced Button (inspiration project), Kokonut UI (component library), Magic UI (component library), Motion (animation library), Motion Primitives (component library), Next.js 16 (+39 more)
 
 ### Community 1 - "NPM Runtime Dependencies"
 Cohesion: 0.05
@@ -180,8 +321,8 @@ Cohesion: 0.05
 Nodes (37): babel-plugin-react-compiler, eslint, eslint-config-next, devDependencies, babel-plugin-react-compiler, eslint, eslint-config-next, pagefind (+29 more)
 
 ### Community 3 - "Next.js Best Practices Docs"
-Cohesion: 0.07
-Nodes (33): Next.js Async Patterns Reference, Next.js Bundling Reference, Next.js Data Patterns Reference, Avoiding Data Waterfalls, Next.js Debug Tricks Reference, Next.js Directives Reference, Next.js Error Handling Reference, Do Not Wrap Navigation APIs in Try-Catch (+25 more)
+Cohesion: 0.11
+Nodes (19): Next.js Bundling Reference, Next.js Debug Tricks Reference, Next.js File Conventions Reference, Next.js Hydration Errors Reference, Next.js Image Optimization Reference, Next.js Metadata Reference, Next.js Parallel and Intercepting Routes Reference (stub), Next.js Route Handlers Reference (stub) (+11 more)
 
 ### Community 4 - "Skill Creator Report Scripts"
 Cohesion: 0.11
@@ -196,12 +337,12 @@ Cohesion: 0.07
 Nodes (29): dom, dom.iterable, esnext, **/*.mts, next.config.mjs, .next/dev/types/**/*.ts, next-env.d.ts, .next/types/**/*.ts (+21 more)
 
 ### Community 7 - "Install Snippet Component"
-Cohesion: 0.10
-Nodes (26): InstallSnippet(), InstallSnippetProps, managers, Snippet(), SnippetCopyButton(), SnippetCopyButtonProps, SnippetHeader(), SnippetHeaderProps (+18 more)
+Cohesion: 0.05
+Nodes (42): geistMono, geistSans, metadata, orgSchema, RootLayout(), RootLayoutProps, syne, websiteSchema (+34 more)
 
 ### Community 8 - "Component & Skill Authoring Guides"
-Cohesion: 0.09
-Nodes (27): Add Component Skill, npm run build-components script (referenced), Default Animation Props Convention, generate-registry.js script (referenced), Prefer Wrappers Over Modifying Base Components, Skill Authoring Best Practices, Concise is Key Principle, Evaluation-Driven Skill Development (+19 more)
+Cohesion: 0.17
+Nodes (12): Add Component Skill, npm run build-components script (referenced), Default Animation Props Convention, generate-registry.js script (referenced), Prefer Wrappers Over Modifying Base Components, class-variance-authority (cva), cn() class-merging utility, Framer Motion (motion/react) (+4 more)
 
 ### Community 9 - "Async/Data-Fetching Libraries"
 Cohesion: 0.18
@@ -212,36 +353,36 @@ Cohesion: 0.08
 Nodes (25): aliases, components, hooks, lib, ui, utils, Authorization, iconLibrary (+17 more)
 
 ### Community 11 - "Card Effect UI Components"
-Cohesion: 0.18
-Nodes (18): Field(), FieldContent(), FieldDescription(), FieldError(), FieldGroup(), FieldLabel(), FieldLegend(), FieldSeparator() (+10 more)
+Cohesion: 0.11
+Nodes (27): Badge(), badgeVariants, Badge(), badgeVariants, AnimatedBackgroundProps, ChildProps, BorderBeam(), BorderBeamProps (+19 more)
 
 ### Community 12 - "Root Layout & Metadata"
-Cohesion: 0.10
-Nodes (18): geistMono, geistSans, metadata, orgSchema, RootLayout(), RootLayoutProps, syne, websiteSchema (+10 more)
+Cohesion: 0.11
+Nodes (19): Button(), ButtonIconProps, ButtonProps, buttonVariants, IconProps, IconRefProps, Button(), ButtonIconProps (+11 more)
 
 ### Community 13 - "MDX Docs Rendering Components"
-Cohesion: 0.25
-Nodes (12): CodeBlock, ComponentPreview(), ComponentPreviewProps, MdxTable(), MdxTbody(), MdxTd(), MdxTh(), MdxThead() (+4 more)
+Cohesion: 0.16
+Nodes (21): ComponentPreview(), ComponentPreviewProps, MdxTable(), MdxTableProps, MdxTbody(), MdxTd(), MdxTh(), MdxThead() (+13 more)
 
 ### Community 14 - "Eval Review Generator Script"
 Cohesion: 0.15
 Nodes (19): build_run(), embed_file(), find_runs(), _find_runs_recursive(), generate_html(), get_mime_type(), _kill_port(), load_previous_iteration() (+11 more)
 
 ### Community 15 - "Component Generator Dashboard"
-Cohesion: 0.26
-Nodes (10): MdxTableProps, TableSectionProps, Table(), TableBody(), TableCaption(), TableCell(), TableFooter(), TableHead() (+2 more)
+Cohesion: 0.17
+Nodes (11): author, dependencies, description, files, class-variance-authority, lucide-react, spinner, name (+3 more)
 
 ### Community 16 - "Transition Panel & Dialog Demo"
-Cohesion: 0.10
-Nodes (16): dependencies, class-variance-authority, lucide-react, Button(), ButtonIconProps, ButtonProps, buttonVariants, IconProps (+8 more)
+Cohesion: 0.12
+Nodes (12): Button(), ButtonIconProps, ButtonProps, buttonVariants, IconProps, IconRefProps, DialogContent(), DialogDescription() (+4 more)
 
 ### Community 18 - "Flip Card & Card Primitives"
-Cohesion: 0.14
-Nodes (17): DashboardPage(), downloadJson(), formSchema, FormValues, parseList(), readFileAsText(), REGISTRY_TYPES, Card() (+9 more)
+Cohesion: 0.11
+Nodes (22): DashboardPage(), downloadJson(), formSchema, FormValues, parseList(), readFileAsText(), REGISTRY_TYPES, CodeBlock (+14 more)
 
 ### Community 19 - "Badge Component & Landing Page"
-Cohesion: 0.11
-Nodes (14): components, features, softwareAppSchema, techStack, Shader(), ShaderBackgroundProps, ShaderPlaneProps, Badge() (+6 more)
+Cohesion: 0.10
+Nodes (18): Magnetic Doc Page, components, features, Home(), softwareAppSchema, techStack, Shader(), ShaderBackgroundProps (+10 more)
 
 ### Community 20 - "AI Writing Detection Reference"
 Cohesion: 0.17
@@ -252,12 +393,16 @@ Cohesion: 0.23
 Nodes (12): aggregate_results(), calculate_stats(), generate_benchmark(), generate_markdown(), load_run_results(), main(), Path, Aggregate run results into summary statistics.      Returns run_summary with s (+4 more)
 
 ### Community 22 - "Confetti Wrapper Registry Entry"
-Cohesion: 0.13
-Nodes (12): author, dependencies, description, devDependencies, files, name, $schema, type (+4 more)
+Cohesion: 0.18
+Nodes (10): author, dependencies, description, devDependencies, files, canvas-confetti, @types/canvas-confetti, name (+2 more)
 
 ### Community 23 - "Border Beam Registry Entry"
 Cohesion: 0.18
 Nodes (10): author, dependencies, description, files, card, motion, name, registryDependencies (+2 more)
+
+### Community 24 - "aura-beam.tsx"
+Cohesion: 0.67
+Nodes (3): AuraEffect(), AuraEffectProps, getBorderPosition()
 
 ### Community 25 - "Dropzone Component"
 Cohesion: 0.24
@@ -277,11 +422,11 @@ Nodes (8): main(), package_skill(), Path, Check if a path should be excluded fro
 
 ### Community 29 - "Code Block & Tooltip Components"
 Cohesion: 0.17
-Nodes (9): CodeBlockInner(), AuraEffect(), AuraEffectProps, BorderBeam(), BorderBeamProps, Tooltip(), TooltipContent(), TooltipTrigger() (+1 more)
+Nodes (11): author, dependencies, description, files, class-variance-authority, lucide-react, spinner, name (+3 more)
 
 ### Community 30 - "Floating Label Input Registry Entry"
 Cohesion: 0.20
-Nodes (9): author, description, files, name, registryDependencies, $schema, type, input (+1 more)
+Nodes (9): author, description, files, input, label, name, registryDependencies, $schema (+1 more)
 
 ### Community 31 - "React Re-render Avoidance Rules"
 Cohesion: 0.22
@@ -304,8 +449,8 @@ Cohesion: 0.22
 Nodes (8): author, dependencies, description, files, class-variance-authority, name, $schema, type
 
 ### Community 36 - "Button Registry Entry"
-Cohesion: 0.22
-Nodes (8): author, description, files, name, registryDependencies, $schema, type, spinner
+Cohesion: 0.17
+Nodes (11): author, dependencies, description, files, class-variance-authority, lucide-react, spinner, name (+3 more)
 
 ### Community 37 - "Depth Media Registry Entry"
 Cohesion: 0.22
@@ -315,13 +460,25 @@ Nodes (8): author, dependencies, description, files, motion, name, $schema, type
 Cohesion: 0.22
 Nodes (8): author, description, files, card, name, registryDependencies, $schema, type
 
+### Community 39 - "button.json"
+Cohesion: 0.17
+Nodes (11): author, dependencies, description, files, class-variance-authority, lucide-react, spinner, name (+3 more)
+
 ### Community 40 - "Magnetic Registry Entry"
 Cohesion: 0.22
 Nodes (8): author, dependencies, description, files, motion, name, $schema, type
 
+### Community 41 - "button.json"
+Cohesion: 0.17
+Nodes (11): author, dependencies, description, files, class-variance-authority, lucide-react, spinner, name (+3 more)
+
 ### Community 42 - "Rainbow Border Registry Entry"
 Cohesion: 0.22
 Nodes (8): author, description, files, card, name, registryDependencies, $schema, type
+
+### Community 43 - "button.json"
+Cohesion: 0.17
+Nodes (11): author, dependencies, description, files, class-variance-authority, lucide-react, spinner, name (+3 more)
 
 ### Community 44 - "Shine Border Registry Entry"
 Cohesion: 0.22
@@ -335,17 +492,25 @@ Nodes (8): author, dependencies, description, files, motion, name, $schema, type
 Cohesion: 0.22
 Nodes (8): author, dependencies, description, files, motion, name, $schema, type
 
+### Community 47 - "button.json"
+Cohesion: 0.17
+Nodes (11): author, dependencies, description, files, class-variance-authority, lucide-react, spinner, name (+3 more)
+
 ### Community 48 - "Component Registry Generator Script"
-Cohesion: 0.22
-Nodes (5): fs, outDir, path, styleCss, uiDir
+Cohesion: 0.15
+Nodes (16): buildItem(), COMPONENTS, fs, LEGACY_ALIASES, makeFile(), outDir, path, readCanonical() (+8 more)
 
 ### Community 49 - "Derived State & Transition Rules"
 Cohesion: 0.25
 Nodes (8): Calculate Derived State During Rendering, You Might Not Need an Effect (React Docs), Subscribe to Derived State, Put Interaction Logic in Event Handlers, Should This Code Move to an Event Handler? (React Docs), Use Transitions for Non-Urgent Updates, React useDeferredValue Reference, Use useDeferredValue for Expensive Derived Renders
 
-### Community 51 - "Border Glow Registry Entry"
-Cohesion: 0.29
-Nodes (6): author, description, files, name, $schema, type
+### Community 50 - "button.json"
+Cohesion: 0.17
+Nodes (11): author, dependencies, description, files, class-variance-authority, lucide-react, spinner, name (+3 more)
+
+### Community 51 - "button.json"
+Cohesion: 0.17
+Nodes (11): author, dependencies, description, files, class-variance-authority, lucide-react, spinner, name (+3 more)
 
 ### Community 52 - "PWA Manifest Config"
 Cohesion: 0.29
@@ -366,6 +531,10 @@ Nodes (5): default.tsx Required for Parallel Route Slots, Intercepting Routes, P
 ### Community 56 - "SVG Rendering Optimization Rules"
 Cohesion: 0.50
 Nodes (5): Animate SVG Wrapper Instead of SVG Element, CSS content-visibility for Long Lists, Hoist Static JSX Elements, Optimize SVG Precision, SVG Element Rendering Optimization
+
+### Community 57 - "button.json"
+Cohesion: 0.17
+Nodes (11): author, dependencies, description, files, class-variance-authority, lucide-react, spinner, name (+3 more)
 
 ### Community 58 - "Route Handlers Guidance"
 Cohesion: 0.50
@@ -419,12 +588,552 @@ Nodes (3): shadcn Critical Rules, Updating Components (Smart Merge), shadcn Comp
 Cohesion: 0.67
 Nodes (3): icon0.svg - Next.js app icon (black angular gem/crystal glyph favicon), Next.js App Router file-based icon convention (icon.svg / iconN.svg), Prisma UI brand mark - angular black gem/crystal glyph
 
+### Community 110 - "button.json"
+Cohesion: 0.17
+Nodes (11): author, dependencies, description, files, class-variance-authority, lucide-react, spinner, name (+3 more)
+
+### Community 111 - "Next.js Data Patterns Reference"
+Cohesion: 0.20
+Nodes (11): Next.js Async Patterns Reference, Next.js Data Patterns Reference, Avoiding Data Waterfalls, Next.js Directives Reference, Next.js Error Handling Reference, Do Not Wrap Navigation APIs in Try-Catch, Next.js Functions Reference, Data Waterfall Anti-pattern (+3 more)
+
+### Community 112 - "border-beam.json"
+Cohesion: 0.18
+Nodes (10): author, dependencies, description, files, card, motion, name, registryDependencies (+2 more)
+
+### Community 113 - "confetti-wrapper.json"
+Cohesion: 0.18
+Nodes (10): author, dependencies, description, devDependencies, files, canvas-confetti, @types/canvas-confetti, name (+2 more)
+
+### Community 114 - "border-beam.json"
+Cohesion: 0.18
+Nodes (10): author, dependencies, description, files, card, motion, name, registryDependencies (+2 more)
+
+### Community 115 - "confetti-wrapper.json"
+Cohesion: 0.18
+Nodes (10): author, dependencies, description, devDependencies, files, canvas-confetti, @types/canvas-confetti, name (+2 more)
+
+### Community 116 - "border-beam.json"
+Cohesion: 0.18
+Nodes (10): author, dependencies, description, files, card, motion, name, registryDependencies (+2 more)
+
+### Community 117 - "confetti-wrapper.json"
+Cohesion: 0.18
+Nodes (10): author, dependencies, description, devDependencies, files, canvas-confetti, @types/canvas-confetti, name (+2 more)
+
+### Community 118 - "border-beam.json"
+Cohesion: 0.18
+Nodes (10): author, dependencies, description, files, card, motion, name, registryDependencies (+2 more)
+
+### Community 119 - "confetti-wrapper.json"
+Cohesion: 0.18
+Nodes (10): author, dependencies, description, devDependencies, files, canvas-confetti, @types/canvas-confetti, name (+2 more)
+
+### Community 120 - "border-beam.json"
+Cohesion: 0.18
+Nodes (10): author, dependencies, description, files, card, motion, name, registryDependencies (+2 more)
+
+### Community 121 - "confetti-wrapper.json"
+Cohesion: 0.18
+Nodes (10): author, dependencies, description, devDependencies, files, canvas-confetti, @types/canvas-confetti, name (+2 more)
+
+### Community 122 - "border-beam.json"
+Cohesion: 0.18
+Nodes (10): author, dependencies, description, files, card, motion, name, registryDependencies (+2 more)
+
+### Community 123 - "confetti-wrapper.json"
+Cohesion: 0.18
+Nodes (10): author, dependencies, description, devDependencies, files, canvas-confetti, @types/canvas-confetti, name (+2 more)
+
+### Community 124 - "border-beam.json"
+Cohesion: 0.18
+Nodes (10): author, dependencies, description, files, card, motion, name, registryDependencies (+2 more)
+
+### Community 125 - "confetti-wrapper.json"
+Cohesion: 0.18
+Nodes (10): author, dependencies, description, devDependencies, files, canvas-confetti, @types/canvas-confetti, name (+2 more)
+
+### Community 126 - "border-beam.json"
+Cohesion: 0.18
+Nodes (10): author, dependencies, description, files, card, motion, name, registryDependencies (+2 more)
+
+### Community 127 - "confetti-wrapper.json"
+Cohesion: 0.18
+Nodes (10): author, dependencies, description, devDependencies, files, canvas-confetti, @types/canvas-confetti, name (+2 more)
+
+### Community 128 - "border-beam.json"
+Cohesion: 0.18
+Nodes (10): author, dependencies, description, files, card, motion, name, registryDependencies (+2 more)
+
+### Community 129 - "confetti-wrapper.json"
+Cohesion: 0.18
+Nodes (10): author, dependencies, description, devDependencies, files, canvas-confetti, @types/canvas-confetti, name (+2 more)
+
+### Community 130 - "border-beam.json"
+Cohesion: 0.18
+Nodes (10): author, dependencies, description, files, card, motion, name, registryDependencies (+2 more)
+
+### Community 131 - "confetti-wrapper.json"
+Cohesion: 0.18
+Nodes (10): author, dependencies, description, devDependencies, files, canvas-confetti, @types/canvas-confetti, name (+2 more)
+
+### Community 132 - "Create Skill Skill"
+Cohesion: 0.31
+Nodes (10): Skill Authoring Best Practices, Concise is Key Principle, Evaluation-Driven Skill Development, Good Skill Examples, Progressive Disclosure Reference, Skill Structure Reference, Create Skill Skill, Degrees of Freedom (skill instruction design) (+2 more)
+
+### Community 133 - "floating-label-input.json"
+Cohesion: 0.20
+Nodes (9): author, description, files, input, label, name, registryDependencies, $schema (+1 more)
+
+### Community 134 - "floating-label-input.json"
+Cohesion: 0.20
+Nodes (9): author, description, files, input, label, name, registryDependencies, $schema (+1 more)
+
+### Community 135 - "floating-label-input.json"
+Cohesion: 0.20
+Nodes (9): author, description, files, input, label, name, registryDependencies, $schema (+1 more)
+
+### Community 136 - "floating-label-input.json"
+Cohesion: 0.20
+Nodes (9): author, description, files, input, label, name, registryDependencies, $schema (+1 more)
+
+### Community 137 - "floating-label-input.json"
+Cohesion: 0.20
+Nodes (9): author, description, files, input, label, name, registryDependencies, $schema (+1 more)
+
+### Community 138 - "floating-label-input.json"
+Cohesion: 0.20
+Nodes (9): author, description, files, input, label, name, registryDependencies, $schema (+1 more)
+
+### Community 139 - "floating-label-input.json"
+Cohesion: 0.20
+Nodes (9): author, description, files, input, label, name, registryDependencies, $schema (+1 more)
+
+### Community 140 - "floating-label-input.json"
+Cohesion: 0.20
+Nodes (9): author, description, files, input, label, name, registryDependencies, $schema (+1 more)
+
+### Community 141 - "floating-label-input.json"
+Cohesion: 0.20
+Nodes (9): author, description, files, input, label, name, registryDependencies, $schema (+1 more)
+
+### Community 142 - "floating-label-input.json"
+Cohesion: 0.20
+Nodes (9): author, description, files, input, label, name, registryDependencies, $schema (+1 more)
+
+### Community 143 - "animated-background.json"
+Cohesion: 0.22
+Nodes (8): author, dependencies, description, files, motion, name, $schema, type
+
+### Community 144 - "aura-beam.json"
+Cohesion: 0.22
+Nodes (8): author, description, files, card, name, registryDependencies, $schema, type
+
+### Community 145 - "badge.json"
+Cohesion: 0.22
+Nodes (8): author, dependencies, description, files, class-variance-authority, name, $schema, type
+
+### Community 146 - "depth-media.json"
+Cohesion: 0.22
+Nodes (8): author, dependencies, description, files, motion, name, $schema, type
+
+### Community 147 - "flip-card.json"
+Cohesion: 0.22
+Nodes (8): author, description, files, card, name, registryDependencies, $schema, type
+
+### Community 148 - "magnetic.json"
+Cohesion: 0.22
+Nodes (8): author, dependencies, description, files, motion, name, $schema, type
+
+### Community 149 - "rainbow-border.json"
+Cohesion: 0.22
+Nodes (8): author, description, files, card, name, registryDependencies, $schema, type
+
+### Community 150 - "shine-border.json"
+Cohesion: 0.22
+Nodes (8): author, description, files, card, name, registryDependencies, $schema, type
+
+### Community 151 - "tilt.json"
+Cohesion: 0.22
+Nodes (8): author, dependencies, description, files, motion, name, $schema, type
+
+### Community 152 - "tracing-beam.json"
+Cohesion: 0.22
+Nodes (8): author, dependencies, description, files, motion, name, $schema, type
+
+### Community 153 - "animated-background.json"
+Cohesion: 0.22
+Nodes (8): author, dependencies, description, files, motion, name, $schema, type
+
+### Community 154 - "aura-beam.json"
+Cohesion: 0.22
+Nodes (8): author, description, files, card, name, registryDependencies, $schema, type
+
+### Community 155 - "badge.json"
+Cohesion: 0.22
+Nodes (8): author, dependencies, description, files, class-variance-authority, name, $schema, type
+
+### Community 156 - "depth-media.json"
+Cohesion: 0.22
+Nodes (8): author, dependencies, description, files, motion, name, $schema, type
+
+### Community 157 - "flip-card.json"
+Cohesion: 0.22
+Nodes (8): author, description, files, card, name, registryDependencies, $schema, type
+
+### Community 158 - "magnetic.json"
+Cohesion: 0.22
+Nodes (8): author, dependencies, description, files, motion, name, $schema, type
+
+### Community 159 - "rainbow-border.json"
+Cohesion: 0.22
+Nodes (8): author, description, files, card, name, registryDependencies, $schema, type
+
+### Community 160 - "shine-border.json"
+Cohesion: 0.22
+Nodes (8): author, description, files, card, name, registryDependencies, $schema, type
+
+### Community 161 - "tilt.json"
+Cohesion: 0.22
+Nodes (8): author, dependencies, description, files, motion, name, $schema, type
+
+### Community 162 - "tracing-beam.json"
+Cohesion: 0.22
+Nodes (8): author, dependencies, description, files, motion, name, $schema, type
+
+### Community 163 - "animated-background.json"
+Cohesion: 0.22
+Nodes (8): author, dependencies, description, files, motion, name, $schema, type
+
+### Community 164 - "aura-beam.json"
+Cohesion: 0.22
+Nodes (8): author, description, files, card, name, registryDependencies, $schema, type
+
+### Community 165 - "badge.json"
+Cohesion: 0.22
+Nodes (8): author, dependencies, description, files, class-variance-authority, name, $schema, type
+
+### Community 166 - "depth-media.json"
+Cohesion: 0.22
+Nodes (8): author, dependencies, description, files, motion, name, $schema, type
+
+### Community 167 - "flip-card.json"
+Cohesion: 0.22
+Nodes (8): author, description, files, card, name, registryDependencies, $schema, type
+
+### Community 168 - "magnetic.json"
+Cohesion: 0.22
+Nodes (8): author, dependencies, description, files, motion, name, $schema, type
+
+### Community 169 - "rainbow-border.json"
+Cohesion: 0.22
+Nodes (8): author, description, files, card, name, registryDependencies, $schema, type
+
+### Community 170 - "shine-border.json"
+Cohesion: 0.22
+Nodes (8): author, description, files, card, name, registryDependencies, $schema, type
+
+### Community 171 - "tilt.json"
+Cohesion: 0.22
+Nodes (8): author, dependencies, description, files, motion, name, $schema, type
+
+### Community 172 - "tracing-beam.json"
+Cohesion: 0.22
+Nodes (8): author, dependencies, description, files, motion, name, $schema, type
+
+### Community 173 - "animated-background.json"
+Cohesion: 0.22
+Nodes (8): author, dependencies, description, files, motion, name, $schema, type
+
+### Community 174 - "aura-beam.json"
+Cohesion: 0.22
+Nodes (8): author, description, files, card, name, registryDependencies, $schema, type
+
+### Community 175 - "badge.json"
+Cohesion: 0.22
+Nodes (8): author, dependencies, description, files, class-variance-authority, name, $schema, type
+
+### Community 176 - "depth-media.json"
+Cohesion: 0.22
+Nodes (8): author, dependencies, description, files, motion, name, $schema, type
+
+### Community 177 - "flip-card.json"
+Cohesion: 0.22
+Nodes (8): author, description, files, card, name, registryDependencies, $schema, type
+
+### Community 178 - "magnetic.json"
+Cohesion: 0.22
+Nodes (8): author, dependencies, description, files, motion, name, $schema, type
+
+### Community 179 - "rainbow-border.json"
+Cohesion: 0.22
+Nodes (8): author, description, files, card, name, registryDependencies, $schema, type
+
+### Community 180 - "shine-border.json"
+Cohesion: 0.22
+Nodes (8): author, description, files, card, name, registryDependencies, $schema, type
+
+### Community 181 - "tilt.json"
+Cohesion: 0.22
+Nodes (8): author, dependencies, description, files, motion, name, $schema, type
+
+### Community 182 - "tracing-beam.json"
+Cohesion: 0.22
+Nodes (8): author, dependencies, description, files, motion, name, $schema, type
+
+### Community 183 - "animated-background.json"
+Cohesion: 0.22
+Nodes (8): author, dependencies, description, files, motion, name, $schema, type
+
+### Community 184 - "aura-beam.json"
+Cohesion: 0.22
+Nodes (8): author, description, files, card, name, registryDependencies, $schema, type
+
+### Community 185 - "badge.json"
+Cohesion: 0.22
+Nodes (8): author, dependencies, description, files, class-variance-authority, name, $schema, type
+
+### Community 186 - "depth-media.json"
+Cohesion: 0.22
+Nodes (8): author, dependencies, description, files, motion, name, $schema, type
+
+### Community 187 - "flip-card.json"
+Cohesion: 0.22
+Nodes (8): author, description, files, card, name, registryDependencies, $schema, type
+
+### Community 188 - "magnetic.json"
+Cohesion: 0.22
+Nodes (8): author, dependencies, description, files, motion, name, $schema, type
+
+### Community 189 - "rainbow-border.json"
+Cohesion: 0.22
+Nodes (8): author, description, files, card, name, registryDependencies, $schema, type
+
+### Community 190 - "shine-border.json"
+Cohesion: 0.22
+Nodes (8): author, description, files, card, name, registryDependencies, $schema, type
+
+### Community 191 - "tilt.json"
+Cohesion: 0.22
+Nodes (8): author, dependencies, description, files, motion, name, $schema, type
+
+### Community 192 - "tracing-beam.json"
+Cohesion: 0.22
+Nodes (8): author, dependencies, description, files, motion, name, $schema, type
+
+### Community 193 - "animated-background.json"
+Cohesion: 0.22
+Nodes (8): author, dependencies, description, files, motion, name, $schema, type
+
+### Community 194 - "aura-beam.json"
+Cohesion: 0.22
+Nodes (8): author, description, files, card, name, registryDependencies, $schema, type
+
+### Community 195 - "badge.json"
+Cohesion: 0.22
+Nodes (8): author, dependencies, description, files, class-variance-authority, name, $schema, type
+
+### Community 196 - "depth-media.json"
+Cohesion: 0.22
+Nodes (8): author, dependencies, description, files, motion, name, $schema, type
+
+### Community 197 - "flip-card.json"
+Cohesion: 0.22
+Nodes (8): author, description, files, card, name, registryDependencies, $schema, type
+
+### Community 198 - "magnetic.json"
+Cohesion: 0.22
+Nodes (8): author, dependencies, description, files, motion, name, $schema, type
+
+### Community 199 - "rainbow-border.json"
+Cohesion: 0.22
+Nodes (8): author, description, files, card, name, registryDependencies, $schema, type
+
+### Community 200 - "shine-border.json"
+Cohesion: 0.22
+Nodes (8): author, description, files, card, name, registryDependencies, $schema, type
+
+### Community 201 - "tilt.json"
+Cohesion: 0.22
+Nodes (8): author, dependencies, description, files, motion, name, $schema, type
+
+### Community 202 - "tracing-beam.json"
+Cohesion: 0.22
+Nodes (8): author, dependencies, description, files, motion, name, $schema, type
+
+### Community 203 - "animated-background.json"
+Cohesion: 0.22
+Nodes (8): author, dependencies, description, files, motion, name, $schema, type
+
+### Community 204 - "aura-beam.json"
+Cohesion: 0.22
+Nodes (8): author, description, files, card, name, registryDependencies, $schema, type
+
+### Community 205 - "badge.json"
+Cohesion: 0.22
+Nodes (8): author, dependencies, description, files, class-variance-authority, name, $schema, type
+
+### Community 206 - "depth-media.json"
+Cohesion: 0.22
+Nodes (8): author, dependencies, description, files, motion, name, $schema, type
+
+### Community 207 - "flip-card.json"
+Cohesion: 0.22
+Nodes (8): author, description, files, card, name, registryDependencies, $schema, type
+
+### Community 208 - "magnetic.json"
+Cohesion: 0.22
+Nodes (8): author, dependencies, description, files, motion, name, $schema, type
+
+### Community 209 - "rainbow-border.json"
+Cohesion: 0.22
+Nodes (8): author, description, files, card, name, registryDependencies, $schema, type
+
+### Community 210 - "shine-border.json"
+Cohesion: 0.22
+Nodes (8): author, description, files, card, name, registryDependencies, $schema, type
+
+### Community 211 - "tilt.json"
+Cohesion: 0.22
+Nodes (8): author, dependencies, description, files, motion, name, $schema, type
+
+### Community 212 - "tracing-beam.json"
+Cohesion: 0.22
+Nodes (8): author, dependencies, description, files, motion, name, $schema, type
+
+### Community 213 - "animated-background.json"
+Cohesion: 0.22
+Nodes (8): author, dependencies, description, files, motion, name, $schema, type
+
+### Community 214 - "aura-beam.json"
+Cohesion: 0.22
+Nodes (8): author, description, files, card, name, registryDependencies, $schema, type
+
+### Community 215 - "badge.json"
+Cohesion: 0.22
+Nodes (8): author, dependencies, description, files, class-variance-authority, name, $schema, type
+
+### Community 216 - "depth-media.json"
+Cohesion: 0.22
+Nodes (8): author, dependencies, description, files, motion, name, $schema, type
+
+### Community 217 - "flip-card.json"
+Cohesion: 0.22
+Nodes (8): author, description, files, card, name, registryDependencies, $schema, type
+
+### Community 218 - "magnetic.json"
+Cohesion: 0.22
+Nodes (8): author, dependencies, description, files, motion, name, $schema, type
+
+### Community 219 - "rainbow-border.json"
+Cohesion: 0.22
+Nodes (8): author, description, files, card, name, registryDependencies, $schema, type
+
+### Community 220 - "shine-border.json"
+Cohesion: 0.22
+Nodes (8): author, description, files, card, name, registryDependencies, $schema, type
+
+### Community 221 - "tilt.json"
+Cohesion: 0.22
+Nodes (8): author, dependencies, description, files, motion, name, $schema, type
+
+### Community 222 - "tracing-beam.json"
+Cohesion: 0.22
+Nodes (8): author, dependencies, description, files, motion, name, $schema, type
+
+### Community 223 - "animated-background.json"
+Cohesion: 0.22
+Nodes (8): author, dependencies, description, files, motion, name, $schema, type
+
+### Community 224 - "aura-beam.json"
+Cohesion: 0.22
+Nodes (8): author, description, files, card, name, registryDependencies, $schema, type
+
+### Community 225 - "badge.json"
+Cohesion: 0.22
+Nodes (8): author, dependencies, description, files, class-variance-authority, name, $schema, type
+
+### Community 226 - "depth-media.json"
+Cohesion: 0.22
+Nodes (8): author, dependencies, description, files, motion, name, $schema, type
+
+### Community 227 - "flip-card.json"
+Cohesion: 0.22
+Nodes (8): author, description, files, card, name, registryDependencies, $schema, type
+
+### Community 228 - "magnetic.json"
+Cohesion: 0.22
+Nodes (8): author, dependencies, description, files, motion, name, $schema, type
+
+### Community 229 - "rainbow-border.json"
+Cohesion: 0.22
+Nodes (8): author, description, files, card, name, registryDependencies, $schema, type
+
+### Community 230 - "shine-border.json"
+Cohesion: 0.22
+Nodes (8): author, description, files, card, name, registryDependencies, $schema, type
+
+### Community 231 - "tilt.json"
+Cohesion: 0.22
+Nodes (8): author, dependencies, description, files, motion, name, $schema, type
+
+### Community 232 - "tracing-beam.json"
+Cohesion: 0.22
+Nodes (8): author, dependencies, description, files, motion, name, $schema, type
+
+### Community 233 - "animated-background.json"
+Cohesion: 0.22
+Nodes (8): author, dependencies, description, files, motion, name, $schema, type
+
+### Community 234 - "aura-beam.json"
+Cohesion: 0.22
+Nodes (8): author, description, files, card, name, registryDependencies, $schema, type
+
+### Community 235 - "badge.json"
+Cohesion: 0.22
+Nodes (8): author, dependencies, description, files, class-variance-authority, name, $schema, type
+
+### Community 236 - "depth-media.json"
+Cohesion: 0.22
+Nodes (8): author, dependencies, description, files, motion, name, $schema, type
+
+### Community 237 - "flip-card.json"
+Cohesion: 0.22
+Nodes (8): author, description, files, card, name, registryDependencies, $schema, type
+
+### Community 238 - "magnetic.json"
+Cohesion: 0.22
+Nodes (8): author, dependencies, description, files, motion, name, $schema, type
+
+### Community 239 - "rainbow-border.json"
+Cohesion: 0.22
+Nodes (8): author, description, files, card, name, registryDependencies, $schema, type
+
+### Community 240 - "shine-border.json"
+Cohesion: 0.22
+Nodes (8): author, description, files, card, name, registryDependencies, $schema, type
+
+### Community 241 - "tilt.json"
+Cohesion: 0.22
+Nodes (8): author, dependencies, description, files, motion, name, $schema, type
+
+### Community 242 - "tracing-beam.json"
+Cohesion: 0.22
+Nodes (8): author, dependencies, description, files, motion, name, $schema, type
+
+### Community 243 - "Frontend Design Skill"
+Cohesion: 0.40
+Nodes (5): Frontend Design Skill License (Apache 2.0), Frontend Design Skill, Commit to a Bold Aesthetic Direction, Generic AI Aesthetic ("AI slop"), Apache License, Version 2.0
+
+### Community 244 - "Next.js Font Optimization Reference"
+Cohesion: 0.67
+Nodes (3): Next.js Font Optimization Reference, Import Fonts Once in Root Layout, Next.js Font Optimization (next/font)
+
 ## Ambiguous Edges - Review These
 - `Eval Set Review HTML Tool` → `evals.json Schema`  [AMBIGUOUS]
   .agents/skills/skill-creator/assets/eval_review.html · relation: references
 
 ## Knowledge Gaps
-- **427 isolated node(s):** `$schema`, `style`, `rsc`, `tsx`, `config` (+422 more)
+- **1468 isolated node(s):** `$schema`, `style`, `rsc`, `tsx`, `config` (+1463 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **37 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -433,15 +1142,15 @@ _Questions this graph is uniquely positioned to answer:_
 
 - **What is the exact relationship between `Eval Set Review HTML Tool` and `evals.json Schema`?**
   _Edge tagged AMBIGUOUS (relation: references) - confidence is low._
-- **Why does `Prisma UI README` connect `UI Inspiration Libraries & Stack` to `NPM Runtime Dependencies`?**
-  _High betweenness centrality (0.090) - this node is a cross-community bridge._
-- **Why does `cn()` connect `Card Effect UI Components` to `UI Inspiration Libraries & Stack`, `Install Snippet Component`, `Root Layout & Metadata`, `MDX Docs Rendering Components`, `Component Generator Dashboard`, `Transition Panel & Dialog Demo`, `Flip Card & Card Primitives`, `Badge Component & Landing Page`, `Dropzone Component`, `Code Block & Tooltip Components`?**
-  _High betweenness centrality (0.076) - this node is a cross-community bridge._
+- **Why does `Prisma UI README` connect `UI Inspiration Libraries & Stack` to `NPM Runtime Dependencies`, `Badge Component & Landing Page`?**
+  _High betweenness centrality (0.014) - this node is a cross-community bridge._
+- **Why does `cn()` connect `Card Effect UI Components` to `UI Inspiration Libraries & Stack`, `Install Snippet Component`, `Root Layout & Metadata`, `MDX Docs Rendering Components`, `Transition Panel & Dialog Demo`, `Flip Card & Card Primitives`, `Badge Component & Landing Page`, `aura-beam.tsx`, `Dropzone Component`?**
+  _High betweenness centrality (0.014) - this node is a cross-community bridge._
 - **Why does `dependencies` connect `NPM Runtime Dependencies` to `UI Inspiration Libraries & Stack`, `Dev Tooling & Linting Dependencies`?**
-  _High betweenness centrality (0.066) - this node is a cross-community bridge._
-- **Are the 14 inferred relationships involving `Prisma UI README` (e.g. with `Animated Background Doc Page` and `Aura Beam Card Doc Page`) actually correct?**
-  _`Prisma UI README` has 14 INFERRED edges - model-reasoned connections that need verification._
+  _High betweenness centrality (0.013) - this node is a cross-community bridge._
+- **Are the 13 inferred relationships involving `Prisma UI README` (e.g. with `Animated Background Doc Page` and `Aura Beam Card Doc Page`) actually correct?**
+  _`Prisma UI README` has 13 INFERRED edges - model-reasoned connections that need verification._
 - **What connects `$schema`, `style`, `rsc` to the rest of the system?**
-  _427 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _1468 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `UI Inspiration Libraries & Stack` be split into smaller, more focused modules?**
-  _Cohesion score 0.05026300409117475 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.05587808417997097 - nodes in this community are weakly interconnected._

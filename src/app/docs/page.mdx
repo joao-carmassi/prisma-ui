@@ -49,7 +49,7 @@ npx shadcn@latest init
 
 ## Adding a component
 
-Pick any component and run the install command from its docs page. For example, to add the **Button**:
+Install any component from its registry URL. For example, to add the **Button**:
 
 <InstallSnippet registryUrl='https://prismaui.com/components/button.json' />
 
@@ -58,6 +58,28 @@ The CLI will:
 1. Download the component source files into your `components/ui` directory.
 2. Install any npm dependencies (e.g. `class-variance-authority`).
 3. Resolve registry dependencies (e.g. card components required by card effects).
+
+## Automatic theme detection (optional)
+
+Direct URLs always serve the `radix-vega` variant. The style-aware components (Button, Badge, and Floating Label Input) also ship variants for every shadcn style — to have the CLI pick the one matching your theme automatically, add the `@prisma` namespace to the `registries` block of your project's `components.json` once:
+
+```json
+{
+  "$schema": "https://ui.shadcn.com/schema.json",
+  "style": "radix-vega",
+  "registries": {
+    "@prisma": "https://prismaui.com/components/{style}/{name}.json"
+  }
+}
+```
+
+Then install by name:
+
+<InstallSnippet registryUrl='@prisma/button' />
+
+The `{style}` placeholder is replaced by the CLI with the `style` field already present in your `components.json`, so every component arrives sized and shaped for your theme. See [Styles & Themes](/docs/styles) for the supported styles and the details.
+
+You can also pin a style manually without the namespace by including the style folder in the direct URL: `https://prismaui.com/components/radix-nova/button.json`.
 
 ---
 

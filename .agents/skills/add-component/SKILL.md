@@ -32,7 +32,7 @@ npm run build-components
 
 - **Framework**: Next.js with App Router, RSC enabled
 - **Styling**: Tailwind CSS v4 with `@theme inline` blocks
-- **Component lib**: shadcn/ui (`new-york` style)
+- **Component lib**: shadcn/ui (`radix-vega` style is the canonical base; see "Style-aware components" below)
 - **Variants**: `class-variance-authority` (cva)
 - **Animation**: `motion/react` (Framer Motion), CSS keyframes in `src/components/ui/style.css`
 - **Icons**: `lucide-react`
@@ -76,6 +76,8 @@ Every non-import code block in a `.mdx` doc page must be preceded by a `<Compone
 ````
 
 If the component requires `useState` or other interactivity for a demo, extract it into a `_demo-<variant>.tsx` client component next to the doc page and import it.
+
+**All demo containers must be `<ComponentPreview>`** (`src/components/docs/component-preview.tsx`). Never invent a new demo container with its own styling (custom borders, table-like row layouts, different padding/background). Any reusable showcase component under `src/components/docs/` (e.g. `style-showcase.tsx`) must render its demos inside `<ComponentPreview>` so every preview on the site looks identical.
 
 **Image placeholders**: When a component accepts or wraps images (e.g. `Backlight`, `ProgressiveBlur`, `InfiniteSlider`), always use [Lorem Picsum](https://picsum.photos) for preview images with Next.js `<Image>`. Slightly vary the dimensions between items to ensure different images are fetched:
 
@@ -170,6 +172,22 @@ src/components/ui/card-hover-effect.tsx  ← wrapper (add features here)
 - Fixing a bug in the base component itself
 - Syncing with a shadcn upstream update
 - Purely structural change (adding a `data-slot` attribute, etc.)
+
+---
+
+## Style-aware components
+
+The registry serves every component in 8 shadcn styles (`radix-vega`, `radix-nova`, `radix-maia`, `radix-lyra`, `radix-mira`, `radix-luma`, `radix-rhea`, `radix-sera`) plus legacy aliases. Most components are style-independent (same source in every style folder). A component is **style-aware** when its sizing, radius, or typography must match the surrounding shadcn controls (currently: Button, Badge, Floating Label Input).
+
+For a style-aware component:
+
+1. **Canonical source** stays at `src/components/ui/<name>.tsx` (this is the `radix-vega` variant).
+2. **Per-style variants** live at `src/components/ui/styles/<style>/<name>.tsx` for the other 7 styles. They import shared CSS as `'../../style.css'` and sibling per-style files relatively (e.g. `'./input'`); `scripts/generate-registry.js` rewrites those imports for the registry payload.
+3. Add the file name to `STYLE_DEPENDENT_FILES` in `scripts/generate-registry.js`.
+4. Base the per-style class strings on the official shadcn sources (`https://ui.shadcn.com/r/styles/<style>/<name>.json`), then re-apply the Prisma delta (effects, extra props) on top.
+5. **Docs page** gets, at the very end, a `## Theme styles` section rendering `<StyleShowcase component='<name>' />` (`src/components/docs/style-showcase.tsx` — extend its imports/prop union). `StyleShowcase` renders one standard `<ComponentPreview>` per style.
+6. The Installation section shows the direct URL snippet first, then the `@prisma/<name>` namespace snippet with the style-aware note (copy the pattern from the badge page).
+7. Mention the component in the style-aware lists on `/docs` (`src/app/docs/page.mdx`) and `/docs/styles` (`src/app/docs/styles/page.mdx`).
 
 ---
 

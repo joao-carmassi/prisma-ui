@@ -9,6 +9,7 @@ import {
 } from '@/components/ui/field';
 import { JsonLd } from '@/components/seo/json-ld';
 import { InstallSnippet } from '@/components/docs/install-snippet';
+import { StyleShowcase } from '@/components/docs/style-showcase';
 import { FieldValidationDemo } from './_demo-field-validation';
 
 export const metadata = {
@@ -58,6 +59,10 @@ An input component with a label that floats above the field when focused or fill
 ## Installation
 
 <InstallSnippet registryUrl='https://prismaui.com/components/floating-label-input.json' />
+
+The direct URL serves the `radix-vega` variant. The Floating Label Input is style-aware — its underlying input height, radius, and label offsets differ per shadcn style. To let the CLI pick the variant that matches your project's theme automatically, register the `@prisma` namespace once (see [Styles & Themes](/docs/styles)) and install by name:
+
+<InstallSnippet registryUrl='@prisma/floating-label-input' />
 
 ## Import
 
@@ -415,3 +420,13 @@ import {
 | `htmlFor`   | `string`          | —       | Matches the input `id`. |
 | `children`  | `React.ReactNode` | —       | The label text.         |
 | `className` | `string`          | —       | Additional CSS classes. |
+
+---
+
+## Theme styles
+
+The Floating Label Input ships in a dedicated variant for each supported shadcn style. Installed through the `@prisma` namespace, the CLI delivers the one matching the `style` in your `components.json` — same API, with the input sizing and label offsets adjusted per style:
+
+<StyleShowcase component='floating-label-input' />
+
+See [Styles & Themes](/docs/styles) for setup and the full list of supported styles.
